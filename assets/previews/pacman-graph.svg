@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300" role="img" aria-label="pacman-graph preview">
+  <rect width="600" height="300" fill="#000814"/>
+  <text x="40" y="44" font-family="'Press Start 2P', ui-monospace, monospace" font-size="14" fill="#ffd23f">PAC-CONTRIB</text>
+  <text x="40" y="64" font-family="ui-monospace, monospace" font-size="10" fill="#ffd23f" letter-spacing="2">HIGH SCORE · 1842</text>
+  <g transform="translate(40,110)">
+    <g fill="#1a3060">
+      <circle cx="10" cy="10" r="3"/>
+      <circle cx="40" cy="10" r="3"/>
+      <circle cx="70" cy="10" r="3"/>
+      <circle cx="100" cy="10" r="3"/>
+      <circle cx="130" cy="10" r="3"/>
+      <circle cx="160" cy="10" r="3"/>
+      <circle cx="190" cy="10" r="3"/>
+      <circle cx="220" cy="10" r="3"/>
+      <circle cx="250" cy="10" r="3"/>
+      <circle cx="280" cy="10" r="3"/>
+      <circle cx="310" cy="10" r="3"/>
+      <circle cx="340" cy="10" r="3"/>
+      <circle cx="370" cy="10" r="3"/>
+      <circle cx="400" cy="10" r="3"/>
+      <circle cx="430" cy="10" r="3"/>
+      <circle cx="460" cy="10" r="3"/>
+      <circle cx="490" cy="10" r="3"/>
+      <circle cx="520" cy="10" r="3"/>
+    </g>
+    <!-- pacman -->
+    <g transform="translate(0,10)">
+      <path d="M 0 0 L 14 -7 A 16 16 0 1 1 14 7 Z" fill="#ffd23f">
+        <animateTransform attributeName="transform" type="translate" values="0 0;520 0;0 0" dur="9s" repeatCount="indefinite"/>
+      </path>
+    </g>
+    <!-- ghosts -->
+    <g transform="translate(560,0)">
+      <path d="M0 16 V4 A8 8 0 0 1 16 4 V16 L12 12 L8 16 L4 12 Z" fill="#ff0044">
+        <animateTransform attributeName="transform" type="translate" values="560 0;100 0;560 0" dur="9s" repeatCount="indefinite"/>
+      </path>
+    </g>
+  </g>
+  <g transform="translate(40,180)">
+    <text font-family="ui-monospace, monospace" font-size="11" fill="#00d9ff" letter-spacing="2">CONTRIBUTIONS · 1.2K  STREAK · 47  PR · 86</text>
+  </g>
+  <text x="40" y="270" font-family="ui-monospace, monospace" font-size="10" fill="#5a648b">action: abozanona/pacman-contribution-graph</text>
+</svg>

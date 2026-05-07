@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300" role="img" aria-label="Neural Pulse Lattice preview">
+  <defs>
+    <path id="npp-e1" d="M 60 60 L 130 110"/>
+    <path id="npp-e2" d="M 60 60 L 100 200"/>
+    <path id="npp-e3" d="M 130 110 L 220 80"/>
+    <path id="npp-e4" d="M 130 110 L 240 180"/>
+    <path id="npp-e5" d="M 100 200 L 240 180"/>
+    <path id="npp-e6" d="M 220 80 L 320 130"/>
+    <path id="npp-e7" d="M 240 180 L 320 130"/>
+    <path id="npp-e8" d="M 240 180 L 360 230"/>
+    <path id="npp-e9" d="M 320 130 L 360 230"/>
+    <radialGradient id="npp-halo">
+      <stop offset="0" stop-color="#4fbcff" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#4fbcff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="npp-glow"><feGaussianBlur stdDeviation="1.6"/></filter>
+  </defs>
+  <rect width="600" height="300" fill="#050810"/>
+  <g stroke="#0e1a30" stroke-width="0.4">
+    <line x1="0" y1="60" x2="400" y2="60"/>
+    <line x1="0" y1="160" x2="400" y2="160"/>
+    <line x1="100" y1="0" x2="100" y2="300"/>
+    <line x1="200" y1="0" x2="200" y2="300"/>
+    <line x1="300" y1="0" x2="300" y2="300"/>
+  </g>
+  <g stroke="#1a2a4a" stroke-width="0.6" fill="none">
+    <use href="#npp-e1"/><use href="#npp-e2"/><use href="#npp-e3"/><use href="#npp-e4"/><use href="#npp-e5"/>
+    <use href="#npp-e6"/><use href="#npp-e7"/><use href="#npp-e8"/><use href="#npp-e9"/>
+  </g>
+  <g>
+    <circle cx="60" cy="60" r="10" fill="url(#npp-halo)"><animate attributeName="r" values="10;16;10" dur="3s" repeatCount="indefinite"/></circle>
+    <circle cx="60" cy="60" r="2.4" fill="#4fbcff"/>
+    <circle cx="130" cy="110" r="14" fill="url(#npp-halo)"><animate attributeName="r" values="12;20;12" dur="2.4s" repeatCount="indefinite"/></circle>
+    <circle cx="130" cy="110" r="3.4" fill="#fef3c7"/>
+    <circle cx="100" cy="200" r="10" fill="url(#npp-halo)"><animate attributeName="r" values="10;16;10" dur="3.2s" repeatCount="indefinite" begin="0.4s"/></circle>
+    <circle cx="100" cy="200" r="2.4" fill="#4fbcff"/>
+    <circle cx="220" cy="80" r="10" fill="url(#npp-halo)"><animate attributeName="r" values="10;16;10" dur="2.8s" repeatCount="indefinite" begin="0.6s"/></circle>
+    <circle cx="220" cy="80" r="2.4" fill="#4fbcff"/>
+    <circle cx="240" cy="180" r="10" fill="url(#npp-halo)"><animate attributeName="r" values="10;16;10" dur="3.4s" repeatCount="indefinite" begin="0.2s"/></circle>
+    <circle cx="240" cy="180" r="2.4" fill="#a78bfa"/>
+    <circle cx="320" cy="130" r="14" fill="url(#npp-halo)"><animate attributeName="r" values="12;20;12" dur="2.6s" repeatCount="indefinite" begin="0.5s"/></circle>
+    <circle cx="320" cy="130" r="3.4" fill="#fef3c7"/>
+    <circle cx="360" cy="230" r="10" fill="url(#npp-halo)"><animate attributeName="r" values="10;16;10" dur="3s" repeatCount="indefinite" begin="0.9s"/></circle>
+    <circle cx="360" cy="230" r="2.4" fill="#4fbcff"/>
+  </g>
+  <g filter="url(#npp-glow)">
+    <circle r="2.4" fill="#7ddbff">
+      <animateMotion dur="1.6s" repeatCount="indefinite"><mpath href="#npp-e1"/></animateMotion>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.85;1" dur="1.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="2.4" fill="#7ddbff">
+      <animateMotion dur="2.0s" repeatCount="indefinite" begin="0.4s"><mpath href="#npp-e3"/></animateMotion>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.85;1" dur="2.0s" repeatCount="indefinite" begin="0.4s"/>
+    </circle>
+    <circle r="2.4" fill="#c4b5fd">
+      <animateMotion dur="1.8s" repeatCount="indefinite" begin="0.7s"><mpath href="#npp-e6"/></animateMotion>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.85;1" dur="1.8s" repeatCount="indefinite" begin="0.7s"/>
+    </circle>
+    <circle r="2.4" fill="#fef3c7">
+      <animateMotion dur="2.2s" repeatCount="indefinite" begin="0.2s"><mpath href="#npp-e9"/></animateMotion>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.1;0.85;1" dur="2.2s" repeatCount="indefinite" begin="0.2s"/>
+    </circle>
+  </g>
+  <line x1="420" y1="40" x2="420" y2="260" stroke="#1a2a4a" stroke-width="0.5"/>
+  <g font-family="'JetBrains Mono', monospace" fill="#a5b4cf">
+    <text x="440" y="60" font-size="8" letter-spacing="3" fill="#4fbcff">NEURAL/PULSE/LATTICE</text>
+    <text x="440" y="118" font-family="'Space Grotesk', sans-serif" font-size="22" font-weight="700" fill="#fef3c7" letter-spacing="-0.3">Jane Doe</text>
+    <text x="440" y="134" font-size="8" letter-spacing="2" fill="#4fbcff">FRONTEND · MOTION</text>
+    <line x1="440" y1="152" x2="568" y2="152" stroke="#1a2a4a" stroke-width="0.5"/>
+    <text x="440" y="174" font-size="9">nodes</text>     <text x="558" y="174" text-anchor="end" fill="#fef3c7" font-size="9">10</text>
+    <text x="440" y="190" font-size="9">edges</text>     <text x="558" y="190" text-anchor="end" fill="#fef3c7" font-size="9">15</text>
+    <text x="440" y="206" font-size="9">signals/s</text>  <text x="558" y="206" text-anchor="end" fill="#fef3c7" font-size="9">9</text>
+    <text x="440" y="222" font-size="9">uptime</text>    <text x="558" y="222" text-anchor="end" fill="#fef3c7" font-size="9">2,184d</text>
+    <line x1="440" y1="238" x2="568" y2="238" stroke="#1a2a4a" stroke-width="0.5"/>
+    <text x="440" y="256" font-size="8" letter-spacing="2" fill="#4fbcff">→ jane.dev</text>
+  </g>
+  <g transform="translate(20,278)" font-family="'JetBrains Mono', monospace" font-size="7" letter-spacing="2">
+    <circle cx="4" cy="-3" r="2.4" fill="#4ade80"><animate attributeName="opacity" values="0.4;1;0.4" dur="1.4s" repeatCount="indefinite"/></circle>
+    <text x="14" y="0" fill="#a5b4cf">SYSTEM NOMINAL · LATENCY 12ms</text>
+  </g>
+</svg>

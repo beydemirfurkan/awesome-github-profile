@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300" role="img" aria-label="monospace-cv preview">
+  <rect width="600" height="300" fill="#0d1117"/>
+  <text x="32" y="50" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="14" fill="#7ee787">$ whoami</text>
+  <text x="32" y="74" font-family="ui-monospace, monospace" font-size="14" fill="#c9d1d9">jane.doe — frontend.eng</text>
+  <text x="32" y="110" font-family="ui-monospace, monospace" font-size="14" fill="#7ee787">$ cat skills.txt</text>
+  <text x="32" y="134" font-family="ui-monospace, monospace" font-size="13" fill="#c9d1d9">typescript · react · node · figma · css.</text>
+  <text x="32" y="170" font-family="ui-monospace, monospace" font-size="14" fill="#7ee787">$ uptime</text>
+  <text x="32" y="194" font-family="ui-monospace, monospace" font-size="13" fill="#c9d1d9">8 yrs shipping production interfaces.</text>
+  <text x="32" y="230" font-family="ui-monospace, monospace" font-size="14" fill="#7ee787">$ contact --all</text>
+  <text x="32" y="254" font-family="ui-monospace, monospace" font-size="13" fill="#58a6ff">→ jane.dev   @janedoe   in/janedoe</text>
+  <rect x="220" y="244" width="8" height="14" fill="#c9d1d9">
+    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+  </rect>
+</svg>

@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-label="Analytics Grid hero">
+  <defs>
+    <linearGradient id="ag-stage" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a0f1f"/>
+      <stop offset="1" stop-color="#070a16"/>
+    </linearGradient>
+    <linearGradient id="ag-card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#15192e"/>
+      <stop offset="1" stop-color="#0e1224"/>
+    </linearGradient>
+    <linearGradient id="ag-spark1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4ade80" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#4ade80" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="ag-spark2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a78bfa" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#a78bfa" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="ag-spark3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fcd34d" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#fcd34d" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="ag-spark4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#67e8f9" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#67e8f9" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="420" fill="url(#ag-stage)"/>
+
+  <!-- Top label strip -->
+  <g font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="4">
+    <g transform="translate(60,52)" fill="#4ade80">
+      <circle cx="6" cy="-3" r="3.5">
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="1.4s" repeatCount="indefinite"/>
+      </circle>
+      <text x="20" y="0">LIVE · UPDATED 14s AGO</text>
+    </g>
+    <g transform="translate(1140,52)" fill="#94a3b8" text-anchor="end">
+      <text x="-20" y="0">DASHBOARD · 2026 Q2</text>
+      <line x1="-14" y1="-4" x2="0" y2="-4" stroke="#94a3b8" stroke-width="0.5"/>
+    </g>
+  </g>
+
+  <!-- Headline -->
+  <text x="60" y="100" font-family="'Inter', 'Space Grotesk', system-ui, sans-serif" font-size="28" font-weight="700" fill="#e2e8f0">Today, in numbers.</text>
+  <text x="60" y="124" font-family="'JetBrains Mono', monospace" font-size="11" fill="#64748b" letter-spacing="2">JANE DOE  ·  COMMIT VELOCITY · STREAK · MERGES · CADENCE</text>
+
+  <!-- Four KPI cards -->
+  <!-- Card 1: COMMITS -->
+  <g transform="translate(60,148)">
+    <rect width="262" height="128" rx="12" fill="url(#ag-card)" stroke="#1f2540" stroke-width="0.7"/>
+    <text x="18" y="32" font-family="'JetBrains Mono', monospace" font-size="9" fill="#64748b" letter-spacing="3">COMMITS · 30D</text>
+    <text x="18" y="74" font-family="'Inter', system-ui, sans-serif" font-size="36" font-weight="700" fill="#f1f5f9">1,842</text>
+    <text x="18" y="92" font-family="'JetBrains Mono', monospace" font-size="11" fill="#4ade80">▲ 18%  vs prev 30d</text>
+    <!-- sparkline -->
+    <polyline points="18,116 38,108 58,114 78,98 98,104 118,90 138,96 158,82 178,88 198,76 218,84 238,72" fill="none" stroke="#4ade80" stroke-width="1.4"/>
+    <polyline points="18,116 38,108 58,114 78,98 98,104 118,90 138,96 158,82 178,88 198,76 218,84 238,72 238,120 18,120" fill="url(#ag-spark1)"/>
+  </g>
+
+  <!-- Card 2: STREAK -->
+  <g transform="translate(338,148)">
+    <rect width="262" height="128" rx="12" fill="url(#ag-card)" stroke="#1f2540" stroke-width="0.7"/>
+    <text x="18" y="32" font-family="'JetBrains Mono', monospace" font-size="9" fill="#64748b" letter-spacing="3">STREAK · CURRENT</text>
+    <text x="18" y="74" font-family="'Inter', system-ui, sans-serif" font-size="36" font-weight="700" fill="#f1f5f9">47<tspan font-size="20" fill="#a78bfa">d</tspan></text>
+    <text x="18" y="92" font-family="'JetBrains Mono', monospace" font-size="11" fill="#a78bfa">→ longest 132d · 2024</text>
+    <!-- streak bars -->
+    <g fill="#a78bfa">
+      <rect x="18" y="108" width="6" height="14" opacity="0.4"/>
+      <rect x="28" y="106" width="6" height="16" opacity="0.45"/>
+      <rect x="38" y="100" width="6" height="22" opacity="0.5"/>
+      <rect x="48" y="104" width="6" height="18" opacity="0.55"/>
+      <rect x="58" y="98" width="6" height="24" opacity="0.6"/>
+      <rect x="68" y="102" width="6" height="20" opacity="0.65"/>
+      <rect x="78" y="96" width="6" height="26" opacity="0.7"/>
+      <rect x="88" y="92" width="6" height="30" opacity="0.75"/>
+      <rect x="98" y="100" width="6" height="22" opacity="0.8"/>
+      <rect x="108" y="94" width="6" height="28" opacity="0.85"/>
+      <rect x="118" y="98" width="6" height="24" opacity="0.9"/>
+      <rect x="128" y="90" width="6" height="32" opacity="0.95"/>
+      <rect x="138" y="86" width="6" height="36"/>
+      <rect x="148" y="82" width="6" height="40"/>
+      <rect x="158" y="78" width="6" height="44">
+        <animate attributeName="height" values="44;38;44" dur="2s" repeatCount="indefinite"/>
+        <animate attributeName="y" values="78;84;78" dur="2s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+  </g>
+
+  <!-- Card 3: MERGES -->
+  <g transform="translate(616,148)">
+    <rect width="262" height="128" rx="12" fill="url(#ag-card)" stroke="#1f2540" stroke-width="0.7"/>
+    <text x="18" y="32" font-family="'JetBrains Mono', monospace" font-size="9" fill="#64748b" letter-spacing="3">PRs MERGED · 30D</text>
+    <text x="18" y="74" font-family="'Inter', system-ui, sans-serif" font-size="36" font-weight="700" fill="#f1f5f9">86</text>
+    <text x="18" y="92" font-family="'JetBrains Mono', monospace" font-size="11" fill="#fcd34d">▲ 4%  · median review 1.2d</text>
+    <!-- sparkline -->
+    <polyline points="18,116 38,110 58,104 78,108 98,98 118,102 138,94 158,98 178,88 198,92 218,84 238,86" fill="none" stroke="#fcd34d" stroke-width="1.4"/>
+    <polyline points="18,116 38,110 58,104 78,108 98,98 118,102 138,94 158,98 178,88 198,92 218,84 238,86 238,120 18,120" fill="url(#ag-spark3)"/>
+  </g>
+
+  <!-- Card 4: CADENCE -->
+  <g transform="translate(894,148)">
+    <rect width="246" height="128" rx="12" fill="url(#ag-card)" stroke="#1f2540" stroke-width="0.7"/>
+    <text x="18" y="32" font-family="'JetBrains Mono', monospace" font-size="9" fill="#64748b" letter-spacing="3">CADENCE · 7D</text>
+    <text x="18" y="74" font-family="'Inter', system-ui, sans-serif" font-size="32" font-weight="700" fill="#f1f5f9">tue→thu</text>
+    <text x="18" y="92" font-family="'JetBrains Mono', monospace" font-size="11" fill="#67e8f9">deep-work bias · 78%</text>
+    <!-- weekday dots -->
+    <g font-family="'JetBrains Mono', monospace" font-size="9" fill="#64748b">
+      <circle cx="32" cy="112" r="5" fill="#1a2540"/><text x="32" y="124" text-anchor="middle">M</text>
+      <circle cx="62" cy="112" r="5" fill="#67e8f9" opacity="0.6"/><text x="62" y="124" text-anchor="middle">T</text>
+      <circle cx="92" cy="112" r="5" fill="#67e8f9"/><text x="92" y="124" text-anchor="middle">W</text>
+      <circle cx="122" cy="112" r="5" fill="#67e8f9"/><text x="122" y="124" text-anchor="middle">T</text>
+      <circle cx="152" cy="112" r="5" fill="#67e8f9" opacity="0.7"/><text x="152" y="124" text-anchor="middle">F</text>
+      <circle cx="182" cy="112" r="5" fill="#1a2540"/><text x="182" y="124" text-anchor="middle">S</text>
+      <circle cx="212" cy="112" r="5" fill="#1a2540"/><text x="212" y="124" text-anchor="middle">S</text>
+    </g>
+  </g>
+
+  <!-- Trend chart (full width) -->
+  <g transform="translate(60,296)">
+    <rect width="1080" height="84" rx="12" fill="url(#ag-card)" stroke="#1f2540" stroke-width="0.7"/>
+    <text x="18" y="22" font-family="'JetBrains Mono', monospace" font-size="9" fill="#64748b" letter-spacing="3">CONTRIBUTION VELOCITY · 90 DAYS</text>
+
+    <!-- area -->
+    <polyline points="18,68 50,60 90,64 130,52 170,58 210,46 250,52 290,38 330,44 370,32 410,40 450,28 490,36 530,22 570,30 610,18 650,26 690,14 730,22 770,30 810,18 850,26 890,38 930,28 970,40 1010,30 1050,42 1062,40" fill="url(#ag-spark2)"/>
+    <polyline points="18,68 50,60 90,64 130,52 170,58 210,46 250,52 290,38 330,44 370,32 410,40 450,28 490,36 530,22 570,30 610,18 650,26 690,14 730,22 770,30 810,18 850,26 890,38 930,28 970,40 1010,30 1050,42 1062,40" fill="none" stroke="#a78bfa" stroke-width="1.6"/>
+
+    <!-- live dot at end -->
+    <circle cx="1062" cy="40" r="4" fill="#fef3c7">
+      <animate attributeName="r" values="4;7;4" dur="1.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="1062" cy="40" r="10" fill="none" stroke="#fef3c7" stroke-width="0.6">
+      <animate attributeName="r" values="10;18;10" dur="1.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0;0.6" dur="1.6s" repeatCount="indefinite"/>
+    </circle>
+
+    <text x="1062" y="74" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#a78bfa">peak · today · 47</text>
+  </g>
+
+  <!-- Footer signature -->
+  <g transform="translate(60,400)" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="3" fill="#475569">
+    <text>JANE.DEV  ·  @JANEDOE  ·  EXEC SUMMARY · WEEK 19</text>
+  </g>
+</svg>

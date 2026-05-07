@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-label="Liquid Glass hero">
+  <defs>
+    <!-- Background — deep aubergine gradient -->
+    <linearGradient id="lg-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0"   stop-color="#180a2e"/>
+      <stop offset="0.5" stop-color="#2a103e"/>
+      <stop offset="1"   stop-color="#0a0418"/>
+    </linearGradient>
+
+    <!-- Animated color orbs (blurred behind glass) -->
+    <radialGradient id="lg-orbA" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ff7eb3" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#ff7eb3" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="lg-orbB" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#7df9ff" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#7df9ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="lg-orbC" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fcd34d" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#fcd34d" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="lg-orbD" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#a78bfa" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#a78bfa" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Heavy blur for orbs -->
+    <filter id="lg-orbblur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="36"/>
+    </filter>
+
+    <!-- Glass surface — subtle blur to suggest light refraction -->
+    <linearGradient id="lg-glasstop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0"   stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="0.4" stop-color="#ffffff" stop-opacity="0.06"/>
+      <stop offset="1"   stop-color="#ffffff" stop-opacity="0.10"/>
+    </linearGradient>
+
+    <!-- Iridescent edge gradient (animated) -->
+    <linearGradient id="lg-edge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0"   stop-color="#ff7eb3"/>
+      <stop offset="0.33" stop-color="#7df9ff"/>
+      <stop offset="0.66" stop-color="#fcd34d"/>
+      <stop offset="1"   stop-color="#a78bfa"/>
+      <animate attributeName="x1" values="0;-1;0" dur="14s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="1;2;1" dur="14s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <!-- Grain — adds the “real glass” texture -->
+    <filter id="lg-grain">
+      <feTurbulence baseFrequency="1.4" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix values="0 0 0 0 1
+                            0 0 0 0 1
+                            0 0 0 0 1
+                            0 0 0 0.05 0"/>
+    </filter>
+
+    <!-- Card outer drop -->
+    <filter id="lg-drop" x="-10%" y="-10%" width="120%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="20"/>
+      <feOffset dy="14"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.6"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="420" fill="url(#lg-bg)"/>
+
+  <!-- Animated color orbs (heavily blurred) -->
+  <g filter="url(#lg-orbblur)">
+    <circle cx="180" cy="120" r="160" fill="url(#lg-orbA)">
+      <animate attributeName="cx" values="180;280;180" dur="18s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="120;90;120" dur="14s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="980" cy="320" r="180" fill="url(#lg-orbB)">
+      <animate attributeName="cx" values="980;860;980" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="320;280;320" dur="16s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="600" cy="260" r="140" fill="url(#lg-orbC)">
+      <animate attributeName="cy" values="260;200;260" dur="12s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="380" cy="380" r="130" fill="url(#lg-orbD)">
+      <animate attributeName="cx" values="380;480;380" dur="22s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Glass card -->
+  <g filter="url(#lg-drop)">
+    <!-- Card surface -->
+    <rect x="80" y="70" width="1040" height="280" rx="32" fill="url(#lg-glasstop)"/>
+    <!-- Iridescent border -->
+    <rect x="80" y="70" width="1040" height="280" rx="32" fill="none" stroke="url(#lg-edge)" stroke-width="1.4"/>
+  </g>
+
+  <!-- Subtle grain on glass surface -->
+  <rect x="80" y="70" width="1040" height="280" rx="32" filter="url(#lg-grain)"/>
+
+  <!-- Crystalline edge highlights -->
+  <g stroke="#ffffff" stroke-width="0.7" fill="none" opacity="0.6">
+    <path d="M 110 70 L 230 70" />                      <!-- top-left highlight -->
+    <path d="M 1090 350 L 970 350" />                   <!-- bottom-right highlight -->
+    <path d="M 80 100 Q 80 70 110 70" opacity="0.8"/>   <!-- top-left curve -->
+    <path d="M 1120 320 Q 1120 350 1090 350" opacity="0.8"/> <!-- bottom-right curve -->
+  </g>
+
+  <!-- Tiny specular dot -->
+  <circle cx="186" cy="92" r="2" fill="#ffffff" opacity="0.9"/>
+  <circle cx="186" cy="92" r="6" fill="none" stroke="#ffffff" stroke-width="0.4" opacity="0.5"/>
+
+  <!-- Inner content (left column) -->
+  <g transform="translate(120,118)" font-family="'Inter', 'Manrope', system-ui, sans-serif">
+    <text font-size="14" font-family="'JetBrains Mono', monospace" fill="#fcd34d" letter-spacing="4">— STUDIO. PORTRAIT.</text>
+    <text y="58" font-size="62" font-weight="700" fill="#fef3c7" letter-spacing="-2">Jane Doe</text>
+    <text y="92" font-size="18" font-weight="400" fill="#e8d5ff" font-style="italic">Designer-engineer · interface, motion, type</text>
+
+    <line x1="0" y1="120" x2="60" y2="120" stroke="#fcd34d" stroke-width="2"/>
+
+    <text y="158" font-size="14" fill="#e8d5ff">Currently shaping the design system at Acme.</text>
+    <text y="180" font-size="14" fill="#e8d5ff">Writing about typography &amp; motion at jane.dev/log.</text>
+    <text y="202" font-size="14" fill="#cbd5e1" opacity="0.75">Open to select projects · 2 slots / Q3.</text>
+  </g>
+
+  <!-- Right column — card sub-panel inside glass -->
+  <g transform="translate(770,108)">
+    <rect width="320" height="200" rx="20" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.18" stroke-width="0.6"/>
+    <text x="20" y="32" font-family="'JetBrains Mono', monospace" font-size="10" fill="#fcd34d" letter-spacing="3">— SELECTED</text>
+    <g font-family="'Inter', sans-serif" font-size="13" fill="#fef3c7">
+      <text x="20" y="60">01 · acme design system</text>
+      <text x="20" y="84">02 · the type observatory</text>
+      <text x="20" y="108">03 · runtime essays</text>
+    </g>
+    <line x1="20" y1="124" x2="300" y2="124" stroke="#ffffff" stroke-opacity="0.15"/>
+    <text x="20" y="148" font-family="'JetBrains Mono', monospace" font-size="10" fill="#fcd34d" letter-spacing="3">— ELSEWHERE</text>
+    <g font-family="'JetBrains Mono', monospace" font-size="11" fill="#e8d5ff">
+      <text x="20" y="172">jane.dev</text>
+      <text x="20" y="190">@janedoe · in/janedoe</text>
+    </g>
+  </g>
+
+  <!-- Bottom register -->
+  <g transform="translate(120,388)" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="3" fill="#a78bfa">
+    <text>STUDIO PORTRAIT · 2026 · ISSUE 03</text>
+  </g>
+</svg>

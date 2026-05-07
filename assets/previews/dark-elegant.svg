@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300" role="img" aria-label="dark-elegant preview">
+  <rect width="600" height="300" fill="#0c0c0e"/>
+  <!-- gold hairline frame -->
+  <rect x="40" y="40" width="520" height="220" fill="none" stroke="#d4af37" stroke-width="0.5"/>
+  <rect x="44" y="44" width="512" height="212" fill="none" stroke="#d4af37" stroke-width="0.5" opacity="0.4"/>
+  <!-- monogram -->
+  <g transform="translate(300,110)">
+    <text text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="56" font-weight="400" fill="#d4af37" font-style="italic">JD</text>
+  </g>
+  <line x1="260" y1="130" x2="340" y2="130" stroke="#d4af37" stroke-width="0.5"/>
+  <text x="300" y="160" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#f5f5f0">Jane Doe</text>
+  <text x="300" y="184" text-anchor="middle" font-family="ui-monospace, monospace" font-size="10" fill="#d4af37" letter-spacing="6">— DEVELOPER · DESIGNER —</text>
+  <text x="300" y="220" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="13" fill="#aaa">"the slowest type of software is the kind that lasts."</text>
+  <text x="300" y="240" text-anchor="middle" font-family="ui-monospace, monospace" font-size="9" fill="#888" letter-spacing="3">JANE.DEV</text>
+</svg>

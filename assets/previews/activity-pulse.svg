@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300" role="img" aria-label="activity-pulse preview">
+  <rect width="600" height="300" fill="#0a0f1c"/>
+  <text x="40" y="44" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="700" fill="#e2e8f0">Activity pulse · last 30 days</text>
+  <g transform="translate(40,80)">
+    <!-- pulse line -->
+    <path d="M0 80 L40 80 L60 80 L70 40 L80 100 L90 80 L120 80 L140 80 L160 80 L170 60 L180 90 L190 80 L220 80 L240 50 L250 110 L260 80 L300 80 L320 30 L330 120 L340 80 L380 80 L400 80 L420 70 L430 90 L440 80 L520 80" fill="none" stroke="#4ade80" stroke-width="2"/>
+    <circle cx="320" cy="30" r="4" fill="#4ade80">
+      <animate attributeName="r" values="4;8;4" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  <g transform="translate(40,210)">
+    <text font-family="ui-monospace, monospace" font-size="11" fill="#94a3b8">peak day · march 21 · 47 commits</text>
+    <text y="20" font-family="ui-monospace, monospace" font-size="11" fill="#94a3b8">avg/day · 12.3   median · 9   p95 · 38</text>
+  </g>
+  <text x="40" y="276" font-family="ui-monospace, monospace" font-size="10" fill="#5a648b">via lowlighter/metrics · plugin: activity</text>
+</svg>

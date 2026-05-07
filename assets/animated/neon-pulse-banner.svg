@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-label="Neon Pulse Banner">
+  <defs>
+    <linearGradient id="np-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0420"/>
+      <stop offset="0.5" stop-color="#16082e"/>
+      <stop offset="1" stop-color="#0a0420"/>
+    </linearGradient>
+    <linearGradient id="np-spectrum" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0"   stop-color="#ff00d9"/>
+      <stop offset="0.5" stop-color="#7c5cff"/>
+      <stop offset="1"   stop-color="#00d9ff"/>
+      <animate attributeName="x1" values="0;-1;0" dur="9s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="1;2;1" dur="9s" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="np-spectrum2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0"   stop-color="#00d9ff"/>
+      <stop offset="0.5" stop-color="#ff00d9"/>
+      <stop offset="1"   stop-color="#7c5cff"/>
+      <animate attributeName="x1" values="0;1;0" dur="11s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="1;0;1" dur="11s" repeatCount="indefinite"/>
+    </linearGradient>
+    <filter id="np-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="np-soft">
+      <feGaussianBlur stdDeviation="1.4"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="420" fill="url(#np-bg)"/>
+
+  <!-- Grid backdrop -->
+  <g stroke="#1a0e3a" stroke-width="0.5">
+    <line x1="0" y1="100" x2="1200" y2="100"/>
+    <line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="200" y1="0" x2="200" y2="420"/>
+    <line x1="400" y1="0" x2="400" y2="420"/>
+    <line x1="600" y1="0" x2="600" y2="420"/>
+    <line x1="800" y1="0" x2="800" y2="420"/>
+    <line x1="1000" y1="0" x2="1000" y2="420"/>
+  </g>
+
+  <!-- Far wave (slow, dim) -->
+  <path fill="none" stroke="url(#np-spectrum2)" stroke-width="2" opacity="0.45">
+    <animate attributeName="d"
+      values="
+        M -50 280 C 200 260 400 320 600 280 C 800 240 1000 320 1250 280;
+        M -50 280 C 200 320 400 240 600 280 C 800 320 1000 240 1250 280;
+        M -50 280 C 200 260 400 320 600 280 C 800 240 1000 320 1250 280"
+      dur="14s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Mid wave (medium speed) -->
+  <path fill="none" stroke="url(#np-spectrum)" stroke-width="2.5" opacity="0.7" filter="url(#np-soft)">
+    <animate attributeName="d"
+      values="
+        M -50 320 C 200 280 400 360 600 320 C 800 280 1000 360 1250 320;
+        M -50 320 C 200 360 400 280 600 320 C 800 360 1000 280 1250 320;
+        M -50 320 C 200 280 400 360 600 320 C 800 280 1000 360 1250 320"
+      dur="9s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Front wave (fast, glowing) -->
+  <path fill="none" stroke="url(#np-spectrum)" stroke-width="3" filter="url(#np-glow)">
+    <animate attributeName="d"
+      values="
+        M -50 360 C 200 320 400 400 600 360 C 800 320 1000 400 1250 360;
+        M -50 360 C 200 400 400 320 600 360 C 800 400 1000 320 1250 360;
+        M -50 360 C 200 320 400 400 600 360 C 800 320 1000 400 1250 360"
+      dur="6s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- Headline -->
+  <g font-family="'Space Grotesk', 'Neue Haas Grotesk', system-ui, sans-serif">
+    <text x="80" y="180" font-size="76" font-weight="800" fill="#ffffff" letter-spacing="-2">JANE DOE</text>
+    <text x="80" y="180" font-size="76" font-weight="800" fill="url(#np-spectrum)" letter-spacing="-2" filter="url(#np-glow)" opacity="0.8">JANE DOE</text>
+  </g>
+
+  <text x="82" y="214" font-family="'JetBrains Mono', monospace" font-size="13" fill="#00d9ff" letter-spacing="6">FRONTEND · MOTION · WEBGL</text>
+
+  <!-- Tag chips -->
+  <g font-family="'JetBrains Mono', monospace" font-size="11" letter-spacing="2">
+    <g transform="translate(80,238)">
+      <rect width="86" height="26" rx="13" fill="none" stroke="#00d9ff" stroke-width="0.8"/>
+      <text x="43" y="17" text-anchor="middle" fill="#00d9ff">react</text>
+    </g>
+    <g transform="translate(176,238)">
+      <rect width="86" height="26" rx="13" fill="none" stroke="#ff00d9" stroke-width="0.8"/>
+      <text x="43" y="17" text-anchor="middle" fill="#ff00d9">typescript</text>
+    </g>
+    <g transform="translate(272,238)">
+      <rect width="86" height="26" rx="13" fill="none" stroke="#7c5cff" stroke-width="0.8"/>
+      <text x="43" y="17" text-anchor="middle" fill="#7c5cff">webgl</text>
+    </g>
+    <g transform="translate(368,238)">
+      <rect width="86" height="26" rx="13" fill="none" stroke="#00d9ff" stroke-width="0.8"/>
+      <text x="43" y="17" text-anchor="middle" fill="#00d9ff">motion</text>
+    </g>
+  </g>
+
+  <!-- Status -->
+  <g transform="translate(80,388)" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="3" fill="#a78bfa">
+    <circle cx="6" cy="-3" r="3.5" fill="#00d9ff">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="1.4s" repeatCount="indefinite"/>
+    </circle>
+    <text x="20" y="0">SIGNAL LIVE · OSC 9Hz · LATENCY 12ms</text>
+  </g>
+
+  <!-- Top corner mark -->
+  <g transform="translate(1120,40)" font-family="'JetBrains Mono', monospace" font-size="9" letter-spacing="3" fill="#7c5cff" text-anchor="end">
+    <text x="-22" y="0">N° MMXXVI / PULSE.04</text>
+    <line x1="-14" y1="-4" x2="0" y2="-4" stroke="#7c5cff" stroke-width="0.5"/>
+  </g>
+</svg>

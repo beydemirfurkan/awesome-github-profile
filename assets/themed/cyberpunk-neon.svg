@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-label="Cyberpunk Neon">
+  <defs>
+    <linearGradient id="cn-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0"   stop-color="#08001f"/>
+      <stop offset="0.55" stop-color="#1a0040"/>
+      <stop offset="1"   stop-color="#08001f"/>
+    </linearGradient>
+    <radialGradient id="cn-sun">
+      <stop offset="0"   stop-color="#ff00d9" stop-opacity="0.9"/>
+      <stop offset="0.5" stop-color="#ff00d9" stop-opacity="0.4"/>
+      <stop offset="1"   stop-color="#ff00d9" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cn-sundisk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0"  stop-color="#fff8e7"/>
+      <stop offset="0.3" stop-color="#ffd23f"/>
+      <stop offset="0.7" stop-color="#ff00d9"/>
+      <stop offset="1"  stop-color="#7c00d9"/>
+    </linearGradient>
+    <filter id="cn-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="cn-bigglow">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+    <clipPath id="cn-sunclip">
+      <rect x="500" y="120" width="200" height="100"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1200" height="420" fill="url(#cn-sky)"/>
+
+  <!-- Sun halo -->
+  <circle cx="600" cy="220" r="220" fill="url(#cn-sun)"/>
+
+  <!-- Vaporwave sun disk with horizontal cuts -->
+  <g>
+    <circle cx="600" cy="220" r="100" fill="url(#cn-sundisk)"/>
+    <!-- horizontal cuts that suggest scanlines on the sun -->
+    <rect x="500" y="190" width="200" height="3" fill="#08001f"/>
+    <rect x="500" y="200" width="200" height="4" fill="#08001f"/>
+    <rect x="500" y="212" width="200" height="5" fill="#08001f"/>
+    <rect x="500" y="224" width="200" height="6" fill="#08001f"/>
+    <rect x="500" y="240" width="200" height="8" fill="#08001f"/>
+    <rect x="500" y="258" width="200" height="10" fill="#08001f"/>
+  </g>
+
+  <!-- Mountains far -->
+  <path d="M0,260 L120,210 L240,250 L360,200 L480,240 L600,210 L720,240 L840,200 L960,245 L1080,210 L1200,250 L1200,300 L0,300 Z" fill="#1a0040" opacity="0.7"/>
+
+  <!-- Horizon -->
+  <line x1="0" y1="260" x2="1200" y2="260" stroke="#ff00d9" stroke-width="1.4" opacity="0.85"/>
+  <line x1="0" y1="260" x2="1200" y2="260" stroke="#00ffe7" stroke-width="0.5" opacity="0.6" filter="url(#cn-glow)"/>
+
+  <!-- Perspective floor grid - vertical (vanishing point lines) -->
+  <g stroke="#ff00d9" stroke-width="1" opacity="0.55">
+    <line x1="-400" y1="420" x2="600" y2="260"/>
+    <line x1="-200" y1="420" x2="600" y2="260"/>
+    <line x1="-50" y1="420" x2="600" y2="260"/>
+    <line x1="100" y1="420" x2="600" y2="260"/>
+    <line x1="240" y1="420" x2="600" y2="260"/>
+    <line x1="380" y1="420" x2="600" y2="260"/>
+    <line x1="500" y1="420" x2="600" y2="260"/>
+    <line x1="600" y1="420" x2="600" y2="260"/>
+    <line x1="700" y1="420" x2="600" y2="260"/>
+    <line x1="820" y1="420" x2="600" y2="260"/>
+    <line x1="960" y1="420" x2="600" y2="260"/>
+    <line x1="1100" y1="420" x2="600" y2="260"/>
+    <line x1="1250" y1="420" x2="600" y2="260"/>
+    <line x1="1400" y1="420" x2="600" y2="260"/>
+    <line x1="1600" y1="420" x2="600" y2="260"/>
+  </g>
+
+  <!-- Perspective floor grid - horizontal lines (scrolling) -->
+  <g stroke="#00ffe7" stroke-width="0.7" opacity="0.6">
+    <line x1="0" y1="270" x2="1200" y2="270" opacity="0.3"/>
+    <line x1="0" y1="284" x2="1200" y2="284" opacity="0.4"/>
+    <line x1="0" y1="304" x2="1200" y2="304" opacity="0.55"/>
+    <line x1="0" y1="332" x2="1200" y2="332" opacity="0.7"/>
+    <line x1="0" y1="370" x2="1200" y2="370" opacity="0.85"/>
+    <line x1="0" y1="420" x2="1200" y2="420" opacity="1"/>
+    <!-- Animated scrolling line -->
+    <line x1="0" y1="320" x2="1200" y2="320" stroke="#00ffe7" stroke-width="1" opacity="0.9">
+      <animate attributeName="y1" values="262;420;262" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="y2" values="262;420;262" dur="3s" repeatCount="indefinite"/>
+    </line>
+  </g>
+
+  <!-- Chromatic aberration title (3 layers offset) -->
+  <g font-family="'Space Grotesk', 'Neue Haas Grotesk', system-ui, sans-serif" font-size="84" font-weight="900" letter-spacing="-2" text-anchor="middle">
+    <text x="600" y="158" fill="#ff00d9" filter="url(#cn-bigglow)" opacity="0.6">JANE_DOE</text>
+    <text x="600" y="158" fill="#ff00d9" opacity="0.85">
+      <animateTransform attributeName="transform" type="translate" values="-3 1;-2 -1;-3 1" dur="0.18s" repeatCount="indefinite"/>
+      JANE_DOE
+    </text>
+    <text x="600" y="158" fill="#00ffe7" opacity="0.85">
+      <animateTransform attributeName="transform" type="translate" values="3 -1;2 1;3 -1" dur="0.18s" repeatCount="indefinite"/>
+      JANE_DOE
+    </text>
+    <text x="600" y="158" fill="#fff8e7">JANE_DOE</text>
+  </g>
+
+  <text x="600" y="190" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="13" fill="#00ffe7" letter-spacing="8">// FRONTEND.ENGINEER.exe</text>
+
+  <!-- Top corner stamps -->
+  <g font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="3">
+    <g transform="translate(60,52)" fill="#ff00d9">
+      <line x1="0" y1="-10" x2="20" y2="-10" stroke="#ff00d9" stroke-width="0.6"/>
+      <text x="28" y="-6">TOKYO.SECTOR_07 · 22:14</text>
+    </g>
+    <g transform="translate(1140,52)" fill="#00ffe7" text-anchor="end">
+      <line x1="-20" y1="-10" x2="0" y2="-10" stroke="#00ffe7" stroke-width="0.6"/>
+      <text x="-28" y="-6">SIGNAL.STRENGTH 98%</text>
+    </g>
+  </g>
+
+  <!-- Status pill -->
+  <g transform="translate(60,396)" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="3" fill="#00ffe7">
+    <circle cx="6" cy="-3" r="3.5" fill="#ff00d9">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="1.4s" repeatCount="indefinite"/>
+    </circle>
+    <text x="20" y="0">JACKED IN · NEURAL UPLINK STABLE · UPTIME 2,184d</text>
+  </g>
+
+  <text x="1140" y="396" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="10" fill="#ff00d9" letter-spacing="3">[ react ] [ webgl ] [ rust ] [ shaders ]</text>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300" role="img" aria-label="tech-sphere preview">
+  <defs>
+    <radialGradient id="ts-glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#5cffd9" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#5cffd9" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="300" fill="#0a0f24"/>
+  <circle cx="430" cy="150" r="140" fill="url(#ts-glow)"/>
+  <g transform="translate(430,150)">
+    <g>
+      <ellipse cx="0" cy="0" rx="100" ry="40" fill="none" stroke="#2a3380" stroke-width="1"/>
+      <ellipse cx="0" cy="0" rx="100" ry="40" fill="none" stroke="#2a3380" stroke-width="1" transform="rotate(60)"/>
+      <ellipse cx="0" cy="0" rx="100" ry="40" fill="none" stroke="#2a3380" stroke-width="1" transform="rotate(120)"/>
+      <circle r="100" fill="none" stroke="#2a3380" stroke-width="1"/>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="22s" repeatCount="indefinite"/>
+    </g>
+    <g font-family="ui-monospace, monospace" font-size="10" fill="#5cffd9">
+      <text x="-90" y="-20">react</text>
+      <text x="60" y="-40">ts</text>
+      <text x="-30" y="50">node</text>
+      <text x="40" y="20">go</text>
+      <text x="-70" y="30">rust</text>
+      <text x="20" y="-50">webgl</text>
+      <text x="70" y="50">css</text>
+    </g>
+    <circle r="3" fill="#5cffd9"/>
+  </g>
+  <text x="40" y="60" font-family="Inter, system-ui, sans-serif" font-size="22" font-weight="700" fill="#e8edff">Tech orbit</text>
+  <text x="40" y="84" font-family="ui-monospace, monospace" font-size="11" fill="#7a86b8" letter-spacing="2">SPINNING TOOLBELT</text>
+  <text x="40" y="160" font-family="Inter, sans-serif" font-size="13" fill="#a5acd6" width="200">Hover and watch the stack revolve. Tap a node to learn more.</text>
+  <text x="40" y="180" font-family="Inter, sans-serif" font-size="13" fill="#a5acd6">A 3D cloud that lives in your README.</text>
+</svg>

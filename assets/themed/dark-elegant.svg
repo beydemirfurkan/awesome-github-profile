@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-label="Dark Elegant hero">
+  <defs>
+    <radialGradient id="de-vignette" cx="0.5" cy="0.5" r="0.7">
+      <stop offset="0"   stop-color="#0c0c0e" stop-opacity="0"/>
+      <stop offset="1"   stop-color="#000000" stop-opacity="0.7"/>
+    </radialGradient>
+
+    <!-- Gold tone -->
+    <linearGradient id="de-gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0"   stop-color="#fde68a"/>
+      <stop offset="0.5" stop-color="#d4af37"/>
+      <stop offset="1"   stop-color="#a07c1f"/>
+    </linearGradient>
+
+    <!-- Shimmer that sweeps the monogram -->
+    <linearGradient id="de-shimmer" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0"   stop-color="#d4af37" stop-opacity="0"/>
+      <stop offset="0.42" stop-color="#d4af37" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#fde68a"/>
+      <stop offset="0.58" stop-color="#d4af37" stop-opacity="0"/>
+      <stop offset="1"   stop-color="#d4af37" stop-opacity="0"/>
+      <animate attributeName="x1" values="-1;1;-1" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="x2" values="0;2;0" dur="6s" repeatCount="indefinite"/>
+    </linearGradient>
+
+    <!-- Paper grain (very subtle) -->
+    <filter id="de-grain">
+      <feTurbulence baseFrequency="1.2" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix values="0 0 0 0 0.85
+                            0 0 0 0 0.7
+                            0 0 0 0 0.22
+                            0 0 0 0.025 0"/>
+    </filter>
+
+    <!-- Soft glow for the monogram -->
+    <filter id="de-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+  </defs>
+
+  <!-- Onyx field -->
+  <rect width="1200" height="420" fill="#0c0c0e"/>
+  <rect width="1200" height="420" fill="url(#de-vignette)"/>
+  <rect width="1200" height="420" filter="url(#de-grain)" opacity="0.6"/>
+
+  <!-- Gold frame (double hairline) -->
+  <rect x="60" y="60" width="1080" height="300" fill="none" stroke="#d4af37" stroke-width="0.6"/>
+  <rect x="64" y="64" width="1072" height="292" fill="none" stroke="#d4af37" stroke-width="0.4" opacity="0.45"/>
+
+  <!-- Frame corners -->
+  <g stroke="#d4af37" stroke-width="0.5" fill="none">
+    <path d="M 60 76 L 60 60 L 76 60"/>
+    <path d="M 1124 60 L 1140 60 L 1140 76"/>
+    <path d="M 1140 344 L 1140 360 L 1124 360"/>
+    <path d="M 76 360 L 60 360 L 60 344"/>
+  </g>
+
+  <!-- Monogram glow halo -->
+  <text x="600" y="220" text-anchor="middle" font-family="'Playfair Display', 'Bodoni Moda', Georgia, serif" font-size="180" font-weight="500" font-style="italic" fill="url(#de-gold)" filter="url(#de-glow)" opacity="0.4">JD</text>
+
+  <!-- Monogram base -->
+  <text x="600" y="220" text-anchor="middle" font-family="'Playfair Display', 'Bodoni Moda', Georgia, serif" font-size="180" font-weight="500" font-style="italic" fill="url(#de-gold)">JD</text>
+
+  <!-- Shimmer sweep over monogram -->
+  <text x="600" y="220" text-anchor="middle" font-family="'Playfair Display', 'Bodoni Moda', Georgia, serif" font-size="180" font-weight="500" font-style="italic" fill="url(#de-shimmer)">JD</text>
+
+  <!-- Hairline divider -->
+  <line x1="540" y1="240" x2="660" y2="240" stroke="#d4af37" stroke-width="0.6"/>
+
+  <!-- Name -->
+  <text x="600" y="278" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="28" font-weight="400" fill="#f5f5f0" letter-spacing="3">Jane Doe</text>
+
+  <!-- Tagline -->
+  <text x="600" y="304" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#d4af37" letter-spacing="6">— DEVELOPER · DESIGNER —</text>
+
+  <!-- Quote -->
+  <text x="600" y="338" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-style="italic" font-size="14" fill="#a3a3a3">"the slowest type of software is the kind that lasts."</text>
+
+  <!-- Top register -->
+  <g font-family="'JetBrains Mono', monospace" font-size="9" letter-spacing="4" fill="#d4af37">
+    <g transform="translate(76,40)">
+      <text x="0" y="0">EST. MMXVII</text>
+    </g>
+    <g transform="translate(1124,40)" text-anchor="end">
+      <text x="0" y="0">ATELIER · ISTANBUL · OSLO</text>
+    </g>
+  </g>
+
+  <!-- Bottom register — JANE.DEV -->
+  <text x="600" y="392" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="#a3a3a3" letter-spacing="6">JANE.DEV  ·  HELLO@JANE.DEV  ·  IN/JANEDOE</text>
+</svg>

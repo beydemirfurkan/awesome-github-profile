@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" width="1200" height="480" role="img" aria-label="Holographic Foil card">
+  <defs>
+    <!-- Iridescent foil — animated stop offsets -->
+    <linearGradient id="hf-foil" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#67e8f9">
+        <animate attributeName="stop-color" values="#67e8f9;#f472b6;#fcd34d;#6ee7b7;#a78bfa;#67e8f9" dur="14s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="0.25" stop-color="#a78bfa">
+        <animate attributeName="stop-color" values="#a78bfa;#67e8f9;#f472b6;#fcd34d;#6ee7b7;#a78bfa" dur="14s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="0.5" stop-color="#f472b6">
+        <animate attributeName="stop-color" values="#f472b6;#a78bfa;#67e8f9;#f472b6;#fcd34d;#f472b6" dur="14s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="0.75" stop-color="#fcd34d">
+        <animate attributeName="stop-color" values="#fcd34d;#f472b6;#a78bfa;#67e8f9;#6ee7b7;#fcd34d" dur="14s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="1" stop-color="#6ee7b7">
+        <animate attributeName="stop-color" values="#6ee7b7;#fcd34d;#f472b6;#a78bfa;#67e8f9;#6ee7b7" dur="14s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+
+    <!-- Diagonal sheen — sweeps across the card -->
+    <linearGradient id="hf-sheen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.42" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0.55"/>
+      <stop offset="0.58" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Orbiting radial highlight -->
+    <radialGradient id="hf-orb" cx="0.5" cy="0.5" r="0.45">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.45"/>
+      <stop offset="0.4" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+      <animate attributeName="cx" values="0.25;0.75;0.6;0.3;0.25" dur="9s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="0.3;0.65;0.3;0.7;0.3" dur="9s" repeatCount="indefinite"/>
+    </radialGradient>
+
+    <!-- Foil scale pattern (Pokémon-card crystal scales) -->
+    <pattern id="hf-scales" x="0" y="0" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M0,18 Q9,4 18,18 Q27,32 36,18 Q27,4 18,18 Q9,32 0,18" fill="none" stroke="#ffffff" stroke-width="0.4" opacity="0.18"/>
+      <circle cx="18" cy="18" r="0.6" fill="#ffffff" opacity="0.25"/>
+    </pattern>
+
+    <!-- Card clip -->
+    <clipPath id="hf-clip">
+      <rect x="160" y="40" width="880" height="400" rx="24"/>
+    </clipPath>
+
+    <!-- Edition glow -->
+    <filter id="hf-glow">
+      <feGaussianBlur stdDeviation="0.8"/>
+    </filter>
+
+    <!-- Card outer drop -->
+    <filter id="hf-drop" x="-10%" y="-10%" width="120%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="14"/>
+      <feOffset dy="10"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.5"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Stage backdrop -->
+  <rect width="1200" height="480" fill="#08081a"/>
+  <rect width="1200" height="480" fill="url(#hf-foil)" opacity="0.08"/>
+
+  <!-- Card frame -->
+  <g filter="url(#hf-drop)">
+    <rect x="160" y="40" width="880" height="400" rx="24" fill="#0a0d1f"/>
+    <rect x="160" y="40" width="880" height="400" rx="24" fill="none" stroke="url(#hf-foil)" stroke-width="2"/>
+  </g>
+
+  <!-- Card interior (clipped) -->
+  <g clip-path="url(#hf-clip)">
+    <!-- Iridescent base wash -->
+    <rect x="160" y="40" width="880" height="400" fill="url(#hf-foil)" opacity="0.32"/>
+    <!-- Scales -->
+    <rect x="160" y="40" width="880" height="400" fill="url(#hf-scales)"/>
+    <!-- Vignette -->
+    <radialGradient id="hf-vignette" cx="0.5" cy="0.5" r="0.7">
+      <stop offset="0.5" stop-color="#0a0d1f" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0a0d1f" stop-opacity="0.7"/>
+    </radialGradient>
+    <rect x="160" y="40" width="880" height="400" fill="url(#hf-vignette)"/>
+    <!-- Orbiting highlight -->
+    <rect x="160" y="40" width="880" height="400" fill="url(#hf-orb)"/>
+
+    <!-- Diagonal sheen — skewed and translated horizontally -->
+    <g transform="skewX(-22)">
+      <rect x="-300" y="-40" width="180" height="600" fill="url(#hf-sheen)">
+        <animate attributeName="x" values="-300;1300;-300" dur="6s" repeatCount="indefinite" keyTimes="0;0.7;1"/>
+      </rect>
+    </g>
+  </g>
+
+  <!-- TOP STRIP — name + HP -->
+  <g font-family="'Space Grotesk', 'Neue Haas Grotesk', system-ui, sans-serif">
+    <text x="200" y="100" font-size="40" font-weight="800" fill="#fef3c7" letter-spacing="-1">JANE DOE</text>
+    <text x="200" y="124" font-family="'JetBrains Mono', monospace" font-size="11" fill="#fcd34d" letter-spacing="5">FRONTEND ENGINEER · LV.7</text>
+  </g>
+  <g transform="translate(1000,90)" font-family="'JetBrains Mono', monospace" text-anchor="end">
+    <text x="0" y="0" font-size="11" fill="#fbbf24" letter-spacing="3">HP</text>
+    <text x="0" y="32" font-size="36" font-weight="700" fill="#fef3c7">2,184</text>
+  </g>
+
+  <!-- DIVIDER -->
+  <line x1="200" y1="148" x2="1000" y2="148" stroke="url(#hf-foil)" stroke-width="0.8" opacity="0.7"/>
+
+  <!-- PORTRAIT FRAME — abstract iridescent panel -->
+  <g transform="translate(200,168)">
+    <rect width="380" height="200" rx="8" fill="#06081a"/>
+    <rect width="380" height="200" rx="8" fill="url(#hf-foil)" opacity="0.55"/>
+    <rect width="380" height="200" rx="8" fill="url(#hf-scales)"/>
+    <!-- Geometric monogram -->
+    <g transform="translate(190,100)" font-family="'Bodoni Moda', 'Playfair Display', serif" text-anchor="middle">
+      <text y="22" font-size="120" font-weight="700" font-style="italic" fill="#fef3c7">JD</text>
+      <line x1="-46" y1="36" x2="46" y2="36" stroke="#fef3c7" stroke-width="1.4"/>
+    </g>
+    <rect width="380" height="200" rx="8" fill="none" stroke="url(#hf-foil)" stroke-width="1"/>
+  </g>
+
+  <!-- SKILLS / MOVES (right column) -->
+  <g transform="translate(620,180)" font-family="'Space Grotesk', system-ui, sans-serif">
+    <text x="0" y="0" font-family="'JetBrains Mono', monospace" font-size="10" fill="#fcd34d" letter-spacing="4">— ABILITIES</text>
+    <g transform="translate(0,28)">
+      <text font-size="17" font-weight="600" fill="#fef3c7">⚡ Type System Mastery</text>
+      <text x="370" font-size="14" fill="#fcd34d" text-anchor="end">86</text>
+      <text x="0" y="20" font-size="11" fill="#cbd5e1" opacity="0.7">strict.tsconfig · generic.inference · brand.types</text>
+    </g>
+    <g transform="translate(0,76)">
+      <text font-size="17" font-weight="600" fill="#fef3c7">🌊 Motion Choreography</text>
+      <text x="370" font-size="14" fill="#a78bfa" text-anchor="end">94</text>
+      <text x="0" y="20" font-size="11" fill="#cbd5e1" opacity="0.7">framer.motion · spring.physics · easing.curves</text>
+    </g>
+    <g transform="translate(0,124)">
+      <text font-size="17" font-weight="600" fill="#fef3c7">✦ Design System Architecture</text>
+      <text x="370" font-size="14" fill="#67e8f9" text-anchor="end">91</text>
+      <text x="0" y="20" font-size="11" fill="#cbd5e1" opacity="0.7">tokens · primitives · documentation</text>
+    </g>
+  </g>
+
+  <!-- BOTTOM FOOTER STRIP -->
+  <line x1="200" y1="400" x2="1000" y2="400" stroke="url(#hf-foil)" stroke-width="0.8" opacity="0.7"/>
+  <g font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="3">
+    <text x="200" y="424" fill="#94a3b8">N° 001 / 2026 · 1ST EDITION</text>
+    <text x="1000" y="424" text-anchor="end" fill="#fcd34d">★★★★★  HOLOGRAPHIC RARE</text>
+  </g>
+
+  <!-- Edition stamp -->
+  <g transform="translate(996,76)" filter="url(#hf-glow)">
+    <circle r="22" fill="none" stroke="#fcd34d" stroke-width="1"/>
+    <text text-anchor="middle" y="-3" font-family="'JetBrains Mono', monospace" font-size="7" fill="#fcd34d" letter-spacing="2">FIRST</text>
+    <text text-anchor="middle" y="9" font-family="'JetBrains Mono', monospace" font-size="7" fill="#fcd34d" letter-spacing="2">EDITION</text>
+  </g>
+</svg>

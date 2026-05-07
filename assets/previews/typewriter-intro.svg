@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300" role="img" aria-label="typewriter-intro preview">
+  <rect width="600" height="300" fill="#11131c"/>
+  <rect x="0" y="0" width="600" height="36" fill="#1c1f2e"/>
+  <circle cx="20" cy="18" r="6" fill="#ff5f56"/>
+  <circle cx="42" cy="18" r="6" fill="#ffbd2e"/>
+  <circle cx="64" cy="18" r="6" fill="#27c93f"/>
+  <text x="300" y="22" text-anchor="middle" font-family="ui-monospace, monospace" font-size="11" fill="#7a7f99">~/jane — zsh</text>
+  <text x="40" y="100" font-family="ui-monospace, Menlo, monospace" font-size="22" fill="#e6e8ff">Hi, I'm Jane —</text>
+  <g font-family="ui-monospace, Menlo, monospace" font-size="22" fill="#7c5cff">
+    <text x="40" y="140">a frontend engineer<animate attributeName="opacity" values="0;1;1;0" dur="6s" repeatCount="indefinite" keyTimes="0;0.1;0.4;0.5"/></text>
+    <text x="40" y="140" opacity="0">a webgl tinkerer<animate attributeName="opacity" values="0;0;1;1;0" dur="6s" begin="0s" repeatCount="indefinite" keyTimes="0;0.5;0.55;0.85;1"/></text>
+  </g>
+  <rect x="320" y="120" width="3" height="26" fill="#7c5cff">
+    <animate attributeName="opacity" values="1;0;1" dur="0.9s" repeatCount="indefinite"/>
+  </rect>
+  <text x="40" y="190" font-family="ui-monospace, monospace" font-size="14" fill="#a5acd6">currently → design systems @ acme</text>
+  <text x="40" y="216" font-family="ui-monospace, monospace" font-size="14" fill="#a5acd6">writing  → notes on motion design</text>
+  <text x="40" y="262" font-family="ui-monospace, monospace" font-size="11" fill="#5a5f7a">jane.dev · @janedoe</text>
+</svg>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300" role="img" aria-label="Holographic Foil preview">
+  <defs>
+    <linearGradient id="hfp-foil" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#67e8f9">
+        <animate attributeName="stop-color" values="#67e8f9;#f472b6;#fcd34d;#6ee7b7;#67e8f9" dur="10s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="0.5" stop-color="#f472b6">
+        <animate attributeName="stop-color" values="#f472b6;#fcd34d;#a78bfa;#67e8f9;#f472b6" dur="10s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="1" stop-color="#fcd34d">
+        <animate attributeName="stop-color" values="#fcd34d;#a78bfa;#67e8f9;#f472b6;#fcd34d" dur="10s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    <linearGradient id="hfp-sheen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#fff" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="hfp-scales" x="0" y="0" width="22" height="22" patternUnits="userSpaceOnUse">
+      <path d="M0,11 Q5.5,3 11,11 Q16.5,19 22,11" fill="none" stroke="#fff" stroke-width="0.3" opacity="0.18"/>
+    </pattern>
+    <clipPath id="hfp-clip"><rect x="60" y="40" width="480" height="220" rx="14"/></clipPath>
+  </defs>
+  <rect width="600" height="300" fill="#08081a"/>
+  <rect x="60" y="40" width="480" height="220" rx="14" fill="#0a0d1f"/>
+  <g clip-path="url(#hfp-clip)">
+    <rect x="60" y="40" width="480" height="220" fill="url(#hfp-foil)" opacity="0.42"/>
+    <rect x="60" y="40" width="480" height="220" fill="url(#hfp-scales)"/>
+    <g transform="skewX(-22)">
+      <rect x="-200" y="-20" width="100" height="350" fill="url(#hfp-sheen)">
+        <animate attributeName="x" values="-200;700;-200" dur="5s" repeatCount="indefinite" keyTimes="0;0.7;1"/>
+      </rect>
+    </g>
+  </g>
+  <rect x="60" y="40" width="480" height="220" rx="14" fill="none" stroke="url(#hfp-foil)" stroke-width="1.5"/>
+  <text x="86" y="92" font-family="'Space Grotesk', system-ui, sans-serif" font-size="26" font-weight="800" fill="#fef3c7" letter-spacing="-0.5">JANE DOE</text>
+  <text x="86" y="110" font-family="'JetBrains Mono', monospace" font-size="8" fill="#fcd34d" letter-spacing="3">FRONTEND ENG · LV.7</text>
+  <text x="514" y="92" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="8" fill="#fbbf24" letter-spacing="2">HP</text>
+  <text x="514" y="116" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="22" font-weight="700" fill="#fef3c7">2,184</text>
+  <line x1="86" y1="124" x2="514" y2="124" stroke="url(#hfp-foil)" stroke-width="0.6" opacity="0.7"/>
+  <g transform="translate(86,148)">
+    <text font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="600" fill="#fef3c7">⚡ Type System Mastery</text>
+    <text x="428" font-family="'JetBrains Mono', monospace" font-size="10" fill="#fcd34d" text-anchor="end">86</text>
+  </g>
+  <g transform="translate(86,176)">
+    <text font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="600" fill="#fef3c7">🌊 Motion Choreography</text>
+    <text x="428" font-family="'JetBrains Mono', monospace" font-size="10" fill="#a78bfa" text-anchor="end">94</text>
+  </g>
+  <g transform="translate(86,204)">
+    <text font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="600" fill="#fef3c7">✦ Design System Architecture</text>
+    <text x="428" font-family="'JetBrains Mono', monospace" font-size="10" fill="#67e8f9" text-anchor="end">91</text>
+  </g>
+  <line x1="86" y1="228" x2="514" y2="228" stroke="url(#hfp-foil)" stroke-width="0.6" opacity="0.7"/>
+  <text x="86" y="246" font-family="'JetBrains Mono', monospace" font-size="7" fill="#94a3b8" letter-spacing="2">N° 001 / 2026 · 1ST ED.</text>
+  <text x="514" y="246" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="7" fill="#fcd34d" letter-spacing="2">★★★★★ HOLO</text>
+</svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300" role="img" aria-label="editorial-magazine preview">
+  <rect width="600" height="300" fill="#f6f1e7"/>
+  <rect x="0" y="0" width="600" height="44" fill="#111111"/>
+  <text x="32" y="28" font-family="Georgia, serif" font-style="italic" font-size="14" font-weight="700" fill="#f6f1e7">THE PROFILE</text>
+  <text x="568" y="28" text-anchor="end" font-family="ui-monospace, monospace" font-size="10" fill="#f6f1e7">VOL.07 · 2026</text>
+  <!-- two-column layout -->
+  <text x="32" y="100" font-family="Georgia, serif" font-size="48" font-weight="700" fill="#111111">A studio</text>
+  <text x="32" y="148" font-family="Georgia, serif" font-style="italic" font-size="48" font-weight="400" fill="#c0392b">of one.</text>
+  <line x1="32" y1="170" x2="100" y2="170" stroke="#111" stroke-width="2"/>
+  <text x="32" y="200" font-family="Georgia, serif" font-size="13" fill="#222">Jane Doe · independent interface engineer</text>
+  <text x="32" y="220" font-family="Georgia, serif" font-size="13" fill="#222">based in Istanbul · available for select projects</text>
+  <!-- right column -->
+  <g transform="translate(360,80)">
+    <text font-family="ui-monospace, monospace" font-size="10" fill="#888" letter-spacing="2">— SELECTED WORK</text>
+    <text y="22" font-family="Georgia, serif" font-size="13" fill="#111">01 · acme design system</text>
+    <text y="44" font-family="Georgia, serif" font-size="13" fill="#111">02 · the type observatory</text>
+    <text y="66" font-family="Georgia, serif" font-size="13" fill="#111">03 · runtime essays</text>
+    <text y="100" font-family="ui-monospace, monospace" font-size="10" fill="#888" letter-spacing="2">— PRESS</text>
+    <text y="122" font-family="Georgia, serif" font-style="italic" font-size="13" fill="#111">"quietly excellent." — sidebar.io</text>
+  </g>
+  <text x="32" y="276" font-family="ui-monospace, monospace" font-size="9" fill="#aaa">jane.dev · @janedoe · hello@jane.dev</text>
+</svg>

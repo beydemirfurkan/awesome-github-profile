@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300" role="img" aria-label="neon-pulse-banner preview">
+  <defs>
+    <linearGradient id="np-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0420"/>
+      <stop offset="1" stop-color="#1a0030"/>
+    </linearGradient>
+    <linearGradient id="np-stroke" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff00d9"/>
+      <stop offset="0.5" stop-color="#7c5cff"/>
+      <stop offset="1" stop-color="#00d9ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="300" fill="url(#np-bg)"/>
+  <path d="M0 180 Q150 120 300 160 T600 140" stroke="url(#np-stroke)" stroke-width="3" fill="none" opacity="0.85">
+    <animate attributeName="d" values="M0 180 Q150 120 300 160 T600 140;M0 160 Q150 200 300 130 T600 170;M0 180 Q150 120 300 160 T600 140" dur="6s" repeatCount="indefinite"/>
+  </path>
+  <path d="M0 200 Q150 250 300 200 T600 220" stroke="url(#np-stroke)" stroke-width="2" fill="none" opacity="0.5"/>
+  <text x="40" y="120" font-family="Inter, system-ui, sans-serif" font-size="40" font-weight="800" fill="#ffffff">JANE DOE</text>
+  <text x="40" y="150" font-family="ui-monospace, monospace" font-size="13" fill="#ff00d9" letter-spacing="3">FRONTEND · MOTION · WEBGL</text>
+  <circle cx="540" cy="60" r="6" fill="#00d9ff">
+    <animate attributeName="r" values="6;9;6" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="560" cy="60" r="6" fill="#ff00d9"/>
+  <circle cx="580" cy="60" r="6" fill="#7c5cff"/>
+</svg>

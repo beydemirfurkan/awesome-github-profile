@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300" role="img" aria-label="Aurora Veil preview">
+  <defs>
+    <radialGradient id="avp-sky" cx="0.5" cy="1" r="1.1">
+      <stop offset="0" stop-color="#0e1b3a"/>
+      <stop offset="1" stop-color="#03050f"/>
+    </radialGradient>
+    <linearGradient id="avp-teal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3fffe6" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#7df9ff" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#3fffe6" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="avp-mag" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff3d8a" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#a78bfa" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#ff3d8a" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="avp-flow" x="-30%" y="-50%" width="160%" height="200%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.012 0.03" numOctaves="2" seed="3">
+        <animate attributeName="seed" from="0" to="40" dur="22s" repeatCount="indefinite"/>
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic" scale="55"/>
+    </filter>
+  </defs>
+  <rect width="600" height="300" fill="url(#avp-sky)"/>
+  <g fill="#fff">
+    <circle cx="60" cy="32" r="0.8"><animate attributeName="opacity" values="0.2;1;0.2" dur="3s" repeatCount="indefinite"/></circle>
+    <circle cx="160" cy="60" r="1"><animate attributeName="opacity" values="0.6;0.2;0.6" dur="2.6s" repeatCount="indefinite"/></circle>
+    <circle cx="280" cy="40" r="0.7"><animate attributeName="opacity" values="0.4;1;0.4" dur="4s" repeatCount="indefinite"/></circle>
+    <circle cx="400" cy="68" r="0.9"><animate attributeName="opacity" values="0.7;0.3;0.7" dur="3.4s" repeatCount="indefinite"/></circle>
+    <circle cx="500" cy="36" r="1"><animate attributeName="opacity" values="0.3;0.9;0.3" dur="4.6s" repeatCount="indefinite"/></circle>
+    <circle cx="560" cy="80" r="0.7"><animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/></circle>
+  </g>
+  <g filter="url(#avp-flow)" opacity="0.85">
+    <rect x="-50" y="70" width="700" height="120" fill="url(#avp-mag)"/>
+  </g>
+  <g filter="url(#avp-flow)" opacity="0.95">
+    <rect x="-50" y="60" width="700" height="120" fill="url(#avp-teal)"/>
+  </g>
+  <path d="M0,300 L0,220 L60,200 L120,212 L180,186 L240,210 L300,180 L360,206 L420,188 L490,212 L550,196 L600,206 L600,300 Z" fill="#03050f"/>
+  <text x="40" y="262" font-family="'Fraunces', Georgia, serif" font-size="42" font-weight="500" font-style="italic" fill="#fef3c7" letter-spacing="-1">Jane Doe</text>
+  <text x="42" y="284" font-family="'JetBrains Mono', monospace" font-size="8" fill="#3fffe6" letter-spacing="4">∗ DESIGNER · ENGINEER · OBSERVER ∗</text>
+</svg>

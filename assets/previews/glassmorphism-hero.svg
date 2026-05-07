@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300" role="img" aria-label="glassmorphism-hero preview">
+  <defs>
+    <linearGradient id="gh-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff7eb3"/>
+      <stop offset="0.5" stop-color="#7c5cff"/>
+      <stop offset="1" stop-color="#00d9ff"/>
+    </linearGradient>
+    <filter id="gh-blur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+  </defs>
+  <rect width="600" height="300" fill="url(#gh-bg)"/>
+  <circle cx="120" cy="80" r="100" fill="#fff" opacity="0.25" filter="url(#gh-blur)"/>
+  <circle cx="500" cy="240" r="120" fill="#fff" opacity="0.2" filter="url(#gh-blur)"/>
+  <!-- glass card -->
+  <g transform="translate(60,60)">
+    <rect width="480" height="180" rx="20" fill="rgba(255,255,255,0.18)" stroke="rgba(255,255,255,0.4)"/>
+    <text x="28" y="50" font-family="Inter, system-ui, sans-serif" font-size="28" font-weight="700" fill="#ffffff">Jane Doe</text>
+    <text x="28" y="76" font-family="Inter, sans-serif" font-size="14" fill="#f5f0ff" opacity="0.85">Designer-engineer · interface, motion, type</text>
+    <line x1="28" y1="98" x2="80" y2="98" stroke="#ffffff" stroke-width="2"/>
+    <text x="28" y="128" font-family="Inter, sans-serif" font-size="13" fill="#f5f0ff" opacity="0.85">Currently shaping the design system at Acme.</text>
+    <text x="28" y="148" font-family="Inter, sans-serif" font-size="13" fill="#f5f0ff" opacity="0.85">Writing about typography & motion at jane.dev.</text>
+    <g transform="translate(28,162)" font-family="ui-monospace, monospace" font-size="10" fill="#ffffff">
+      <text>jane.dev</text>
+      <text x="80">·</text>
+      <text x="92">@janedoe</text>
+      <text x="172">·</text>
+      <text x="184">in/janedoe</text>
+    </g>
+  </g>
+</svg>

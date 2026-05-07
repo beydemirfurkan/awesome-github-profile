@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300" role="img" aria-label="3d-contribution-tower preview">
+  <defs>
+    <linearGradient id="ct-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0c1a36"/>
+      <stop offset="1" stop-color="#11264a"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="300" fill="url(#ct-sky)"/>
+  <text x="40" y="44" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#e8edff">Contribution skyline</text>
+  <text x="40" y="62" font-family="ui-monospace, monospace" font-size="11" fill="#7a86b8" letter-spacing="2">2025 · {{username}}</text>
+  <g transform="translate(40,260)">
+    <!-- isometric bars -->
+    <g>
+      <polygon points="0,0 24,-12 48,0 24,12" fill="#3a4d7a"/>
+      <polygon points="0,0 0,-30 24,-42 24,-12" fill="#5cffd9"/>
+      <polygon points="48,0 24,-12 24,-42 48,-30" fill="#3ab098"/>
+    </g>
+    <g transform="translate(50,0)">
+      <polygon points="0,0 24,-12 48,0 24,12" fill="#3a4d7a"/>
+      <polygon points="0,0 0,-60 24,-72 24,-12" fill="#5cffd9"/>
+      <polygon points="48,0 24,-12 24,-72 48,-60" fill="#3ab098"/>
+    </g>
+    <g transform="translate(100,0)">
+      <polygon points="0,0 24,-12 48,0 24,12" fill="#3a4d7a"/>
+      <polygon points="0,0 0,-90 24,-102 24,-12" fill="#7c5cff"/>
+      <polygon points="48,0 24,-12 24,-102 48,-90" fill="#5a3ab0"/>
+    </g>
+    <g transform="translate(150,0)">
+      <polygon points="0,0 24,-12 48,0 24,12" fill="#3a4d7a"/>
+      <polygon points="0,0 0,-50 24,-62 24,-12" fill="#5cffd9"/>
+      <polygon points="48,0 24,-12 24,-62 48,-50" fill="#3ab098"/>
+    </g>
+    <g transform="translate(200,0)">
+      <polygon points="0,0 24,-12 48,0 24,12" fill="#3a4d7a"/>
+      <polygon points="0,0 0,-130 24,-142 24,-12" fill="#ff5cdb"/>
+      <polygon points="48,0 24,-12 24,-142 48,-130" fill="#b03ab0"/>
+    </g>
+    <g transform="translate(250,0)">
+      <polygon points="0,0 24,-12 48,0 24,12" fill="#3a4d7a"/>
+      <polygon points="0,0 0,-70 24,-82 24,-12" fill="#5cffd9"/>
+      <polygon points="48,0 24,-12 24,-82 48,-70" fill="#3ab098"/>
+    </g>
+    <g transform="translate(300,0)">
+      <polygon points="0,0 24,-12 48,0 24,12" fill="#3a4d7a"/>
+      <polygon points="0,0 0,-100 24,-112 24,-12" fill="#7c5cff"/>
+      <polygon points="48,0 24,-12 24,-112 48,-100" fill="#5a3ab0"/>
+    </g>
+    <g transform="translate(350,0)">
+      <polygon points="0,0 24,-12 48,0 24,12" fill="#3a4d7a"/>
+      <polygon points="0,0 0,-40 24,-52 24,-12" fill="#5cffd9"/>
+      <polygon points="48,0 24,-12 24,-52 48,-40" fill="#3ab098"/>
+    </g>
+    <g transform="translate(400,0)">
+      <polygon points="0,0 24,-12 48,0 24,12" fill="#3a4d7a"/>
+      <polygon points="0,0 0,-160 24,-172 24,-12" fill="#ff5cdb"/>
+      <polygon points="48,0 24,-12 24,-172 48,-160" fill="#b03ab0"/>
+    </g>
+    <g transform="translate(450,0)">
+      <polygon points="0,0 24,-12 48,0 24,12" fill="#3a4d7a"/>
+      <polygon points="0,0 0,-80 24,-92 24,-12" fill="#5cffd9"/>
+      <polygon points="48,0 24,-12 24,-92 48,-80" fill="#3ab098"/>
+    </g>
+  </g>
+  <text x="560" y="290" text-anchor="end" font-family="ui-monospace, monospace" font-size="9" fill="#5a648b">via github-profile-3d-contrib</text>
+</svg>

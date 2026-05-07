@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-label="Tech Sphere">
+  <defs>
+    <radialGradient id="ts-halo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0"   stop-color="#5cffd9" stop-opacity="0.3"/>
+      <stop offset="0.6" stop-color="#5cffd9" stop-opacity="0.05"/>
+      <stop offset="1"   stop-color="#5cffd9" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="ts-sphere" cx="0.35" cy="0.3" r="0.7">
+      <stop offset="0"   stop-color="#1a2a52"/>
+      <stop offset="0.6" stop-color="#0a0f24"/>
+      <stop offset="1"   stop-color="#040614"/>
+    </radialGradient>
+    <radialGradient id="ts-shine" cx="0.3" cy="0.25" r="0.3">
+      <stop offset="0" stop-color="#a78bfa" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#a78bfa" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ts-rim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5cffd9" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#a78bfa" stop-opacity="0.2"/>
+    </linearGradient>
+    <filter id="ts-soft">
+      <feGaussianBlur stdDeviation="0.8"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="420" fill="#040614"/>
+
+  <!-- Background grid -->
+  <g stroke="#0a1230" stroke-width="0.5">
+    <line x1="0" y1="100" x2="1200" y2="100"/>
+    <line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="200" y1="0" x2="200" y2="420"/>
+    <line x1="400" y1="0" x2="400" y2="420"/>
+    <line x1="600" y1="0" x2="600" y2="420"/>
+    <line x1="800" y1="0" x2="800" y2="420"/>
+    <line x1="1000" y1="0" x2="1000" y2="420"/>
+  </g>
+
+  <!-- Side panel — left -->
+  <g transform="translate(60,80)">
+    <g font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="4" fill="#5cffd9">
+      <line x1="0" y1="-10" x2="20" y2="-10" stroke="#5cffd9" stroke-width="0.6"/>
+      <text x="28" y="-6">ORBITAL TOOLBELT · v.2026</text>
+    </g>
+    <text y="40" font-family="'Fraunces', 'Playfair Display', Georgia, serif" font-size="56" font-weight="500" font-style="italic" fill="#e8edff" letter-spacing="-1.5">Jane Doe</text>
+    <text y="68" font-family="'JetBrains Mono', monospace" font-size="11" fill="#5cffd9" letter-spacing="3">FRONTEND ENGINEER · MOTION · 3D</text>
+
+    <line x1="0" y1="100" x2="380" y2="100" stroke="#1a2238" stroke-width="0.6"/>
+
+    <text y="128" font-family="'JetBrains Mono', monospace" font-size="11" fill="#cbd5e1">↳ Eight tools, one orbit. The bigger</text>
+    <text y="148" font-family="'JetBrains Mono', monospace" font-size="11" fill="#cbd5e1">  the radius, the longer I've shipped.</text>
+    <text y="168" font-family="'JetBrains Mono', monospace" font-size="11" fill="#cbd5e1">  The center is whatever I'm learning</text>
+    <text y="188" font-family="'JetBrains Mono', monospace" font-size="11" fill="#cbd5e1">  this week.</text>
+
+    <line x1="0" y1="220" x2="380" y2="220" stroke="#1a2238" stroke-width="0.6"/>
+
+    <g transform="translate(0,250)" font-family="'JetBrains Mono', monospace" font-size="10" fill="#a5b4cf" letter-spacing="2">
+      <text>STABLE  </text>     <text x="80" fill="#5cffd9">react · ts · node</text>
+      <text y="20">TRUSTED </text>    <text x="80" y="20" fill="#5cffd9">go · postgres · k8s</text>
+      <text y="40">EXPLORING</text>   <text x="80" y="40" fill="#a78bfa">rust · webgl · shaders</text>
+    </g>
+  </g>
+
+  <!-- Vertical separator -->
+  <line x1="500" y1="60" x2="500" y2="380" stroke="#1a2238" stroke-width="0.6"/>
+
+  <!-- Sphere — right -->
+  <g transform="translate(840,210)">
+    <!-- Halo -->
+    <circle r="220" fill="url(#ts-halo)"/>
+    <!-- Sphere base -->
+    <circle r="160" fill="url(#ts-sphere)"/>
+    <!-- Specular shine -->
+    <circle r="160" fill="url(#ts-shine)"/>
+    <!-- Rim light -->
+    <circle r="160" fill="none" stroke="url(#ts-rim)" stroke-width="1.2"/>
+
+    <!-- Latitude ellipses (rotating group) -->
+    <g filter="url(#ts-soft)">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="22s" repeatCount="indefinite"/>
+      <ellipse rx="160" ry="60" fill="none" stroke="#5cffd9" stroke-width="0.6" opacity="0.5"/>
+      <ellipse rx="160" ry="60" fill="none" stroke="#5cffd9" stroke-width="0.6" opacity="0.4" transform="rotate(60)"/>
+      <ellipse rx="160" ry="60" fill="none" stroke="#5cffd9" stroke-width="0.6" opacity="0.4" transform="rotate(120)"/>
+      <ellipse rx="160" ry="20" fill="none" stroke="#a78bfa" stroke-width="0.5" opacity="0.4"/>
+      <ellipse rx="160" ry="100" fill="none" stroke="#a78bfa" stroke-width="0.5" opacity="0.4"/>
+      <ellipse rx="60" ry="160" fill="none" stroke="#5cffd9" stroke-width="0.5" opacity="0.35"/>
+      <ellipse rx="120" ry="160" fill="none" stroke="#5cffd9" stroke-width="0.5" opacity="0.35"/>
+    </g>
+
+    <!-- Tech tokens (counter-rotating to stay readable) -->
+    <g font-family="'JetBrains Mono', monospace" font-size="13" font-weight="500">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="-360" dur="22s" repeatCount="indefinite"/>
+      <g transform="translate(-130,-30)">
+        <circle r="3" fill="#5cffd9"/>
+        <text x="10" y="4" fill="#5cffd9">react</text>
+      </g>
+      <g transform="translate(-110,40)">
+        <circle r="3" fill="#5cffd9"/>
+        <text x="10" y="4" fill="#5cffd9">ts</text>
+      </g>
+      <g transform="translate(-50,-110)">
+        <circle r="3" fill="#a78bfa"/>
+        <text x="10" y="4" fill="#a78bfa">webgl</text>
+      </g>
+      <g transform="translate(40,-90)">
+        <circle r="3" fill="#5cffd9"/>
+        <text x="10" y="4" fill="#5cffd9">node</text>
+      </g>
+      <g transform="translate(120,-10)">
+        <circle r="3" fill="#a78bfa"/>
+        <text x="10" y="4" fill="#a78bfa">rust</text>
+      </g>
+      <g transform="translate(80,80)">
+        <circle r="3" fill="#5cffd9"/>
+        <text x="10" y="4" fill="#5cffd9">go</text>
+      </g>
+      <g transform="translate(-30,120)">
+        <circle r="3" fill="#5cffd9"/>
+        <text x="10" y="4" fill="#5cffd9">css</text>
+      </g>
+      <g transform="translate(30,-20)" opacity="0.7">
+        <text x="0" y="0" font-style="italic" fill="#fef3c7">// learning</text>
+      </g>
+    </g>
+
+    <!-- Center node -->
+    <circle r="5" fill="#fef3c7">
+      <animate attributeName="r" values="5;7;5" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="14" fill="none" stroke="#fef3c7" stroke-width="0.6" opacity="0.5">
+      <animate attributeName="r" values="14;22;14" dur="2.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;0;0.5" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Bottom register -->
+  <g transform="translate(60,396)" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="3" fill="#5a648b">
+    <text>JANE.DEV  ·  @JANEDOE  ·  HELLO@JANE.DEV</text>
+  </g>
+  <text x="1140" y="396" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="10" fill="#a78bfa" letter-spacing="3">↻ ROTATION T = 22s</text>
+</svg>

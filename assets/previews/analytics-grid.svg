@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300" role="img" aria-label="analytics-grid preview">
+  <rect width="600" height="300" fill="#0f172a"/>
+  <text x="32" y="44" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="700" fill="#e2e8f0">Today, in numbers</text>
+  <text x="32" y="62" font-family="ui-monospace, monospace" font-size="10" fill="#4ade80" letter-spacing="2">↑ +12% VS LAST WEEK</text>
+  <!-- 4 stat cards -->
+  <g font-family="Inter, sans-serif">
+    <g transform="translate(32,88)">
+      <rect width="128" height="92" rx="10" fill="#1e293b" stroke="#334155"/>
+      <text x="14" y="28" font-size="10" fill="#94a3b8" letter-spacing="2">COMMITS</text>
+      <text x="14" y="62" font-size="28" font-weight="700" fill="#e2e8f0">1,842</text>
+      <text x="14" y="80" font-size="10" fill="#4ade80">▲ 18%</text>
+    </g>
+    <g transform="translate(168,88)">
+      <rect width="128" height="92" rx="10" fill="#1e293b" stroke="#334155"/>
+      <text x="14" y="28" font-size="10" fill="#94a3b8" letter-spacing="2">PRs MERGED</text>
+      <text x="14" y="62" font-size="28" font-weight="700" fill="#e2e8f0">86</text>
+      <text x="14" y="80" font-size="10" fill="#4ade80">▲ 4%</text>
+    </g>
+    <g transform="translate(304,88)">
+      <rect width="128" height="92" rx="10" fill="#1e293b" stroke="#334155"/>
+      <text x="14" y="28" font-size="10" fill="#94a3b8" letter-spacing="2">STARS</text>
+      <text x="14" y="62" font-size="28" font-weight="700" fill="#e2e8f0">2.1K</text>
+      <text x="14" y="80" font-size="10" fill="#4ade80">▲ 9%</text>
+    </g>
+    <g transform="translate(440,88)">
+      <rect width="128" height="92" rx="10" fill="#1e293b" stroke="#334155"/>
+      <text x="14" y="28" font-size="10" fill="#94a3b8" letter-spacing="2">STREAK</text>
+      <text x="14" y="62" font-size="28" font-weight="700" fill="#e2e8f0">47d</text>
+      <text x="14" y="80" font-size="10" fill="#fb923c">→ steady</text>
+    </g>
+  </g>
+  <!-- chart -->
+  <g transform="translate(32,196)">
+    <rect width="536" height="80" rx="10" fill="#1e293b" stroke="#334155"/>
+    <polyline points="20,60 60,40 100,50 140,30 180,42 220,22 260,38 300,18 340,28 380,12 420,26 460,16 500,20" fill="none" stroke="#4ade80" stroke-width="2"/>
+    <polyline points="20,60 60,40 100,50 140,30 180,42 220,22 260,38 300,18 340,28 380,12 420,26 460,16 500,20 500,68 20,68" fill="#4ade80" fill-opacity="0.12" stroke="none"/>
+  </g>
+</svg>
