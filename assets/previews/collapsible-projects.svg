@@ -1,29 +1,87 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300" role="img" aria-label="collapsible-projects preview">
-  <rect width="600" height="300" fill="#0d1117"/>
-  <text x="30" y="40" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="700" fill="#e6edf3" letter-spacing="2">PROJECTS — CLICK TO EXPAND</text>
-  <!-- accordion items -->
-  <g font-family="Inter, sans-serif" font-size="13">
-    <g transform="translate(30,68)">
-      <rect width="540" height="40" rx="6" fill="#161b22" stroke="#30363d"/>
-      <text x="20" y="25" fill="#7c5cff">▾</text>
-      <text x="42" y="25" fill="#e6edf3" font-weight="600">acme design system</text>
-      <text x="520" y="25" text-anchor="end" fill="#8b949e" font-size="11">typescript · react</text>
-      <!-- expanded content -->
-      <rect y="44" width="540" height="60" rx="6" fill="#0d1117" stroke="#21262d"/>
-      <text x="20" y="68" fill="#8b949e" font-size="12">A token-driven UI kit shipped to 14 product teams.</text>
-      <text x="20" y="88" fill="#7c5cff" font-size="11">→ github.com/jane/acme-ds</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300" role="img" aria-label="Collapsible Projects preview">
+  <defs>
+    <linearGradient id="cp-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#070a13"/>
+    </linearGradient>
+    <linearGradient id="cp-row" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#161b22"/>
+      <stop offset="1" stop-color="#11151c"/>
+    </linearGradient>
+    <linearGradient id="cp-spark" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7c5cff" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#7c5cff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="300" fill="url(#cp-bg)"/>
+
+  <!-- Header -->
+  <text x="30" y="32" font-family="'Inter', system-ui, sans-serif" font-size="13" font-weight="700" fill="#e6edf3">PROJECTS</text>
+  <line x1="30" y1="40" x2="62" y2="40" stroke="#7c5cff" stroke-width="2"/>
+  <text x="84" y="32" font-family="'JetBrains Mono', monospace" font-size="9" fill="#7d8590" letter-spacing="3">CLICK A ROW · &lt;details&gt;</text>
+  <text x="570" y="32" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#a78bfa" letter-spacing="2">3 active · 7 archived</text>
+
+  <!-- Row 1: EXPANDED (the showcase) -->
+  <g transform="translate(30,52)">
+    <!-- Header bar -->
+    <rect width="540" height="34" rx="6" fill="url(#cp-row)" stroke="#30363d"/>
+    <text x="18" y="22" font-size="13" font-weight="700" fill="#a78bfa">▾</text>
+    <text x="38" y="22" font-family="'Inter', sans-serif" font-size="13" font-weight="600" fill="#e6edf3">acme · design system</text>
+    <!-- tags -->
+    <g transform="translate(360,12)">
+      <rect width="58" height="14" rx="3" fill="#1f2540" stroke="#3a4480" stroke-width="0.5"/>
+      <text x="29" y="10" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7" fill="#a78bfa" letter-spacing="1">TYPESCRIPT</text>
     </g>
-    <g transform="translate(30,184)">
-      <rect width="540" height="40" rx="6" fill="#161b22" stroke="#30363d"/>
-      <text x="20" y="25" fill="#8b949e">▸</text>
-      <text x="42" y="25" fill="#e6edf3" font-weight="600">the type observatory</text>
-      <text x="520" y="25" text-anchor="end" fill="#8b949e" font-size="11">webgl · canvas</text>
+    <g transform="translate(424,12)">
+      <rect width="44" height="14" rx="3" fill="#1f2540" stroke="#3a4480" stroke-width="0.5"/>
+      <text x="22" y="10" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7" fill="#67e8f9" letter-spacing="1">REACT</text>
     </g>
-    <g transform="translate(30,236)">
-      <rect width="540" height="40" rx="6" fill="#161b22" stroke="#30363d"/>
-      <text x="20" y="25" fill="#8b949e">▸</text>
-      <text x="42" y="25" fill="#e6edf3" font-weight="600">runtime essays</text>
-      <text x="520" y="25" text-anchor="end" fill="#8b949e" font-size="11">writing</text>
+    <g transform="translate(474,12)">
+      <rect width="48" height="14" rx="3" fill="#1f2540" stroke="#3a4480" stroke-width="0.5"/>
+      <text x="24" y="10" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7" fill="#fcd34d" letter-spacing="1">FIGMA</text>
     </g>
+
+    <!-- Expanded body -->
+    <rect y="38" width="540" height="100" rx="6" fill="#0a0d14" stroke="#21262d"/>
+    <!-- Description -->
+    <text x="20" y="60" font-family="'Inter', sans-serif" font-size="12" fill="#c9d1d9">A token-driven UI kit shipped to 14 product teams.</text>
+    <text x="20" y="78" font-family="'JetBrains Mono', monospace" font-size="10" fill="#7d8590">strict.tsconfig · generic.inference · brand.types · 412 components</text>
+
+    <!-- Mini sparkline chart inline -->
+    <g transform="translate(20,86)">
+      <polyline points="0,16 20,12 40,14 60,8 80,10 100,4 120,8 140,2 160,4 180,0" fill="none" stroke="#7c5cff" stroke-width="1.4"/>
+      <polyline points="0,16 20,12 40,14 60,8 80,10 100,4 120,8 140,2 160,4 180,0 180,20 0,20" fill="url(#cp-spark)"/>
+      <text x="0" y="32" font-family="'JetBrains Mono', monospace" font-size="8" fill="#475569" letter-spacing="1">commits · last 10 weeks</text>
+    </g>
+
+    <!-- Stats row -->
+    <g transform="translate(220,108)" font-family="'JetBrains Mono', monospace" font-size="9" letter-spacing="1">
+      <text fill="#a78bfa">★ 1.2K</text>
+      <text x="56" fill="#4ade80">▲ 47 PR</text>
+      <text x="124" fill="#fcd34d">14 TEAMS</text>
+      <text x="200" fill="#67e8f9">→ jane/acme-ds</text>
+    </g>
+  </g>
+
+  <!-- Row 2: collapsed -->
+  <g transform="translate(30,202)">
+    <rect width="540" height="30" rx="6" fill="url(#cp-row)" stroke="#21262d"/>
+    <text x="18" y="20" font-size="12" fill="#7d8590">▸</text>
+    <text x="38" y="20" font-family="'Inter', sans-serif" font-size="12" font-weight="600" fill="#e6edf3">the type observatory</text>
+    <text x="525" y="20" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#7d8590" letter-spacing="1">webgl · canvas</text>
+  </g>
+
+  <!-- Row 3: collapsed -->
+  <g transform="translate(30,238)">
+    <rect width="540" height="30" rx="6" fill="url(#cp-row)" stroke="#21262d"/>
+    <text x="18" y="20" font-size="12" fill="#7d8590">▸</text>
+    <text x="38" y="20" font-family="'Inter', sans-serif" font-size="12" font-weight="600" fill="#e6edf3">runtime essays</text>
+    <text x="525" y="20" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#7d8590" letter-spacing="1">writing · weekly</text>
+  </g>
+
+  <!-- Footer hint -->
+  <g transform="translate(300,288)" font-family="'JetBrains Mono', monospace" font-size="8" letter-spacing="3" text-anchor="middle" fill="#475569">
+    <text>+ 7 ARCHIVED · TAP TO EXPAND</text>
   </g>
 </svg>

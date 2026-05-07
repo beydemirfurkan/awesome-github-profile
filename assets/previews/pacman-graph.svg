@@ -1,43 +1,156 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300" role="img" aria-label="pacman-graph preview">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300" role="img" aria-label="Pac-Man Graph preview">
+  <defs>
+    <radialGradient id="pm-vignette" cx="0.5" cy="0.5" r="0.7">
+      <stop offset="0.3" stop-color="#000814" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.7"/>
+    </radialGradient>
+    <filter id="pm-glow"><feGaussianBlur stdDeviation="1.2"/></filter>
+  </defs>
+
   <rect width="600" height="300" fill="#000814"/>
-  <text x="40" y="44" font-family="'Press Start 2P', ui-monospace, monospace" font-size="14" fill="#ffd23f">PAC-CONTRIB</text>
-  <text x="40" y="64" font-family="ui-monospace, monospace" font-size="10" fill="#ffd23f" letter-spacing="2">HIGH SCORE · 1842</text>
-  <g transform="translate(40,110)">
+  <rect width="600" height="300" fill="url(#pm-vignette)"/>
+
+  <!-- CRT scanlines -->
+  <g stroke="#001028" stroke-width="0.5" opacity="0.7">
+    <line x1="0" y1="40" x2="600" y2="40"/>
+    <line x1="0" y1="80" x2="600" y2="80"/>
+    <line x1="0" y1="120" x2="600" y2="120"/>
+    <line x1="0" y1="160" x2="600" y2="160"/>
+    <line x1="0" y1="200" x2="600" y2="200"/>
+    <line x1="0" y1="240" x2="600" y2="240"/>
+  </g>
+
+  <!-- Title -->
+  <text x="30" y="36" font-family="'Press Start 2P', ui-monospace, monospace" font-size="14" fill="#ffd23f" letter-spacing="2">PAC-CONTRIB</text>
+  <text x="30" y="56" font-family="'JetBrains Mono', monospace" font-size="9" fill="#ffd23f" letter-spacing="3">HIGH SCORE · 1842   STAGE · 07</text>
+
+  <!-- Maze fragment (top-right corner walls) -->
+  <g stroke="#1a3060" stroke-width="2" fill="none">
+    <path d="M 380 30 L 460 30 L 460 60"/>
+    <path d="M 480 30 L 560 30 L 560 60"/>
+    <path d="M 380 90 L 460 90 L 460 50"/>
+    <path d="M 480 90 L 560 90 L 560 50"/>
+  </g>
+
+  <!-- Dots row (the contribution graph as a dot trail) -->
+  <g transform="translate(30,114)">
     <g fill="#1a3060">
-      <circle cx="10" cy="10" r="3"/>
-      <circle cx="40" cy="10" r="3"/>
-      <circle cx="70" cy="10" r="3"/>
-      <circle cx="100" cy="10" r="3"/>
-      <circle cx="130" cy="10" r="3"/>
-      <circle cx="160" cy="10" r="3"/>
-      <circle cx="190" cy="10" r="3"/>
-      <circle cx="220" cy="10" r="3"/>
-      <circle cx="250" cy="10" r="3"/>
-      <circle cx="280" cy="10" r="3"/>
-      <circle cx="310" cy="10" r="3"/>
-      <circle cx="340" cy="10" r="3"/>
-      <circle cx="370" cy="10" r="3"/>
-      <circle cx="400" cy="10" r="3"/>
-      <circle cx="430" cy="10" r="3"/>
-      <circle cx="460" cy="10" r="3"/>
-      <circle cx="490" cy="10" r="3"/>
-      <circle cx="520" cy="10" r="3"/>
+      <circle cx="10" cy="0" r="2.5"/>
+      <circle cx="32" cy="0" r="2.5"/>
+      <circle cx="54" cy="0" r="2.5"/>
+      <circle cx="76" cy="0" r="2.5"/>
+      <circle cx="98" cy="0" r="2.5"/>
+      <circle cx="120" cy="0" r="2.5"/>
+      <circle cx="142" cy="0" r="2.5"/>
+      <circle cx="164" cy="0" r="2.5"/>
+      <circle cx="186" cy="0" r="2.5"/>
+      <circle cx="208" cy="0" r="2.5"/>
+      <circle cx="230" cy="0" r="2.5"/>
+      <circle cx="252" cy="0" r="2.5"/>
+      <circle cx="274" cy="0" r="2.5"/>
+      <circle cx="296" cy="0" r="2.5"/>
+      <circle cx="318" cy="0" r="2.5"/>
+      <circle cx="340" cy="0" r="2.5"/>
+      <circle cx="362" cy="0" r="2.5"/>
+      <circle cx="384" cy="0" r="2.5"/>
+      <circle cx="406" cy="0" r="2.5"/>
+      <circle cx="428" cy="0" r="2.5"/>
+      <circle cx="450" cy="0" r="2.5"/>
+      <circle cx="472" cy="0" r="2.5"/>
+      <circle cx="494" cy="0" r="2.5"/>
+      <circle cx="516" cy="0" r="2.5"/>
     </g>
-    <!-- pacman -->
-    <g transform="translate(0,10)">
-      <path d="M 0 0 L 14 -7 A 16 16 0 1 1 14 7 Z" fill="#ffd23f">
-        <animateTransform attributeName="transform" type="translate" values="0 0;520 0;0 0" dur="9s" repeatCount="indefinite"/>
+    <!-- Power pellets (4 large) -->
+    <circle cx="32" cy="0" r="5" fill="#ffd23f">
+      <animate attributeName="opacity" values="1;0.4;1" dur="0.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="186" cy="0" r="5" fill="#ffd23f">
+      <animate attributeName="opacity" values="1;0.4;1" dur="0.6s" repeatCount="indefinite" begin="0.15s"/>
+    </circle>
+    <circle cx="362" cy="0" r="5" fill="#ffd23f">
+      <animate attributeName="opacity" values="1;0.4;1" dur="0.6s" repeatCount="indefinite" begin="0.3s"/>
+    </circle>
+    <circle cx="494" cy="0" r="5" fill="#ffd23f">
+      <animate attributeName="opacity" values="1;0.4;1" dur="0.6s" repeatCount="indefinite" begin="0.45s"/>
+    </circle>
+  </g>
+
+  <!-- Pac-Man, traveling the dot row -->
+  <g transform="translate(30,114)" filter="url(#pm-glow)">
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="-30 0;530 0;-30 0" dur="9s" repeatCount="indefinite" keyTimes="0;0.7;1"/>
+      <!-- Pac-Man with chomping mouth -->
+      <path d="M 0 0 L 14 -8 A 16 16 0 1 1 14 8 Z" fill="#ffd23f">
+        <animate attributeName="d"
+          values="M 0 0 L 14 -8 A 16 16 0 1 1 14 8 Z;
+                  M 0 0 L 16 -3 A 16 16 0 1 1 16 3 Z;
+                  M 0 0 L 14 -8 A 16 16 0 1 1 14 8 Z"
+          dur="0.4s" repeatCount="indefinite"/>
       </path>
-    </g>
-    <!-- ghosts -->
-    <g transform="translate(560,0)">
-      <path d="M0 16 V4 A8 8 0 0 1 16 4 V16 L12 12 L8 16 L4 12 Z" fill="#ff0044">
-        <animateTransform attributeName="transform" type="translate" values="560 0;100 0;560 0" dur="9s" repeatCount="indefinite"/>
-      </path>
+      <!-- Eye -->
+      <circle cx="2" cy="-6" r="1.5" fill="#000814"/>
     </g>
   </g>
-  <g transform="translate(40,180)">
-    <text font-family="ui-monospace, monospace" font-size="11" fill="#00d9ff" letter-spacing="2">CONTRIBUTIONS · 1.2K  STREAK · 47  PR · 86</text>
+
+  <!-- Ghost #1 (red — Blinky), chasing -->
+  <g transform="translate(30,114)" filter="url(#pm-glow)">
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="540 0;-30 0;540 0" dur="9s" repeatCount="indefinite" keyTimes="0;0.7;1"/>
+      <path d="M -14 14 L -14 -2 A 14 14 0 0 1 14 -2 L 14 14 L 10 10 L 6 14 L 2 10 L -2 14 L -6 10 L -10 14 Z" fill="#ff0044"/>
+      <circle cx="-5" cy="-4" r="3" fill="#ffffff"/>
+      <circle cx="5" cy="-4" r="3" fill="#ffffff"/>
+      <circle cx="-4" cy="-3" r="1.4" fill="#1a3060"/>
+      <circle cx="6" cy="-3" r="1.4" fill="#1a3060"/>
+    </g>
   </g>
-  <text x="40" y="270" font-family="ui-monospace, monospace" font-size="10" fill="#5a648b">action: abozanona/pacman-contribution-graph</text>
+
+  <!-- Ghost #2 (cyan — Inky), trailing -->
+  <g transform="translate(30,114)" opacity="0.85" filter="url(#pm-glow)">
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="600 0;30 0;600 0" dur="9s" repeatCount="indefinite" keyTimes="0;0.7;1"/>
+      <path d="M -12 12 L -12 -2 A 12 12 0 0 1 12 -2 L 12 12 L 8 8 L 4 12 L 0 8 L -4 12 L -8 8 Z" fill="#00d9ff"/>
+      <circle cx="-4" cy="-3" r="2.5" fill="#ffffff"/>
+      <circle cx="4" cy="-3" r="2.5" fill="#ffffff"/>
+    </g>
+  </g>
+
+  <!-- Stats row -->
+  <g transform="translate(30,170)" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="2">
+    <text fill="#00d9ff">CONTRIBUTIONS</text>
+    <text x="0" y="20" fill="#ffd23f" font-size="20" font-weight="700">1.2K</text>
+
+    <text x="160" fill="#00d9ff">STREAK</text>
+    <text x="160" y="20" fill="#ffd23f" font-size="20" font-weight="700">47</text>
+
+    <text x="280" fill="#00d9ff">PRs</text>
+    <text x="280" y="20" fill="#ffd23f" font-size="20" font-weight="700">86</text>
+
+    <text x="380" fill="#00d9ff">CHERRIES</text>
+    <text x="380" y="20" fill="#ff0044" font-size="20" font-weight="700">14</text>
+  </g>
+
+  <!-- Lives indicator -->
+  <g transform="translate(440,222)">
+    <text font-family="'JetBrains Mono', monospace" font-size="10" fill="#00d9ff" letter-spacing="2">LIVES</text>
+    <g transform="translate(46,-3)">
+      <circle cx="0" cy="0" r="6" fill="#ffd23f"/>
+      <path d="M 0 0 L 5 -3 A 6 6 0 1 1 5 3 Z" fill="#000814"/>
+      <circle cx="14" cy="0" r="6" fill="#ffd23f"/>
+      <path d="M 14 0 L 19 -3 A 6 6 0 1 1 19 3 Z" fill="#000814"/>
+      <circle cx="28" cy="0" r="6" fill="#ffd23f"/>
+      <path d="M 28 0 L 33 -3 A 6 6 0 1 1 33 3 Z" fill="#000814"/>
+    </g>
+  </g>
+
+  <!-- Status -->
+  <g transform="translate(30,254)" font-family="'JetBrains Mono', monospace" font-size="9" letter-spacing="3" fill="#1a3060">
+    <text>READY  ·  PRESS START</text>
+  </g>
+  <text x="570" y="254" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#ffd23f" letter-spacing="3">
+    <tspan>1UP</tspan>
+    <tspan x="570" dy="14">1842</tspan>
+  </text>
+
+  <!-- Bottom register -->
+  <text x="30" y="282" font-family="'JetBrains Mono', monospace" font-size="8" fill="#1a3060" letter-spacing="2">action: abozanona/pacman-contribution-graph</text>
 </svg>

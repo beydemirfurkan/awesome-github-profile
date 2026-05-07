@@ -1,16 +1,104 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300" role="img" aria-label="activity-pulse preview">
-  <rect width="600" height="300" fill="#0a0f1c"/>
-  <text x="40" y="44" font-family="Inter, system-ui, sans-serif" font-size="18" font-weight="700" fill="#e2e8f0">Activity pulse · last 30 days</text>
-  <g transform="translate(40,80)">
-    <!-- pulse line -->
-    <path d="M0 80 L40 80 L60 80 L70 40 L80 100 L90 80 L120 80 L140 80 L160 80 L170 60 L180 90 L190 80 L220 80 L240 50 L250 110 L260 80 L300 80 L320 30 L330 120 L340 80 L380 80 L400 80 L420 70 L430 90 L440 80 L520 80" fill="none" stroke="#4ade80" stroke-width="2"/>
-    <circle cx="320" cy="30" r="4" fill="#4ade80">
-      <animate attributeName="r" values="4;8;4" dur="1.5s" repeatCount="indefinite"/>
-    </circle>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300" role="img" aria-label="Activity Pulse preview">
+  <defs>
+    <linearGradient id="ap-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0a0f1c"/>
+      <stop offset="1" stop-color="#04070f"/>
+    </linearGradient>
+    <linearGradient id="ap-pulse-fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4ade80" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#4ade80" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="ap-pulse-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+  </defs>
+
+  <rect width="600" height="300" fill="url(#ap-bg)"/>
+
+  <!-- Subtle grid -->
+  <g stroke="#0e1830" stroke-width="0.4">
+    <line x1="0" y1="100" x2="600" y2="100"/>
+    <line x1="0" y1="160" x2="600" y2="160"/>
+    <line x1="0" y1="220" x2="600" y2="220"/>
+    <line x1="100" y1="60" x2="100" y2="240"/>
+    <line x1="200" y1="60" x2="200" y2="240"/>
+    <line x1="300" y1="60" x2="300" y2="240"/>
+    <line x1="400" y1="60" x2="400" y2="240"/>
+    <line x1="500" y1="60" x2="500" y2="240"/>
   </g>
-  <g transform="translate(40,210)">
-    <text font-family="ui-monospace, monospace" font-size="11" fill="#94a3b8">peak day · march 21 · 47 commits</text>
-    <text y="20" font-family="ui-monospace, monospace" font-size="11" fill="#94a3b8">avg/day · 12.3   median · 9   p95 · 38</text>
+
+  <!-- Header -->
+  <g font-family="'JetBrains Mono', monospace" font-size="9" letter-spacing="3">
+    <g transform="translate(30,30)" fill="#4ade80">
+      <circle cx="6" cy="-3" r="3">
+        <animate attributeName="opacity" values="0.4;1;0.4" dur="1s" repeatCount="indefinite"/>
+      </circle>
+      <text x="20" y="0">VITALS  ·  LIVE</text>
+    </g>
+    <text x="570" y="30" text-anchor="end" fill="#475569">30D · BPM 14.3 · MEDIAN 9</text>
   </g>
-  <text x="40" y="276" font-family="ui-monospace, monospace" font-size="10" fill="#5a648b">via lowlighter/metrics · plugin: activity</text>
+
+  <text x="30" y="58" font-family="'Inter', system-ui, sans-serif" font-size="18" font-weight="700" fill="#e2e8f0">Activity pulse</text>
+  <line x1="30" y1="68" x2="64" y2="68" stroke="#4ade80" stroke-width="2"/>
+
+  <!-- Pulse waveform (EKG style) -->
+  <!-- Background area fill -->
+  <polyline
+    points="30,160 60,160 80,160 100,120 110,200 120,140 130,160 160,160 200,160 220,140 230,180 240,160 280,160 300,140 320,180 340,160 380,160 400,100 410,220 420,160 460,160 500,130 510,190 520,160 570,160"
+    fill="url(#ap-pulse-fade)" stroke="none"/>
+
+  <!-- Faint baseline trail (dashed) -->
+  <line x1="30" y1="160" x2="570" y2="160" stroke="#1f2540" stroke-width="0.5" stroke-dasharray="2 4"/>
+
+  <!-- Main pulse line (sharp, glowing) -->
+  <polyline
+    points="30,160 60,160 80,160 100,120 110,200 120,140 130,160 160,160 200,160 220,140 230,180 240,160 280,160 300,140 320,180 340,160 380,160 400,100 410,220 420,160 460,160 500,130 510,190 520,160 570,160"
+    fill="none" stroke="#4ade80" stroke-width="2" filter="url(#ap-pulse-glow)"/>
+
+  <polyline
+    points="30,160 60,160 80,160 100,120 110,200 120,140 130,160 160,160 200,160 220,140 230,180 240,160 280,160 300,140 320,180 340,160 380,160 400,100 410,220 420,160 460,160 500,130 510,190 520,160 570,160"
+    fill="none" stroke="#86efac" stroke-width="1"/>
+
+  <!-- Live moving "today" indicator -->
+  <circle r="4" fill="#fef3c7" filter="url(#ap-pulse-glow)">
+    <animate attributeName="cx" values="540;560;540" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="cy" values="160;130;160" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="r" values="4;6;4" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="540" cy="160" r="14" fill="none" stroke="#fef3c7" stroke-width="0.5">
+    <animate attributeName="r" values="14;22;14" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;0;0.6" dur="2s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Bottom stats panel -->
+  <g transform="translate(30,250)" font-family="'JetBrains Mono', monospace" font-size="9" letter-spacing="2">
+    <g>
+      <text fill="#475569">PEAK</text>
+      <text y="16" font-size="12" fill="#4ade80" font-weight="700">47<tspan font-size="9" fill="#94a3b8" letter-spacing="1"> commits</tspan></text>
+      <text y="32" fill="#475569">mar 21 · tuesday</text>
+    </g>
+    <g transform="translate(140,0)">
+      <text fill="#475569">AVG / DAY</text>
+      <text y="16" font-size="12" fill="#a78bfa" font-weight="700">12.3</text>
+      <text y="32" fill="#475569">↑ 14% vs prev</text>
+    </g>
+    <g transform="translate(260,0)">
+      <text fill="#475569">P95</text>
+      <text y="16" font-size="12" fill="#fcd34d" font-weight="700">38</text>
+      <text y="32" fill="#475569">95th percentile</text>
+    </g>
+    <g transform="translate(360,0)">
+      <text fill="#475569">RHYTHM</text>
+      <text y="16" font-size="12" fill="#67e8f9" font-weight="700">tue → thu</text>
+      <text y="32" fill="#475569">deep-work bias</text>
+    </g>
+    <g transform="translate(490,0)">
+      <text fill="#475569">RESTING</text>
+      <text y="16" font-size="12" fill="#fef3c7" font-weight="700">2h 14m</text>
+      <text y="32" fill="#475569">avg downtime</text>
+    </g>
+  </g>
+
+  <!-- Bottom register -->
+  <text x="30" y="84" font-family="'JetBrains Mono', monospace" font-size="9" fill="#475569" letter-spacing="3">via lowlighter/metrics · plugin: activity</text>
 </svg>

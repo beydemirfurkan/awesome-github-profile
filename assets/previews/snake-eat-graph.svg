@@ -1,49 +1,201 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300" role="img" aria-label="snake-eat-graph preview">
-  <rect width="600" height="300" fill="#0d1117"/>
-  <text x="40" y="44" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#e8edff">contribution snake</text>
-  <text x="40" y="62" font-family="ui-monospace, monospace" font-size="11" fill="#39d353" letter-spacing="2">EATING SQUARES SINCE 2019</text>
-  <g transform="translate(40,90)">
-    <!-- contribution grid -->
-    <g fill="#0e4429">
-      <rect width="14" height="14" rx="2"/>
-      <rect x="20" width="14" height="14" rx="2" fill="#26a641"/>
-      <rect x="40" width="14" height="14" rx="2" fill="#39d353"/>
-      <rect x="60" width="14" height="14" rx="2" fill="#006d32"/>
-      <rect x="80" width="14" height="14" rx="2"/>
-      <rect x="100" width="14" height="14" rx="2" fill="#26a641"/>
-      <rect x="120" width="14" height="14" rx="2" fill="#39d353"/>
-      <rect x="140" width="14" height="14" rx="2"/>
-      <rect x="160" width="14" height="14" rx="2" fill="#006d32"/>
-      <rect x="180" width="14" height="14" rx="2" fill="#26a641"/>
-      <rect x="200" width="14" height="14" rx="2"/>
-      <rect x="220" width="14" height="14" rx="2" fill="#39d353"/>
-      <rect x="240" width="14" height="14" rx="2" fill="#006d32"/>
-      <rect x="260" width="14" height="14" rx="2"/>
-      <rect x="280" width="14" height="14" rx="2" fill="#26a641"/>
-      <rect x="300" width="14" height="14" rx="2" fill="#39d353"/>
-      <rect x="320" width="14" height="14" rx="2"/>
-      <rect x="340" width="14" height="14" rx="2" fill="#006d32"/>
-      <rect x="360" width="14" height="14" rx="2"/>
-      <rect x="380" width="14" height="14" rx="2" fill="#26a641"/>
-      <rect x="400" width="14" height="14" rx="2"/>
-      <rect x="420" width="14" height="14" rx="2" fill="#39d353"/>
-      <rect x="440" width="14" height="14" rx="2"/>
-      <rect x="460" width="14" height="14" rx="2" fill="#26a641"/>
-      <rect x="480" width="14" height="14" rx="2" fill="#39d353"/>
-      <rect x="500" width="14" height="14" rx="2"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300" role="img" aria-label="Snake Eat Graph preview">
+  <defs>
+    <linearGradient id="se-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#04070d"/>
+    </linearGradient>
+    <radialGradient id="se-snake-glow">
+      <stop offset="0" stop-color="#7c5cff" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#7c5cff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="se-glow"><feGaussianBlur stdDeviation="1.4"/></filter>
+  </defs>
+
+  <rect width="600" height="300" fill="url(#se-bg)"/>
+
+  <!-- Title -->
+  <text x="30" y="36" font-family="'Inter', system-ui, sans-serif" font-size="16" font-weight="700" fill="#e6edf3">contribution snake</text>
+  <text x="30" y="54" font-family="'JetBrains Mono', monospace" font-size="9" fill="#39d353" letter-spacing="3">EATING SQUARES · DAILY BUILD</text>
+
+  <!-- Day labels -->
+  <g font-family="'JetBrains Mono', monospace" font-size="7" fill="#586069">
+    <text x="14" y="92">M</text>
+    <text x="14" y="108">T</text>
+    <text x="14" y="124">W</text>
+    <text x="14" y="140">T</text>
+    <text x="14" y="156">F</text>
+    <text x="14" y="172">S</text>
+    <text x="14" y="188">S</text>
+  </g>
+
+  <!-- Contribution grid: 14 weeks × 7 days = 98 cells, 12×12 with 4px gap -->
+  <g>
+    <!-- Mon row (y=84) -->
+    <rect x="30" y="84" width="12" height="12" rx="2" fill="#0e4429"/>
+    <rect x="46" y="84" width="12" height="12" rx="2" fill="#26a641"/>
+    <rect x="62" y="84" width="12" height="12" rx="2" fill="#006d32"/>
+    <rect x="78" y="84" width="12" height="12" rx="2" fill="#39d353"/>
+    <rect x="94" y="84" width="12" height="12" rx="2" fill="#161b22"/>
+    <rect x="110" y="84" width="12" height="12" rx="2" fill="#26a641"/>
+    <rect x="126" y="84" width="12" height="12" rx="2" fill="#39d353"/>
+    <rect x="142" y="84" width="12" height="12" rx="2" fill="#006d32"/>
+    <rect x="158" y="84" width="12" height="12" rx="2" fill="#26a641"/>
+    <rect x="174" y="84" width="12" height="12" rx="2" fill="#0e4429"/>
+    <rect x="190" y="84" width="12" height="12" rx="2" fill="#006d32"/>
+    <rect x="206" y="84" width="12" height="12" rx="2" fill="#39d353"/>
+    <rect x="222" y="84" width="12" height="12" rx="2" fill="#26a641"/>
+    <rect x="238" y="84" width="12" height="12" rx="2" fill="#0e4429"/>
+    <!-- Tue row (y=100) -->
+    <rect x="30" y="100" width="12" height="12" rx="2" fill="#26a641"/>
+    <rect x="46" y="100" width="12" height="12" rx="2" fill="#161b22"/>
+    <rect x="62" y="100" width="12" height="12" rx="2" fill="#39d353"/>
+    <rect x="78" y="100" width="12" height="12" rx="2" fill="#006d32"/>
+    <rect x="94" y="100" width="12" height="12" rx="2" fill="#26a641"/>
+    <rect x="110" y="100" width="12" height="12" rx="2" fill="#0e4429"/>
+    <rect x="126" y="100" width="12" height="12" rx="2" fill="#006d32"/>
+    <rect x="142" y="100" width="12" height="12" rx="2" fill="#39d353"/>
+    <rect x="158" y="100" width="12" height="12" rx="2" fill="#26a641"/>
+    <rect x="174" y="100" width="12" height="12" rx="2" fill="#39d353"/>
+    <rect x="190" y="100" width="12" height="12" rx="2" fill="#0e4429"/>
+    <rect x="206" y="100" width="12" height="12" rx="2" fill="#26a641"/>
+    <rect x="222" y="100" width="12" height="12" rx="2" fill="#006d32"/>
+    <rect x="238" y="100" width="12" height="12" rx="2" fill="#161b22"/>
+    <!-- Wed row (y=116) -->
+    <rect x="30" y="116" width="12" height="12" rx="2" fill="#39d353"/>
+    <rect x="46" y="116" width="12" height="12" rx="2" fill="#26a641"/>
+    <rect x="62" y="116" width="12" height="12" rx="2" fill="#006d32"/>
+    <rect x="78" y="116" width="12" height="12" rx="2" fill="#39d353"/>
+    <rect x="94" y="116" width="12" height="12" rx="2" fill="#26a641"/>
+    <rect x="110" y="116" width="12" height="12" rx="2" fill="#39d353"/>
+    <rect x="126" y="116" width="12" height="12" rx="2" fill="#26a641"/>
+    <rect x="142" y="116" width="12" height="12" rx="2" fill="#006d32"/>
+    <rect x="158" y="116" width="12" height="12" rx="2" fill="#39d353"/>
+    <rect x="174" y="116" width="12" height="12" rx="2" fill="#26a641"/>
+    <rect x="190" y="116" width="12" height="12" rx="2" fill="#39d353"/>
+    <rect x="206" y="116" width="12" height="12" rx="2" fill="#006d32"/>
+    <rect x="222" y="116" width="12" height="12" rx="2" fill="#26a641"/>
+    <rect x="238" y="116" width="12" height="12" rx="2" fill="#39d353"/>
+    <!-- Thu row (y=132) -->
+    <rect x="30" y="132" width="12" height="12" rx="2" fill="#006d32"/>
+    <rect x="46" y="132" width="12" height="12" rx="2" fill="#39d353"/>
+    <rect x="62" y="132" width="12" height="12" rx="2" fill="#26a641"/>
+    <rect x="78" y="132" width="12" height="12" rx="2" fill="#0e4429"/>
+    <rect x="94" y="132" width="12" height="12" rx="2" fill="#39d353"/>
+    <rect x="110" y="132" width="12" height="12" rx="2" fill="#006d32"/>
+    <rect x="126" y="132" width="12" height="12" rx="2" fill="#26a641"/>
+    <rect x="142" y="132" width="12" height="12" rx="2" fill="#161b22"/>
+    <rect x="158" y="132" width="12" height="12" rx="2" fill="#006d32"/>
+    <rect x="174" y="132" width="12" height="12" rx="2" fill="#39d353"/>
+    <rect x="190" y="132" width="12" height="12" rx="2" fill="#26a641"/>
+    <rect x="206" y="132" width="12" height="12" rx="2" fill="#0e4429"/>
+    <rect x="222" y="132" width="12" height="12" rx="2" fill="#006d32"/>
+    <rect x="238" y="132" width="12" height="12" rx="2" fill="#26a641"/>
+    <!-- Fri row (y=148) -->
+    <rect x="30" y="148" width="12" height="12" rx="2" fill="#26a641"/>
+    <rect x="46" y="148" width="12" height="12" rx="2" fill="#39d353"/>
+    <rect x="62" y="148" width="12" height="12" rx="2" fill="#0e4429"/>
+    <rect x="78" y="148" width="12" height="12" rx="2" fill="#006d32"/>
+    <rect x="94" y="148" width="12" height="12" rx="2" fill="#39d353"/>
+    <rect x="110" y="148" width="12" height="12" rx="2" fill="#26a641"/>
+    <rect x="126" y="148" width="12" height="12" rx="2" fill="#161b22"/>
+    <rect x="142" y="148" width="12" height="12" rx="2" fill="#39d353"/>
+    <rect x="158" y="148" width="12" height="12" rx="2" fill="#26a641"/>
+    <rect x="174" y="148" width="12" height="12" rx="2" fill="#006d32"/>
+    <rect x="190" y="148" width="12" height="12" rx="2" fill="#39d353"/>
+    <rect x="206" y="148" width="12" height="12" rx="2" fill="#26a641"/>
+    <rect x="222" y="148" width="12" height="12" rx="2" fill="#0e4429"/>
+    <rect x="238" y="148" width="12" height="12" rx="2" fill="#006d32"/>
+    <!-- Sat row (y=164) -->
+    <rect x="30" y="164" width="12" height="12" rx="2" fill="#0e4429"/>
+    <rect x="46" y="164" width="12" height="12" rx="2" fill="#161b22"/>
+    <rect x="62" y="164" width="12" height="12" rx="2" fill="#26a641"/>
+    <rect x="78" y="164" width="12" height="12" rx="2" fill="#0e4429"/>
+    <rect x="94" y="164" width="12" height="12" rx="2" fill="#161b22"/>
+    <rect x="110" y="164" width="12" height="12" rx="2" fill="#006d32"/>
+    <rect x="126" y="164" width="12" height="12" rx="2" fill="#26a641"/>
+    <rect x="142" y="164" width="12" height="12" rx="2" fill="#0e4429"/>
+    <rect x="158" y="164" width="12" height="12" rx="2" fill="#161b22"/>
+    <rect x="174" y="164" width="12" height="12" rx="2" fill="#26a641"/>
+    <rect x="190" y="164" width="12" height="12" rx="2" fill="#0e4429"/>
+    <rect x="206" y="164" width="12" height="12" rx="2" fill="#006d32"/>
+    <rect x="222" y="164" width="12" height="12" rx="2" fill="#26a641"/>
+    <rect x="238" y="164" width="12" height="12" rx="2" fill="#0e4429"/>
+    <!-- Sun row (y=180) -->
+    <rect x="30" y="180" width="12" height="12" rx="2" fill="#161b22"/>
+    <rect x="46" y="180" width="12" height="12" rx="2" fill="#0e4429"/>
+    <rect x="62" y="180" width="12" height="12" rx="2" fill="#161b22"/>
+    <rect x="78" y="180" width="12" height="12" rx="2" fill="#26a641"/>
+    <rect x="94" y="180" width="12" height="12" rx="2" fill="#0e4429"/>
+    <rect x="110" y="180" width="12" height="12" rx="2" fill="#161b22"/>
+    <rect x="126" y="180" width="12" height="12" rx="2" fill="#0e4429"/>
+    <rect x="142" y="180" width="12" height="12" rx="2" fill="#161b22"/>
+    <rect x="158" y="180" width="12" height="12" rx="2" fill="#26a641"/>
+    <rect x="174" y="180" width="12" height="12" rx="2" fill="#0e4429"/>
+    <rect x="190" y="180" width="12" height="12" rx="2" fill="#161b22"/>
+    <rect x="206" y="180" width="12" height="12" rx="2" fill="#0e4429"/>
+    <rect x="222" y="180" width="12" height="12" rx="2" fill="#26a641"/>
+    <rect x="238" y="180" width="12" height="12" rx="2" fill="#0e4429"/>
+  </g>
+
+  <!-- Snake glow trail (behind segments) -->
+  <g filter="url(#se-glow)">
+    <circle r="14" fill="url(#se-snake-glow)" cx="0" cy="0">
+      <animateMotion dur="9s" repeatCount="indefinite" path="M -20 122 L 252 122"/>
+    </circle>
+  </g>
+
+  <!-- Snake (4-segment, sweeping the Wed row, y=122 center) -->
+  <g>
+    <rect x="-6" y="-6" width="12" height="12" rx="3" fill="#7c5cff">
+      <animateMotion dur="9s" repeatCount="indefinite" keyTimes="0;0.85;1" keyPoints="0;1;0" path="M -20 122 L 252 122 L 252 122 L -20 122"/>
+    </rect>
+    <rect x="-6" y="-6" width="12" height="12" rx="3" fill="#7c5cff" opacity="0.75">
+      <animateMotion dur="9s" repeatCount="indefinite" begin="0.18s" keyTimes="0;0.85;1" keyPoints="0;1;0" path="M -20 122 L 252 122 L 252 122 L -20 122"/>
+    </rect>
+    <rect x="-6" y="-6" width="12" height="12" rx="3" fill="#7c5cff" opacity="0.55">
+      <animateMotion dur="9s" repeatCount="indefinite" begin="0.36s" keyTimes="0;0.85;1" keyPoints="0;1;0" path="M -20 122 L 252 122 L 252 122 L -20 122"/>
+    </rect>
+    <rect x="-6" y="-6" width="12" height="12" rx="3" fill="#7c5cff" opacity="0.35">
+      <animateMotion dur="9s" repeatCount="indefinite" begin="0.54s" keyTimes="0;0.85;1" keyPoints="0;1;0" path="M -20 122 L 252 122 L 252 122 L -20 122"/>
+    </rect>
+  </g>
+
+  <!-- Side panel (right) -->
+  <g transform="translate(296,30)">
+    <line x1="0" y1="20" x2="0" y2="220" stroke="#1a2238" stroke-width="0.5"/>
+    <text x="20" y="20" font-family="'JetBrains Mono', monospace" font-size="9" fill="#39d353" letter-spacing="3">SCOREBOARD</text>
+
+    <g transform="translate(20,40)" font-family="'JetBrains Mono', monospace" font-size="10">
+      <text fill="#94a3b8">SCORE</text>
+      <text x="240" y="0" text-anchor="end" fill="#39d353" font-size="14" font-weight="700">1,842</text>
+
+      <text y="24" fill="#94a3b8">STREAK</text>
+      <text x="240" y="24" text-anchor="end" fill="#39d353" font-size="14" font-weight="700">47d</text>
+
+      <text y="48" fill="#94a3b8">LIVES</text>
+      <text x="240" y="48" text-anchor="end" fill="#fcd34d" font-size="14" font-weight="700">∞</text>
+
+      <text y="72" fill="#94a3b8">LEVEL</text>
+      <text x="240" y="72" text-anchor="end" fill="#7c5cff" font-size="14" font-weight="700">7</text>
     </g>
-    <!-- snake -->
-    <g>
-      <rect x="-10" y="0" width="14" height="14" rx="2" fill="#7c5cff">
-        <animate attributeName="x" values="-10;520;-10" dur="8s" repeatCount="indefinite"/>
-      </rect>
-      <rect x="-30" y="0" width="14" height="14" rx="2" fill="#7c5cff" opacity="0.7">
-        <animate attributeName="x" values="-30;500;-30" dur="8s" repeatCount="indefinite"/>
-      </rect>
-      <rect x="-50" y="0" width="14" height="14" rx="2" fill="#7c5cff" opacity="0.45">
-        <animate attributeName="x" values="-50;480;-50" dur="8s" repeatCount="indefinite"/>
-      </rect>
+
+    <line x1="20" y1="138" x2="260" y2="138" stroke="#1a2238" stroke-width="0.5"/>
+
+    <g transform="translate(20,160)" font-family="'JetBrains Mono', monospace" font-size="9" fill="#94a3b8">
+      <text>HIGH SCORE</text>
+      <text y="16" fill="#fcd34d">2,318  ·  Q3 2025</text>
     </g>
   </g>
-  <text x="40" y="270" font-family="ui-monospace, monospace" font-size="10" fill="#586069">action: Platane/snk · runs daily on schedule</text>
+
+  <!-- Status bar -->
+  <g transform="translate(30,232)" font-family="'JetBrains Mono', monospace" font-size="9" letter-spacing="3" fill="#475569">
+    <circle cx="6" cy="-3" r="3" fill="#39d353">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="1.4s" repeatCount="indefinite"/>
+    </circle>
+    <text x="20" y="0">DAILY BUILD · LAST RUN 06:23 UTC · NEXT IN 19h 02m</text>
+  </g>
+
+  <!-- Bottom register -->
+  <text x="30" y="276" font-family="'JetBrains Mono', monospace" font-size="8" fill="#475569" letter-spacing="2">action: Platane/snk · MIT</text>
+  <text x="570" y="276" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="8" fill="#39d353" letter-spacing="2">↗ jane.dev</text>
 </svg>

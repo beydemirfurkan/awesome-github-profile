@@ -1,23 +1,102 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300" role="img" aria-label="light-dark-switcher preview">
-  <!-- left: light -->
-  <rect x="0" y="0" width="300" height="300" fill="#fafafa"/>
-  <text x="30" y="40" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="700" fill="#111">LIGHT</text>
-  <text x="30" y="100" font-family="Inter, sans-serif" font-size="22" font-weight="700" fill="#111">Jane Doe</text>
-  <text x="30" y="124" font-family="Inter, sans-serif" font-size="12" fill="#444">frontend engineer</text>
-  <rect x="30" y="150" width="240" height="60" fill="#f0f0f0" stroke="#ddd"/>
-  <circle cx="50" cy="180" r="10" fill="#111"/>
-  <text x="70" y="184" font-family="Inter, sans-serif" font-size="11" fill="#222">stats · light theme</text>
-  <!-- divider with sun/moon -->
-  <line x1="300" y1="0" x2="300" y2="300" stroke="#999" stroke-dasharray="4 4"/>
-  <circle cx="300" cy="150" r="22" fill="#fff" stroke="#333"/>
-  <circle cx="294" cy="146" r="14" fill="#0c0c12"/>
-  <!-- right: dark -->
-  <rect x="300" y="0" width="300" height="300" fill="#0c0c12"/>
-  <text x="330" y="40" font-family="Inter, sans-serif" font-size="14" font-weight="700" fill="#e8edff">DARK</text>
-  <text x="330" y="100" font-family="Inter, sans-serif" font-size="22" font-weight="700" fill="#e8edff">Jane Doe</text>
-  <text x="330" y="124" font-family="Inter, sans-serif" font-size="12" fill="#a5acd6">frontend engineer</text>
-  <rect x="330" y="150" width="240" height="60" fill="#1a1a2e" stroke="#2a2a4a"/>
-  <circle cx="350" cy="180" r="10" fill="#7c5cff"/>
-  <text x="370" y="184" font-family="Inter, sans-serif" font-size="11" fill="#cdd3f5">stats · dark theme</text>
-  <text x="300" y="276" text-anchor="middle" font-family="ui-monospace, monospace" font-size="10" fill="#888">picture · source · prefers-color-scheme</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300" role="img" aria-label="Light/Dark Switcher preview">
+  <defs>
+    <radialGradient id="lds-sun" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fef3c7"/>
+      <stop offset="1" stop-color="#fcd34d"/>
+    </radialGradient>
+    <radialGradient id="lds-moon" cx="0.35" cy="0.35" r="0.6">
+      <stop offset="0" stop-color="#1e293b"/>
+      <stop offset="1" stop-color="#0a0e1a"/>
+    </radialGradient>
+    <linearGradient id="lds-spark-l" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#10b981" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#10b981" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="lds-spark-d" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a78bfa" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#a78bfa" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Light side -->
+  <rect x="0" y="0" width="300" height="300" fill="#f8fafc"/>
+  <text x="300" y="20" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="8" fill="#64748b" letter-spacing="3" transform="translate(-12,0)">— LIGHT</text>
+
+  <text x="30" y="58" font-family="'Fraunces', Georgia, serif" font-size="22" font-weight="700" fill="#0f172a">Jane Doe</text>
+  <text x="30" y="76" font-family="'JetBrains Mono', monospace" font-size="8" fill="#64748b" letter-spacing="3">FRONTEND ENG · DAYLIGHT</text>
+  <line x1="30" y1="88" x2="60" y2="88" stroke="#10b981" stroke-width="2"/>
+
+  <rect x="30" y="104" width="232" height="106" rx="8" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="46" y="126" font-family="'JetBrains Mono', monospace" font-size="8" fill="#64748b" letter-spacing="2">COMMITS · 30D</text>
+  <text x="46" y="156" font-family="'Inter', system-ui, sans-serif" font-size="22" font-weight="700" fill="#0f172a">1,842</text>
+  <text x="46" y="174" font-family="'JetBrains Mono', monospace" font-size="9" fill="#10b981">▲ 18%</text>
+  <polyline points="46,196 66,190 86,194 106,182 126,186 146,174 166,180 186,166 206,170 226,158 246,164" fill="none" stroke="#10b981" stroke-width="1.4"/>
+  <polyline points="46,196 66,190 86,194 106,182 126,186 146,174 166,180 186,166 206,170 226,158 246,164 246,202 46,202" fill="url(#lds-spark-l)"/>
+
+  <text x="30" y="244" font-family="'JetBrains Mono', monospace" font-size="8" fill="#94a3b8" letter-spacing="2">prefers-color-scheme: light</text>
+  <text x="30" y="262" font-family="'Fraunces', Georgia, serif" font-style="italic" font-size="11" fill="#0f172a">"clarity is a feature."</text>
+
+  <!-- Dark side -->
+  <rect x="300" y="0" width="300" height="300" fill="#0a0e1a"/>
+  <text x="312" y="20" font-family="'JetBrains Mono', monospace" font-size="8" fill="#94a3b8" letter-spacing="3">DARK —</text>
+
+  <text x="338" y="58" font-family="'Fraunces', Georgia, serif" font-size="22" font-weight="700" fill="#f1f5f9">Jane Doe</text>
+  <text x="338" y="76" font-family="'JetBrains Mono', monospace" font-size="8" fill="#94a3b8" letter-spacing="3">FRONTEND ENG · NIGHT MODE</text>
+  <line x1="338" y1="88" x2="368" y2="88" stroke="#a78bfa" stroke-width="2"/>
+
+  <rect x="338" y="104" width="232" height="106" rx="8" fill="#15192e" stroke="#1f2540"/>
+  <text x="354" y="126" font-family="'JetBrains Mono', monospace" font-size="8" fill="#94a3b8" letter-spacing="2">COMMITS · 30D</text>
+  <text x="354" y="156" font-family="'Inter', system-ui, sans-serif" font-size="22" font-weight="700" fill="#f1f5f9">1,842</text>
+  <text x="354" y="174" font-family="'JetBrains Mono', monospace" font-size="9" fill="#4ade80">▲ 18%</text>
+  <polyline points="354,196 374,190 394,194 414,182 434,186 454,174 474,180 494,166 514,170 534,158 554,164" fill="none" stroke="#a78bfa" stroke-width="1.4"/>
+  <polyline points="354,196 374,190 394,194 414,182 434,186 454,174 474,180 494,166 514,170 534,158 554,164 554,202 354,202" fill="url(#lds-spark-d)"/>
+
+  <text x="338" y="244" font-family="'JetBrains Mono', monospace" font-size="8" fill="#475569" letter-spacing="2">prefers-color-scheme: dark</text>
+  <text x="338" y="262" font-family="'Fraunces', Georgia, serif" font-style="italic" font-size="11" fill="#e2e8f0">"depth is a feature, too."</text>
+
+  <!-- Center vertical dashed lines, top and bottom -->
+  <line x1="300" y1="0" x2="300" y2="118" stroke="#cbd5e1" stroke-dasharray="3 3" stroke-width="0.5"/>
+  <line x1="300" y1="182" x2="300" y2="300" stroke="#1f2540" stroke-dasharray="3 3" stroke-width="0.5"/>
+
+  <!-- Center morph circle: sun ↔ moon transition -->
+  <g transform="translate(300,150)">
+    <!-- outer ring -->
+    <circle r="34" fill="none" stroke="#cbd5e1" stroke-width="0.5" opacity="0.6"/>
+    <circle r="34" fill="none" stroke="#1f2540" stroke-width="0.5" opacity="0.6" transform="scale(1,1)"/>
+    <!-- main disk -->
+    <circle r="28" fill="url(#lds-sun)">
+      <animate attributeName="opacity" values="1;0;1" keyTimes="0;0.5;1" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="28" fill="url(#lds-moon)">
+      <animate attributeName="opacity" values="0;1;0" keyTimes="0;0.5;1" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <!-- moon crescent (covers part of disk during night phase) -->
+    <circle cx="-8" cy="-3" r="22" fill="#0a0e1a">
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.4;0.5;0.95;1" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <!-- stars during night -->
+    <g>
+      <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.4;0.55;0.9;1" dur="6s" repeatCount="indefinite"/>
+      <circle cx="6" cy="-12" r="0.8" fill="#fef3c7"/>
+      <circle cx="14" cy="-2" r="0.6" fill="#fef3c7"/>
+      <circle cx="9" cy="9" r="0.7" fill="#fef3c7"/>
+    </g>
+    <!-- sun rays during day -->
+    <g stroke="#fcd34d" stroke-width="1" stroke-linecap="round">
+      <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.3;0.5;0.95;1" dur="6s" repeatCount="indefinite"/>
+      <line x1="0" y1="-38" x2="0" y2="-32"/>
+      <line x1="38" y1="0" x2="32" y2="0"/>
+      <line x1="0" y1="38" x2="0" y2="32"/>
+      <line x1="-38" y1="0" x2="-32" y2="0"/>
+      <line x1="27" y1="-27" x2="23" y2="-23"/>
+      <line x1="27" y1="27" x2="23" y2="23"/>
+      <line x1="-27" y1="-27" x2="-23" y2="-23"/>
+      <line x1="-27" y1="27" x2="-23" y2="23"/>
+    </g>
+  </g>
+
+  <!-- Bottom: technical caption -->
+  <g transform="translate(300,290)" font-family="'JetBrains Mono', monospace" font-size="7" letter-spacing="3" text-anchor="middle">
+    <text fill="#94a3b8">&lt;picture&gt; · ONE TAG · TWO REALITIES</text>
+  </g>
 </svg>
