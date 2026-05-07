@@ -68,14 +68,14 @@ That's it. A few templates run a GitHub Action to generate live SVGs (the snake,
   <tr>
     <td width="50%" align="center" valign="top">
       <a href="./templates/02-animated/neon-pulse-banner/">
-        <img src="./assets/previews/neon-pulse-banner.svg" alt="Neon Pulse Banner" width="100%" />
+        <img src="./assets/animated/neon-pulse-banner.svg" alt="Neon Pulse Banner" width="100%" />
         <br><strong>Neon Pulse Banner</strong>
       </a>
       <br><sub>Wide gradient hero with a slow wave.</sub>
     </td>
     <td width="50%" align="center" valign="top">
       <a href="./templates/02-animated/typewriter-intro/">
-        <img src="./assets/previews/typewriter-intro.svg" alt="Typewriter Intro" width="100%" />
+        <img src="./assets/animated/typewriter-intro.svg" alt="Typewriter Intro" width="100%" />
         <br><strong>Typewriter Intro</strong>
       </a>
       <br><sub>A terminal that types itself in.</sub>
@@ -98,7 +98,7 @@ That's it. A few templates run a GitHub Action to generate live SVGs (the snake,
     </td>
     <td width="50%" align="center" valign="top">
       <a href="./templates/03-3d-immersive/tech-sphere/">
-        <img src="./assets/previews/tech-sphere.svg" alt="Tech Sphere" width="100%" />
+        <img src="./assets/3d-immersive/tech-sphere.svg" alt="Tech Sphere" width="100%" />
         <br><strong>Tech Sphere</strong>
       </a>
       <br><sub>A rotating orbit of your stack.</sub>
@@ -137,7 +137,7 @@ That's it. A few templates run a GitHub Action to generate live SVGs (the snake,
   <tr>
     <td width="50%" align="center" valign="top">
       <a href="./templates/05-dashboard/analytics-grid/">
-        <img src="./assets/previews/analytics-grid.svg" alt="Analytics Grid" width="100%" />
+        <img src="./assets/dashboard/analytics-grid.svg" alt="Analytics Grid" width="100%" />
         <br><strong>Analytics Grid</strong>
       </a>
       <br><sub>2×2 metric cards. Dashboard energy.</sub>
@@ -160,7 +160,7 @@ That's it. A few templates run a GitHub Action to generate live SVGs (the snake,
   <tr>
     <td width="50%" align="center" valign="top">
       <a href="./templates/06-designer-portfolio/glassmorphism-hero/">
-        <img src="./assets/previews/glassmorphism-hero.svg" alt="Glassmorphism Hero" width="100%" />
+        <img src="./assets/designer-portfolio/glassmorphism-hero.svg" alt="Glassmorphism Hero" width="100%" />
         <br><strong>Glassmorphism Hero</strong>
       </a>
       <br><sub>Frosted glass on a melting gradient.</sub>
@@ -183,14 +183,14 @@ That's it. A few templates run a GitHub Action to generate live SVGs (the snake,
   <tr>
     <td width="50%" align="center" valign="top">
       <a href="./templates/07-themed/cyberpunk-neon/">
-        <img src="./assets/previews/cyberpunk-neon.svg" alt="Cyberpunk Neon" width="100%" />
+        <img src="./assets/themed/cyberpunk-neon.svg" alt="Cyberpunk Neon" width="100%" />
         <br><strong>Cyberpunk Neon</strong>
       </a>
       <br><sub>Vaporwave grid + chromatic aberration.</sub>
     </td>
     <td width="50%" align="center" valign="top">
       <a href="./templates/07-themed/dark-elegant/">
-        <img src="./assets/previews/dark-elegant.svg" alt="Dark Elegant" width="100%" />
+        <img src="./assets/themed/dark-elegant.svg" alt="Dark Elegant" width="100%" />
         <br><strong>Dark Elegant</strong>
       </a>
       <br><sub>Monogram, gold hairline, restraint.</sub>

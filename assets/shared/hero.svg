@@ -1,100 +1,175 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="1200" height="320" role="img" aria-label="Awesome GitHub Profile">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="1200" height="360" role="img" aria-label="Awesome GitHub Profile — senior-grade README kit">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0b1020"/>
-      <stop offset="0.5" stop-color="#13193a"/>
-      <stop offset="1" stop-color="#0b1020"/>
+    <!-- Background — cosmic depth -->
+    <linearGradient id="h-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0"   stop-color="#0a0e24"/>
+      <stop offset="0.5" stop-color="#0f1338"/>
+      <stop offset="1"   stop-color="#04061a"/>
     </linearGradient>
-    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#7c5cff"/>
-      <stop offset="0.5" stop-color="#00d9ff"/>
-      <stop offset="1" stop-color="#ff5cdb"/>
+
+    <!-- Iridescent gradient — animated stops, holographic technique -->
+    <linearGradient id="h-iri" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#67e8f9">
+        <animate attributeName="stop-color" values="#67e8f9;#f472b6;#fcd34d;#a78bfa;#67e8f9" dur="14s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="0.33" stop-color="#a78bfa">
+        <animate attributeName="stop-color" values="#a78bfa;#67e8f9;#f472b6;#fcd34d;#a78bfa" dur="14s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="0.66" stop-color="#f472b6">
+        <animate attributeName="stop-color" values="#f472b6;#a78bfa;#67e8f9;#fcd34d;#f472b6" dur="14s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="1" stop-color="#fcd34d">
+        <animate attributeName="stop-color" values="#fcd34d;#f472b6;#a78bfa;#67e8f9;#fcd34d" dur="14s" repeatCount="indefinite"/>
+      </stop>
     </linearGradient>
-    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.6">
-      <stop offset="0" stop-color="#7c5cff" stop-opacity="0.45"/>
-      <stop offset="1" stop-color="#7c5cff" stop-opacity="0"/>
+
+    <!-- Subtle aurora wash on the upper third -->
+    <radialGradient id="h-aura" cx="0.3" cy="0" r="0.7">
+      <stop offset="0"   stop-color="#a78bfa" stop-opacity="0.35"/>
+      <stop offset="0.5" stop-color="#67e8f9" stop-opacity="0.18"/>
+      <stop offset="1"   stop-color="#0a0e24" stop-opacity="0"/>
     </radialGradient>
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M40 0 H0 V40" fill="none" stroke="#1d2550" stroke-width="1"/>
-    </pattern>
-    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="14"/>
+
+    <filter id="h-aura-blur"><feGaussianBlur stdDeviation="40"/></filter>
+
+    <filter id="h-grain">
+      <feTurbulence baseFrequency="1.2" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix values="0 0 0 0 1
+                            0 0 0 0 1
+                            0 0 0 0 1
+                            0 0 0 0.04 0"/>
+    </filter>
+
+    <filter id="h-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3"/>
     </filter>
   </defs>
 
-  <rect width="1200" height="320" fill="url(#bg)"/>
-  <rect width="1200" height="320" fill="url(#grid)" opacity="0.6"/>
+  <!-- Stage -->
+  <rect width="1200" height="360" fill="url(#h-bg)"/>
 
-  <!-- ambient glow -->
-  <circle cx="240" cy="170" r="260" fill="url(#glow)">
-    <animate attributeName="cx" values="240;320;240" dur="9s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="980" cy="150" r="240" fill="url(#glow)" opacity="0.7">
-    <animate attributeName="cx" values="980;900;980" dur="11s" repeatCount="indefinite"/>
-  </circle>
+  <!-- Soft aurora wash -->
+  <g filter="url(#h-aura-blur)" opacity="0.7">
+    <circle cx="320" cy="40" r="220" fill="url(#h-aura)"/>
+    <circle cx="900" cy="120" r="180" fill="url(#h-aura)" opacity="0.6"/>
+  </g>
 
-  <!-- accent bar -->
-  <rect x="80" y="80" width="6" height="160" rx="3" fill="url(#accent)">
-    <animate attributeName="height" values="160;120;160" dur="4s" repeatCount="indefinite"/>
-    <animate attributeName="y" values="80;100;80" dur="4s" repeatCount="indefinite"/>
-  </rect>
+  <!-- Subtle grid -->
+  <g stroke="#10173d" stroke-width="0.5">
+    <line x1="0" y1="120" x2="1200" y2="120"/>
+    <line x1="0" y1="240" x2="1200" y2="240"/>
+    <line x1="200" y1="0" x2="200" y2="360"/>
+    <line x1="600" y1="0" x2="600" y2="360"/>
+    <line x1="1000" y1="0" x2="1000" y2="360"/>
+  </g>
 
-  <!-- eyebrow -->
-  <text x="110" y="110" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" letter-spacing="6" fill="#8b94c7">SENIOR-GRADE README KIT</text>
+  <!-- Grain overlay -->
+  <rect width="1200" height="360" filter="url(#h-grain)"/>
 
-  <!-- title -->
-  <text x="110" y="180" font-family="Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, sans-serif" font-size="64" font-weight="800" fill="#f5f7ff" letter-spacing="-1">Awesome GitHub Profile</text>
-
-  <!-- subtitle with shimmer -->
-  <text x="110" y="222" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="20" font-weight="500" fill="url(#accent)">From minimal to 3D — copy, paste, ship.</text>
-
-  <!-- mini chips -->
-  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12" fill="#cdd3f5">
-    <g transform="translate(110,254)">
-      <rect width="92" height="28" rx="14" fill="#1a2150" stroke="#2a3380"/>
-      <text x="46" y="18" text-anchor="middle">minimal</text>
+  <!-- Top register strips -->
+  <g font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace" font-size="9" letter-spacing="4">
+    <g transform="translate(60,46)" fill="#fcd34d">
+      <line x1="0" y1="-10" x2="20" y2="-10" stroke="#fcd34d" stroke-width="0.5"/>
+      <text x="28" y="-6">SENIOR-GRADE README KIT  ·  20 TEMPLATES  ·  9 CATEGORIES</text>
     </g>
-    <g transform="translate(212,254)">
-      <rect width="92" height="28" rx="14" fill="#1a2150" stroke="#2a3380"/>
-      <text x="46" y="18" text-anchor="middle">animated</text>
-    </g>
-    <g transform="translate(314,254)">
-      <rect width="80" height="28" rx="14" fill="#1a2150" stroke="#2a3380"/>
-      <text x="40" y="18" text-anchor="middle">3D</text>
-    </g>
-    <g transform="translate(404,254)">
-      <rect width="92" height="28" rx="14" fill="#1a2150" stroke="#2a3380"/>
-      <text x="46" y="18" text-anchor="middle">gamified</text>
-    </g>
-    <g transform="translate(506,254)">
-      <rect width="100" height="28" rx="14" fill="#1a2150" stroke="#2a3380"/>
-      <text x="50" y="18" text-anchor="middle">dashboard</text>
-    </g>
-    <g transform="translate(616,254)">
-      <rect width="92" height="28" rx="14" fill="#1a2150" stroke="#2a3380"/>
-      <text x="46" y="18" text-anchor="middle">themed</text>
+    <g transform="translate(1140,46)" text-anchor="end" fill="#67e8f9">
+      <text x="-22" y="-6">EDITION MMXXVI</text>
+      <line x1="-14" y1="-10" x2="0" y2="-10" stroke="#67e8f9" stroke-width="0.5"/>
     </g>
   </g>
 
-  <!-- right-side mock card -->
-  <g transform="translate(820,70)">
-    <rect width="300" height="180" rx="16" fill="#0f163a" stroke="#2a3380"/>
-    <rect x="16" y="16" width="60" height="6" rx="3" fill="url(#accent)"/>
-    <rect x="16" y="32" width="180" height="10" rx="3" fill="#cdd3f5"/>
-    <rect x="16" y="50" width="220" height="6" rx="3" fill="#3a4480"/>
-    <rect x="16" y="62" width="140" height="6" rx="3" fill="#3a4480"/>
-    <g transform="translate(16,86)">
-      <rect width="84" height="60" rx="8" fill="#1a2150" stroke="#2a3380"/>
-      <rect x="92" width="84" height="60" rx="8" fill="#1a2150" stroke="#2a3380"/>
-      <rect x="184" width="84" height="60" rx="8" fill="#1a2150" stroke="#2a3380"/>
-      <circle cx="42" cy="30" r="14" fill="#7c5cff" opacity="0.85">
-        <animate attributeName="r" values="14;16;14" dur="2.4s" repeatCount="indefinite"/>
-      </circle>
-      <rect x="120" y="20" width="28" height="20" rx="4" fill="#00d9ff" opacity="0.85"/>
-      <path d="M210 40 L226 24 L242 40 L242 50 L210 50 Z" fill="#ff5cdb" opacity="0.85"/>
+  <!-- Massive multi-line title -->
+  <g font-family="'Fraunces', 'Playfair Display', Georgia, serif">
+    <!-- "Awesome" — iridescent italic, glow halo + base -->
+    <text x="80" y="170" font-size="86" font-weight="500" font-style="italic" fill="url(#h-iri)" filter="url(#h-glow)" opacity="0.5" letter-spacing="-2">Awesome</text>
+    <text x="80" y="170" font-size="86" font-weight="500" font-style="italic" fill="url(#h-iri)" letter-spacing="-2">Awesome</text>
+    <!-- "GitHub Profile." — solid white -->
+    <text x="80" y="244" font-size="86" font-weight="600" fill="#fef3c7" letter-spacing="-2.5">GitHub Profile.</text>
+  </g>
+
+  <!-- Tagline -->
+  <g font-family="'JetBrains Mono', monospace" font-size="13" letter-spacing="4">
+    <text x="84" y="282" fill="#67e8f9">FROM MINIMAL TO 3D</text>
+    <text x="252" y="282" fill="#475569">·</text>
+    <text x="266" y="282" fill="#a78bfa">COPY</text>
+    <text x="306" y="282" fill="#475569">·</text>
+    <text x="320" y="282" fill="#a78bfa">PASTE</text>
+    <text x="370" y="282" fill="#475569">·</text>
+    <text x="384" y="282" fill="#a78bfa">SHIP</text>
+  </g>
+
+  <!-- Right decorative — orbital sphere -->
+  <g transform="translate(1020, 180)">
+    <circle r="105" fill="none" stroke="#1a2348" stroke-width="0.5"/>
+    <g>
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="22s" repeatCount="indefinite"/>
+      <ellipse rx="100" ry="40" fill="none" stroke="#67e8f9" stroke-width="0.5" opacity="0.55"/>
+      <ellipse rx="100" ry="40" fill="none" stroke="#a78bfa" stroke-width="0.5" opacity="0.5" transform="rotate(60)"/>
+      <ellipse rx="100" ry="40" fill="none" stroke="#67e8f9" stroke-width="0.5" opacity="0.5" transform="rotate(120)"/>
+      <ellipse rx="100" ry="60" fill="none" stroke="#a78bfa" stroke-width="0.4" opacity="0.4"/>
+      <ellipse rx="60" ry="100" fill="none" stroke="#67e8f9" stroke-width="0.4" opacity="0.4"/>
     </g>
-    <rect x="16" y="158" width="40" height="6" rx="3" fill="#3a4480"/>
-    <rect x="62" y="158" width="40" height="6" rx="3" fill="#3a4480"/>
-    <rect x="108" y="158" width="40" height="6" rx="3" fill="#3a4480"/>
+    <!-- Orbiting tokens (counter-rotating to stay readable) -->
+    <g font-family="'JetBrains Mono', monospace" font-size="9" letter-spacing="1">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="-360" dur="22s" repeatCount="indefinite"/>
+      <g transform="translate(-72,-46)"><circle r="2" fill="#67e8f9"/><text x="6" y="3" fill="#67e8f9">svg</text></g>
+      <g transform="translate(60,-30)"><circle r="2" fill="#a78bfa"/><text x="6" y="3" fill="#a78bfa">smil</text></g>
+      <g transform="translate(70,40)"><circle r="2" fill="#67e8f9"/><text x="6" y="3" fill="#67e8f9">filter</text></g>
+      <g transform="translate(-50,68)"><circle r="2" fill="#a78bfa"/><text x="6" y="3" fill="#a78bfa">path</text></g>
+    </g>
+    <circle r="4" fill="#fef3c7"/>
+    <circle r="12" fill="none" stroke="#fef3c7" stroke-width="0.5" opacity="0.6">
+      <animate attributeName="r" values="12;20;12" dur="2.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0;0.6" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Category chips strip -->
+  <g transform="translate(80, 320)" font-family="'JetBrains Mono', monospace" font-size="9" letter-spacing="2" fill="#a5b4cf">
+    <g>
+      <rect width="64" height="22" rx="11" fill="none" stroke="#1f2540"/>
+      <text x="32" y="14" text-anchor="middle">minimal</text>
+    </g>
+    <g transform="translate(74,0)">
+      <rect width="72" height="22" rx="11" fill="none" stroke="#1f2540"/>
+      <text x="36" y="14" text-anchor="middle">animated</text>
+    </g>
+    <g transform="translate(156,0)">
+      <rect width="38" height="22" rx="11" fill="none" stroke="#1f2540"/>
+      <text x="19" y="14" text-anchor="middle">3d</text>
+    </g>
+    <g transform="translate(204,0)">
+      <rect width="72" height="22" rx="11" fill="none" stroke="#1f2540"/>
+      <text x="36" y="14" text-anchor="middle">gamified</text>
+    </g>
+    <g transform="translate(286,0)">
+      <rect width="80" height="22" rx="11" fill="none" stroke="#1f2540"/>
+      <text x="40" y="14" text-anchor="middle">dashboard</text>
+    </g>
+    <g transform="translate(376,0)">
+      <rect width="68" height="22" rx="11" fill="none" stroke="#1f2540"/>
+      <text x="34" y="14" text-anchor="middle">designer</text>
+    </g>
+    <g transform="translate(454,0)">
+      <rect width="60" height="22" rx="11" fill="none" stroke="#1f2540"/>
+      <text x="30" y="14" text-anchor="middle">themed</text>
+    </g>
+    <g transform="translate(524,0)">
+      <rect width="52" height="22" rx="11" fill="none" stroke="#1f2540"/>
+      <text x="26" y="14" text-anchor="middle">tricks</text>
+    </g>
+    <!-- highlighted avant-garde chip -->
+    <g transform="translate(586,0)">
+      <rect width="100" height="22" rx="11" fill="none" stroke="url(#h-iri)" stroke-width="0.8"/>
+      <text x="50" y="14" text-anchor="middle" fill="url(#h-iri)" font-weight="600">avant-garde</text>
+    </g>
+  </g>
+
+  <!-- Live status, bottom right -->
+  <g transform="translate(1140,332)" font-family="'JetBrains Mono', monospace" font-size="9" letter-spacing="3" fill="#94a3b8" text-anchor="end">
+    <text x="0" y="0">LIVE  ·  github.com/beydemirfurkan</text>
+    <circle cx="-238" cy="-3" r="3" fill="#4ade80">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="1.4s" repeatCount="indefinite"/>
+    </circle>
   </g>
 </svg>
