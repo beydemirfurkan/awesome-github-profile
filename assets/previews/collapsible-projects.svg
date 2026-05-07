@@ -2,86 +2,121 @@
   <defs>
     <linearGradient id="cp-bg" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#0d1117"/>
-      <stop offset="1" stop-color="#070a13"/>
+      <stop offset="1" stop-color="#04070d"/>
+    </linearGradient>
+    <linearGradient id="cp-row-active" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1c2235"/>
+      <stop offset="1" stop-color="#161a2c"/>
     </linearGradient>
     <linearGradient id="cp-row" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#161b22"/>
       <stop offset="1" stop-color="#11151c"/>
     </linearGradient>
     <linearGradient id="cp-spark" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#7c5cff" stop-opacity="0.4"/>
+      <stop offset="0" stop-color="#7c5cff" stop-opacity="0.45"/>
       <stop offset="1" stop-color="#7c5cff" stop-opacity="0"/>
     </linearGradient>
+    <linearGradient id="cp-accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#a78bfa"/>
+      <stop offset="1" stop-color="#67e8f9"/>
+    </linearGradient>
+    <filter id="cp-glow"><feGaussianBlur stdDeviation="1"/></filter>
   </defs>
 
   <rect width="600" height="300" fill="url(#cp-bg)"/>
 
-  <!-- Header -->
-  <text x="30" y="32" font-family="'Inter', system-ui, sans-serif" font-size="13" font-weight="700" fill="#e6edf3">PROJECTS</text>
-  <line x1="30" y1="40" x2="62" y2="40" stroke="#7c5cff" stroke-width="2"/>
-  <text x="84" y="32" font-family="'JetBrains Mono', monospace" font-size="9" fill="#7d8590" letter-spacing="3">CLICK A ROW · &lt;details&gt;</text>
-  <text x="570" y="32" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#a78bfa" letter-spacing="2">3 active · 7 archived</text>
+  <!-- Header strip -->
+  <g transform="translate(30,30)" font-family="'JetBrains Mono', monospace">
+    <text font-size="9" letter-spacing="3" fill="#a78bfa">— DOSSIER · &lt;details&gt;</text>
+    <text x="540" y="0" text-anchor="end" font-family="'Inter', system-ui, sans-serif" font-size="9" fill="#7d8590">
+      <tspan font-weight="600" fill="#39d353">3 active</tspan>
+      <tspan fill="#7d8590"> · 7 archived</tspan>
+    </text>
+  </g>
 
-  <!-- Row 1: EXPANDED (the showcase) -->
+  <!-- ROW 1 — EXPANDED (the showcase) -->
   <g transform="translate(30,52)">
-    <!-- Header bar -->
-    <rect width="540" height="34" rx="6" fill="url(#cp-row)" stroke="#30363d"/>
-    <text x="18" y="22" font-size="13" font-weight="700" fill="#a78bfa">▾</text>
-    <text x="38" y="22" font-family="'Inter', sans-serif" font-size="13" font-weight="600" fill="#e6edf3">acme · design system</text>
-    <!-- tags -->
-    <g transform="translate(360,12)">
-      <rect width="58" height="14" rx="3" fill="#1f2540" stroke="#3a4480" stroke-width="0.5"/>
-      <text x="29" y="10" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7" fill="#a78bfa" letter-spacing="1">TYPESCRIPT</text>
-    </g>
-    <g transform="translate(424,12)">
-      <rect width="44" height="14" rx="3" fill="#1f2540" stroke="#3a4480" stroke-width="0.5"/>
-      <text x="22" y="10" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7" fill="#67e8f9" letter-spacing="1">REACT</text>
-    </g>
-    <g transform="translate(474,12)">
-      <rect width="48" height="14" rx="3" fill="#1f2540" stroke="#3a4480" stroke-width="0.5"/>
-      <text x="24" y="10" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="7" fill="#fcd34d" letter-spacing="1">FIGMA</text>
+    <!-- Header bar with accent left bar -->
+    <rect width="540" height="34" rx="6" fill="url(#cp-row-active)" stroke="#3a4080" stroke-width="0.6"/>
+    <rect x="0" y="0" width="3" height="34" fill="url(#cp-accent)"/>
+    <text x="20" y="22" font-size="14" font-weight="700" fill="#a78bfa" filter="url(#cp-glow)">▾</text>
+    <text x="40" y="22" font-family="'Inter', system-ui, sans-serif" font-size="13" font-weight="600" fill="#f5f7ff">acme · design system</text>
+    <!-- Hover indicator pulse -->
+    <circle cx="528" cy="17" r="2.5" fill="#39d353">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="1.4s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Tags row -->
+    <g transform="translate(290,11)" font-family="'JetBrains Mono', monospace" font-size="7" letter-spacing="1">
+      <g><rect width="62" height="14" rx="3" fill="#1f2540" stroke="#3a4480" stroke-width="0.5"/><text x="31" y="10" text-anchor="middle" fill="#a78bfa">TYPESCRIPT</text></g>
+      <g transform="translate(68,0)"><rect width="46" height="14" rx="3" fill="#1f2540" stroke="#3a4480" stroke-width="0.5"/><text x="23" y="10" text-anchor="middle" fill="#67e8f9">REACT</text></g>
+      <g transform="translate(120,0)"><rect width="44" height="14" rx="3" fill="#1f2540" stroke="#3a4480" stroke-width="0.5"/><text x="22" y="10" text-anchor="middle" fill="#fcd34d">FIGMA</text></g>
+      <g transform="translate(170,0)"><rect width="58" height="14" rx="3" fill="#1f2540" stroke="#3a4480" stroke-width="0.5"/><text x="29" y="10" text-anchor="middle" fill="#f472b6">STORYBOOK</text></g>
     </g>
 
     <!-- Expanded body -->
-    <rect y="38" width="540" height="100" rx="6" fill="#0a0d14" stroke="#21262d"/>
+    <rect y="38" width="540" height="118" rx="6" fill="#0a0d14" stroke="#21262d" stroke-width="0.7"/>
+
     <!-- Description -->
-    <text x="20" y="60" font-family="'Inter', sans-serif" font-size="12" fill="#c9d1d9">A token-driven UI kit shipped to 14 product teams.</text>
-    <text x="20" y="78" font-family="'JetBrains Mono', monospace" font-size="10" fill="#7d8590">strict.tsconfig · generic.inference · brand.types · 412 components</text>
+    <text x="20" y="62" font-family="'Inter', sans-serif" font-size="12" fill="#c9d1d9">A token-driven UI kit shipped to <tspan fill="#fcd34d" font-weight="600">14 product teams</tspan>.</text>
+    <text x="20" y="80" font-family="'JetBrains Mono', monospace" font-size="10" fill="#7d8590">strict.tsconfig · generic.inference · brand.types · 412 components · 1.4 MB tree-shaken</text>
 
-    <!-- Mini sparkline chart inline -->
-    <g transform="translate(20,86)">
-      <polyline points="0,16 20,12 40,14 60,8 80,10 100,4 120,8 140,2 160,4 180,0" fill="none" stroke="#7c5cff" stroke-width="1.4"/>
-      <polyline points="0,16 20,12 40,14 60,8 80,10 100,4 120,8 140,2 160,4 180,0 180,20 0,20" fill="url(#cp-spark)"/>
-      <text x="0" y="32" font-family="'JetBrains Mono', monospace" font-size="8" fill="#475569" letter-spacing="1">commits · last 10 weeks</text>
+    <!-- Mini commit chart -->
+    <g transform="translate(20,98)">
+      <text font-family="'JetBrains Mono', monospace" font-size="8" fill="#64748b" letter-spacing="2">COMMITS · LAST 12 WEEKS</text>
+      <g transform="translate(0,8)">
+        <polyline points="0,28 18,22 36,24 54,18 72,20 90,12 108,16 126,8 144,12 162,4 180,8 198,0" fill="none" stroke="#7c5cff" stroke-width="1.4"/>
+        <polyline points="0,28 18,22 36,24 54,18 72,20 90,12 108,16 126,8 144,12 162,4 180,8 198,0 198,32 0,32" fill="url(#cp-spark)"/>
+        <circle cx="198" cy="0" r="2.5" fill="#fef3c7">
+          <animate attributeName="r" values="2.5;4;2.5" dur="1.6s" repeatCount="indefinite"/>
+        </circle>
+      </g>
     </g>
 
-    <!-- Stats row -->
-    <g transform="translate(220,108)" font-family="'JetBrains Mono', monospace" font-size="9" letter-spacing="1">
-      <text fill="#a78bfa">★ 1.2K</text>
-      <text x="56" fill="#4ade80">▲ 47 PR</text>
-      <text x="124" fill="#fcd34d">14 TEAMS</text>
-      <text x="200" fill="#67e8f9">→ jane/acme-ds</text>
+    <!-- Stats column right -->
+    <g transform="translate(260,72)" font-family="'JetBrains Mono', monospace" font-size="9" letter-spacing="1">
+      <g>
+        <text fill="#64748b">★ STARS</text>
+        <text x="120" y="0" text-anchor="end" fill="#fef3c7" font-weight="700">1,243</text>
+      </g>
+      <g transform="translate(0,18)">
+        <text fill="#64748b">▲ MERGED</text>
+        <text x="120" y="0" text-anchor="end" fill="#39d353" font-weight="700">47 PR</text>
+      </g>
+      <g transform="translate(0,36)">
+        <text fill="#64748b">⚑ TEAMS</text>
+        <text x="120" y="0" text-anchor="end" fill="#a78bfa" font-weight="700">14</text>
+      </g>
+      <g transform="translate(0,54)">
+        <text fill="#64748b">⌘ STATUS</text>
+        <text x="120" y="0" text-anchor="end" fill="#67e8f9" font-weight="700">v3.2.0</text>
+      </g>
+    </g>
+
+    <!-- Repo link -->
+    <g transform="translate(400,144)" font-family="'JetBrains Mono', monospace" font-size="9">
+      <text fill="#67e8f9">→ github.com/jane/acme-ds</text>
     </g>
   </g>
 
-  <!-- Row 2: collapsed -->
-  <g transform="translate(30,202)">
-    <rect width="540" height="30" rx="6" fill="url(#cp-row)" stroke="#21262d"/>
-    <text x="18" y="20" font-size="12" fill="#7d8590">▸</text>
-    <text x="38" y="20" font-family="'Inter', sans-serif" font-size="12" font-weight="600" fill="#e6edf3">the type observatory</text>
-    <text x="525" y="20" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#7d8590" letter-spacing="1">webgl · canvas</text>
+  <!-- ROW 2 — collapsed -->
+  <g transform="translate(30,220)">
+    <rect width="540" height="28" rx="6" fill="url(#cp-row)" stroke="#21262d" stroke-width="0.6"/>
+    <text x="20" y="19" font-size="12" fill="#7d8590">▸</text>
+    <text x="40" y="19" font-family="'Inter', sans-serif" font-size="12" font-weight="600" fill="#e6edf3">the type observatory</text>
+    <text x="525" y="19" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#7d8590" letter-spacing="1">webgl · canvas · 18 essays</text>
   </g>
 
-  <!-- Row 3: collapsed -->
-  <g transform="translate(30,238)">
-    <rect width="540" height="30" rx="6" fill="url(#cp-row)" stroke="#21262d"/>
-    <text x="18" y="20" font-size="12" fill="#7d8590">▸</text>
-    <text x="38" y="20" font-family="'Inter', sans-serif" font-size="12" font-weight="600" fill="#e6edf3">runtime essays</text>
-    <text x="525" y="20" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#7d8590" letter-spacing="1">writing · weekly</text>
+  <!-- ROW 3 — collapsed -->
+  <g transform="translate(30,254)">
+    <rect width="540" height="28" rx="6" fill="url(#cp-row)" stroke="#21262d" stroke-width="0.6"/>
+    <text x="20" y="19" font-size="12" fill="#7d8590">▸</text>
+    <text x="40" y="19" font-family="'Inter', sans-serif" font-size="12" font-weight="600" fill="#e6edf3">runtime essays</text>
+    <text x="525" y="19" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9" fill="#7d8590" letter-spacing="1">writing · weekly · 5K subs</text>
   </g>
 
-  <!-- Footer hint -->
-  <g transform="translate(300,288)" font-family="'JetBrains Mono', monospace" font-size="8" letter-spacing="3" text-anchor="middle" fill="#475569">
-    <text>+ 7 ARCHIVED · TAP TO EXPAND</text>
+  <!-- Footer -->
+  <g transform="translate(300,288)" font-family="'JetBrains Mono', monospace" font-size="8" letter-spacing="3" text-anchor="middle">
+    <text fill="#475569">+ 7 ARCHIVED  ·  TAP A ROW TO EXPAND</text>
   </g>
 </svg>

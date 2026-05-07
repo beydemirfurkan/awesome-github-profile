@@ -1,65 +1,183 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300" role="img" aria-label="3d-contribution-tower preview">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300" role="img" aria-label="3D Contribution Tower preview">
   <defs>
     <linearGradient id="ct-sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#0c1a36"/>
-      <stop offset="1" stop-color="#11264a"/>
+      <stop offset="0"   stop-color="#1a0844"/>
+      <stop offset="0.5" stop-color="#0c1430"/>
+      <stop offset="1"   stop-color="#04060f"/>
+    </linearGradient>
+    <radialGradient id="ct-glow" cx="0.5" cy="1" r="0.7">
+      <stop offset="0"   stop-color="#a78bfa" stop-opacity="0.35"/>
+      <stop offset="1"   stop-color="#a78bfa" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Tier gradients: top / front / side per height tier -->
+    <linearGradient id="ct-low-top" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#60a5fa"/><stop offset="1" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="ct-mid-top" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="ct-high-top" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c4b5fd"/><stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+    <linearGradient id="ct-peak-top" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fbcfe8"/><stop offset="1" stop-color="#f472b6"/>
     </linearGradient>
   </defs>
+
+  <!-- Sky -->
   <rect width="600" height="300" fill="url(#ct-sky)"/>
-  <text x="40" y="44" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="700" fill="#e8edff">Contribution skyline</text>
-  <text x="40" y="62" font-family="ui-monospace, monospace" font-size="11" fill="#7a86b8" letter-spacing="2">2025 · {{username}}</text>
-  <g transform="translate(40,260)">
-    <!-- isometric bars -->
-    <g>
-      <polygon points="0,0 24,-12 48,0 24,12" fill="#3a4d7a"/>
-      <polygon points="0,0 0,-30 24,-42 24,-12" fill="#5cffd9"/>
-      <polygon points="48,0 24,-12 24,-42 48,-30" fill="#3ab098"/>
-    </g>
-    <g transform="translate(50,0)">
-      <polygon points="0,0 24,-12 48,0 24,12" fill="#3a4d7a"/>
-      <polygon points="0,0 0,-60 24,-72 24,-12" fill="#5cffd9"/>
-      <polygon points="48,0 24,-12 24,-72 48,-60" fill="#3ab098"/>
-    </g>
-    <g transform="translate(100,0)">
-      <polygon points="0,0 24,-12 48,0 24,12" fill="#3a4d7a"/>
-      <polygon points="0,0 0,-90 24,-102 24,-12" fill="#7c5cff"/>
-      <polygon points="48,0 24,-12 24,-102 48,-90" fill="#5a3ab0"/>
-    </g>
-    <g transform="translate(150,0)">
-      <polygon points="0,0 24,-12 48,0 24,12" fill="#3a4d7a"/>
-      <polygon points="0,0 0,-50 24,-62 24,-12" fill="#5cffd9"/>
-      <polygon points="48,0 24,-12 24,-62 48,-50" fill="#3ab098"/>
-    </g>
-    <g transform="translate(200,0)">
-      <polygon points="0,0 24,-12 48,0 24,12" fill="#3a4d7a"/>
-      <polygon points="0,0 0,-130 24,-142 24,-12" fill="#ff5cdb"/>
-      <polygon points="48,0 24,-12 24,-142 48,-130" fill="#b03ab0"/>
-    </g>
-    <g transform="translate(250,0)">
-      <polygon points="0,0 24,-12 48,0 24,12" fill="#3a4d7a"/>
-      <polygon points="0,0 0,-70 24,-82 24,-12" fill="#5cffd9"/>
-      <polygon points="48,0 24,-12 24,-82 48,-70" fill="#3ab098"/>
-    </g>
-    <g transform="translate(300,0)">
-      <polygon points="0,0 24,-12 48,0 24,12" fill="#3a4d7a"/>
-      <polygon points="0,0 0,-100 24,-112 24,-12" fill="#7c5cff"/>
-      <polygon points="48,0 24,-12 24,-112 48,-100" fill="#5a3ab0"/>
-    </g>
-    <g transform="translate(350,0)">
-      <polygon points="0,0 24,-12 48,0 24,12" fill="#3a4d7a"/>
-      <polygon points="0,0 0,-40 24,-52 24,-12" fill="#5cffd9"/>
-      <polygon points="48,0 24,-12 24,-52 48,-40" fill="#3ab098"/>
-    </g>
-    <g transform="translate(400,0)">
-      <polygon points="0,0 24,-12 48,0 24,12" fill="#3a4d7a"/>
-      <polygon points="0,0 0,-160 24,-172 24,-12" fill="#ff5cdb"/>
-      <polygon points="48,0 24,-12 24,-172 48,-160" fill="#b03ab0"/>
-    </g>
-    <g transform="translate(450,0)">
-      <polygon points="0,0 24,-12 48,0 24,12" fill="#3a4d7a"/>
-      <polygon points="0,0 0,-80 24,-92 24,-12" fill="#5cffd9"/>
-      <polygon points="48,0 24,-12 24,-92 48,-80" fill="#3ab098"/>
-    </g>
+
+  <!-- Stars -->
+  <g fill="#ffffff">
+    <circle cx="60"  cy="34" r="0.8"><animate attributeName="opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite"/></circle>
+    <circle cx="140" cy="22" r="1"><animate attributeName="opacity" values="0.5;0.1;0.5" dur="4s" repeatCount="indefinite"/></circle>
+    <circle cx="220" cy="48" r="0.7"><animate attributeName="opacity" values="0.4;1;0.4" dur="3.4s" repeatCount="indefinite"/></circle>
+    <circle cx="320" cy="28" r="1.1"><animate attributeName="opacity" values="0.6;0.2;0.6" dur="2.6s" repeatCount="indefinite"/></circle>
+    <circle cx="410" cy="58" r="0.8"><animate attributeName="opacity" values="0.4;1;0.4" dur="4.6s" repeatCount="indefinite"/></circle>
+    <circle cx="490" cy="32" r="1"><animate attributeName="opacity" values="0.7;0.3;0.7" dur="3s" repeatCount="indefinite"/></circle>
+    <circle cx="540" cy="68" r="0.7"><animate attributeName="opacity" values="0.5;1;0.5" dur="3.6s" repeatCount="indefinite"/></circle>
   </g>
-  <text x="560" y="290" text-anchor="end" font-family="ui-monospace, monospace" font-size="9" fill="#5a648b">via github-profile-3d-contrib</text>
+
+  <!-- Cosmic glow over horizon -->
+  <ellipse cx="300" cy="280" rx="420" ry="60" fill="url(#ct-glow)"/>
+
+  <!-- Header -->
+  <text x="30" y="30" font-family="'Inter', system-ui, sans-serif" font-size="14" font-weight="700" fill="#e8edff">Contribution skyline</text>
+  <text x="30" y="48" font-family="'JetBrains Mono', monospace" font-size="9" fill="#a78bfa" letter-spacing="3">2026  ·  beydemirfurkan</text>
+
+  <!-- Ground plane (isometric, very subtle) -->
+  <polygon points="20,278 380,278 410,266 50,266" fill="#0a0e24" opacity="0.6"/>
+  <polygon points="20,278 380,278 410,266 50,266" fill="none" stroke="#1a2348" stroke-width="0.4"/>
+
+  <!-- BACK ROW (rendered first — deeper) — stride 40, y_base=246, x_offset=+18 -->
+  <!-- W=24, D=12 -->
+  <!-- Back row: 8 towers x = 38, 78, 118, 158, 198, 238, 278, 318 -->
+
+  <!-- T-back-1: x=38, H=80, tier=mid -->
+  <polygon points="38,246 62,246 62,166 38,166" fill="#0e7490"/>
+  <polygon points="62,246 74,240 74,160 62,166" fill="#155e75"/>
+  <polygon points="38,166 62,166 74,160 50,160" fill="url(#ct-mid-top)"/>
+
+  <!-- T-back-2: x=78, H=130, tier=high -->
+  <polygon points="78,246 102,246 102,116 78,116" fill="#7c3aed"/>
+  <polygon points="102,246 114,240 114,110 102,116" fill="#5b21b6"/>
+  <polygon points="78,116 102,116 114,110 90,110" fill="url(#ct-high-top)"/>
+
+  <!-- T-back-3: x=118, H=70, tier=low -->
+  <polygon points="118,246 142,246 142,176 118,176" fill="#1d4ed8"/>
+  <polygon points="142,246 154,240 154,170 142,176" fill="#1e3a8a"/>
+  <polygon points="118,176 142,176 154,170 130,170" fill="url(#ct-low-top)"/>
+
+  <!-- T-back-4: x=158, H=160, tier=peak -->
+  <polygon points="158,246 182,246 182,86 158,86" fill="#db2777"/>
+  <polygon points="182,246 194,240 194,80 182,86" fill="#9d174d"/>
+  <polygon points="158,86 182,86 194,80 170,80" fill="url(#ct-peak-top)"/>
+
+  <!-- T-back-5: x=198, H=100, tier=mid -->
+  <polygon points="198,246 222,246 222,146 198,146" fill="#0e7490"/>
+  <polygon points="222,246 234,240 234,140 222,146" fill="#155e75"/>
+  <polygon points="198,146 222,146 234,140 210,140" fill="url(#ct-mid-top)"/>
+
+  <!-- T-back-6: x=238, H=140, tier=high -->
+  <polygon points="238,246 262,246 262,106 238,106" fill="#7c3aed"/>
+  <polygon points="262,246 274,240 274,100 262,106" fill="#5b21b6"/>
+  <polygon points="238,106 262,106 274,100 250,100" fill="url(#ct-high-top)"/>
+
+  <!-- T-back-7: x=278, H=80, tier=mid -->
+  <polygon points="278,246 302,246 302,166 278,166" fill="#0e7490"/>
+  <polygon points="302,246 314,240 314,160 302,166" fill="#155e75"/>
+  <polygon points="278,166 302,166 314,160 290,160" fill="url(#ct-mid-top)"/>
+
+  <!-- T-back-8: x=318, H=110, tier=mid -->
+  <polygon points="318,246 342,246 342,136 318,136" fill="#0e7490"/>
+  <polygon points="342,246 354,240 354,130 342,136" fill="#155e75"/>
+  <polygon points="318,136 342,136 354,130 330,130" fill="url(#ct-mid-top)"/>
+
+  <!-- FRONT ROW — stride 40, y_base=266 -->
+  <!-- Front row: 8 towers x = 26, 66, 106, 146, 186, 226, 266, 306 -->
+
+  <!-- T-front-1: x=26, H=60, tier=low -->
+  <polygon points="26,266 50,266 50,206 26,206" fill="#1d4ed8"/>
+  <polygon points="50,266 62,260 62,200 50,206" fill="#1e3a8a"/>
+  <polygon points="26,206 50,206 62,200 38,200" fill="url(#ct-low-top)"/>
+
+  <!-- T-front-2: x=66, H=120, tier=high -->
+  <polygon points="66,266 90,266 90,146 66,146" fill="#7c3aed"/>
+  <polygon points="90,266 102,260 102,140 90,146" fill="#5b21b6"/>
+  <polygon points="66,146 90,146 102,140 78,140" fill="url(#ct-high-top)"/>
+
+  <!-- T-front-3: x=106, H=90, tier=mid -->
+  <polygon points="106,266 130,266 130,176 106,176" fill="#0e7490"/>
+  <polygon points="130,266 142,260 142,170 130,176" fill="#155e75"/>
+  <polygon points="106,176 130,176 142,170 118,170" fill="url(#ct-mid-top)"/>
+
+  <!-- T-front-4: x=146, H=180, tier=peak (the tallest, central) -->
+  <polygon points="146,266 170,266 170,86 146,86" fill="#db2777"/>
+  <polygon points="170,266 182,260 182,80 170,86" fill="#9d174d"/>
+  <polygon points="146,86 170,86 182,80 158,80" fill="url(#ct-peak-top)"/>
+
+  <!-- T-front-5: x=186, H=70, tier=low -->
+  <polygon points="186,266 210,266 210,196 186,196" fill="#1d4ed8"/>
+  <polygon points="210,266 222,260 222,190 210,196" fill="#1e3a8a"/>
+  <polygon points="186,196 210,196 222,190 198,190" fill="url(#ct-low-top)"/>
+
+  <!-- T-front-6: x=226, H=130, tier=high -->
+  <polygon points="226,266 250,266 250,136 226,136" fill="#7c3aed"/>
+  <polygon points="250,266 262,260 262,130 250,136" fill="#5b21b6"/>
+  <polygon points="226,136 250,136 262,130 238,130" fill="url(#ct-high-top)"/>
+
+  <!-- T-front-7: x=266, H=100, tier=mid -->
+  <polygon points="266,266 290,266 290,166 266,166" fill="#0e7490"/>
+  <polygon points="290,266 302,260 302,160 290,166" fill="#155e75"/>
+  <polygon points="266,166 290,166 302,160 278,160" fill="url(#ct-mid-top)"/>
+
+  <!-- T-front-8: x=306, H=160, tier=peak -->
+  <polygon points="306,266 330,266 330,106 306,106" fill="#db2777"/>
+  <polygon points="330,266 342,260 342,100 330,106" fill="#9d174d"/>
+  <polygon points="306,106 330,106 342,100 318,100" fill="url(#ct-peak-top)"/>
+
+  <!-- T-front-9: x=346, H=80, tier=mid -->
+  <polygon points="346,266 370,266 370,186 346,186" fill="#0e7490"/>
+  <polygon points="370,266 382,260 382,180 370,186" fill="#155e75"/>
+  <polygon points="346,186 370,186 382,180 358,180" fill="url(#ct-mid-top)"/>
+
+  <!-- Side panel — right -->
+  <line x1="420" y1="40" x2="420" y2="260" stroke="#1a2348" stroke-width="0.5"/>
+
+  <g transform="translate(440,76)" font-family="'JetBrains Mono', monospace">
+    <text font-size="9" fill="#a78bfa" letter-spacing="3">— LEGEND</text>
+
+    <g transform="translate(0,24)">
+      <rect width="10" height="10" fill="url(#ct-peak-top)"/>
+      <text x="20" y="9" font-size="9" fill="#cbd5e1">peak  ·  150+ commits</text>
+    </g>
+    <g transform="translate(0,42)">
+      <rect width="10" height="10" fill="url(#ct-high-top)"/>
+      <text x="20" y="9" font-size="9" fill="#cbd5e1">high  ·  120-150</text>
+    </g>
+    <g transform="translate(0,60)">
+      <rect width="10" height="10" fill="url(#ct-mid-top)"/>
+      <text x="20" y="9" font-size="9" fill="#cbd5e1">mid   ·  80-120</text>
+    </g>
+    <g transform="translate(0,78)">
+      <rect width="10" height="10" fill="url(#ct-low-top)"/>
+      <text x="20" y="9" font-size="9" fill="#cbd5e1">low   ·  &lt; 80</text>
+    </g>
+
+    <line x1="0" y1="100" x2="120" y2="100" stroke="#1a2348" stroke-width="0.4"/>
+
+    <text y="124" font-size="9" fill="#a78bfa" letter-spacing="3">— TOTALS</text>
+    <text y="146" font-size="9" fill="#cbd5e1">total</text>
+    <text x="120" y="146" text-anchor="end" font-size="11" fill="#fef3c7" font-weight="700">1,842</text>
+    <text y="164" font-size="9" fill="#cbd5e1">peak day</text>
+    <text x="120" y="164" text-anchor="end" font-size="11" fill="#f472b6" font-weight="700">47</text>
+    <text y="182" font-size="9" fill="#cbd5e1">streak</text>
+    <text x="120" y="182" text-anchor="end" font-size="11" fill="#a78bfa" font-weight="700">47d</text>
+  </g>
+
+  <!-- Status / footer -->
+  <g transform="translate(30,278)" font-family="'JetBrains Mono', monospace" font-size="8" letter-spacing="2" fill="#475569">
+    <text>action: yoshi389111/github-profile-3d-contrib</text>
+  </g>
+  <text x="570" y="278" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="8" fill="#a78bfa" letter-spacing="3">RENDERED DAILY</text>
 </svg>
