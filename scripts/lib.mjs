@@ -232,6 +232,23 @@ export function svgProblems(svgPath) {
   }
   if (stack.length) problems.push(`unclosed tag(s): ${[...new Set(stack)].join(', ')}`)
 
+  // A gradient defaults to objectBoundingBox units, which are undefined when
+  // the box has zero width or height — so a gradient-stroked horizontal or
+  // vertical <line> paints nothing at all, silently. Two divider rules in
+  // holographic-foil.svg were invisible this way from the first commit.
+  const userSpace = new Set(
+    [...src.matchAll(/<(?:linear|radial)Gradient\b[^>]*\bid="([^"]+)"[^>]*gradientUnits="userSpaceOnUse"/g)].map((m) => m[1]),
+  )
+  for (const m of withoutComments.matchAll(/<line\b([^>]*)>/g)) {
+    const attrs = m[1]
+    const ref = attrs.match(/stroke="url\(#([^)]+)\)"/)?.[1]
+    if (!ref || userSpace.has(ref)) continue
+    const num = (n) => Number(attrs.match(new RegExp(`\\b${n}="([-\\d.]+)"`))?.[1] ?? NaN)
+    if (num('x1') === num('x2') || num('y1') === num('y2')) {
+      problems.push(`<line> stroked with url(#${ref}) is axis-aligned, so its gradient has a zero-area box and paints nothing — use a <rect>, or give the gradient gradientUnits="userSpaceOnUse"`)
+    }
+  }
+
   return problems
 }
 

@@ -100,13 +100,13 @@
     <text x="112" y="94" font-size="40" font-weight="800" fill="#fef3c7" letter-spacing="-1">JANE DOE</text>
     <text x="112" y="118" font-family="'JetBrains Mono', monospace" font-size="11" fill="#fcd34d" letter-spacing="5">FRONTEND ENGINEER · LV.7</text>
   </g>
-  <g transform="translate(1088,84)" font-family="'JetBrains Mono', monospace" text-anchor="end">
+  <g transform="translate(1012,84)" font-family="'JetBrains Mono', monospace" text-anchor="end">
     <text x="0" y="0" font-size="11" fill="#fbbf24" letter-spacing="3">HP</text>
     <text x="0" y="32" font-size="36" font-weight="700" fill="#fef3c7">2,184</text>
   </g>
 
   <!-- DIVIDER -->
-  <line x1="200" y1="148" x2="1000" y2="148" stroke="url(#hf-foil)" stroke-width="0.8" opacity="0.7"/>
+  <rect x="112" y="133" width="976" height="0.8" fill="url(#hf-foil)" opacity="0.7"/>
 
   <!-- PORTRAIT FRAME — abstract iridescent panel -->
   <g transform="translate(112,150)">
@@ -142,14 +142,14 @@
   </g>
 
   <!-- BOTTOM FOOTER STRIP -->
-  <line x1="200" y1="400" x2="1000" y2="400" stroke="url(#hf-foil)" stroke-width="0.8" opacity="0.7"/>
+  <rect x="112" y="341" width="976" height="0.8" fill="url(#hf-foil)" opacity="0.7"/>
   <g font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="3">
     <text x="112" y="362" fill="#94a3b8">N° 001 / 2026 · 1ST EDITION</text>
     <text x="1088" y="362" text-anchor="end" fill="#fcd34d">★★★★★  HOLOGRAPHIC RARE</text>
   </g>
 
   <!-- Edition stamp -->
-  <g transform="translate(1076,78)" filter="url(#hf-glow)">
+  <g transform="translate(1066,86)" filter="url(#hf-glow)">
     <circle r="22" fill="none" stroke="#fcd34d" stroke-width="1"/>
     <text text-anchor="middle" y="-3" font-family="'JetBrains Mono', monospace" font-size="7" fill="#fcd34d" letter-spacing="2">FIRST</text>
     <text text-anchor="middle" y="9" font-family="'JetBrains Mono', monospace" font-size="7" fill="#fcd34d" letter-spacing="2">EDITION</text>
