@@ -1,0 +1,80 @@
+{
+  "slug": "risograph-poster",
+  "name": "Risograph Poster",
+  "kind": "svg",
+  "difficulty": "Advanced",
+  "blurb": "Two-ink riso print, halftone screens and all.",
+  "asset": "assets/print-analog/risograph-poster.svg",
+  "picture": false,
+  "tags": [
+    "print",
+    "risograph",
+    "halftone",
+    "misregistration",
+    "self-hosted"
+  ],
+  "services": [],
+  "placeholders": [
+    {
+      "token": "name",
+      "where": "markdown",
+      "description": "Display name — also set in both headline layers",
+      "example": "Jane Doe"
+    },
+    {
+      "token": "tagline",
+      "where": "markdown",
+      "description": "Role line — also set in the SVG",
+      "example": "Frontend engineer"
+    },
+    {
+      "token": "body_line_*",
+      "where": "asset",
+      "description": "Two lines of poster body copy",
+      "example": "Building the parts nobody notices."
+    },
+    {
+      "token": "edition_note",
+      "where": "asset",
+      "description": "The footer edition line",
+      "example": "EDITION OF 100"
+    },
+    {
+      "token": "currently_paragraph",
+      "where": "markdown",
+      "description": "One or two sentences on what you are doing now",
+      "example": "Shaping the design system at Acme."
+    },
+    {
+      "token": "project_*_name",
+      "where": "markdown",
+      "description": "Project name, one per bullet",
+      "example": "acme design system"
+    },
+    {
+      "token": "project_*_desc",
+      "where": "markdown",
+      "description": "One line on what it is",
+      "example": "tokens shipped to 14 teams"
+    },
+    {
+      "token": "website",
+      "where": "markdown",
+      "description": "Domain shown to the reader",
+      "example": "jane.dev"
+    },
+    {
+      "token": "website_url",
+      "where": "markdown",
+      "description": "Site URL with protocol",
+      "example": "https://jane.dev"
+    },
+    {
+      "token": "twitter",
+      "where": "markdown",
+      "description": "Twitter/X handle, no @",
+      "example": "janedoe"
+    }
+  ],
+  "credits": []
+}

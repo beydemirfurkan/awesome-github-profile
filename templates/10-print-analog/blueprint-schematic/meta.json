@@ -1,0 +1,86 @@
+{
+  "slug": "blueprint-schematic",
+  "name": "Blueprint Schematic",
+  "kind": "svg",
+  "difficulty": "Advanced",
+  "blurb": "Your README, drafted as an exploded assembly.",
+  "asset": "assets/print-analog/blueprint-schematic.svg",
+  "picture": false,
+  "tags": [
+    "print",
+    "blueprint",
+    "technical-drawing",
+    "displacement",
+    "self-hosted"
+  ],
+  "services": [],
+  "placeholders": [
+    {
+      "token": "name",
+      "where": "markdown",
+      "description": "Display name — also set in the title block",
+      "example": "Jane Doe"
+    },
+    {
+      "token": "callout_*",
+      "where": "asset",
+      "description": "The four numbered callout labels",
+      "example": "HERO — self-hosted SVG"
+    },
+    {
+      "token": "drawn_by",
+      "where": "asset",
+      "description": "Title-block author field",
+      "example": "janedoe"
+    },
+    {
+      "token": "revision",
+      "where": "asset",
+      "description": "Title-block revision letter",
+      "example": "C"
+    },
+    {
+      "token": "section_one_note",
+      "where": "markdown",
+      "description": "A line about your hero section",
+      "example": "One self-hosted SVG, no services."
+    },
+    {
+      "token": "section_two_note",
+      "where": "markdown",
+      "description": "A line about what you are doing now",
+      "example": "Shaping the design system at Acme."
+    },
+    {
+      "token": "project_*_name",
+      "where": "markdown",
+      "description": "Project name, one per bullet",
+      "example": "acme design system"
+    },
+    {
+      "token": "project_*_desc",
+      "where": "markdown",
+      "description": "One line on what it is",
+      "example": "tokens shipped to 14 teams"
+    },
+    {
+      "token": "website",
+      "where": "markdown",
+      "description": "Domain shown to the reader",
+      "example": "jane.dev"
+    },
+    {
+      "token": "website_url",
+      "where": "markdown",
+      "description": "Site URL with protocol",
+      "example": "https://jane.dev"
+    },
+    {
+      "token": "twitter",
+      "where": "markdown",
+      "description": "Twitter/X handle, no @",
+      "example": "janedoe"
+    }
+  ],
+  "credits": []
+}

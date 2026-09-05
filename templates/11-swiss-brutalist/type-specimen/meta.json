@@ -1,0 +1,80 @@
+{
+  "slug": "type-specimen",
+  "name": "Type Specimen",
+  "kind": "svg",
+  "difficulty": "Basic",
+  "blurb": "Your name as a foundry specimen, ruled and measured.",
+  "asset": "assets/swiss-brutalist/type-specimen.svg",
+  "picture": false,
+  "tags": [
+    "typography",
+    "specimen",
+    "serif",
+    "editorial",
+    "self-hosted"
+  ],
+  "services": [],
+  "placeholders": [
+    {
+      "token": "name",
+      "where": "markdown",
+      "description": "Display name — appears at all five settings in the SVG",
+      "example": "Jane Doe"
+    },
+    {
+      "token": "ladder_*",
+      "where": "asset",
+      "description": "The four smaller settings, each adding detail",
+      "example": "Jane Doe — frontend engineer"
+    },
+    {
+      "token": "glyph_row",
+      "where": "asset",
+      "description": "The alphabet and figures row",
+      "example": "ABCDEFGHIJKLM… 0123456789"
+    },
+    {
+      "token": "colophon_heading",
+      "where": "markdown",
+      "description": "Heading for your note",
+      "example": "colophon"
+    },
+    {
+      "token": "colophon_paragraph",
+      "where": "markdown",
+      "description": "A paragraph about how you work",
+      "example": "Set in whatever the reader has installed."
+    },
+    {
+      "token": "project_*_name",
+      "where": "markdown",
+      "description": "Project name, one per bullet",
+      "example": "acme design system"
+    },
+    {
+      "token": "project_*_desc",
+      "where": "markdown",
+      "description": "One line on what it is",
+      "example": "tokens shipped to 14 teams"
+    },
+    {
+      "token": "website",
+      "where": "markdown",
+      "description": "Domain shown to the reader",
+      "example": "jane.dev"
+    },
+    {
+      "token": "website_url",
+      "where": "markdown",
+      "description": "Site URL with protocol",
+      "example": "https://jane.dev"
+    },
+    {
+      "token": "twitter",
+      "where": "markdown",
+      "description": "Twitter/X handle, no @",
+      "example": "janedoe"
+    }
+  ],
+  "credits": []
+}

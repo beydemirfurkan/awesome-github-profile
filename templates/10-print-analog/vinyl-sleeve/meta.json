@@ -1,0 +1,74 @@
+{
+  "slug": "vinyl-sleeve",
+  "name": "Vinyl Sleeve",
+  "kind": "svg",
+  "difficulty": "Intermediate",
+  "blurb": "A record half out of its sleeve. Projects are the tracklist.",
+  "asset": "assets/print-analog/vinyl-sleeve.svg",
+  "picture": false,
+  "tags": [
+    "print",
+    "vinyl",
+    "record",
+    "tracklist",
+    "self-hosted"
+  ],
+  "services": [],
+  "placeholders": [
+    {
+      "token": "name",
+      "where": "markdown",
+      "description": "Display name — also set on the sleeve",
+      "example": "Jane Doe"
+    },
+    {
+      "token": "monogram",
+      "where": "asset",
+      "description": "Two letters on the record label",
+      "example": "JD"
+    },
+    {
+      "token": "tracklist_*",
+      "where": "asset",
+      "description": "The five tracklist rows",
+      "example": "A1 · acme design system · 4:12"
+    },
+    {
+      "token": "liner_notes",
+      "where": "markdown",
+      "description": "A paragraph about the record, so to speak",
+      "example": "Five years of interface work, in order."
+    },
+    {
+      "token": "track_*_name",
+      "where": "markdown",
+      "description": "Project name, one per bullet",
+      "example": "acme design system"
+    },
+    {
+      "token": "track_*_desc",
+      "where": "markdown",
+      "description": "One line on what it is",
+      "example": "tokens shipped to 14 teams"
+    },
+    {
+      "token": "website",
+      "where": "markdown",
+      "description": "Domain shown to the reader",
+      "example": "jane.dev"
+    },
+    {
+      "token": "website_url",
+      "where": "markdown",
+      "description": "Site URL with protocol",
+      "example": "https://jane.dev"
+    },
+    {
+      "token": "twitter",
+      "where": "markdown",
+      "description": "Twitter/X handle, no @",
+      "example": "janedoe"
+    }
+  ],
+  "credits": []
+}

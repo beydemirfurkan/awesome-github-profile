@@ -1,0 +1,68 @@
+{
+  "slug": "strata-core",
+  "name": "Strata Core",
+  "kind": "svg",
+  "difficulty": "Intermediate",
+  "blurb": "Six years of commits as a drilled core sample.",
+  "asset": "assets/generative/strata-core.svg",
+  "picture": false,
+  "tags": [
+    "generative",
+    "geology",
+    "timeline",
+    "data-art",
+    "self-hosted"
+  ],
+  "services": [],
+  "placeholders": [
+    {
+      "token": "name",
+      "where": "markdown",
+      "description": "Display name — also set in the SVG",
+      "example": "Jane Doe"
+    },
+    {
+      "token": "year_*",
+      "where": "asset",
+      "description": "The six year labels and their commit counts",
+      "example": "2026 · 1,842 commits"
+    },
+    {
+      "token": "log_paragraph",
+      "where": "markdown",
+      "description": "What the years actually contained",
+      "example": "Two quiet years, then a design system."
+    },
+    {
+      "token": "project_*_name",
+      "where": "markdown",
+      "description": "Project name, one per bullet",
+      "example": "acme design system"
+    },
+    {
+      "token": "project_*_desc",
+      "where": "markdown",
+      "description": "One line on what it is",
+      "example": "tokens shipped to 14 teams"
+    },
+    {
+      "token": "website",
+      "where": "markdown",
+      "description": "Domain shown to the reader",
+      "example": "jane.dev"
+    },
+    {
+      "token": "website_url",
+      "where": "markdown",
+      "description": "Site URL with protocol",
+      "example": "https://jane.dev"
+    },
+    {
+      "token": "twitter",
+      "where": "markdown",
+      "description": "Twitter/X handle, no @",
+      "example": "janedoe"
+    }
+  ],
+  "credits": []
+}

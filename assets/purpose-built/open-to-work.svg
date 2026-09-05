@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-label="Open to Work — a hiring card stating availability, what you want, and what you don't">
+  <title>Open to Work</title>
+  <desc>Everything a hiring manager checks in the first ten seconds, in the order they check it: are you available, what do you do, what do you want, and how do they reach you.</desc>
+  <defs>
+    <linearGradient id="ow-live" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#16a34a"/><stop offset="1" stop-color="#22c55e"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="420" fill="#f7f7f5"/>
+  <rect x="0" y="0" width="1200" height="5" fill="url(#ow-live)"/>
+
+  <!-- Status: the first thing anyone needs, so it is the first thing here. -->
+  <g>
+    <rect x="72" y="46" width="196" height="34" rx="17" fill="#dcfce7" stroke="#16a34a" stroke-width="1.2"/>
+    <circle cx="94" cy="63" r="5" fill="#16a34a">
+      <animate attributeName="opacity" values="1;0.3;1" dur="2.2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="110" y="68" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="12" font-weight="700" fill="#14532d" letter-spacing="2">OPEN TO WORK</text>
+  </g>
+  <text x="1128" y="68" text-anchor="end" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="11" fill="#8a8a84" letter-spacing="2.5">UPDATED SEPTEMBER 2026</text>
+
+  <text x="72" y="140" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, sans-serif" font-size="52" font-weight="800" fill="#131316" letter-spacing="-1.5">Jane Doe</text>
+  <text x="72" y="172" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="20" fill="#4a4a52">Senior frontend engineer · design systems, motion, accessibility</text>
+
+  <line x1="72" y1="204" x2="1128" y2="204" stroke="#e2e2dd"/>
+
+  <!-- What I want / what I don't. The second column is the one people
+       remember, because almost nobody writes it down. -->
+  <text x="72" y="238" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10" fill="#16a34a" letter-spacing="3.5">LOOKING FOR</text>
+  <g font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="16" fill="#22222a">
+    <text x="72" y="268">Product teams that own a surface end to end</text>
+    <text x="72" y="294">Design systems with real adoption pressure</text>
+    <text x="72" y="320">Remote-first, EU-overlapping hours</text>
+  </g>
+  <g fill="#16a34a">
+    <circle cx="58" cy="263" r="3"/><circle cx="58" cy="289" r="3"/><circle cx="58" cy="315" r="3"/>
+  </g>
+
+  <text x="640" y="238" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10" fill="#a16207" letter-spacing="3.5">NOT LOOKING FOR</text>
+  <g font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="16" fill="#5a5a62">
+    <text x="640" y="268">Relocation, or on-site five days</text>
+    <text x="640" y="294">Agency work on a two-week cadence</text>
+    <text x="640" y="320">Anything that starts with a take-home over 4h</text>
+  </g>
+  <g stroke="#d4a017" stroke-width="1.6" stroke-linecap="round">
+    <path d="M623 260 l6 6 M629 260 l-6 6"/>
+    <path d="M623 286 l6 6 M629 286 l-6 6"/>
+    <path d="M623 312 l6 6 M629 312 l-6 6"/>
+  </g>
+
+  <!-- Facts strip -->
+  <line x1="72" y1="346" x2="1128" y2="346" stroke="#e2e2dd"/>
+  <g font-family="ui-monospace, Menlo, Consolas, monospace">
+    <text x="72" y="368" font-size="9" fill="#8a8a84" letter-spacing="2.5">AVAILABLE</text>
+    <text x="72" y="390" font-size="15" font-weight="700" fill="#131316">Nov 2026</text>
+    <text x="256" y="368" font-size="9" fill="#8a8a84" letter-spacing="2.5">TIMEZONE</text>
+    <text x="256" y="390" font-size="15" font-weight="700" fill="#131316">UTC+3</text>
+    <text x="424" y="368" font-size="9" fill="#8a8a84" letter-spacing="2.5">TYPE</text>
+    <text x="424" y="390" font-size="15" font-weight="700" fill="#131316">Full-time · Contract</text>
+    <text x="704" y="368" font-size="9" fill="#8a8a84" letter-spacing="2.5">NOTICE</text>
+    <text x="704" y="390" font-size="15" font-weight="700" fill="#131316">6 weeks</text>
+  </g>
+  <g>
+    <rect x="876" y="356" width="252" height="42" rx="6" fill="#131316"/>
+    <text x="1002" y="383" text-anchor="middle" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="14" font-weight="700" fill="#f7f7f5" letter-spacing="1">hello@jane.dev →</text>
+  </g>
+</svg>

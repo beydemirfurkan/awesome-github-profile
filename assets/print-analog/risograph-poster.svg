@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-label="Risograph Poster — a two-ink risograph print with halftone screens and deliberate misregistration">
+  <title>Risograph Poster</title>
+  <desc>Two spot inks, screened at 15° and 75° so their dots interleave instead of covering each other — which is how a real two-colour separation behaves, and why no blend mode is needed.</desc>
+  <defs>
+    <!-- Halftone screens. Angling the two inks 60° apart is the whole trick:
+         at different angles the dots sit between each other rather than on top,
+         so plain alpha compositing produces a genuine two-ink overlap and there
+         is no dependence on mix-blend-mode. Three densities per ink give tone. -->
+    <pattern id="rp-pink-90" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(15)">
+      <circle cx="3.5" cy="3.5" r="3.1" fill="#f0338c"/>
+    </pattern>
+    <pattern id="rp-pink-55" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(15)">
+      <circle cx="3.5" cy="3.5" r="2.3" fill="#f0338c"/>
+    </pattern>
+    <pattern id="rp-pink-20" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(15)">
+      <circle cx="3.5" cy="3.5" r="1.35" fill="#f0338c"/>
+    </pattern>
+    <pattern id="rp-blue-90" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(75)">
+      <circle cx="3.5" cy="3.5" r="3.1" fill="#1257a8"/>
+    </pattern>
+    <pattern id="rp-blue-40" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(75)">
+      <circle cx="3.5" cy="3.5" r="1.9" fill="#1257a8"/>
+    </pattern>
+
+    <!-- Uncoated stock: coarse, low-contrast, slightly warm. -->
+    <filter id="rp-grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.62" numOctaves="4" seed="19" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.10  0 0 0 0 0.09  0 0 0 0 0.07  0 0 0 0.55 0"/>
+    </filter>
+
+    <clipPath id="rp-disc"><circle cx="944" cy="196" r="148"/></clipPath>
+    <clipPath id="rp-band"><rect x="72" y="252" width="536" height="86"/></clipPath>
+  </defs>
+
+  <rect width="1200" height="420" fill="#f4efe3"/>
+
+  <!-- Ink 2: the disc. Drawn first so the headline prints over it. -->
+  <g clip-path="url(#rp-disc)">
+    <rect x="796" y="48" width="296" height="296" fill="url(#rp-blue-90)"/>
+    <rect x="796" y="48" width="296" height="150" fill="url(#rp-blue-40)"/>
+  </g>
+  <!-- Ink 1: the tone band under the body copy. -->
+  <g clip-path="url(#rp-band)">
+    <rect x="72" y="252" width="536" height="86" fill="url(#rp-pink-20)"/>
+  </g>
+
+  <!-- Misregistration. The blue plate is 4px off, the way a second pass on a
+       drum duplicator actually lands. This is the effect, not a mistake. -->
+  <text x="68" y="192" font-family="'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif" font-size="104" font-weight="800" fill="#1257a8" letter-spacing="-4" opacity="0.85">JANE DOE</text>
+  <text x="72" y="189" font-family="'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif" font-size="104" font-weight="800" fill="#f0338c" letter-spacing="-4">JANE DOE</text>
+
+  <text x="74" y="224" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="12" fill="#1257a8" letter-spacing="6">FRONTEND ENGINEER · ISTANBUL</text>
+
+  <text x="96" y="284" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#101a2c">Building the parts of products nobody notices when they work.</text>
+  <text x="96" y="310" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#101a2c">Design systems, motion, and the slow kind of interface.</text>
+
+  <!-- Registration marks, one per corner -->
+  <g stroke="#16233a" stroke-width="1" opacity="0.65">
+    <g transform="translate(40,40)"><line x1="-11" y1="0" x2="11" y2="0"/><line x1="0" y1="-11" x2="0" y2="11"/><circle cx="0" cy="0" r="6.5" fill="none"/></g>
+    <g transform="translate(1160,40)"><line x1="-11" y1="0" x2="11" y2="0"/><line x1="0" y1="-11" x2="0" y2="11"/><circle cx="0" cy="0" r="6.5" fill="none"/></g>
+    <g transform="translate(40,380)"><line x1="-11" y1="0" x2="11" y2="0"/><line x1="0" y1="-11" x2="0" y2="11"/><circle cx="0" cy="0" r="6.5" fill="none"/></g>
+    <g transform="translate(1160,380)"><line x1="-11" y1="0" x2="11" y2="0"/><line x1="0" y1="-11" x2="0" y2="11"/><circle cx="0" cy="0" r="6.5" fill="none"/></g>
+  </g>
+
+  <!-- Colour bars, as on a press sheet -->
+  <g transform="translate(72,356)">
+    <rect x="0" y="0" width="26" height="12" fill="#f0338c"/>
+    <rect x="30" y="0" width="26" height="12" fill="#1257a8"/>
+    <rect x="60" y="0" width="26" height="12" fill="url(#rp-pink-55)"/>
+    <rect x="90" y="0" width="26" height="12" fill="url(#rp-blue-40)"/>
+    <rect x="120" y="0" width="26" height="12" fill="url(#rp-pink-20)"/>
+  </g>
+  <text x="240" y="366" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9.5" fill="#5c6474" letter-spacing="2.5">RISO 2-COLOUR · FLUORO PINK 1017 + FEDERAL BLUE 1023</text>
+  <text x="1128" y="366" text-anchor="end" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9.5" fill="#5c6474" letter-spacing="2.5">EDITION OF 100 · JANE.DEV</text>
+
+  <rect width="1200" height="420" filter="url(#rp-grain)" opacity="0.6"/>
+</svg>

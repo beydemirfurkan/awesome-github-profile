@@ -1,0 +1,92 @@
+{
+  "slug": "open-to-work",
+  "name": "Open to Work",
+  "kind": "svg",
+  "difficulty": "Basic",
+  "blurb": "Available, what you want, what you don't, and how to reach you.",
+  "asset": "assets/purpose-built/open-to-work.svg",
+  "picture": false,
+  "tags": [
+    "hiring",
+    "availability",
+    "open-to-work",
+    "utility",
+    "self-hosted"
+  ],
+  "services": [],
+  "placeholders": [
+    {
+      "token": "name",
+      "where": "markdown",
+      "description": "Display name — also set on the card",
+      "example": "Jane Doe"
+    },
+    {
+      "token": "role_line",
+      "where": "asset",
+      "description": "Role and specialisms under your name",
+      "example": "Senior frontend engineer"
+    },
+    {
+      "token": "looking_for_*",
+      "where": "asset",
+      "description": "The three things you want",
+      "example": "Product teams that own a surface"
+    },
+    {
+      "token": "not_looking_for_*",
+      "where": "asset",
+      "description": "The three things you do not",
+      "example": "Relocation, or on-site five days"
+    },
+    {
+      "token": "fact_*",
+      "where": "asset",
+      "description": "Availability, timezone, type, notice",
+      "example": "UTC+3"
+    },
+    {
+      "token": "recent_paragraph",
+      "where": "markdown",
+      "description": "What you have been working on",
+      "example": "Two years on one design system."
+    },
+    {
+      "token": "email",
+      "where": "markdown",
+      "description": "Contact address",
+      "example": "hello@jane.dev"
+    },
+    {
+      "token": "project_*_name",
+      "where": "markdown",
+      "description": "Project name, one per bullet",
+      "example": "acme design system"
+    },
+    {
+      "token": "project_*_desc",
+      "where": "markdown",
+      "description": "One line on what it is",
+      "example": "tokens shipped to 14 teams"
+    },
+    {
+      "token": "website",
+      "where": "markdown",
+      "description": "Domain shown to the reader",
+      "example": "jane.dev"
+    },
+    {
+      "token": "website_url",
+      "where": "markdown",
+      "description": "Site URL with protocol",
+      "example": "https://jane.dev"
+    },
+    {
+      "token": "twitter",
+      "where": "markdown",
+      "description": "Twitter/X handle, no @",
+      "example": "janedoe"
+    }
+  ],
+  "credits": []
+}

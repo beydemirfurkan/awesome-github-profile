@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-label="Blueprint Schematic — a profile drawn as an exploded technical elevation on cyanotype stock">
+  <title>Blueprint Schematic</title>
+  <desc>The README as a drafted assembly: four plates in axonometric, leadered and numbered, dimensioned, with a title block. Linework is displaced very slightly so it reads as drafted rather than plotted.</desc>
+  <defs>
+    <pattern id="bs-minor" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M20 0 L0 0 L0 20" fill="none" stroke="#2f7fae" stroke-width="0.4" opacity="0.45"/>
+    </pattern>
+    <pattern id="bs-major" width="100" height="100" patternUnits="userSpaceOnUse">
+      <path d="M100 0 L0 0 L0 100" fill="none" stroke="#4c9ecb" stroke-width="0.7" opacity="0.4"/>
+    </pattern>
+    <!-- A drafting hand never draws a perfectly straight line. Two octaves of
+         noise at a very low displacement is the whole difference between
+         "plotted" and "drawn" — any more and it reads as damage. -->
+    <filter id="bs-hand" x="-3%" y="-3%" width="106%" height="106%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="2" seed="8" result="t"/>
+      <feDisplacementMap in="SourceGraphic" in2="t" scale="2.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <marker id="bs-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 1 L10 5 L0 9 Z" fill="#bfe4f7"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="420" fill="#07314e"/>
+  <rect width="1200" height="420" fill="url(#bs-minor)"/>
+  <rect width="1200" height="420" fill="url(#bs-major)"/>
+  <rect x="22" y="22" width="1156" height="376" fill="none" stroke="#bfe4f7" stroke-width="1.6" opacity="0.8"/>
+
+  <text x="48" y="56" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="11" fill="#bfe4f7" letter-spacing="5" opacity="0.9">PROFILE README — ASSEMBLY, EXPLODED</text>
+
+  <!-- The drawing itself: four plates in axonometric, back to front. -->
+  <g filter="url(#bs-hand)" stroke="#dff1fb" fill="none" stroke-width="1.5" stroke-linejoin="round">
+    <g opacity="0.95">
+      <path d="M120 300 L470 300 L560 250 L210 250 Z"/>
+      <path d="M120 300 L120 312 L470 312 L470 300"/>
+      <path d="M470 312 L560 262 L560 250"/>
+    </g>
+    <g opacity="0.85">
+      <path d="M120 240 L470 240 L560 190 L210 190 Z"/>
+      <path d="M120 240 L120 250 L470 250 L470 240"/>
+      <path d="M470 250 L560 200 L560 190"/>
+    </g>
+    <g opacity="0.75">
+      <path d="M120 180 L470 180 L560 130 L210 130 Z"/>
+      <path d="M120 180 L120 190 L470 190 L470 180"/>
+      <path d="M470 190 L560 140 L560 130"/>
+    </g>
+    <g opacity="0.65">
+      <path d="M120 120 L470 120 L560 70 L210 70 Z"/>
+      <path d="M120 120 L120 130 L470 130 L470 120"/>
+      <path d="M470 130 L560 80 L560 70"/>
+    </g>
+    <!-- assembly axis -->
+    <path d="M300 330 L300 44" stroke-dasharray="10 5 2 5" opacity="0.5" stroke-width="1"/>
+  </g>
+
+  <!-- Leaders and part numbers -->
+  <g stroke="#7fc4e6" stroke-width="1" fill="none">
+    <path d="M560 95 L640 95 L664 95"/>
+    <path d="M560 155 L640 155 L664 155"/>
+    <path d="M560 215 L640 215 L664 215"/>
+    <path d="M560 275 L640 275 L664 275"/>
+  </g>
+  <g font-family="ui-monospace, Menlo, Consolas, monospace" font-size="12" fill="#eaf7ff">
+    <circle cx="678" cy="91" r="11" fill="none" stroke="#bfe4f7" stroke-width="1"/><text x="678" y="95" text-anchor="middle" font-size="10">01</text>
+    <text x="700" y="95">HERO — self-hosted SVG</text>
+    <circle cx="678" cy="151" r="11" fill="none" stroke="#bfe4f7" stroke-width="1"/><text x="678" y="155" text-anchor="middle" font-size="10">02</text>
+    <text x="700" y="155">CURRENTLY — three lines</text>
+    <circle cx="678" cy="211" r="11" fill="none" stroke="#bfe4f7" stroke-width="1"/><text x="678" y="215" text-anchor="middle" font-size="10">03</text>
+    <text x="700" y="215">WORK — collapsible</text>
+    <circle cx="678" cy="271" r="11" fill="none" stroke="#bfe4f7" stroke-width="1"/><text x="678" y="275" text-anchor="middle" font-size="10">04</text>
+    <text x="700" y="275">CONTACT — one line</text>
+  </g>
+
+  <!-- Overall dimension -->
+  <g stroke="#bfe4f7" stroke-width="1">
+    <line x1="120" y1="348" x2="560" y2="348" marker-start="url(#bs-arrow)" marker-end="url(#bs-arrow)"/>
+    <line x1="120" y1="340" x2="120" y2="356"/>
+    <line x1="560" y1="340" x2="560" y2="356"/>
+  </g>
+  <text x="340" y="342" text-anchor="middle" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="11" fill="#eaf7ff">1200 mm</text>
+
+  <!-- Title block -->
+  <g stroke="#bfe4f7" stroke-width="1.2" fill="none">
+    <rect x="936" y="252" width="242" height="132"/>
+    <line x1="936" y1="286" x2="1178" y2="286"/>
+    <line x1="936" y1="320" x2="1178" y2="320"/>
+    <line x1="936" y1="352" x2="1178" y2="352"/>
+    <line x1="1078" y1="286" x2="1078" y2="384"/>
+  </g>
+  <g font-family="ui-monospace, Menlo, Consolas, monospace" fill="#eaf7ff">
+    <text x="948" y="276" font-size="14" letter-spacing="2">JANE DOE</text>
+    <text x="948" y="300" font-size="8" fill="#7fc4e6" letter-spacing="2">DRAWN BY</text><text x="948" y="313" font-size="11">janedoe</text>
+    <text x="1090" y="300" font-size="8" fill="#7fc4e6" letter-spacing="2">SCALE</text><text x="1090" y="313" font-size="11">1:1</text>
+    <text x="948" y="334" font-size="8" fill="#7fc4e6" letter-spacing="2">SHEET</text><text x="948" y="347" font-size="11">01 OF 01</text>
+    <text x="1090" y="334" font-size="8" fill="#7fc4e6" letter-spacing="2">REV</text><text x="1090" y="347" font-size="11">C</text>
+    <text x="948" y="370" font-size="8" fill="#7fc4e6" letter-spacing="2">DATE</text><text x="1000" y="370" font-size="10">2026-09</text>
+    <text x="1090" y="370" font-size="10">jane.dev</text>
+  </g>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-label="Type Specimen — your name set as a foundry specimen sheet with a size ladder and metric rules">
+  <title>Type Specimen</title>
+  <desc>A foundry specimen: one word at five sizes, with baseline, x-height and cap-height ruled and labelled, plus a glyph row and the usual specimen furniture.</desc>
+
+  <rect width="1200" height="420" fill="#fbf9f4"/>
+
+  <!-- Specimen head -->
+  <text x="72" y="46" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10" fill="#8a8478" letter-spacing="5">SPECIMEN — ONE FAMILY, FIVE SIZES</text>
+  <text x="1128" y="46" text-anchor="end" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10" fill="#8a8478" letter-spacing="5">SET AT 100% · NO. 001</text>
+  <rect x="72" y="58" width="1056" height="2" fill="#14110d"/>
+
+  <!-- The specimen line, with metric rules. Cap height, x-height and baseline
+       are drawn where they actually fall for the 108px setting. -->
+  <g stroke="#c9402c" stroke-width="0.8" opacity="0.75">
+    <line x1="72" y1="102" x2="1128" y2="102"/>
+    <line x1="72" y1="140" x2="1128" y2="140"/>
+    <line x1="72" y1="178" x2="1128" y2="178"/>
+  </g>
+  <g font-family="ui-monospace, Menlo, Consolas, monospace" font-size="8" fill="#c9402c" letter-spacing="1.5">
+    <text x="1132" y="105">CAP</text>
+    <text x="1132" y="143">X-HT</text>
+    <text x="1132" y="181">BASE</text>
+  </g>
+  <text x="72" y="178" font-family="Georgia, 'Times New Roman', serif" font-size="108" font-weight="700" fill="#14110d" letter-spacing="-2">Jane Doe</text>
+
+  <!-- Size ladder -->
+  <g font-family="Georgia, 'Times New Roman', serif" fill="#14110d">
+    <text x="72" y="230" font-size="44">Jane Doe</text>
+    <text x="72" y="268" font-size="30">Jane Doe — frontend engineer</text>
+    <text x="72" y="298" font-size="19">Jane Doe — frontend engineer, Istanbul</text>
+    <text x="72" y="322" font-size="13">Jane Doe — frontend engineer, Istanbul · design systems, motion, typography</text>
+  </g>
+  <g font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9" fill="#8a8478" text-anchor="end">
+    <text x="1128" y="230">44 / 52</text>
+    <text x="1128" y="268">30 / 38</text>
+    <text x="1128" y="298">19 / 26</text>
+    <text x="1128" y="322">13 / 20</text>
+  </g>
+
+  <!-- Glyph row -->
+  <rect x="72" y="340" width="1056" height="1" fill="#ddd7ca"/>
+  <text x="72" y="366" font-family="Georgia, 'Times New Roman', serif" font-size="19" fill="#5f594d" letter-spacing="3.5">ABCDEFGHIJKLMNOPQRSTUVWXYZ &amp; 0123456789 ,.;:!?—“”</text>
+
+  <!-- Colophon -->
+  <text x="72" y="396" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9.5" fill="#8a8478" letter-spacing="2.5">SERIF · REGULAR / BOLD · OPTICAL SIZES 13–108</text>
+  <text x="1128" y="396" text-anchor="end" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9.5" fill="#8a8478" letter-spacing="2.5">JANE.DEV · @JANEDOE</text>
+</svg>

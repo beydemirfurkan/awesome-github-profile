@@ -1,0 +1,80 @@
+{
+  "slug": "boarding-pass",
+  "name": "Boarding Pass",
+  "kind": "svg",
+  "difficulty": "Intermediate",
+  "blurb": "Where you are, where you are going, and a stub.",
+  "asset": "assets/print-analog/boarding-pass.svg",
+  "picture": false,
+  "tags": [
+    "print",
+    "ticket",
+    "boarding-pass",
+    "open-to-work",
+    "self-hosted"
+  ],
+  "services": [],
+  "placeholders": [
+    {
+      "token": "name",
+      "where": "markdown",
+      "description": "Display name — also set as the passenger",
+      "example": "Jane Doe"
+    },
+    {
+      "token": "origin_code",
+      "where": "asset",
+      "description": "Three-letter origin",
+      "example": "IST"
+    },
+    {
+      "token": "destination_code",
+      "where": "asset",
+      "description": "Three-letter destination",
+      "example": "PRD"
+    },
+    {
+      "token": "field_*",
+      "where": "asset",
+      "description": "The five foot fields: flight, gate, seat, boards, status",
+      "example": "GATE 47"
+    },
+    {
+      "token": "itinerary_paragraph",
+      "where": "markdown",
+      "description": "Where you are headed, in a sentence or two",
+      "example": "Design systems, then motion."
+    },
+    {
+      "token": "project_*_name",
+      "where": "markdown",
+      "description": "Project name, one per bullet",
+      "example": "acme design system"
+    },
+    {
+      "token": "project_*_desc",
+      "where": "markdown",
+      "description": "One line on what it is",
+      "example": "tokens shipped to 14 teams"
+    },
+    {
+      "token": "website",
+      "where": "markdown",
+      "description": "Domain shown to the reader",
+      "example": "jane.dev"
+    },
+    {
+      "token": "website_url",
+      "where": "markdown",
+      "description": "Site URL with protocol",
+      "example": "https://jane.dev"
+    },
+    {
+      "token": "twitter",
+      "where": "markdown",
+      "description": "Twitter/X handle, no @",
+      "example": "janedoe"
+    }
+  ],
+  "credits": []
+}

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-label="Brutalist Slab — heavy borders, deliberate overlap, black and white plus one warning yellow">
+  <title>Brutalist Slab</title>
+  <desc>Everything is a box with a six-pixel border. Boxes overlap instead of aligning, and nothing is rounded — the structure is the decoration.</desc>
+
+  <rect width="1200" height="420" fill="#e9e6df"/>
+
+  <!-- Slab A: the name. Sits under the others, so it is the thing they cover. -->
+  <g>
+    <rect x="48" y="52" width="700" height="180" fill="#0a0a0a"/>
+    <text x="72" y="140" font-family="'Helvetica Neue', Helvetica, Arial, system-ui, sans-serif" font-size="86" font-weight="800" fill="#e9e6df" letter-spacing="-3">JANE DOE</text>
+    <text x="74" y="182" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="14" fill="#ffd400" letter-spacing="6">FRONTEND ENGINEER</text>
+    <text x="74" y="210" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="12" fill="#8f8b84" letter-spacing="3">EST. 2017 — ISTANBUL</text>
+  </g>
+
+  <!-- Slab B: the statement. Overlaps A on purpose; the overlap is the layout. -->
+  <g>
+    <rect x="596" y="106" width="556" height="140" fill="#ffd400" stroke="#0a0a0a" stroke-width="6"/>
+    <text x="624" y="150" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="23" font-weight="800" fill="#0a0a0a">NO FRAMEWORKS WERE</text>
+    <text x="624" y="180" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="23" font-weight="800" fill="#0a0a0a">HARMED IN THE MAKING</text>
+    <text x="624" y="210" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="23" font-weight="800" fill="#0a0a0a">OF THIS PROFILE.</text>
+    <text x="1124" y="234" text-anchor="end" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="11" fill="#0a0a0a" letter-spacing="3">FIG. 01</text>
+  </g>
+
+  <!-- Slab C: the index. Four cells, hard borders, no gaps between them. -->
+  <g stroke="#0a0a0a" stroke-width="6" fill="none">
+    <rect x="48" y="262" width="272" height="106"/>
+    <rect x="314" y="262" width="272" height="106"/>
+    <rect x="580" y="262" width="272" height="106"/>
+    <rect x="846" y="262" width="306" height="106"/>
+  </g>
+  <g font-family="ui-monospace, Menlo, Consolas, monospace">
+    <text x="72" y="292" font-size="10" fill="#5c5851" letter-spacing="3">SHIPPING</text>
+    <text x="72" y="330" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" font-weight="800" fill="#0a0a0a">DESIGN SYS</text>
+    <text x="72" y="354" font-size="11" fill="#5c5851">412 components</text>
+
+    <text x="338" y="292" font-size="10" fill="#5c5851" letter-spacing="3">STREAK</text>
+    <text x="338" y="330" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" font-weight="800" fill="#0a0a0a">47 DAYS</text>
+    <text x="338" y="354" font-size="11" fill="#5c5851">longest 112</text>
+
+    <text x="604" y="292" font-size="10" fill="#5c5851" letter-spacing="3">MERGED</text>
+    <text x="604" y="330" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" font-weight="800" fill="#0a0a0a">86 PR</text>
+    <text x="604" y="354" font-size="11" fill="#5c5851">this year</text>
+
+    <text x="870" y="292" font-size="10" fill="#5c5851" letter-spacing="3">CONTACT</text>
+    <text x="870" y="330" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="26" font-weight="800" fill="#0a0a0a">JANE.DEV</text>
+    <text x="870" y="354" font-size="11" fill="#5c5851">hello@jane.dev · @janedoe</text>
+  </g>
+
+  <!-- Registration ticks, top edge. The only ornament, and it is a measurement. -->
+  <g stroke="#0a0a0a" stroke-width="3">
+    <line x1="48" y1="24" x2="48" y2="40"/>
+    <line x1="314" y1="28" x2="314" y2="40"/>
+    <line x1="580" y1="28" x2="580" y2="40"/>
+    <line x1="846" y1="28" x2="846" y2="40"/>
+    <line x1="1152" y1="24" x2="1152" y2="40"/>
+  </g>
+  <text x="1152" y="396" text-anchor="end" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10" fill="#5c5851" letter-spacing="3">BLACK · BONE · ONE WARNING YELLOW</text>
+</svg>

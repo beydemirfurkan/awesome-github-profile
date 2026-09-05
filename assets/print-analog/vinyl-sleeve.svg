@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-label="Vinyl Sleeve — a profile as a record sleeve with the disc half pulled out">
+<title>Vinyl Sleeve</title>
+<desc>A 12-inch sleeve with the record drawn behind it, so the disc reads as half pulled out. Projects are the tracklist.</desc>
+<defs>
+<radialGradient id="vs-disc" cx="0.42" cy="0.36" r="0.72">
+<stop offset="0" stop-color="#2a221d"/><stop offset="0.55" stop-color="#15100d"/><stop offset="1" stop-color="#0c0908"/>
+</radialGradient>
+<linearGradient id="vs-sheen" x1="0" y1="0" x2="1" y2="1">
+<stop offset="0" stop-color="#ffffff" stop-opacity="0.11"/>
+<stop offset="0.42" stop-color="#ffffff" stop-opacity="0"/>
+<stop offset="0.62" stop-color="#ffffff" stop-opacity="0.07"/>
+<stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+</linearGradient>
+<filter id="vs-stock" x="0" y="0" width="100%" height="100%">
+<feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" seed="31" result="n"/>
+<feColorMatrix in="n" type="matrix" values="0 0 0 0 0.14  0 0 0 0 0.11  0 0 0 0 0.08  0 0 0 0.4 0"/>
+</filter>
+<clipPath id="vs-sleeve"><rect x="72" y="32" width="356" height="356"/></clipPath>
+</defs>
+
+<rect width="1200" height="420" fill="#151110"/>
+
+<!-- The record sits behind the sleeve, which is what sells "half pulled out". -->
+<g>
+<animateTransform attributeName="transform" type="rotate" from="0 566 210" to="360 566 210" dur="24s" repeatCount="indefinite"/>
+<circle cx="566" cy="210" r="172" fill="url(#vs-disc)"/>
+<circle cx="566" cy="210" r="66.0" fill="none" stroke="#241d19" stroke-width="0.7"/><circle cx="566" cy="210" r="70.5" fill="none" stroke="#241d19" stroke-width="0.7"/><circle cx="566" cy="210" r="73.6" fill="none" stroke="#241d19" stroke-width="0.7"/><circle cx="566" cy="210" r="76.7" fill="none" stroke="#3a302a" stroke-width="1"/><circle cx="566" cy="210" r="79.8" fill="none" stroke="#241d19" stroke-width="0.7"/><circle cx="566" cy="210" r="84.3" fill="none" stroke="#241d19" stroke-width="0.7"/><circle cx="566" cy="210" r="87.4" fill="none" stroke="#241d19" stroke-width="0.7"/><circle cx="566" cy="210" r="90.5" fill="none" stroke="#241d19" stroke-width="0.7"/><circle cx="566" cy="210" r="93.6" fill="none" stroke="#241d19" stroke-width="0.7"/><circle cx="566" cy="210" r="98.1" fill="none" stroke="#241d19" stroke-width="0.7"/><circle cx="566" cy="210" r="101.2" fill="none" stroke="#3a302a" stroke-width="1"/><circle cx="566" cy="210" r="104.3" fill="none" stroke="#241d19" stroke-width="0.7"/><circle cx="566" cy="210" r="107.4" fill="none" stroke="#241d19" stroke-width="0.7"/><circle cx="566" cy="210" r="111.9" fill="none" stroke="#241d19" stroke-width="0.7"/><circle cx="566" cy="210" r="115.0" fill="none" stroke="#241d19" stroke-width="0.7"/><circle cx="566" cy="210" r="118.1" fill="none" stroke="#241d19" stroke-width="0.7"/><circle cx="566" cy="210" r="121.2" fill="none" stroke="#241d19" stroke-width="0.7"/><circle cx="566" cy="210" r="125.7" fill="none" stroke="#3a302a" stroke-width="1"/><circle cx="566" cy="210" r="128.8" fill="none" stroke="#241d19" stroke-width="0.7"/><circle cx="566" cy="210" r="131.9" fill="none" stroke="#241d19" stroke-width="0.7"/><circle cx="566" cy="210" r="135.0" fill="none" stroke="#241d19" stroke-width="0.7"/><circle cx="566" cy="210" r="139.5" fill="none" stroke="#241d19" stroke-width="0.7"/><circle cx="566" cy="210" r="142.6" fill="none" stroke="#241d19" stroke-width="0.7"/><circle cx="566" cy="210" r="145.7" fill="none" stroke="#241d19" stroke-width="0.7"/><circle cx="566" cy="210" r="148.8" fill="none" stroke="#3a302a" stroke-width="1"/><circle cx="566" cy="210" r="153.3" fill="none" stroke="#241d19" stroke-width="0.7"/><circle cx="566" cy="210" r="156.4" fill="none" stroke="#241d19" stroke-width="0.7"/><circle cx="566" cy="210" r="159.5" fill="none" stroke="#241d19" stroke-width="0.7"/><circle cx="566" cy="210" r="162.6" fill="none" stroke="#241d19" stroke-width="0.7"/><circle cx="566" cy="210" r="167.1" fill="none" stroke="#241d19" stroke-width="0.7"/>
+<circle cx="566" cy="210" r="60" fill="#c8552e"/>
+<circle cx="566" cy="210" r="60" fill="none" stroke="#e6763f" stroke-width="1"/>
+<text x="566" y="212" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="34" font-weight="700" fill="#1a0f0a">JD</text>
+<text x="566" y="234" text-anchor="middle" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="7" fill="#3d1a0e" letter-spacing="2.5">33⅓ RPM</text>
+<circle cx="566" cy="210" r="4.5" fill="#151110"/>
+</g>
+<circle cx="566" cy="210" r="172" fill="url(#vs-sheen)"/>
+
+<!-- Sleeve, printed over the disc -->
+<rect x="72" y="32" width="356" height="356" fill="#efe4d4"/>
+<g clip-path="url(#vs-sleeve)">
+<circle cx="300" cy="150" r="118" fill="#c8552e"/>
+<rect x="72" y="238" width="356" height="34" fill="#1c2a4a"/>
+<circle cx="188" cy="150" r="118" fill="none" stroke="#1c2a4a" stroke-width="1.4" opacity="0.7"/>
+<circle cx="188" cy="150" r="86" fill="none" stroke="#1c2a4a" stroke-width="1.4" opacity="0.55"/>
+<circle cx="188" cy="150" r="54" fill="none" stroke="#1c2a4a" stroke-width="1.4" opacity="0.4"/>
+</g>
+<text x="96" y="308" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="30" font-weight="800" fill="#15100d" letter-spacing="-0.6">JANE DOE</text>
+<text x="96" y="332" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10" fill="#5c5147" letter-spacing="4">SELECTED WORKS · MMXXVI</text>
+<text x="96" y="366" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9" fill="#8a7a68" letter-spacing="2.5">LP · 5 TRACKS · JANE.DEV</text>
+<rect x="72" y="32" width="356" height="356" fill="none" stroke="#c9bda9" stroke-width="1"/>
+<rect x="72" y="32" width="356" height="356" filter="url(#vs-stock)" opacity="0.45"/>
+
+<!-- Tracklist -->
+<text x="840" y="72" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10" fill="#8a7a68" letter-spacing="4">TRACKLIST</text>
+<line x1="840" y1="86" x2="1128" y2="86" stroke="#c8552e" stroke-width="2"/>
+<text x="840" y="126" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#efe4d4">Selected Works</text>
+<text x="1128" y="126" text-anchor="end" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10" fill="#8a7a68" letter-spacing="2">SIDE A / B</text>
+<text x="840" y="176" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="11" fill="#8a7a68">A1</text><text x="878" y="176" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="16" fill="#efe4d4">acme design system</text><text x="1128" y="176" text-anchor="end" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="12" fill="#8a7a68">4:12</text><line x1="840" y1="188" x2="1128" y2="188" stroke="#2e2620"/><text x="840" y="210" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="11" fill="#8a7a68">A2</text><text x="878" y="210" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="16" fill="#efe4d4">the type observatory</text><text x="1128" y="210" text-anchor="end" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="12" fill="#8a7a68">3:48</text><line x1="840" y1="222" x2="1128" y2="222" stroke="#2e2620"/><text x="840" y="244" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="11" fill="#8a7a68">A3</text><text x="878" y="244" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="16" fill="#efe4d4">runtime essays</text><text x="1128" y="244" text-anchor="end" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="12" fill="#8a7a68">5:03</text><line x1="840" y1="256" x2="1128" y2="256" stroke="#2e2620"/><text x="840" y="278" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="11" fill="#8a7a68">B1</text><text x="878" y="278" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="16" fill="#efe4d4">motion studies</text><text x="1128" y="278" text-anchor="end" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="12" fill="#8a7a68">4:31</text><line x1="840" y1="290" x2="1128" y2="290" stroke="#2e2620"/><text x="840" y="312" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="11" fill="#8a7a68">B2</text><text x="878" y="312" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="16" fill="#efe4d4">notes on slowness</text><text x="1128" y="312" text-anchor="end" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="12" fill="#8a7a68">6:20</text><line x1="840" y1="324" x2="1128" y2="324" stroke="#2e2620"/>
+<text x="840" y="382" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9" fill="#6b5d4f" letter-spacing="2.5">PRESSED AT HOME · NO SKIPS</text>
+<text x="1128" y="382" text-anchor="end" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9" fill="#6b5d4f" letter-spacing="2.5">@JANEDOE</text>
+</svg>

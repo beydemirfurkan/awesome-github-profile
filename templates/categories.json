@@ -4,56 +4,80 @@
     "dir": "minimal",
     "title": "Minimal",
     "tagline": "Less is more. Templates that earn attention through restraint.",
-    "templates": ["editorial-card", "monospace-cv"]
+    "templates": [
+      "editorial-card",
+      "monospace-cv"
+    ]
   },
   {
     "id": "02-animated",
     "dir": "animated",
     "title": "Animated",
     "tagline": "One focal motion done well — never a carnival.",
-    "templates": ["neon-pulse-banner", "typewriter-intro"]
+    "templates": [
+      "neon-pulse-banner",
+      "typewriter-intro"
+    ]
   },
   {
     "id": "03-3d-immersive",
     "dir": "3d-immersive",
     "title": "3D & Immersive",
     "tagline": "Depth, perspective, motion that hints at WebGL — running entirely on `<svg>`.",
-    "templates": ["3d-contribution-tower", "tech-sphere"]
+    "templates": [
+      "3d-contribution-tower",
+      "tech-sphere"
+    ]
   },
   {
     "id": "04-gamified",
     "dir": "gamified",
     "title": "Gamified",
     "tagline": "Arcade-grade. Auto-updated by GitHub Actions.",
-    "templates": ["snake-eat-graph", "pacman-graph"]
+    "templates": [
+      "snake-eat-graph",
+      "pacman-graph"
+    ]
   },
   {
     "id": "05-dashboard",
     "dir": "dashboard",
     "title": "Dashboard",
     "tagline": "Stats-heavy templates that read like product analytics pages.",
-    "templates": ["analytics-grid", "activity-pulse"]
+    "templates": [
+      "analytics-grid",
+      "activity-pulse"
+    ]
   },
   {
     "id": "06-designer-portfolio",
     "dir": "designer-portfolio",
     "title": "Designer Portfolio",
     "tagline": "Visual, brand-driven, opinionated. For people whose work is the way it looks.",
-    "templates": ["glassmorphism-hero", "editorial-magazine"]
+    "templates": [
+      "glassmorphism-hero",
+      "editorial-magazine"
+    ]
   },
   {
     "id": "07-themed",
     "dir": "themed",
     "title": "Themed",
     "tagline": "Strong aesthetic identity. Pick one and commit.",
-    "templates": ["cyberpunk-neon", "dark-elegant"]
+    "templates": [
+      "cyberpunk-neon",
+      "dark-elegant"
+    ]
   },
   {
     "id": "08-markdown-tricks",
     "dir": "markdown-tricks",
     "title": "Markdown Tricks",
     "tagline": "Techniques that make every other template better. Use them inside whichever you pick.",
-    "templates": ["light-dark-switcher", "collapsible-projects"]
+    "templates": [
+      "light-dark-switcher",
+      "collapsible-projects"
+    ]
   },
   {
     "id": "09-avant-garde",
@@ -61,6 +85,55 @@
     "title": "Avant-Garde",
     "showcase": true,
     "tagline": "What the GitHub README format is *actually* capable of when you push every SVG primitive at once. No scripts, no GIFs, no external services — just SMIL animation, filter primitives, path morphing, and motion paths, composed with intent.",
-    "templates": ["aurora-veil", "holographic-foil", "liquid-morph-wordmark", "neural-pulse-lattice"]
+    "templates": [
+      "aurora-veil",
+      "holographic-foil",
+      "liquid-morph-wordmark",
+      "neural-pulse-lattice"
+    ]
+  },
+  {
+    "id": "10-print-analog",
+    "dir": "print-analog",
+    "title": "Print & Analog",
+    "tagline": "Halftone screens, misregistration, paper grain, drafting jitter — the vocabulary of things that were printed, rebuilt with SVG filter primitives.",
+    "templates": [
+      "risograph-poster",
+      "blueprint-schematic",
+      "boarding-pass",
+      "vinyl-sleeve"
+    ]
+  },
+  {
+    "id": "11-swiss-brutalist",
+    "dir": "swiss-brutalist",
+    "title": "Swiss & Brutalist",
+    "tagline": "Grid, weight, and one accent. The counterweight to everything glowing.",
+    "templates": [
+      "swiss-grid",
+      "brutalist-slab",
+      "type-specimen"
+    ]
+  },
+  {
+    "id": "12-generative",
+    "dir": "generative",
+    "title": "Generative & Data-Art",
+    "tagline": "Your own numbers, drawn by an algorithm rather than a chart library — and the numbers still have to be true.",
+    "templates": [
+      "flow-field",
+      "voronoi-territory",
+      "strata-core"
+    ]
+  },
+  {
+    "id": "13-purpose-built",
+    "dir": "purpose-built",
+    "title": "Purpose-Built",
+    "tagline": "Templates with a job to do. Less about looking good, more about saving somebody a message.",
+    "templates": [
+      "open-to-work",
+      "oss-maintainer"
+    ]
   }
 ]

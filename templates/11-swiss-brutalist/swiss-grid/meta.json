@@ -1,0 +1,86 @@
+{
+  "slug": "swiss-grid",
+  "name": "Swiss Grid",
+  "kind": "svg",
+  "difficulty": "Intermediate",
+  "blurb": "Twelve columns, left visible, and one red.",
+  "asset": "assets/swiss-brutalist/swiss-grid.svg",
+  "picture": false,
+  "tags": [
+    "swiss",
+    "grid",
+    "typography",
+    "editorial",
+    "self-hosted"
+  ],
+  "services": [],
+  "placeholders": [
+    {
+      "token": "name",
+      "where": "markdown",
+      "description": "Display name — split across two elements in the SVG",
+      "example": "Jane Doe"
+    },
+    {
+      "token": "tagline",
+      "where": "markdown",
+      "description": "Role line in the running head",
+      "example": "Frontend engineer"
+    },
+    {
+      "token": "statement_*",
+      "where": "asset",
+      "description": "The three ragged-right statement lines",
+      "example": "Interfaces that hold up"
+    },
+    {
+      "token": "index_*",
+      "where": "asset",
+      "description": "The four numbered index entries",
+      "example": "Design systems"
+    },
+    {
+      "token": "statement_heading",
+      "where": "markdown",
+      "description": "Heading above your statement paragraph",
+      "example": "what I do"
+    },
+    {
+      "token": "statement_paragraph",
+      "where": "markdown",
+      "description": "A paragraph in your own words",
+      "example": "I build design systems that survive adoption."
+    },
+    {
+      "token": "project_*_name",
+      "where": "markdown",
+      "description": "Project name, one per bullet",
+      "example": "acme design system"
+    },
+    {
+      "token": "project_*_desc",
+      "where": "markdown",
+      "description": "One line on what it is",
+      "example": "tokens shipped to 14 teams"
+    },
+    {
+      "token": "website",
+      "where": "markdown",
+      "description": "Domain shown to the reader",
+      "example": "jane.dev"
+    },
+    {
+      "token": "website_url",
+      "where": "markdown",
+      "description": "Site URL with protocol",
+      "example": "https://jane.dev"
+    },
+    {
+      "token": "twitter",
+      "where": "markdown",
+      "description": "Twitter/X handle, no @",
+      "example": "janedoe"
+    }
+  ],
+  "credits": []
+}

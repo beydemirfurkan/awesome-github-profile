@@ -1,0 +1,68 @@
+{
+  "slug": "voronoi-territory",
+  "name": "Voronoi Territory",
+  "kind": "svg",
+  "difficulty": "Advanced",
+  "blurb": "Your languages as territory, sized by how much you write them.",
+  "asset": "assets/generative/voronoi-territory.svg",
+  "picture": false,
+  "tags": [
+    "generative",
+    "voronoi",
+    "power-diagram",
+    "data-art",
+    "self-hosted"
+  ],
+  "services": [],
+  "placeholders": [
+    {
+      "token": "name",
+      "where": "markdown",
+      "description": "Display name — also set in the SVG",
+      "example": "Jane Doe"
+    },
+    {
+      "token": "language_*",
+      "where": "asset",
+      "description": "The nine language names and shares",
+      "example": "TypeScript · 31.0%"
+    },
+    {
+      "token": "territory_paragraph",
+      "where": "markdown",
+      "description": "What the split says about your work",
+      "example": "One language, and eight it talks to."
+    },
+    {
+      "token": "project_*_name",
+      "where": "markdown",
+      "description": "Project name, one per bullet",
+      "example": "acme design system"
+    },
+    {
+      "token": "project_*_desc",
+      "where": "markdown",
+      "description": "One line on what it is",
+      "example": "tokens shipped to 14 teams"
+    },
+    {
+      "token": "website",
+      "where": "markdown",
+      "description": "Domain shown to the reader",
+      "example": "jane.dev"
+    },
+    {
+      "token": "website_url",
+      "where": "markdown",
+      "description": "Site URL with protocol",
+      "example": "https://jane.dev"
+    },
+    {
+      "token": "twitter",
+      "where": "markdown",
+      "description": "Twitter/X handle, no @",
+      "example": "janedoe"
+    }
+  ],
+  "credits": []
+}

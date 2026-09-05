@@ -1,0 +1,68 @@
+{
+  "slug": "flow-field",
+  "name": "Flow Field",
+  "kind": "svg",
+  "difficulty": "Advanced",
+  "blurb": "A year of commits, drawn as a vector field.",
+  "asset": "assets/generative/flow-field.svg",
+  "picture": false,
+  "tags": [
+    "generative",
+    "flow-field",
+    "streamlines",
+    "data-art",
+    "self-hosted"
+  ],
+  "services": [],
+  "placeholders": [
+    {
+      "token": "name",
+      "where": "markdown",
+      "description": "Display name — also set in the SVG",
+      "example": "Jane Doe"
+    },
+    {
+      "token": "caption",
+      "where": "asset",
+      "description": "The mono caption under your name",
+      "example": "A YEAR, AS A VECTOR FIELD"
+    },
+    {
+      "token": "year_paragraph",
+      "where": "markdown",
+      "description": "What the year actually involved",
+      "example": "Mostly one design system, and a lot of typography."
+    },
+    {
+      "token": "project_*_name",
+      "where": "markdown",
+      "description": "Project name, one per bullet",
+      "example": "acme design system"
+    },
+    {
+      "token": "project_*_desc",
+      "where": "markdown",
+      "description": "One line on what it is",
+      "example": "tokens shipped to 14 teams"
+    },
+    {
+      "token": "website",
+      "where": "markdown",
+      "description": "Domain shown to the reader",
+      "example": "jane.dev"
+    },
+    {
+      "token": "website_url",
+      "where": "markdown",
+      "description": "Site URL with protocol",
+      "example": "https://jane.dev"
+    },
+    {
+      "token": "twitter",
+      "where": "markdown",
+      "description": "Twitter/X handle, no @",
+      "example": "janedoe"
+    }
+  ],
+  "credits": []
+}

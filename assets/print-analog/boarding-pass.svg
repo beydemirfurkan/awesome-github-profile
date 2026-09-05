@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-label="Boarding Pass — a profile laid out as an airline boarding pass with a perforated stub">
+  <title>Boarding Pass</title>
+  <desc>Thermal-stock ticket: a main coupon and a torn-off stub, separated by a real perforation with punched notches at both edges. The barcode is drawn, not fetched.</desc>
+  <defs>
+    <filter id="bp-stock" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="3" seed="23" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.12  0 0 0 0 0.10  0 0 0 0 0.08  0 0 0 0.4 0"/>
+    </filter>
+    <clipPath id="bp-card"><rect x="72" y="44" width="1056" height="332" rx="10"/></clipPath>
+  </defs>
+
+  <rect width="1200" height="420" fill="#191d24"/>
+
+  <!-- ticket -->
+  <rect x="72" y="44" width="1056" height="332" rx="10" fill="#f7f3e9"/>
+
+  <!-- header band -->
+  <g clip-path="url(#bp-card)">
+    <rect x="72" y="44" width="1056" height="58" fill="#12233d"/>
+  </g>
+  <text x="100" y="82" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="700" font-style="italic" fill="#f7f3e9">JD</text>
+  <text x="146" y="80" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="12" fill="#8fb4dd" letter-spacing="5">BOARDING PASS</text>
+  <text x="836" y="80" text-anchor="end" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="12" fill="#f7f3e9" letter-spacing="3">CLASS · ENGINEERING</text>
+  <text x="1100" y="80" text-anchor="end" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="12" fill="#8fb4dd" letter-spacing="3">STUB</text>
+
+  <!-- passenger -->
+  <text x="100" y="134" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9" fill="#8a8272" letter-spacing="3">PASSENGER</text>
+  <text x="100" y="172" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="34" font-weight="700" fill="#141821" letter-spacing="1">DOE / JANE</text>
+
+  <!-- route -->
+  <text x="100" y="222" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9" fill="#8a8272" letter-spacing="3">FROM</text>
+  <text x="100" y="278" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="52" font-weight="800" fill="#141821">IST</text>
+  <text x="100" y="300" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10" fill="#6b6559">design systems</text>
+
+  <g stroke="#c8402a" stroke-width="2" fill="none">
+    <line x1="234" y1="262" x2="356" y2="262" stroke-dasharray="5 5"/>
+  </g>
+  <path d="M362 262 L340 250 L346 262 L340 274 Z" fill="#c8402a"/>
+
+  <text x="392" y="222" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9" fill="#8a8272" letter-spacing="3">TO</text>
+  <text x="392" y="278" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="52" font-weight="800" fill="#141821">PRD</text>
+  <text x="392" y="300" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10" fill="#6b6559">shipped, not staged</text>
+
+  <!-- field strip -->
+  <line x1="100" y1="322" x2="812" y2="322" stroke="#ddd6c6"/>
+  <g font-family="ui-monospace, Menlo, Consolas, monospace">
+    <text x="100" y="342" font-size="9" fill="#8a8272" letter-spacing="2.5">FLIGHT</text><text x="100" y="362" font-size="15" font-weight="700" fill="#141821">JD 2026</text>
+    <text x="244" y="342" font-size="9" fill="#8a8272" letter-spacing="2.5">GATE</text><text x="244" y="362" font-size="15" font-weight="700" fill="#141821">47</text>
+    <text x="388" y="342" font-size="9" fill="#8a8272" letter-spacing="2.5">SEAT</text><text x="388" y="362" font-size="15" font-weight="700" fill="#141821">1A</text>
+    <text x="532" y="342" font-size="9" fill="#8a8272" letter-spacing="2.5">BOARDS</text><text x="532" y="362" font-size="15" font-weight="700" fill="#141821">09:15</text>
+    <text x="676" y="342" font-size="9" fill="#8a8272" letter-spacing="2.5">STATUS</text><text x="676" y="362" font-size="15" font-weight="700" fill="#1a7f4b">OPEN TO WORK</text>
+  </g>
+
+  <!-- perforation, with punched notches where it meets the edge -->
+  <line x1="856" y1="60" x2="856" y2="360" stroke="#c9c2b0" stroke-width="2" stroke-dasharray="2 7" stroke-linecap="round"/>
+  <circle cx="856" cy="44" r="11" fill="#191d24"/>
+  <circle cx="856" cy="376" r="11" fill="#191d24"/>
+
+  <!-- stub -->
+  <text x="888" y="134" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9" fill="#8a8272" letter-spacing="3">PASSENGER</text>
+  <text x="888" y="156" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="14" font-weight="700" fill="#141821">DOE / JANE</text>
+  <text x="888" y="184" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9" fill="#8a8272" letter-spacing="3">IST → PRD · SEAT 1A</text>
+
+  <!-- barcode: drawn from a fixed bit pattern, so it is a graphic, not a claim -->
+  <g fill="#141821">
+    <rect x="888" y="206" width="3" height="96"/><rect x="894" y="206" width="1.5" height="96"/>
+    <rect x="899" y="206" width="4" height="96"/><rect x="906" y="206" width="1.5" height="96"/>
+    <rect x="910" y="206" width="2.5" height="96"/><rect x="916" y="206" width="4" height="96"/>
+    <rect x="923" y="206" width="1.5" height="96"/><rect x="927" y="206" width="3" height="96"/>
+    <rect x="933" y="206" width="2" height="96"/><rect x="938" y="206" width="4.5" height="96"/>
+    <rect x="946" y="206" width="1.5" height="96"/><rect x="950" y="206" width="2.5" height="96"/>
+    <rect x="956" y="206" width="4" height="96"/><rect x="963" y="206" width="1.5" height="96"/>
+    <rect x="967" y="206" width="3.5" height="96"/><rect x="974" y="206" width="2" height="96"/>
+    <rect x="979" y="206" width="1.5" height="96"/><rect x="983" y="206" width="4" height="96"/>
+    <rect x="990" y="206" width="2.5" height="96"/><rect x="996" y="206" width="1.5" height="96"/>
+    <rect x="1000" y="206" width="3.5" height="96"/><rect x="1007" y="206" width="2" height="96"/>
+    <rect x="1012" y="206" width="4" height="96"/><rect x="1019" y="206" width="1.5" height="96"/>
+    <rect x="1023" y="206" width="2.5" height="96"/><rect x="1029" y="206" width="3.5" height="96"/>
+    <rect x="1036" y="206" width="1.5" height="96"/><rect x="1040" y="206" width="4" height="96"/>
+    <rect x="1047" y="206" width="2" height="96"/><rect x="1052" y="206" width="3" height="96"/>
+    <rect x="1058" y="206" width="1.5" height="96"/><rect x="1062" y="206" width="4.5" height="96"/>
+    <rect x="1070" y="206" width="2" height="96"/><rect x="1075" y="206" width="3" height="96"/>
+    <rect x="1081" y="206" width="1.5" height="96"/><rect x="1085" y="206" width="3.5" height="96"/>
+  </g>
+  <text x="888" y="322" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10" fill="#6b6559" letter-spacing="2">GH · JANEDOE · 001</text>
+  <text x="888" y="348" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9" fill="#8a8272" letter-spacing="2.5">SEQ</text>
+  <text x="928" y="348" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9" fill="#141821" letter-spacing="2.5">001</text>
+  <text x="1100" y="348" text-anchor="end" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9" fill="#8a8272" letter-spacing="2.5">JANE.DEV</text>
+
+  <rect x="72" y="44" width="1056" height="332" rx="10" filter="url(#bp-stock)" opacity="0.5"/>
+</svg>

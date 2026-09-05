@@ -1,0 +1,86 @@
+{
+  "slug": "brutalist-slab",
+  "name": "Brutalist Slab",
+  "kind": "svg",
+  "difficulty": "Basic",
+  "blurb": "Heavy borders, deliberate overlap, one warning yellow.",
+  "asset": "assets/swiss-brutalist/brutalist-slab.svg",
+  "picture": false,
+  "tags": [
+    "brutalist",
+    "slab",
+    "high-contrast",
+    "no-radius",
+    "self-hosted"
+  ],
+  "services": [],
+  "placeholders": [
+    {
+      "token": "name",
+      "where": "markdown",
+      "description": "Display name, set on the black slab",
+      "example": "Jane Doe"
+    },
+    {
+      "token": "tagline",
+      "where": "markdown",
+      "description": "Role line under the name",
+      "example": "Frontend engineer"
+    },
+    {
+      "token": "slab_line_*",
+      "where": "asset",
+      "description": "The three lines on the yellow slab",
+      "example": "NO FRAMEWORKS WERE"
+    },
+    {
+      "token": "cell_*",
+      "where": "asset",
+      "description": "The four index cells: label, value, note",
+      "example": "STREAK · 47 DAYS"
+    },
+    {
+      "token": "statement_heading",
+      "where": "markdown",
+      "description": "Heading for your statement",
+      "example": "WHAT I DO"
+    },
+    {
+      "token": "statement_paragraph",
+      "where": "markdown",
+      "description": "A paragraph, ideally blunt",
+      "example": "I make interfaces that do not need a tour."
+    },
+    {
+      "token": "project_*_name",
+      "where": "markdown",
+      "description": "Project name, one per bullet",
+      "example": "acme design system"
+    },
+    {
+      "token": "project_*_desc",
+      "where": "markdown",
+      "description": "One line on what it is",
+      "example": "tokens shipped to 14 teams"
+    },
+    {
+      "token": "website",
+      "where": "markdown",
+      "description": "Domain shown to the reader",
+      "example": "jane.dev"
+    },
+    {
+      "token": "website_url",
+      "where": "markdown",
+      "description": "Site URL with protocol",
+      "example": "https://jane.dev"
+    },
+    {
+      "token": "twitter",
+      "where": "markdown",
+      "description": "Twitter/X handle, no @",
+      "example": "janedoe"
+    }
+  ],
+  "credits": []
+}

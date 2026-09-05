@@ -11,8 +11,8 @@
 
 <!-- BEGIN:badges -->
 <p align="center">
-  <a href="#categories"><img src="https://img.shields.io/badge/templates-20-111111?style=for-the-badge&labelColor=f5f3ee" alt="20 templates" /></a>
-  <a href="#categories"><img src="https://img.shields.io/badge/categories-9-111111?style=for-the-badge&labelColor=f5f3ee" alt="9 categories" /></a>
+  <a href="#categories"><img src="https://img.shields.io/badge/templates-32-111111?style=for-the-badge&labelColor=f5f3ee" alt="32 templates" /></a>
+  <a href="#categories"><img src="https://img.shields.io/badge/categories-13-111111?style=for-the-badge&labelColor=f5f3ee" alt="13 categories" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-111111?style=for-the-badge&labelColor=f5f3ee" alt="MIT license" /></a>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-111111?style=for-the-badge&labelColor=f5f3ee" alt="contributions welcome" /></a>
 </p>
@@ -24,7 +24,9 @@
 
 Every other "awesome profile README" project does one of three things: links to other people's profiles for inspiration, generates generic markdown from a form, or piles up unstyled examples that all look the same. **This one ships ready-to-paste, design-led templates** — every one held to a senior frontend bar, and every claim on this page checked by CI rather than by hand.
 
-The last category — **[Avant-Garde](#09--avant-garde--showcase-tier)** — is the showcase tier. Multi-layer `feTurbulence` + `feDisplacementMap` for living aurora flow. Animated iridescent gradients with diagonal sheen sweeps for trading-card foil. SVG path morphing through topologically-equivalent geometric forms. Network graphs with nine simultaneous signal pulses driven by `<animateMotion>`. These push the GitHub README format to its actual limits — everything still pure SVG, no script, no GIF.
+**[Avant-Garde](#09--avant-garde--showcase-tier)** is the showcase tier — multi-layer `feTurbulence` and `feDisplacementMap` for living aurora flow, animated iridescent gradients for trading-card foil, path morphing through six geometric forms, network graphs with nine simultaneous signal pulses on real motion paths. Everything still pure SVG: no script, no GIF, no service.
+
+Past it the kit widens rather than escalates. **[Print & Analog](#10--print--analog)** rebuilds halftone screens, misregistration, paper grain and drafting jitter out of `<pattern>` and filter primitives. **[Swiss & Brutalist](#11--swiss--brutalist)** is the counterweight to everything glowing: grid, weight, one accent. **[Generative](#12--generative--data-art)** draws your own numbers with an algorithm instead of a chart library — and holds itself to the numbers being true, which is why the language map is a solved power diagram rather than a Voronoi that quietly equalises every cell. **[Purpose-Built](#13--purpose-built)** gives up on looking clever and tries to save somebody a message.
 
 You shouldn't have to be a designer to look like one on GitHub.
 
@@ -296,6 +298,146 @@ Templates are not all the same shape, and the gallery says which is which on eve
     </td>
   </tr>
 </table>
+
+### 10 · Print & Analog
+
+> Halftone screens, misregistration, paper grain, drafting jitter — the vocabulary of things that were printed, rebuilt with SVG filter primitives.
+
+<table border="0">
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <a href="./templates/10-print-analog/risograph-poster/">
+        <img src="./assets/print-analog/risograph-poster.svg" alt="Risograph Poster" width="100%" />
+        <br><strong>Risograph Poster</strong>
+      </a>
+      <br><sub><code>svg</code> · Advanced</sub>
+      <br><sub>Two-ink riso print, halftone screens and all.</sub>
+    </td>
+    <td width="50%" align="center" valign="top">
+      <a href="./templates/10-print-analog/blueprint-schematic/">
+        <img src="./assets/print-analog/blueprint-schematic.svg" alt="Blueprint Schematic" width="100%" />
+        <br><strong>Blueprint Schematic</strong>
+      </a>
+      <br><sub><code>svg</code> · Advanced</sub>
+      <br><sub>Your README, drafted as an exploded assembly.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <a href="./templates/10-print-analog/boarding-pass/">
+        <img src="./assets/print-analog/boarding-pass.svg" alt="Boarding Pass" width="100%" />
+        <br><strong>Boarding Pass</strong>
+      </a>
+      <br><sub><code>svg</code> · Intermediate</sub>
+      <br><sub>Where you are, where you are going, and a stub.</sub>
+    </td>
+    <td width="50%" align="center" valign="top">
+      <a href="./templates/10-print-analog/vinyl-sleeve/">
+        <img src="./assets/print-analog/vinyl-sleeve.svg" alt="Vinyl Sleeve" width="100%" />
+        <br><strong>Vinyl Sleeve</strong>
+      </a>
+      <br><sub><code>svg</code> · Intermediate</sub>
+      <br><sub>A record half out of its sleeve. Projects are the tracklist.</sub>
+    </td>
+  </tr>
+</table>
+
+### 11 · Swiss & Brutalist
+
+> Grid, weight, and one accent. The counterweight to everything glowing.
+
+<table border="0">
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <a href="./templates/11-swiss-brutalist/swiss-grid/">
+        <img src="./assets/swiss-brutalist/swiss-grid.svg" alt="Swiss Grid" width="100%" />
+        <br><strong>Swiss Grid</strong>
+      </a>
+      <br><sub><code>svg</code> · Intermediate</sub>
+      <br><sub>Twelve columns, left visible, and one red.</sub>
+    </td>
+    <td width="50%" align="center" valign="top">
+      <a href="./templates/11-swiss-brutalist/brutalist-slab/">
+        <img src="./assets/swiss-brutalist/brutalist-slab.svg" alt="Brutalist Slab" width="100%" />
+        <br><strong>Brutalist Slab</strong>
+      </a>
+      <br><sub><code>svg</code> · Basic</sub>
+      <br><sub>Heavy borders, deliberate overlap, one warning yellow.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <a href="./templates/11-swiss-brutalist/type-specimen/">
+        <img src="./assets/swiss-brutalist/type-specimen.svg" alt="Type Specimen" width="100%" />
+        <br><strong>Type Specimen</strong>
+      </a>
+      <br><sub><code>svg</code> · Basic</sub>
+      <br><sub>Your name as a foundry specimen, ruled and measured.</sub>
+    </td>
+    <td width="50%"></td>
+  </tr>
+</table>
+
+### 12 · Generative & Data-Art
+
+> Your own numbers, drawn by an algorithm rather than a chart library — and the numbers still have to be true.
+
+<table border="0">
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <a href="./templates/12-generative/flow-field/">
+        <img src="./assets/generative/flow-field.svg" alt="Flow Field" width="100%" />
+        <br><strong>Flow Field</strong>
+      </a>
+      <br><sub><code>svg</code> · Advanced</sub>
+      <br><sub>A year of commits, drawn as a vector field.</sub>
+    </td>
+    <td width="50%" align="center" valign="top">
+      <a href="./templates/12-generative/voronoi-territory/">
+        <img src="./assets/generative/voronoi-territory.svg" alt="Voronoi Territory" width="100%" />
+        <br><strong>Voronoi Territory</strong>
+      </a>
+      <br><sub><code>svg</code> · Advanced</sub>
+      <br><sub>Your languages as territory, sized by how much you write them.</sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <a href="./templates/12-generative/strata-core/">
+        <img src="./assets/generative/strata-core.svg" alt="Strata Core" width="100%" />
+        <br><strong>Strata Core</strong>
+      </a>
+      <br><sub><code>svg</code> · Intermediate</sub>
+      <br><sub>Six years of commits as a drilled core sample.</sub>
+    </td>
+    <td width="50%"></td>
+  </tr>
+</table>
+
+### 13 · Purpose-Built
+
+> Templates with a job to do. Less about looking good, more about saving somebody a message.
+
+<table border="0">
+  <tr>
+    <td width="50%" align="center" valign="top">
+      <a href="./templates/13-purpose-built/open-to-work/">
+        <img src="./assets/purpose-built/open-to-work.svg" alt="Open to Work" width="100%" />
+        <br><strong>Open to Work</strong>
+      </a>
+      <br><sub><code>svg</code> · Basic</sub>
+      <br><sub>Available, what you want, what you don't, and how to reach you.</sub>
+    </td>
+    <td width="50%" align="center" valign="top">
+      <a href="./templates/13-purpose-built/oss-maintainer/">
+        <img src="./assets/purpose-built/oss-maintainer.svg" alt="OSS Maintainer" width="100%" />
+        <br><strong>OSS Maintainer</strong>
+      </a>
+      <br><sub><code>svg</code> · Basic</sub>
+      <br><sub>What you maintain, how fast you answer, where to start.</sub>
+    </td>
+  </tr>
+</table>
 <!-- END:gallery -->
 
 ---
@@ -325,6 +467,18 @@ Templates are not all the same shape, and the gallery says which is which on eve
 | 18 | [Holographic Foil](./templates/09-avant-garde/holographic-foil/) | Avant-Garde | `svg` | Advanced | none |
 | 19 | [Liquid Morph Wordmark](./templates/09-avant-garde/liquid-morph-wordmark/) | Avant-Garde | `svg` | Advanced | none |
 | 20 | [Neural Pulse Lattice](./templates/09-avant-garde/neural-pulse-lattice/) | Avant-Garde | `svg` | Advanced | none |
+| 21 | [Risograph Poster](./templates/10-print-analog/risograph-poster/) | Print & Analog | `svg` | Advanced | none |
+| 22 | [Blueprint Schematic](./templates/10-print-analog/blueprint-schematic/) | Print & Analog | `svg` | Advanced | none |
+| 23 | [Boarding Pass](./templates/10-print-analog/boarding-pass/) | Print & Analog | `svg` | Intermediate | none |
+| 24 | [Vinyl Sleeve](./templates/10-print-analog/vinyl-sleeve/) | Print & Analog | `svg` | Intermediate | none |
+| 25 | [Swiss Grid](./templates/11-swiss-brutalist/swiss-grid/) | Swiss & Brutalist | `svg` | Intermediate | none |
+| 26 | [Brutalist Slab](./templates/11-swiss-brutalist/brutalist-slab/) | Swiss & Brutalist | `svg` | Basic | none |
+| 27 | [Type Specimen](./templates/11-swiss-brutalist/type-specimen/) | Swiss & Brutalist | `svg` | Basic | none |
+| 28 | [Flow Field](./templates/12-generative/flow-field/) | Generative & Data-Art | `svg` | Advanced | none |
+| 29 | [Voronoi Territory](./templates/12-generative/voronoi-territory/) | Generative & Data-Art | `svg` | Advanced | none |
+| 30 | [Strata Core](./templates/12-generative/strata-core/) | Generative & Data-Art | `svg` | Intermediate | none |
+| 31 | [Open to Work](./templates/13-purpose-built/open-to-work/) | Purpose-Built | `svg` | Basic | none |
+| 32 | [OSS Maintainer](./templates/13-purpose-built/oss-maintainer/) | Purpose-Built | `svg` | Basic | none |
 <!-- END:index -->
 
 ---

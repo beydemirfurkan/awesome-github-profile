@@ -11,7 +11,7 @@
 
 - **Category:**
 <!-- BEGIN:categories -->
-`01-minimal` | `02-animated` | `03-3d-immersive` | `04-gamified` | `05-dashboard` | `06-designer-portfolio` | `07-themed` | `08-markdown-tricks` | `09-avant-garde`
+`01-minimal` | `02-animated` | `03-3d-immersive` | `04-gamified` | `05-dashboard` | `06-designer-portfolio` | `07-themed` | `08-markdown-tricks` | `09-avant-garde` | `10-print-analog` | `11-swiss-brutalist` | `12-generative` | `13-purpose-built`
 <!-- END:categories -->
 - **Slug:** `kebab-case-name`
 - **Kind:** `svg` | `markdown` | `action` | `technique`
