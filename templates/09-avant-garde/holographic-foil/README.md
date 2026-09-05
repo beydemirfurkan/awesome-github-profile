@@ -1,14 +1,23 @@
 # Holographic Foil
 
-![preview](../../../assets/previews/holographic-foil.svg)
+<!-- BEGIN:preview -->
+![Holographic Foil](../../../assets/avant-garde/holographic-foil.svg)
+<!-- END:preview -->
 
 > Your profile as a 1st-edition holographic trading card. Animated stop-color iridescence + skewed sheen sweep + orbiting highlight + crystal-scale pattern. The kind of thing people screenshot.
 
-**Difficulty:** Advanced
-**External services:** none — fully self-contained SVG
-**Tags:** `avant-garde` `holographic` `trading-card` `animated-gradient` `playful-luxury`
+<!-- BEGIN:meta -->
+**Kind:** `svg` — ships a self-hosted SVG you download and commit  
+**Difficulty:** Advanced  
+**External services:** none  
+**Tags:** `avant-garde` `iridescent` `card` `self-hosted`
+<!-- END:meta -->
 
-## Why this is different
+## Preview
+
+A trading card across the full plate: an iridescent field under a fine scale pattern, a diagonal sheen sweeping over it, your monogram in the art box on the left and three rated abilities on the right. The header carries your name and an HP figure; the footer carries an edition mark.
+
+## Why this design
 
 Holographic effects on the web usually need WebGL or canvas. This template gets *Pokemon-1st-edition Charizard* energy from pure SVG by stacking five tricks:
 
@@ -53,22 +62,23 @@ Holographic effects on the web usually need WebGL or canvas. This template gets 
 
 ## Placeholders
 
-| Token                    | Description                                            | Example                                  |
-|--------------------------|--------------------------------------------------------|------------------------------------------|
-| `{{name}}`               | Display name (edited inside SVG)                       | `JANE DOE`                               |
-| `{{role}}`               | Role (edited inside SVG)                               | `FRONTEND ENGINEER`                      |
-| `{{level}}`              | Years of experience as a "level" (edited inside SVG)   | `7`                                      |
-| `{{hp}}`                 | A number that means something (commits, days streak)   | `2,184`                                  |
-| `{{monogram}}`           | Two-letter italic monogram (edited inside SVG)         | `JD`                                     |
-| `{{ability_one_*}}`      | Ability label, score, sublabel (edited inside SVG)     | `⚡ Type System Mastery / 86 / strict.tsconfig…` |
-| `{{ability_two_*}}`      | Same                                                   | `🌊 Motion Choreography / 94 / framer.motion…`  |
-| `{{ability_three_*}}`    | Same                                                   | `✦ Design System Architecture / 91 / tokens…`   |
-| `{{bio_paragraph}}`      | 1–2 sentences                                          | `Trades rare type systems...`            |
-| `{{currently_*}}`        | Three short bullets in markdown                        | `Acme · shipping the design system...`   |
-| `{{website}}`            | Domain                                                 | `jane.dev`                               |
-| `{{website_url}}`        | URL                                                    | `https://jane.dev`                       |
-| `{{twitter}}`            | Twitter handle without `@`                             | `janedoe`                                |
-| `{{linkedin}}`           | LinkedIn slug                                          | `janedoe`                                |
+<!-- BEGIN:placeholders -->
+| Token | Replace it | Description | Example |
+|-------|------------|-------------|---------|
+| `{{name}}` | in the block below | Display name | `JANE DOE` |
+| `{{role}}` | in the block below | Role | `FRONTEND ENGINEER` |
+| `{{level}}` | in the block below | Years of experience as a "level" | `7` |
+| `{{hp}}` | inside the SVG | A number that means something (commits, days streak) | `2,184` |
+| `{{monogram}}` | inside the SVG | Two-letter italic monogram | `JD` |
+| `{{bio_paragraph}}` | in the block below | 1–2 sentences | `Trades rare type systems...` |
+| `{{website}}` | in the block below | Domain | `jane.dev` |
+| `{{website_url}}` | in the block below | URL | `https://jane.dev` |
+| `{{twitter}}` | in the block below | Twitter handle without @ | `janedoe` |
+| `{{linkedin}}` | in the block below | LinkedIn slug | `janedoe` |
+| `{{currently_*_label}}` | in the block below | Short label for a “currently” row | `shipping` |
+| `{{currently_*_text}}` | in the block below | What you are doing, one line | `the design system at Acme` |
+| `{{ability_*_*}}` | inside the SVG | Ability label, score, sublabel | `⚡ Type System Mastery / 86 / strict.tsconfig…` |
+<!-- END:placeholders -->
 
 ## Customization Tips
 

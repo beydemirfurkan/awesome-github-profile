@@ -1,12 +1,17 @@
-# Pac-Man Contribution Graph
+# Pac-Man Graph
 
-![preview](../../../assets/previews/pacman-graph.svg)
+<!-- BEGIN:preview -->
+![Pac-Man Graph](../../../assets/gamified/pacman-graph.svg)
+<!-- END:preview -->
 
 > Pac-Man eats your contribution dots while ghosts give chase. The snake template's louder cousin.
 
-**Difficulty:** Intermediate
-**External services:** [pacman-contribution-graph](https://github.com/abozanona/pacman-contribution-graph) (GitHub Action)
-**Tags:** `gamified` `contribution-graph` `pacman` `automated` `retro`
+<!-- BEGIN:meta -->
+**Kind:** `action` — a GitHub Action generates it in your repo  
+**Difficulty:** Intermediate  
+**External services:** `raw.githubusercontent.com`  
+**Tags:** `gamified` `pacman` `contributions` `action`
+<!-- END:meta -->
 
 ## Preview
 
@@ -81,18 +86,20 @@ Trigger once manually from the **Actions** tab to seed the `output` branch.
 
 ## Placeholders
 
-| Token                  | Description                                       | Example                       |
-|------------------------|---------------------------------------------------|-------------------------------|
-| `{{username}}`         | GitHub username (also profile repo name)          | `janedoe`                     |
-| `{{name}}`             | Display name                                      | `Jane Doe`                    |
-| `{{tagline}}`          | One-liner                                         | `arcade-grade frontend`       |
-| `{{commit_count}}`     | Optional flair — your commit total this year      | `1842`                        |
-| `{{streak_days}}`      | Optional — current contribution streak            | `47`                          |
-| `{{current_stage}}`    | Optional — what you're working on, framed as game | `senior eng @ acme`           |
-| `{{currently_paragraph}}`| 1–2 sentences                                   | `Building...`                 |
-| `{{website}}`          | Domain only                                       | `jane.dev`                    |
-| `{{website_url}}`      | Full URL                                          | `https://jane.dev`            |
-| `{{twitter}}`          | Twitter handle without `@`                        | `janedoe`                     |
+<!-- BEGIN:placeholders -->
+| Token | Replace it | Description | Example |
+|-------|------------|-------------|---------|
+| `{{username}}` | in the block below | GitHub username (also profile repo name) | `janedoe` |
+| `{{name}}` | in the block below | Display name | `Jane Doe` |
+| `{{tagline}}` | in the block below | One-liner | `arcade-grade frontend` |
+| `{{commit_count}}` | in the block below | Optional flair — your commit total this year | `1842` |
+| `{{streak_days}}` | in the block below | Optional — current contribution streak | `47` |
+| `{{current_stage}}` | in the block below | Optional — what you're working on, framed as game | `senior eng @ acme` |
+| `{{currently_paragraph}}` | in the block below | 1–2 sentences | `Building...` |
+| `{{website}}` | in the block below | Domain only | `jane.dev` |
+| `{{website_url}}` | in the block below | Full URL | `https://jane.dev` |
+| `{{twitter}}` | in the block below | Twitter handle without @ | `janedoe` |
+<!-- END:placeholders -->
 
 ## Customization Tips
 

@@ -5,23 +5,26 @@
 <h1 align="center">Awesome GitHub Profile</h1>
 
 <p align="center">
-  <strong>Production-grade GitHub profile README templates.</strong><br>
+  <strong>Design-led GitHub profile README templates.</strong><br>
   From minimal type studies to 3D contribution skylines — copy, paste, ship.
 </p>
 
+<!-- BEGIN:badges -->
 <p align="center">
-  <a href="#categories"><img src="https://img.shields.io/badge/templates-20-7c5cff?style=for-the-badge&labelColor=0b1020" alt="20 templates" /></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-00d9ff?style=for-the-badge&labelColor=0b1020" alt="MIT license" /></a>
-  <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-ff5cdb?style=for-the-badge&labelColor=0b1020" alt="contributions welcome" /></a>
+  <a href="#categories"><img src="https://img.shields.io/badge/templates-20-111111?style=for-the-badge&labelColor=f5f3ee" alt="20 templates" /></a>
+  <a href="#categories"><img src="https://img.shields.io/badge/categories-9-111111?style=for-the-badge&labelColor=f5f3ee" alt="9 categories" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-111111?style=for-the-badge&labelColor=f5f3ee" alt="MIT license" /></a>
+  <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-111111?style=for-the-badge&labelColor=f5f3ee" alt="contributions welcome" /></a>
 </p>
+<!-- END:badges -->
 
 ---
 
 ## Why this exists
 
-Every other "awesome profile README" project does one of three things: links to other people's profiles for inspiration, generates generic markdown from a form, or piles up unstyled examples that all look the same. **This one ships ready-to-paste, design-led templates** — nine categories, twenty templates at launch, every one held to a senior frontend bar.
+Every other "awesome profile README" project does one of three things: links to other people's profiles for inspiration, generates generic markdown from a form, or piles up unstyled examples that all look the same. **This one ships ready-to-paste, design-led templates** — every one held to a senior frontend bar, and every claim on this page checked by CI rather than by hand.
 
-The final category — **[Avant-Garde](#09--avant-garde--showcase-tier)** — is the showcase tier. Multi-layer `feTurbulence` + `feDisplacementMap` for living aurora flow. Animated 5-stop iridescent gradients with diagonal sheen sweeps for Pokemon-card foil. SVG path morphing through six topologically-equivalent geometric forms. Network graphs with 9 simultaneous signal pulses driven by `<animateMotion>`. These templates push the GitHub README format to its actual limits — everything still pure SVG, no script, no GIF.
+The last category — **[Avant-Garde](#09--avant-garde--showcase-tier)** — is the showcase tier. Multi-layer `feTurbulence` + `feDisplacementMap` for living aurora flow. Animated iridescent gradients with diagonal sheen sweeps for trading-card foil. SVG path morphing through topologically-equivalent geometric forms. Network graphs with nine simultaneous signal pulses driven by `<animateMotion>`. These push the GitHub README format to its actual limits — everything still pure SVG, no script, no GIF.
 
 You shouldn't have to be a designer to look like one on GitHub.
 
@@ -31,12 +34,26 @@ You shouldn't have to be a designer to look like one on GitHub.
 2. **Open the template's folder** — every template has its own README with a copy-and-customize block.
 3. **Replace the `{{placeholders}}`** (each template lists exactly which ones it uses) and paste into your `<your-username>/<your-username>` profile repo's `README.md`.
 
-That's it. A few templates run a GitHub Action to generate live SVGs (the snake, the 3D contribution graph, the metrics pulse). For those, follow the one-time setup block in the template's README.
+### Know what you're getting
+
+Templates are not all the same shape, and the gallery says which is which on every card. Check the kind before you pick:
+
+<!-- BEGIN:kinds -->
+| Kind | What you get |
+|------|--------------|
+| `svg` | ships a self-hosted SVG you download and commit |
+| `markdown` | pure markdown — no images at all |
+| `action` | a GitHub Action generates it in your repo |
+| `technique` | a pattern you apply inside another template |
+<!-- END:kinds -->
+
+`svg` templates are the self-contained ones: you commit a single file to your own repo and nothing can rate-limit or 404 on you. `action` templates regenerate themselves on a schedule and need a one-time workflow — each template's README carries the exact YAML.
 
 ---
 
 ## Categories
 
+<!-- BEGIN:gallery -->
 ### 01 · Minimal
 
 > Less is more. Templates that earn attention through restraint.
@@ -45,16 +62,18 @@ That's it. A few templates run a GitHub Action to generate live SVGs (the snake,
   <tr>
     <td width="50%" align="center" valign="top">
       <a href="./templates/01-minimal/editorial-card/">
-        <img src="./assets/previews/editorial-card.svg" alt="Editorial Card" width="100%" />
+        <img src="./assets/minimal/editorial-card.svg" alt="Editorial Card" width="100%" />
         <br><strong>Editorial Card</strong>
       </a>
+      <br><sub><code>markdown</code> · Basic</sub>
       <br><sub>Magazine-style serif. No deps.</sub>
     </td>
     <td width="50%" align="center" valign="top">
       <a href="./templates/01-minimal/monospace-cv/">
-        <img src="./assets/previews/monospace-cv.svg" alt="Monospace CV" width="100%" />
+        <img src="./assets/minimal/monospace-cv.svg" alt="Monospace CV" width="100%" />
         <br><strong>Monospace CV</strong>
       </a>
+      <br><sub><code>markdown</code> · Basic</sub>
       <br><sub>Profile as a terminal session.</sub>
     </td>
   </tr>
@@ -71,6 +90,7 @@ That's it. A few templates run a GitHub Action to generate live SVGs (the snake,
         <img src="./assets/animated/neon-pulse-banner.svg" alt="Neon Pulse Banner" width="100%" />
         <br><strong>Neon Pulse Banner</strong>
       </a>
+      <br><sub><code>svg</code> · Intermediate</sub>
       <br><sub>Wide gradient hero with a slow wave.</sub>
     </td>
     <td width="50%" align="center" valign="top">
@@ -78,6 +98,7 @@ That's it. A few templates run a GitHub Action to generate live SVGs (the snake,
         <img src="./assets/animated/typewriter-intro.svg" alt="Typewriter Intro" width="100%" />
         <br><strong>Typewriter Intro</strong>
       </a>
+      <br><sub><code>svg</code> · Basic</sub>
       <br><sub>A terminal that types itself in.</sub>
     </td>
   </tr>
@@ -91,9 +112,10 @@ That's it. A few templates run a GitHub Action to generate live SVGs (the snake,
   <tr>
     <td width="50%" align="center" valign="top">
       <a href="./templates/03-3d-immersive/3d-contribution-tower/">
-        <img src="./assets/previews/3d-contribution-tower.svg" alt="3D Contribution Tower" width="100%" />
+        <img src="./assets/3d-immersive/3d-contribution-tower.svg" alt="3D Contribution Tower" width="100%" />
         <br><strong>3D Contribution Tower</strong>
       </a>
+      <br><sub><code>action</code> · Advanced</sub>
       <br><sub>Your contributions as an isometric skyline.</sub>
     </td>
     <td width="50%" align="center" valign="top">
@@ -101,6 +123,7 @@ That's it. A few templates run a GitHub Action to generate live SVGs (the snake,
         <img src="./assets/3d-immersive/tech-sphere.svg" alt="Tech Sphere" width="100%" />
         <br><strong>Tech Sphere</strong>
       </a>
+      <br><sub><code>svg</code> · Advanced</sub>
       <br><sub>A rotating orbit of your stack.</sub>
     </td>
   </tr>
@@ -114,16 +137,18 @@ That's it. A few templates run a GitHub Action to generate live SVGs (the snake,
   <tr>
     <td width="50%" align="center" valign="top">
       <a href="./templates/04-gamified/snake-eat-graph/">
-        <img src="./assets/previews/snake-eat-graph.svg" alt="Snake Eat Graph" width="100%" />
+        <img src="./assets/gamified/snake-eat-graph.svg" alt="Snake Eat Graph" width="100%" />
         <br><strong>Snake Eat Graph</strong>
       </a>
+      <br><sub><code>action</code> · Intermediate</sub>
       <br><sub>The classic. Eats your contributions daily.</sub>
     </td>
     <td width="50%" align="center" valign="top">
       <a href="./templates/04-gamified/pacman-graph/">
-        <img src="./assets/previews/pacman-graph.svg" alt="Pac-Man Graph" width="100%" />
+        <img src="./assets/gamified/pacman-graph.svg" alt="Pac-Man Graph" width="100%" />
         <br><strong>Pac-Man Graph</strong>
       </a>
+      <br><sub><code>action</code> · Intermediate</sub>
       <br><sub>The louder cousin. Ghosts included.</sub>
     </td>
   </tr>
@@ -140,13 +165,15 @@ That's it. A few templates run a GitHub Action to generate live SVGs (the snake,
         <img src="./assets/dashboard/analytics-grid.svg" alt="Analytics Grid" width="100%" />
         <br><strong>Analytics Grid</strong>
       </a>
-      <br><sub>2×2 metric cards. Dashboard energy.</sub>
+      <br><sub><code>svg</code> · Intermediate</sub>
+      <br><sub>Metric cards with sparklines. Dashboard energy.</sub>
     </td>
     <td width="50%" align="center" valign="top">
       <a href="./templates/05-dashboard/activity-pulse/">
-        <img src="./assets/previews/activity-pulse.svg" alt="Activity Pulse" width="100%" />
+        <img src="./assets/dashboard/activity-pulse.svg" alt="Activity Pulse" width="100%" />
         <br><strong>Activity Pulse</strong>
       </a>
+      <br><sub><code>action</code> · Advanced</sub>
       <br><sub>One card. Lots of signal. metrics-engine.</sub>
     </td>
   </tr>
@@ -163,13 +190,15 @@ That's it. A few templates run a GitHub Action to generate live SVGs (the snake,
         <img src="./assets/designer-portfolio/glassmorphism-hero.svg" alt="Glassmorphism Hero" width="100%" />
         <br><strong>Glassmorphism Hero</strong>
       </a>
+      <br><sub><code>svg</code> · Advanced</sub>
       <br><sub>Frosted glass on a melting gradient.</sub>
     </td>
     <td width="50%" align="center" valign="top">
       <a href="./templates/06-designer-portfolio/editorial-magazine/">
-        <img src="./assets/previews/editorial-magazine.svg" alt="Editorial Magazine" width="100%" />
+        <img src="./assets/designer-portfolio/editorial-magazine.svg" alt="Editorial Magazine" width="100%" />
         <br><strong>Editorial Magazine</strong>
       </a>
+      <br><sub><code>markdown</code> · Intermediate</sub>
       <br><sub>Typeset like a small print quarterly.</sub>
     </td>
   </tr>
@@ -186,6 +215,7 @@ That's it. A few templates run a GitHub Action to generate live SVGs (the snake,
         <img src="./assets/themed/cyberpunk-neon.svg" alt="Cyberpunk Neon" width="100%" />
         <br><strong>Cyberpunk Neon</strong>
       </a>
+      <br><sub><code>svg</code> · Advanced</sub>
       <br><sub>Vaporwave grid + chromatic aberration.</sub>
     </td>
     <td width="50%" align="center" valign="top">
@@ -193,6 +223,7 @@ That's it. A few templates run a GitHub Action to generate live SVGs (the snake,
         <img src="./assets/themed/dark-elegant.svg" alt="Dark Elegant" width="100%" />
         <br><strong>Dark Elegant</strong>
       </a>
+      <br><sub><code>svg</code> · Intermediate</sub>
       <br><sub>Monogram, gold hairline, restraint.</sub>
     </td>
   </tr>
@@ -200,22 +231,24 @@ That's it. A few templates run a GitHub Action to generate live SVGs (the snake,
 
 ### 08 · Markdown Tricks
 
-> Two techniques that make every other template better. Use them inside whichever you pick.
+> Techniques that make every other template better. Use them inside whichever you pick.
 
 <table border="0">
   <tr>
     <td width="50%" align="center" valign="top">
       <a href="./templates/08-markdown-tricks/light-dark-switcher/">
-        <img src="./assets/previews/light-dark-switcher.svg" alt="Light/Dark Switcher" width="100%" />
+        <img src="./assets/markdown-tricks/light-dark-switcher.svg" alt="Light / Dark Switcher" width="100%" />
         <br><strong>Light / Dark Switcher</strong>
       </a>
-      <br><sub>One <code>&lt;picture&gt;</code> tag, perfect parity.</sub>
+      <br><sub><code>technique</code> · Basic</sub>
+      <br><sub>One picture tag, perfect theme parity.</sub>
     </td>
     <td width="50%" align="center" valign="top">
       <a href="./templates/08-markdown-tricks/collapsible-projects/">
-        <img src="./assets/previews/collapsible-projects.svg" alt="Collapsible Projects" width="100%" />
+        <img src="./assets/markdown-tricks/collapsible-projects.svg" alt="Collapsible Projects" width="100%" />
         <br><strong>Collapsible Projects</strong>
       </a>
+      <br><sub><code>markdown</code> · Basic</sub>
       <br><sub>Pack ten projects into the space of three.</sub>
     </td>
   </tr>
@@ -229,63 +262,70 @@ That's it. A few templates run a GitHub Action to generate live SVGs (the snake,
   <tr>
     <td width="50%" align="center" valign="top">
       <a href="./templates/09-avant-garde/aurora-veil/">
-        <img src="./assets/previews/aurora-veil.svg" alt="Aurora Veil" width="100%" />
+        <img src="./assets/avant-garde/aurora-veil.svg" alt="Aurora Veil" width="100%" />
         <br><strong>Aurora Veil</strong>
       </a>
+      <br><sub><code>svg</code> · Advanced</sub>
       <br><sub>Multi-layer turbulence + displacement, never repeats.</sub>
     </td>
     <td width="50%" align="center" valign="top">
       <a href="./templates/09-avant-garde/holographic-foil/">
-        <img src="./assets/previews/holographic-foil.svg" alt="Holographic Foil" width="100%" />
+        <img src="./assets/avant-garde/holographic-foil.svg" alt="Holographic Foil" width="100%" />
         <br><strong>Holographic Foil</strong>
       </a>
-      <br><sub>Pokemon 1st-edition card, animated stop-color iridescence.</sub>
+      <br><sub><code>svg</code> · Advanced</sub>
+      <br><sub>Trading-card foil, animated stop-color iridescence.</sub>
     </td>
   </tr>
   <tr>
     <td width="50%" align="center" valign="top">
       <a href="./templates/09-avant-garde/liquid-morph-wordmark/">
-        <img src="./assets/previews/liquid-morph-wordmark.svg" alt="Liquid Morph Wordmark" width="100%" />
+        <img src="./assets/avant-garde/liquid-morph-wordmark.svg" alt="Liquid Morph Wordmark" width="100%" />
         <br><strong>Liquid Morph Wordmark</strong>
       </a>
+      <br><sub><code>svg</code> · Advanced</sub>
       <br><sub>Path interpolation across six geometric forms.</sub>
     </td>
     <td width="50%" align="center" valign="top">
       <a href="./templates/09-avant-garde/neural-pulse-lattice/">
-        <img src="./assets/previews/neural-pulse-lattice.svg" alt="Neural Pulse Lattice" width="100%" />
+        <img src="./assets/avant-garde/neural-pulse-lattice.svg" alt="Neural Pulse Lattice" width="100%" />
         <br><strong>Neural Pulse Lattice</strong>
       </a>
+      <br><sub><code>svg</code> · Advanced</sub>
       <br><sub>10 nodes, 15 edges, 9 signals — animateMotion + mpath.</sub>
     </td>
   </tr>
 </table>
+<!-- END:gallery -->
 
 ---
 
 ## Full template index
 
-| #  | Template                  | Category               | Difficulty   | External services                          |
-|----|---------------------------|------------------------|--------------|--------------------------------------------|
-| 01 | [Editorial Card](./templates/01-minimal/editorial-card/)                       | Minimal              | Basic        | none                                        |
-| 02 | [Monospace CV](./templates/01-minimal/monospace-cv/)                           | Minimal              | Basic        | readme-typing-svg (optional)                |
-| 03 | [Neon Pulse Banner](./templates/02-animated/neon-pulse-banner/)                | Animated             | Intermediate | none (self-hosted SVG)                      |
-| 04 | [Typewriter Intro](./templates/02-animated/typewriter-intro/)                  | Animated             | Basic        | none (self-hosted SVG)                      |
-| 05 | [3D Contribution Tower](./templates/03-3d-immersive/3d-contribution-tower/)    | 3D & Immersive       | Advanced     | github-profile-3d-contrib (Action)          |
-| 06 | [Tech Sphere](./templates/03-3d-immersive/tech-sphere/)                        | 3D & Immersive       | Advanced     | none (self-hosted SVG)                      |
-| 07 | [Snake Eat Graph](./templates/04-gamified/snake-eat-graph/)                    | Gamified             | Intermediate | Platane/snk (Action)                        |
-| 08 | [Pac-Man Graph](./templates/04-gamified/pacman-graph/)                         | Gamified             | Intermediate | abozanona/pacman-contribution-graph (Action)|
-| 09 | [Analytics Grid](./templates/05-dashboard/analytics-grid/)                     | Dashboard            | Intermediate | none for hero (optional readme-stats below) |
-| 10 | [Activity Pulse](./templates/05-dashboard/activity-pulse/)                     | Dashboard            | Advanced     | lowlighter/metrics (Action)                 |
-| 11 | [Glassmorphism Hero](./templates/06-designer-portfolio/glassmorphism-hero/)    | Designer Portfolio   | Advanced     | none (self-hosted SVG)                      |
-| 12 | [Editorial Magazine](./templates/06-designer-portfolio/editorial-magazine/)    | Designer Portfolio   | Intermediate | none                                        |
-| 13 | [Cyberpunk Neon](./templates/07-themed/cyberpunk-neon/)                        | Themed               | Advanced     | none (self-hosted SVG)                      |
-| 14 | [Dark Elegant](./templates/07-themed/dark-elegant/)                            | Themed               | Intermediate | none for hero (optional readme-stats below) |
-| 15 | [Light / Dark Switcher](./templates/08-markdown-tricks/light-dark-switcher/)   | Markdown Tricks      | Basic        | any image                                   |
-| 16 | [Collapsible Projects](./templates/08-markdown-tricks/collapsible-projects/)   | Markdown Tricks      | Basic        | none                                        |
-| 17 | [Aurora Veil](./templates/09-avant-garde/aurora-veil/)                         | Avant-Garde          | Advanced     | none (self-hosted SVG)                      |
-| 18 | [Holographic Foil](./templates/09-avant-garde/holographic-foil/)               | Avant-Garde          | Advanced     | none (self-hosted SVG)                      |
-| 19 | [Liquid Morph Wordmark](./templates/09-avant-garde/liquid-morph-wordmark/)     | Avant-Garde          | Advanced     | none (self-hosted SVG)                      |
-| 20 | [Neural Pulse Lattice](./templates/09-avant-garde/neural-pulse-lattice/)       | Avant-Garde          | Advanced     | none (self-hosted SVG)                      |
+<!-- BEGIN:index -->
+| #  | Template | Category | Kind | Difficulty | External services |
+|----|----------|----------|------|------------|-------------------|
+| 01 | [Editorial Card](./templates/01-minimal/editorial-card/) | Minimal | `markdown` | Basic | none |
+| 02 | [Monospace CV](./templates/01-minimal/monospace-cv/) | Minimal | `markdown` | Basic | `readme-typing-svg.demolab.com` *(optional)* |
+| 03 | [Neon Pulse Banner](./templates/02-animated/neon-pulse-banner/) | Animated | `svg` | Intermediate | none |
+| 04 | [Typewriter Intro](./templates/02-animated/typewriter-intro/) | Animated | `svg` | Basic | none |
+| 05 | [3D Contribution Tower](./templates/03-3d-immersive/3d-contribution-tower/) | 3D & Immersive | `action` | Advanced | none |
+| 06 | [Tech Sphere](./templates/03-3d-immersive/tech-sphere/) | 3D & Immersive | `svg` | Advanced | none |
+| 07 | [Snake Eat Graph](./templates/04-gamified/snake-eat-graph/) | Gamified | `action` | Intermediate | `raw.githubusercontent.com` |
+| 08 | [Pac-Man Graph](./templates/04-gamified/pacman-graph/) | Gamified | `action` | Intermediate | `raw.githubusercontent.com` |
+| 09 | [Analytics Grid](./templates/05-dashboard/analytics-grid/) | Dashboard | `svg` | Intermediate | `github-readme-stats.vercel.app` *(optional)* |
+| 10 | [Activity Pulse](./templates/05-dashboard/activity-pulse/) | Dashboard | `action` | Advanced | none |
+| 11 | [Glassmorphism Hero](./templates/06-designer-portfolio/glassmorphism-hero/) | Designer Portfolio | `svg` | Advanced | none |
+| 12 | [Editorial Magazine](./templates/06-designer-portfolio/editorial-magazine/) | Designer Portfolio | `markdown` | Intermediate | none |
+| 13 | [Cyberpunk Neon](./templates/07-themed/cyberpunk-neon/) | Themed | `svg` | Advanced | none |
+| 14 | [Dark Elegant](./templates/07-themed/dark-elegant/) | Themed | `svg` | Intermediate | `github-readme-stats.vercel.app` *(optional)* |
+| 15 | [Light / Dark Switcher](./templates/08-markdown-tricks/light-dark-switcher/) | Markdown Tricks | `technique` | Basic | `github-readme-stats.vercel.app` *(optional)*<br>`raw.githubusercontent.com` *(optional)* |
+| 16 | [Collapsible Projects](./templates/08-markdown-tricks/collapsible-projects/) | Markdown Tricks | `markdown` | Basic | none |
+| 17 | [Aurora Veil](./templates/09-avant-garde/aurora-veil/) | Avant-Garde | `svg` | Advanced | none |
+| 18 | [Holographic Foil](./templates/09-avant-garde/holographic-foil/) | Avant-Garde | `svg` | Advanced | none |
+| 19 | [Liquid Morph Wordmark](./templates/09-avant-garde/liquid-morph-wordmark/) | Avant-Garde | `svg` | Advanced | none |
+| 20 | [Neural Pulse Lattice](./templates/09-avant-garde/neural-pulse-lattice/) | Avant-Garde | `svg` | Advanced | none |
+<!-- END:index -->
 
 ---
 
@@ -298,9 +338,8 @@ That's it. A few templates run a GitHub Action to generate live SVGs (the snake,
 | Boundary-pushing SVG (turbulence, path morph, animateMotion) | ✅ | ❌ | ❌ | ❌ |
 | 3D / immersive templates              | ✅        | ⚠️         | ❌         | ❌         |
 | GitHub Action setup walkthroughs      | ✅        | ❌         | ❌         | ❌         |
-| Light + dark mode parity              | ✅        | ❌         | ❌         | ⚠️         |
-| Mobile-tested                         | ✅        | ❌         | ❌         | ❌         |
-| Quality-bar enforced via PR template  | ✅        | ❌         | ❌         | n/a       |
+| Dependency count stated per template  | ✅        | ❌         | ❌         | ❌         |
+| Quality bar enforced by CI, not honour system | ✅ | ❌     | ❌         | n/a       |
 
 `✅ yes  · ⚠️ partial · ❌ no`
 
@@ -308,22 +347,23 @@ That's it. A few templates run a GitHub Action to generate live SVGs (the snake,
 
 ## Contributing
 
-Adding a new template? Read [`CONTRIBUTING.md`](CONTRIBUTING.md) — it documents the quality bar, the placeholder convention, and the PR process. Templates that don't clear the quality bar will be politely declined; templates that do are merged within a week.
+Adding a new template? Read [`CONTRIBUTING.md`](CONTRIBUTING.md) — it documents the quality bar, the `meta.json` contract, and the PR process. The bar is not a checklist someone eyeballs: `npm run check` enforces it, and CI runs it on every pull request.
 
 If you found a bug (broken link, wrong placeholder, render glitch on mobile), open an issue or PR with a screenshot.
 
 ## Credits
 
-This repo stands on the shoulders of the public services that make GitHub READMEs expressive. Each template lists its specific dependencies in its own `Credits` section. Maintainers we lean on most:
+This repo stands on the shoulders of the public services that make GitHub READMEs expressive. The list below is generated from what the templates actually depend on, so it can't drift into thanking something nothing uses:
 
-- [DenverCoder1](https://github.com/DenverCoder1) — readme-typing-svg, github-readme-streak-stats
-- [kyechan99](https://github.com/kyechan99) — capsule-render
-- [anuraghazra](https://github.com/anuraghazra) — github-readme-stats
-- [Platane](https://github.com/Platane) — snk
-- [yoshi389111](https://github.com/yoshi389111) — github-profile-3d-contrib
-- [abozanona](https://github.com/abozanona) — pacman-contribution-graph
-- [lowlighter](https://github.com/lowlighter) — metrics
-- [tandpfun](https://github.com/tandpfun) — skill-icons
+<!-- BEGIN:credits -->
+- [abozanona](https://github.com/abozanona) — [pacman-contribution-graph](https://github.com/abozanona/pacman-contribution-graph)
+- [anuraghazra](https://github.com/anuraghazra) — [github-readme-stats](https://github.com/anuraghazra/github-readme-stats)
+- [crazy-max](https://github.com/crazy-max) — [ghaction-github-pages](https://github.com/crazy-max/ghaction-github-pages)
+- [DenverCoder1](https://github.com/DenverCoder1) — [readme-typing-svg](https://github.com/DenverCoder1/readme-typing-svg)
+- [lowlighter](https://github.com/lowlighter) — [metrics](https://github.com/lowlighter/metrics)
+- [Platane](https://github.com/Platane) — [snk](https://github.com/Platane/snk)
+- [yoshi389111](https://github.com/yoshi389111) — [github-profile-3d-contrib](https://github.com/yoshi389111/github-profile-3d-contrib)
+<!-- END:credits -->
 
 If your project is referenced and you'd like a different attribution wording, open an issue.
 

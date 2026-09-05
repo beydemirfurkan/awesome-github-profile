@@ -1,16 +1,25 @@
 # Neon Pulse Banner
 
-![preview](../../../assets/previews/neon-pulse-banner.svg)
+<!-- BEGIN:preview -->
+![Neon Pulse Banner](../../../assets/animated/neon-pulse-banner.svg)
+<!-- END:preview -->
 
 > Three nested wave paths morphing in parallel against an animated spectrum gradient. Self-hosted SVG — no third-party banner services, no shields, no shimmer-from-someone-else's-Vercel.
 
-**Difficulty:** Intermediate
-**External services:** none — fully self-contained SVG
+<!-- BEGIN:meta -->
+**Kind:** `svg` — ships a self-hosted SVG you download and commit  
+**Difficulty:** Intermediate  
+**External services:** none  
 **Tags:** `animated` `gradient-flow` `wave-morph` `glow-filter` `self-hosted`
+<!-- END:meta -->
 
-## Why this got upgraded
+## Preview
 
-The first version of this template stitched together three external services (capsule-render, readme-typing-svg, shields.io) — fast to ship but generic, and broken when any of those services rate-limit. The new version is one self-hosted SVG with three independently animated wave paths, two animated linear gradients (sweeping in opposite directions), a glow filter on the front wave, and a chromatic-overlay headline. Same visual energy, zero outside dependencies, instant load.
+A wide dark-violet field with three wave paths crossing it at different speeds and opacities, a spectrum that *travels* through them rather than shifting hue, and your name in heavy sans with a blurred spectrum copy glowing underneath. Four tag chips sit below the role line; a status line and a corner mark close the frame.
+
+## Why this design
+
+Three external services would ship this faster — a hero generator, a typing SVG, a badge row — but each one is a runtime dependency that can rate-limit, change its API, or simply be down when someone opens your profile. This is one self-hosted file instead: three independently animated wave paths, two linear gradients sweeping in opposite directions, a glow filter on the front wave, and a chromatic-overlay headline. Same visual energy, nothing that can go down.
 
 ## Live showcase
 
@@ -45,18 +54,18 @@ The first version of this template stitched together three external services (ca
 
 ## Placeholders
 
-| Token                | Description                                           | Example                                  |
-|----------------------|-------------------------------------------------------|------------------------------------------|
-| `{{name}}`           | Display name (edited inside SVG)                      | `JANE DOE`                               |
-| `{{tagline}}`        | Role line (edited inside SVG)                         | `FRONTEND · MOTION · WEBGL`              |
-| `{{tags_*}}`         | Four chip labels (edited inside SVG)                  | `react`, `typescript`, `webgl`, `motion` |
-| `{{bio_paragraph}}`  | 1–2 sentences in markdown                             | `I build interfaces that move...`        |
-| `{{currently_one}}`  | Bullet 1                                              | `shipping the design system at acme`     |
-| `{{currently_two}}`  | Bullet 2                                              | `learning rust shaders for fun`          |
-| `{{currently_three}}`| Bullet 3                                              | `writing about css.layers`               |
-| `{{website}}`        | Domain                                                | `jane.dev`                               |
-| `{{website_url}}`    | URL                                                   | `https://jane.dev`                       |
-| `{{twitter}}`        | Twitter handle without `@`                            | `janedoe`                                |
+<!-- BEGIN:placeholders -->
+| Token | Replace it | Description | Example |
+|-------|------------|-------------|---------|
+| `{{name}}` | in the block below | Display name | `JANE DOE` |
+| `{{tagline}}` | in the block below | Role line | `FRONTEND · MOTION · WEBGL` |
+| `{{tags_*}}` | inside the SVG | Four chip labels | `react, typescript, webgl, motion` |
+| `{{bio_paragraph}}` | in the block below | 1–2 sentences in markdown | `I build interfaces that move...` |
+| `{{currently_*}}` | in the block below | Bullet | `shipping the design system at acme` |
+| `{{website}}` | in the block below | Domain | `jane.dev` |
+| `{{website_url}}` | in the block below | URL | `https://jane.dev` |
+| `{{twitter}}` | in the block below | Twitter handle without @ | `janedoe` |
+<!-- END:placeholders -->
 
 ## Customization Tips
 
@@ -64,7 +73,7 @@ The first version of this template stitched together three external services (ca
 - **Three wave paths at three speeds (14s/9s/6s).** The far wave is dim and slow; the front wave is glowing and fast. This is parallax — flattening their speeds destroys the depth.
 - **The headline ghost layer.** The white text + the spectrum-filled glow-blurred copy underneath = a cheap-but-perfect chromatic glow. Both `<text>` elements need identical `font-size` and `letter-spacing`, or alignment breaks.
 - **Don't add shields/badges.** This is a self-contained composition; pasting `![badge](shields.io/...)` next to it will look like a flyer with sponsor logos.
-- **Mobile.** Three SMIL animations + one filter chain renders fine on mobile Safari and Chrome. Tested ~14ms paint per frame on iPhone 13.
+- **Cost.** Eight `<animate>` elements and two blur filters. The gradients and path morphs are cheap; the glow on the front wave is the only part that costs anything, so if you need this lighter, drop the filter and keep the motion.
 - **Pair with prose, not stats.** This banner does the heavy visual lifting — let the markdown below it be quiet sentences, not another stats wall.
 
 ## Technical notes

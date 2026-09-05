@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-label="Editorial Card — a magazine-style profile README specimen">
+  <title>Editorial Card</title>
+  <defs>
+    <!-- Paper grain. Fractal noise flattened to a faint alpha wash: enough
+         tooth that the flat fill reads as stock rather than as #fff. -->
+    <filter id="ec-grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="7" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.06  0 0 0 0 0.05  0 0 0 0 0.04  0 0 0 0.5 0"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="420" fill="#faf7f1"/>
+  <rect width="1200" height="420" filter="url(#ec-grain)" opacity="0.5"/>
+
+  <!-- Masthead rule. The one heavy element on the page; everything else is
+       hairline, which is what makes the restraint read as deliberate. -->
+  <rect x="0" y="0" width="1200" height="9" fill="#111111"/>
+
+  <!-- Folio, top right -->
+  <text x="1128" y="52" text-anchor="end" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10" fill="#a09a90" letter-spacing="3">ISSUE №01</text>
+
+  <!-- Masthead -->
+  <text x="72" y="150" font-family="Georgia, 'Times New Roman', serif" font-size="78" font-weight="700" fill="#111111" letter-spacing="-2">Jane Doe</text>
+  <line x1="72" y1="182" x2="228" y2="182" stroke="#111111" stroke-width="2.5"/>
+  <text x="72" y="220" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="21" fill="#454038">Frontend engineer who writes essays in code</text>
+
+  <!-- Three columns, unequal on purpose: the widest measure goes to the one
+       with sentences in it, the narrowest to the one with handles. -->
+  <line x1="412" y1="272" x2="412" y2="368" stroke="#d8d2c6" stroke-width="1"/>
+  <line x1="656" y1="272" x2="656" y2="368" stroke="#d8d2c6" stroke-width="1"/>
+
+  <!-- Column one -->
+  <text x="72" y="284" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10" fill="#8c8578" letter-spacing="3.5">CURRENTLY</text>
+  <text x="72" y="314" font-family="Georgia, serif" font-size="16" fill="#1a1a1a">Building the design system</text>
+  <text x="72" y="338" font-family="Georgia, serif" font-size="16" fill="#1a1a1a">at Acme. Writing about</text>
+  <text x="72" y="362" font-family="Georgia, serif" font-size="16" fill="#1a1a1a">typography on the web.</text>
+
+  <!-- Column two -->
+  <text x="452" y="284" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10" fill="#8c8578" letter-spacing="3.5">ELSEWHERE</text>
+  <text x="452" y="314" font-family="Georgia, serif" font-size="16" fill="#1a1a1a">jane.dev</text>
+  <text x="452" y="338" font-family="Georgia, serif" font-size="16" fill="#1a1a1a">@janedoe</text>
+  <text x="452" y="362" font-family="Georgia, serif" font-size="16" fill="#1a1a1a">in/janedoe</text>
+
+  <!-- Column three -->
+  <text x="696" y="284" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10" fill="#8c8578" letter-spacing="3.5">WORK</text>
+  <text x="696" y="314" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#1a1a1a">acme design system<tspan font-weight="400" fill="#5a5348"> — a token-driven UI kit.</tspan></text>
+  <text x="696" y="338" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#1a1a1a">the type observatory<tspan font-weight="400" fill="#5a5348"> — variable fonts in motion.</tspan></text>
+  <text x="696" y="362" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#1a1a1a">runtime essays<tspan font-weight="400" fill="#5a5348"> — notes on shipping interfaces.</tspan></text>
+
+  <!-- Baseline folio -->
+  <line x1="72" y1="392" x2="1128" y2="392" stroke="#ddd7cb" stroke-width="1"/>
+  <text x="72" y="410" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9.5" fill="#a09a90" letter-spacing="2.5">2026 · WRITTEN IN THIS README</text>
+  <text x="1128" y="410" text-anchor="end" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9.5" fill="#a09a90" letter-spacing="2.5">PURE MARKDOWN · ZERO DEPENDENCIES</text>
+</svg>

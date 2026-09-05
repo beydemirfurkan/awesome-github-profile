@@ -1,18 +1,27 @@
 # Analytics Grid
 
-![preview](../../../assets/previews/analytics-grid.svg)
+<!-- BEGIN:preview -->
+![Analytics Grid](../../../assets/dashboard/analytics-grid.svg)
+<!-- END:preview -->
 
 > A four-tile executive dashboard with hand-drawn sparklines, a pulse-bar streak meter, weekday cadence dots, and a 90-day trend area chart with a live indicator. Self-hosted hero, optional external stat cards below.
 
-**Difficulty:** Intermediate
-**External services:** none for the hero; optional [github-readme-stats](https://github.com/anuraghazra/github-readme-stats) below
-**Tags:** `dashboard` `kpi-tiles` `sparklines` `live-indicator` `self-hosted`
+<!-- BEGIN:meta -->
+**Kind:** `svg` — ships a self-hosted SVG you download and commit  
+**Difficulty:** Intermediate  
+**External services:** `github-readme-stats.vercel.app` (optional)  
+**Tags:** `dashboard` `metrics` `cards` `self-hosted`
+<!-- END:meta -->
 
-## Why this got upgraded
+## Preview
 
-The first version was just four `<img>` tags from public stat services — competent but generic, and the four cards had inconsistent typography because each service ships its own type system. The new version is **one cohesive SVG** with hand-drawn sparklines (real polylines, no charts library), a custom streak-bar meter, weekday cadence dots, and a 90-day trend chart with a pulsing "today" indicator. All four cards share one type scale. Looks like a product analytics page, not a sponsor wall.
+Four metric cards across one plate, sharing a single type scale: a commit count with a hand-drawn sparkline, a streak meter, a pull-request tally, and a weekday cadence read-out. Below them a 90-day trend line runs the full width, with a pulsing marker on today.
 
-You can still drop external stat cards below the hero for live data — but the hero itself stands on its own.
+## Why this design
+
+Four `<img>` tags from public stat services would cover the same ground, but each service ships its own type system — so four cards end up carrying four different type scales side by side. This is one SVG instead: hand-drawn sparklines (real polylines, no chart library), a custom streak meter, weekday cadence dots, and a 90-day trend with a pulsing today marker, all on one scale. It reads as a product analytics page rather than a sponsor wall.
+
+You can still drop live stat cards underneath for real numbers — the hero stands on its own either way.
 
 ## Live showcase
 
@@ -56,17 +65,19 @@ You can still drop external stat cards below the hero for live data — but the 
 
 ## Placeholders
 
-| Token                  | Description                                       | Example                              |
-|------------------------|---------------------------------------------------|--------------------------------------|
-| `{{name}}`             | Display name (edited inside SVG header)           | `JANE DOE`                           |
-| `{{kpi_*}}`            | Four KPI numbers (edited inside SVG)              | `1,842 / 47d / 86 / tue→thu`         |
-| `{{commit_reason}}`    | One sentence narrative                            | `the design system shipped milestone 3` |
-| `{{streak_reason}}`    | One sentence narrative                            | `i blocked 30 minutes every morning` |
-| `{{cadence_reason}}`   | One sentence narrative                            | `i protect mondays and fridays for deep work` |
-| `{{username}}`         | GitHub username (for optional live card)          | `janedoe`                            |
-| `{{website}}`          | Domain                                            | `jane.dev`                           |
-| `{{website_url}}`      | URL                                               | `https://jane.dev`                   |
-| `{{twitter}}`          | Twitter without `@`                               | `janedoe`                            |
+<!-- BEGIN:placeholders -->
+| Token | Replace it | Description | Example |
+|-------|------------|-------------|---------|
+| `{{name}}` | in the block below | Display name (edited inside SVG header) | `JANE DOE` |
+| `{{kpi_*}}` | inside the SVG | Four KPI numbers | `1,842 / 47d / 86 / tue→thu` |
+| `{{commit_reason}}` | in the block below | One sentence narrative | `the design system shipped milestone 3` |
+| `{{streak_reason}}` | in the block below | One sentence narrative | `i blocked 30 minutes every morning` |
+| `{{cadence_reason}}` | in the block below | One sentence narrative | `i protect mondays and fridays for deep work` |
+| `{{username}}` | in the block below | GitHub username (for optional live card) | `janedoe` |
+| `{{website}}` | in the block below | Domain | `jane.dev` |
+| `{{website_url}}` | in the block below | URL | `https://jane.dev` |
+| `{{twitter}}` | in the block below | Twitter without @ | `janedoe` |
+<!-- END:placeholders -->
 
 ## Customization Tips
 

@@ -1,0 +1,50 @@
+{
+  "slug": "3d-contribution-tower",
+  "name": "3D Contribution Tower",
+  "kind": "action",
+  "difficulty": "Advanced",
+  "blurb": "Your contributions as an isometric skyline.",
+  "asset": "assets/3d-immersive/3d-contribution-tower.svg",
+  "picture": true,
+  "tags": [
+    "3d",
+    "isometric",
+    "contributions",
+    "action"
+  ],
+  "services": [],
+  "placeholders": [
+    {
+      "token": "username",
+      "where": "setup",
+      "description": "GitHub username (also the profile repo name)",
+      "example": "janedoe"
+    },
+    {
+      "token": "name",
+      "where": "markdown",
+      "description": "Display name",
+      "example": "Jane Doe"
+    },
+    {
+      "token": "website",
+      "where": "markdown",
+      "description": "Domain only",
+      "example": "jane.dev"
+    },
+    {
+      "token": "website_url",
+      "where": "markdown",
+      "description": "Full URL",
+      "example": "https://jane.dev"
+    }
+  ],
+  "credits": [
+    {
+      "name": "github-profile-3d-contrib",
+      "author": "yoshi389111",
+      "url": "https://github.com/yoshi389111/github-profile-3d-contrib",
+      "license": "MIT"
+    }
+  ]
+}

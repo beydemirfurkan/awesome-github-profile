@@ -1,0 +1,91 @@
+{
+  "slug": "monospace-cv",
+  "name": "Monospace CV",
+  "kind": "markdown",
+  "difficulty": "Basic",
+  "blurb": "Profile as a terminal session.",
+  "asset": "assets/minimal/monospace-cv.svg",
+  "picture": false,
+  "tags": [
+    "minimal",
+    "monospace",
+    "terminal",
+    "cv"
+  ],
+  "services": [
+    {
+      "host": "readme-typing-svg.demolab.com",
+      "optional": true
+    }
+  ],
+  "placeholders": [
+    {
+      "token": "username",
+      "where": "markdown",
+      "description": "GitHub-style handle (lowercase + dot OK)",
+      "example": "jane.doe"
+    },
+    {
+      "token": "role",
+      "where": "markdown",
+      "description": "Short role title",
+      "example": "frontend.eng"
+    },
+    {
+      "token": "skills_csv",
+      "where": "markdown",
+      "description": "Comma-separated skills",
+      "example": "typescript · react · node · figma"
+    },
+    {
+      "token": "uptime_line",
+      "where": "markdown",
+      "description": "Years of experience as a sentence",
+      "example": "8 yrs shipping production interfaces."
+    },
+    {
+      "token": "website",
+      "where": "markdown",
+      "description": "Domain only",
+      "example": "jane.dev"
+    },
+    {
+      "token": "website_url",
+      "where": "markdown",
+      "description": "Full URL",
+      "example": "https://jane.dev"
+    },
+    {
+      "token": "twitter",
+      "where": "markdown",
+      "description": "Twitter handle, no @",
+      "example": "janedoe"
+    },
+    {
+      "token": "linkedin",
+      "where": "markdown",
+      "description": "LinkedIn slug",
+      "example": "janedoe"
+    },
+    {
+      "token": "accent",
+      "where": "markdown",
+      "description": "Hex color, no #, used for the typing cursor",
+      "example": "7ee787"
+    },
+    {
+      "token": "typing_line_*",
+      "where": "markdown",
+      "description": "nth rotating status",
+      "example": "currently shipping design tokens"
+    }
+  ],
+  "credits": [
+    {
+      "name": "readme-typing-svg",
+      "author": "DenverCoder1",
+      "url": "https://github.com/DenverCoder1/readme-typing-svg",
+      "license": "MIT"
+    }
+  ]
+}

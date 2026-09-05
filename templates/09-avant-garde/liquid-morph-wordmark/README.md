@@ -1,18 +1,27 @@
 # Liquid Morph Wordmark
 
-![preview](../../../assets/previews/liquid-morph-wordmark.svg)
+<!-- BEGIN:preview -->
+![Liquid Morph Wordmark](../../../assets/avant-garde/liquid-morph-wordmark.svg)
+<!-- END:preview -->
 
 > A brutalist Swiss wordmark with a single morphing glyph that interpolates through six geometric states forever. Path interpolation done right — every transition is one continuous curve, no keyframe pop.
 
-**Difficulty:** Advanced
-**External services:** none — fully self-contained SVG
-**Tags:** `avant-garde` `path-morphing` `swiss-brutalist` `editorial` `restrained`
+<!-- BEGIN:meta -->
+**Kind:** `svg` — ships a self-hosted SVG you download and commit  
+**Difficulty:** Advanced  
+**External services:** none  
+**Tags:** `avant-garde` `path-morph` `wordmark` `self-hosted`
+<!-- END:meta -->
 
-## Why this is different
+## Preview
+
+A cream plate with your name set very large in a heavy serif, and beside it a black form that interpolates continuously through six geometric states — circle, diamond, squircle and back — without ever breaking its outline. Crop marks at the corners frame it like a print proof.
+
+## Why this design
 
 Most "animated logos" on GitHub READMEs are GIFs or sprite-flips. This one uses **SVG path morphing via `<animate attributeName="d">`** — the path's command list interpolates between six topologically-equivalent forms. The morph is mathematically smooth: every cubic bezier handle linearly interpolates to its counterpart in the next state, every frame is a real, never-recorded shape.
 
-The tight constraint that makes it work: every state in the `values` list must have **identical command structure** (same number of `C` curves, in the same order). The five states here are all 4-cubic-bezier closed shapes — so they morph cleanly. Break that rule and the browser falls back to keyframe-snapping, which looks broken.
+The tight constraint that makes it work: every state in the `values` list must have **identical command structure** (same number of `C` curves, in the same order). The six states here are all 4-cubic-bezier closed shapes — so they morph cleanly. Break that rule and the browser falls back to keyframe-snapping, which looks broken.
 
 The cherry on top: a dashed outline path morphs in parallel + slowly rotates 360° over 60s. That's two SMIL primitives stacked: `<animate>` for path, `<animateTransform>` for rotation.
 
@@ -71,26 +80,27 @@ The cherry on top: a dashed outline path morphs in parallel + slowly rotates 360
 
 ## Placeholders
 
-| Token                  | Description                                          | Example                      |
-|------------------------|------------------------------------------------------|------------------------------|
-| `{{name_short}}`       | Wordmark text (edit inside SVG)                      | `JANE`                       |
-| `{{tagline}}`          | One-liner for accessibility alt                      | `studio of one`              |
-| `{{what_paragraph}}`   | 1–2 sentences positioning                            | `An independent practice...` |
-| `{{now_paragraph}}`    | 1–2 sentences current work                           | `Designing the system at...` |
-| `{{writing_paragraph}}`| 1–2 sentences writing/output                         | `Notes on motion...`         |
-| `{{work_one_name}}`    | First selected work                                  | `acme design system`         |
-| `{{work_one_url}}`     | URL                                                  | `https://github.com/...`     |
-| (etc. for two, three)  |                                                      |                              |
-| `{{website}}`          | Domain                                               | `jane.dev`                   |
-| `{{website_url}}`      | URL                                                  | `https://jane.dev`           |
-| `{{twitter}}`          | Twitter without `@`                                  | `janedoe`                    |
-| `{{email}}`            | Email                                                | `hello@jane.dev`             |
+<!-- BEGIN:placeholders -->
+| Token | Replace it | Description | Example |
+|-------|------------|-------------|---------|
+| `{{name_short}}` | in the block below | Wordmark text | `JANE` |
+| `{{tagline}}` | in the block below | One-liner for accessibility alt | `studio of one` |
+| `{{what_paragraph}}` | in the block below | 1–2 sentences positioning | `An independent practice...` |
+| `{{now_paragraph}}` | in the block below | 1–2 sentences current work | `Designing the system at...` |
+| `{{writing_paragraph}}` | in the block below | 1–2 sentences writing/output | `Notes on motion...` |
+| `{{work_*_name}}` | in the block below | nth selected work | `acme design system` |
+| `{{work_*_url}}` | in the block below | URL | `https://github.com/...` |
+| `{{website}}` | in the block below | Domain | `jane.dev` |
+| `{{website_url}}` | in the block below | URL | `https://jane.dev` |
+| `{{twitter}}` | in the block below | Twitter without @ | `janedoe` |
+| `{{email}}` | in the block below | Email | `hello@jane.dev` |
+<!-- END:placeholders -->
 
 ## Customization Tips
 
 - **Don't rotate the wordmark.** The whole point is that the static type plays against the morphing glyph. If both move, neither lands. Restraint here is the design.
 - **The cubic-bezier control points encode the personality.** If you want a *louder* morph, push the values further from the radius (e.g., `C 0 -88 ; 88 0 ; ...` for hard diamonds). For a *quieter* morph, keep all points close to the original circle and barely shift.
-- **Five states minimum.** Three states make the cycle obvious. Five-to-eight states feel like a continuous evolution. Twelve gets noisy.
+- **Five states minimum.** Three states make the cycle obvious. Six — what this ships — reads as continuous evolution. Twelve gets noisy.
 - **`calcMode="spline"` + `keySplines="0.4 0 0.2 1"`** is the easing that makes the morph feel material. Without it, the linear interpolation reads as robotic. The spline values are CSS's `cubic-bezier(0.4, 0, 0.2, 1)` — Material Design's "standard" curve.
 - **Registration crosses are non-negotiable.** They're what makes this read as "designed by a designer", not "made in Canva." Print marks are the secret handshake.
 - **Paper grain `feTurbulence` at 0.04 alpha.** Anything stronger looks dirty. Anything less is missed.

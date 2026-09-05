@@ -1,0 +1,85 @@
+{
+  "slug": "liquid-morph-wordmark",
+  "name": "Liquid Morph Wordmark",
+  "kind": "svg",
+  "difficulty": "Advanced",
+  "blurb": "Path interpolation across six geometric forms.",
+  "asset": "assets/avant-garde/liquid-morph-wordmark.svg",
+  "picture": false,
+  "tags": [
+    "avant-garde",
+    "path-morph",
+    "wordmark",
+    "self-hosted"
+  ],
+  "services": [],
+  "placeholders": [
+    {
+      "token": "name_short",
+      "where": "markdown",
+      "description": "Wordmark text",
+      "example": "JANE"
+    },
+    {
+      "token": "tagline",
+      "where": "markdown",
+      "description": "One-liner for accessibility alt",
+      "example": "studio of one"
+    },
+    {
+      "token": "what_paragraph",
+      "where": "markdown",
+      "description": "1–2 sentences positioning",
+      "example": "An independent practice..."
+    },
+    {
+      "token": "now_paragraph",
+      "where": "markdown",
+      "description": "1–2 sentences current work",
+      "example": "Designing the system at..."
+    },
+    {
+      "token": "writing_paragraph",
+      "where": "markdown",
+      "description": "1–2 sentences writing/output",
+      "example": "Notes on motion..."
+    },
+    {
+      "token": "work_*_name",
+      "where": "markdown",
+      "description": "nth selected work",
+      "example": "acme design system"
+    },
+    {
+      "token": "work_*_url",
+      "where": "markdown",
+      "description": "URL",
+      "example": "https://github.com/..."
+    },
+    {
+      "token": "website",
+      "where": "markdown",
+      "description": "Domain",
+      "example": "jane.dev"
+    },
+    {
+      "token": "website_url",
+      "where": "markdown",
+      "description": "URL",
+      "example": "https://jane.dev"
+    },
+    {
+      "token": "twitter",
+      "where": "markdown",
+      "description": "Twitter without @",
+      "example": "janedoe"
+    },
+    {
+      "token": "email",
+      "where": "markdown",
+      "description": "Email",
+      "example": "hello@jane.dev"
+    }
+  ],
+  "credits": []
+}

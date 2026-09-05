@@ -1,12 +1,17 @@
 # Activity Pulse
 
-![preview](../../../assets/previews/activity-pulse.svg)
+<!-- BEGIN:preview -->
+![Activity Pulse](../../../assets/dashboard/activity-pulse.svg)
+<!-- END:preview -->
 
 > A single-card view of how you actually work. One line, lots of signal.
 
-**Difficulty:** Advanced
-**External services:** [lowlighter/metrics](https://github.com/lowlighter/metrics) (runs as a GitHub Action)
-**Tags:** `dashboard` `single-card` `activity` `automated` `composable`
+<!-- BEGIN:meta -->
+**Kind:** `action` — a GitHub Action generates it in your repo  
+**Difficulty:** Advanced  
+**External services:** none  
+**Tags:** `dashboard` `metrics` `activity` `action`
+<!-- END:meta -->
 
 ## Preview
 
@@ -81,16 +86,18 @@ You'll need a personal access token with `repo` and `read:user` scopes, saved as
 
 ## Placeholders
 
-| Token                   | Description                                          | Example                          |
-|-------------------------|------------------------------------------------------|----------------------------------|
-| `{{username}}`          | GitHub username                                      | `janedoe`                        |
-| `{{name}}`              | Display name                                         | `Jane Doe`                       |
-| `{{tagline}}`           | One-liner                                            | `frontend with a metrics habit`  |
-| `{{side_project_name}}` | Current side project                                 | `the type observatory`           |
-| `{{side_project_url}}`  | Side project URL                                     | `https://github.com/jane/tto`    |
-| `{{website}}`           | Domain only                                          | `jane.dev`                       |
-| `{{website_url}}`       | Full URL                                             | `https://jane.dev`               |
-| `{{twitter}}`           | Twitter handle without `@`                           | `janedoe`                        |
+<!-- BEGIN:placeholders -->
+| Token | Replace it | Description | Example |
+|-------|------------|-------------|---------|
+| `{{username}}` | in the setup workflow | GitHub username | `janedoe` |
+| `{{name}}` | in the block below | Display name | `Jane Doe` |
+| `{{tagline}}` | in the block below | One-liner | `frontend with a metrics habit` |
+| `{{side_project_name}}` | in the block below | Current side project | `the type observatory` |
+| `{{side_project_url}}` | in the block below | Side project URL | `https://github.com/jane/tto` |
+| `{{website}}` | in the block below | Domain only | `jane.dev` |
+| `{{website_url}}` | in the block below | Full URL | `https://jane.dev` |
+| `{{twitter}}` | in the block below | Twitter handle without @ | `janedoe` |
+<!-- END:placeholders -->
 
 ## Customization Tips
 

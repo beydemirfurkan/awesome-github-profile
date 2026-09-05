@@ -1,12 +1,17 @@
 # 3D Contribution Tower
 
-![preview](../../../assets/previews/3d-contribution-tower.svg)
+<!-- BEGIN:preview -->
+![3D Contribution Tower](../../../assets/3d-immersive/3d-contribution-tower.svg)
+<!-- END:preview -->
 
 > Your contribution graph as an isometric skyline. Tall bars are productive weeks; flat blocks are vacations.
 
-**Difficulty:** Advanced
-**External services:** [github-profile-3d-contrib](https://github.com/yoshi389111/github-profile-3d-contrib) (runs as a GitHub Action in your profile repo)
-**Tags:** `3d` `isometric` `contribution-graph` `automated`
+<!-- BEGIN:meta -->
+**Kind:** `action` — a GitHub Action generates it in your repo  
+**Difficulty:** Advanced  
+**External services:** none  
+**Tags:** `3d` `isometric` `contributions` `action`
+<!-- END:meta -->
 
 ## Preview
 
@@ -69,12 +74,14 @@ Push the workflow, then trigger it once manually from the **Actions** tab → **
 
 ## Placeholders
 
-| Token             | Description                                      | Example                |
-|-------------------|--------------------------------------------------|------------------------|
-| `{{username}}`    | GitHub username (also the profile repo name)     | `janedoe`              |
-| `{{name}}`        | Display name                                     | `Jane Doe`             |
-| `{{website}}`     | Domain only                                      | `jane.dev`             |
-| `{{website_url}}` | Full URL                                         | `https://jane.dev`     |
+<!-- BEGIN:placeholders -->
+| Token | Replace it | Description | Example |
+|-------|------------|-------------|---------|
+| `{{username}}` | in the setup workflow | GitHub username (also the profile repo name) | `janedoe` |
+| `{{name}}` | in the block below | Display name | `Jane Doe` |
+| `{{website}}` | in the block below | Domain only | `jane.dev` |
+| `{{website_url}}` | in the block below | Full URL | `https://jane.dev` |
+<!-- END:placeholders -->
 
 ## Customization Tips
 

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-label="Activity Pulse — commit activity drawn as a heartbeat trace">
+<title>Activity Pulse</title>
+<defs>
+<linearGradient id="ap-trace" x1="0" y1="0" x2="1" y2="0">
+<stop offset="0" stop-color="#22c55e" stop-opacity="0.35"/><stop offset="0.5" stop-color="#4ade80"/><stop offset="1" stop-color="#22c55e" stop-opacity="0.35"/>
+</linearGradient>
+<filter id="ap-glow" x="-10%" y="-80%" width="120%" height="260%">
+<feGaussianBlur stdDeviation="4.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+</filter>
+</defs>
+<rect width="1200" height="420" fill="#0a1310"/>
+<circle cx="80" cy="60" r="4" fill="#4ade80"><animate attributeName="opacity" values="1;0.2;1" dur="1.6s" repeatCount="indefinite"/></circle>
+<text x="96" y="64" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10" fill="#4ade80" letter-spacing="3.5">VITALS · LIVE</text>
+<text x="1128" y="64" text-anchor="end" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10" fill="#2f6b47" letter-spacing="3">LAST 30 DAYS · MEDIAN 8 / DAY</text>
+<text x="72" y="118" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="26" font-weight="700" fill="#dcfce7">Activity pulse</text>
+<line x1="72" y1="130" x2="196" y2="130" stroke="#4ade80" stroke-width="2"/>
+<text x="72" y="152" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="11" fill="#3f7a55">via lowlighter/metrics · plugin: activity</text>
+<line x1="72" y1="232" x2="1128" y2="232" stroke="#15301e" stroke-width="1"/>
+<!-- The trace is always fully drawn. A dash-offset reveal would leave the
+     band empty wherever SMIL is paused, because a paused animation still
+     applies its first value — so the motion is a scanner riding a finished
+     trace instead of the trace drawing itself. -->
+<path d="M72 232 L124.2 232 L131.2 209.6 L138.2 244.3 L145.2 232 L180.4 232 L187.4 174.7 L194.4 263.5 L201.4 232 L242.5 232 L249.5 189.8 L256.5 255.2 L263.5 232 L313.2 232 L320.2 160.1 L327.2 271.5 L334.2 232 L373.5 232 L380.5 197.0 L387.5 251.3 L394.5 232 L434.5 232 L441.5 173.6 L448.5 264.1 L455.5 232 L494.2 232 L501.2 185.2 L508.2 257.7 L515.2 232 L557.4 232 L564.4 174.7 L571.4 263.5 L578.4 232 L614.8 232 L621.8 169.3 L628.8 266.5 L635.8 232 L691.1 232 L698.1 192.1 L705.1 253.9 L712.1 232 L739.8 232 L746.8 208.7 L753.8 244.8 L760.8 232 L801.7 232 L808.7 188.3 L815.7 256.0 L822.7 232 L847.1 232 L854.1 188.9 L861.1 255.7 L868.1 232 L902.6 232 L909.6 182.6 L916.6 259.2 L923.6 232 L974.8 232 L981.8 170.3 L988.8 265.9 L995.8 232 L1050.5 232 L1057.5 209.2 L1064.5 244.5 L1071.5 232 L1128 232" fill="none" stroke="url(#ap-trace)" stroke-width="2.4" stroke-linejoin="round" filter="url(#ap-glow)"/>
+<circle cx="72" cy="232" r="4.5" fill="#dcfce7">
+<animateMotion dur="9s" repeatCount="indefinite" path="M0 0 L1056.0 0"/>
+<animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.05;0.95;1" dur="9s" repeatCount="indefinite"/>
+</circle>
+<line x1="72" y1="302" x2="1128" y2="302" stroke="#16321f" stroke-width="1"/>
+<text x="72" y="330" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9.5" fill="#2f6b47" letter-spacing="2.5">PEAK DAY</text><text x="72" y="360" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="20" font-weight="700" fill="#dcfce7">47 commits</text><text x="72" y="380" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9.5" fill="#3f7a55">mar 21 · tuesday</text><text x="284" y="330" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9.5" fill="#2f6b47" letter-spacing="2.5">AVG / DAY</text><text x="284" y="360" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="20" font-weight="700" fill="#dcfce7">12.3</text><text x="284" y="380" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9.5" fill="#3f7a55">+19% vs prev 30d</text><text x="496" y="330" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9.5" fill="#2f6b47" letter-spacing="2.5">PULL REQUESTS</text><text x="496" y="360" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="20" font-weight="700" fill="#dcfce7">38</text><text x="496" y="380" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9.5" fill="#3f7a55">85th percentile</text><text x="708" y="330" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9.5" fill="#2f6b47" letter-spacing="2.5">RHYTHM</text><text x="708" y="360" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="20" font-weight="700" fill="#dcfce7">tue → thu</text><text x="708" y="380" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9.5" fill="#3f7a55">deep work bias</text><text x="920" y="330" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9.5" fill="#2f6b47" letter-spacing="2.5">REVIEW LAG</text><text x="920" y="360" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="20" font-weight="700" fill="#dcfce7">2h 14m</text><text x="920" y="380" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9.5" fill="#3f7a55">median, first pass</text>
+</svg>

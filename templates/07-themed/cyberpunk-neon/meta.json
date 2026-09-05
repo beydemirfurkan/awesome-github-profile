@@ -1,0 +1,79 @@
+{
+  "slug": "cyberpunk-neon",
+  "name": "Cyberpunk Neon",
+  "kind": "svg",
+  "difficulty": "Advanced",
+  "blurb": "Vaporwave grid + chromatic aberration.",
+  "asset": "assets/themed/cyberpunk-neon.svg",
+  "picture": false,
+  "tags": [
+    "themed",
+    "cyberpunk",
+    "vaporwave",
+    "self-hosted"
+  ],
+  "services": [],
+  "placeholders": [
+    {
+      "token": "name",
+      "where": "markdown",
+      "description": "Title text, ALL_CAPS_WITH_UNDERSCORES",
+      "example": "JANE_DOE"
+    },
+    {
+      "token": "role",
+      "where": "asset",
+      "description": "Subtitle",
+      "example": "FRONTEND.ENGINEER"
+    },
+    {
+      "token": "location_stamp",
+      "where": "asset",
+      "description": "Top-left corner",
+      "example": "TOKYO.SECTOR_07 · 22:14"
+    },
+    {
+      "token": "status_pill",
+      "where": "asset",
+      "description": "Bottom-left phrase",
+      "example": "JACKED IN · NEURAL UPLINK STABLE"
+    },
+    {
+      "token": "tags_list",
+      "where": "asset",
+      "description": "Four uppercase chip labels",
+      "example": "[ react ] [ webgl ] [ rust ] [ shaders ]"
+    },
+    {
+      "token": "bio_lowercase",
+      "where": "markdown",
+      "description": "1–2 sentences in *lowercase only*",
+      "example": "i build interfaces that..."
+    },
+    {
+      "token": "currently_*",
+      "where": "markdown",
+      "description": "lowercase bullets",
+      "example": "shipping the design system..."
+    },
+    {
+      "token": "website",
+      "where": "markdown",
+      "description": "Domain",
+      "example": "jane.dev"
+    },
+    {
+      "token": "twitter",
+      "where": "markdown",
+      "description": "Handle without @",
+      "example": "janedoe"
+    },
+    {
+      "token": "email",
+      "where": "markdown",
+      "description": "Email",
+      "example": "hello@jane.dev"
+    }
+  ],
+  "credits": []
+}

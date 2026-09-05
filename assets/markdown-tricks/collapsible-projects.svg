@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-label="Collapsible Projects — one open details block above three collapsed ones">
+  <title>Collapsible Projects</title>
+  <defs>
+    <linearGradient id="cp-spark" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#a78bfa" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="420" fill="#0d1117"/>
+
+  <text x="72" y="60" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="11" fill="#7d8590" letter-spacing="3.5">DOSSIER · &lt;details&gt; · &lt;summary&gt;</text>
+  <text x="1128" y="60" text-anchor="end" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="11" fill="#7d8590" letter-spacing="2">3 ACTIVE · 4 ARCHIVED</text>
+
+  <!-- ================================================ one open, to show the payoff -->
+  <rect x="72" y="82" width="1056" height="186" rx="10" fill="#161b22" stroke="#30363d"/>
+  <rect x="72" y="82" width="3.5" height="186" rx="2" fill="#a78bfa"/>
+
+  <!-- summary row -->
+  <path d="M100 116 L110 122 L100 128 Z" fill="#a78bfa" transform="rotate(90 105 122)"/>
+  <text x="124" y="128" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="18" font-weight="700" fill="#e6edf3">acme · design system</text>
+  <g font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9.5" letter-spacing="1">
+    <rect x="376" y="110" width="86" height="21" rx="10.5" fill="#1f2a44"/><text x="419" y="125" text-anchor="middle" fill="#79c0ff">TYPESCRIPT</text>
+    <rect x="470" y="110" width="56" height="21" rx="10.5" fill="#20323a"/><text x="498" y="125" text-anchor="middle" fill="#56d4dd">REACT</text>
+    <rect x="534" y="110" width="56" height="21" rx="10.5" fill="#33243a"/><text x="562" y="125" text-anchor="middle" fill="#d2a8ff">FIGMA</text>
+    <rect x="598" y="110" width="84" height="21" rx="10.5" fill="#3a2a1c"/><text x="640" y="125" text-anchor="middle" fill="#e3b341">STORYBOOK</text>
+  </g>
+  <circle cx="1096" cy="120" r="4" fill="#3fb950"/>
+  <text x="1080" y="124" text-anchor="end" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10" fill="#3fb950" letter-spacing="2">ACTIVE</text>
+
+  <line x1="100" y1="146" x2="1100" y2="146" stroke="#21262d"/>
+
+  <!-- body -->
+  <text x="124" y="174" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="15" fill="#c9d1d9">A token-driven UI kit shipped to <tspan fill="#a78bfa" font-weight="700">14 product teams</tspan>.</text>
+  <text x="124" y="198" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="12" fill="#7d8590">strict tsconfig · generic inference · 412 components</text>
+
+  <text x="124" y="222" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9.5" fill="#7d8590" letter-spacing="2.5">COMMITS · LAST 12 WEEKS</text>
+  <!-- sparkline -->
+  <path d="M124 256 L162 252 L200 254 L238 246 L276 250 L314 240 L352 245 L390 236 L428 240 L466 231 L504 235 L542 228"
+        fill="none" stroke="url(#cp-spark)" stroke-width="2.2" stroke-linejoin="round"/>
+  <circle cx="542" cy="228" r="3.5" fill="#a78bfa"/>
+
+  <g font-family="ui-monospace, Menlo, Consolas, monospace" font-size="11">
+    <text x="700" y="172" fill="#7d8590">★ STARS</text><text x="1100" y="172" text-anchor="end" fill="#e6edf3" font-weight="700">1,243</text>
+    <text x="700" y="198" fill="#7d8590">▲ MERGED</text><text x="1100" y="198" text-anchor="end" fill="#e6edf3" font-weight="700">47 PR</text>
+    <text x="700" y="224" fill="#7d8590">◈ TEAMS</text><text x="1100" y="224" text-anchor="end" fill="#e6edf3" font-weight="700">14</text>
+    <text x="700" y="250" fill="#7d8590">⬢ VERSION</text><text x="1100" y="250" text-anchor="end" fill="#3fb950" font-weight="700">v3.2.0</text>
+  </g>
+  <line x1="700" y1="182" x2="1100" y2="182" stroke="#21262d"/>
+  <line x1="700" y1="208" x2="1100" y2="208" stroke="#21262d"/>
+  <line x1="700" y1="234" x2="1100" y2="234" stroke="#21262d"/>
+
+  <!-- ============================================ and three still folded away -->
+  <g font-family="system-ui, -apple-system, 'Segoe UI', sans-serif">
+    <rect x="72" y="282" width="1056" height="40" rx="8" fill="#12161d" stroke="#21262d"/>
+    <path d="M100 296 L110 302 L100 308 Z" fill="#7d8590"/>
+    <text x="124" y="308" font-size="16" fill="#c9d1d9">the type observatory</text>
+    <text x="1100" y="307" text-anchor="end" font-family="ui-monospace, monospace" font-size="11" fill="#6e7681">webgl · canvas · 18 essays</text>
+
+    <rect x="72" y="330" width="1056" height="40" rx="8" fill="#12161d" stroke="#21262d"/>
+    <path d="M100 344 L110 350 L100 356 Z" fill="#7d8590"/>
+    <text x="124" y="356" font-size="16" fill="#c9d1d9">runtime essays</text>
+    <text x="1100" y="355" text-anchor="end" font-family="ui-monospace, monospace" font-size="11" fill="#6e7681">writing · weekly · 5K subs</text>
+  </g>
+
+  <text x="72" y="396" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10" fill="#484f58" letter-spacing="2.5">4 ARCHIVED · ONE CLICK TO EXPAND</text>
+  <text x="1128" y="396" text-anchor="end" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10" fill="#484f58" letter-spacing="2.5">PURE MARKDOWN · NO IMAGES</text>
+</svg>

@@ -9,31 +9,38 @@
 
 ## Template details (skip if not a new template)
 
-- **Category:** `01-minimal` | `02-animated` | `03-3d-immersive` | `04-gamified` | `05-dashboard` | `06-designer-portfolio` | `07-themed` | `08-markdown-tricks`
+- **Category:**
+<!-- BEGIN:categories -->
+`01-minimal` | `02-animated` | `03-3d-immersive` | `04-gamified` | `05-dashboard` | `06-designer-portfolio` | `07-themed` | `08-markdown-tricks` | `09-avant-garde`
+<!-- END:categories -->
 - **Slug:** `kebab-case-name`
+- **Kind:** `svg` | `markdown` | `action` | `technique`
 - **Difficulty:** Basic | Intermediate | Advanced
-- **External services count:** N
 
-## Quality checklist
+## Checked by CI
 
-Confirm each item before requesting review.
+Run `npm run check` locally — it enforces the asset ratio, the section schema, the placeholder contract, the declared services and the credits list. Paste the green output or just confirm:
+
+- [ ] `npm run check` passes
+- [ ] `npm run build` was run and the regenerated files are committed
+
+## Checked by a human
+
+CI cannot judge these. Confirm each before requesting review.
 
 - [ ] Visual hierarchy is clear (hero / sections / footer)
 - [ ] At most two typography styles
-- [ ] Color palette ≤ 4 colors, documented in `Customization Tips`
-- [ ] Renders cleanly on GitHub desktop (link to your test profile or screenshot)
-- [ ] Renders cleanly on GitHub mobile app (screenshot attached)
+- [ ] Colour palette ≤ 4 colours, documented in `Customization Tips`
+- [ ] Renders cleanly on github.com, desktop (screenshot or link below)
+- [ ] Renders cleanly at 390px (screenshot below)
 - [ ] Both light and dark themes look intentional
 - [ ] All `<img>` URLs return 200
-- [ ] External service calls ≤ 5
-- [ ] Preview asset ≤ 300KB and committed under `assets/previews/`
-- [ ] Uses only the documented placeholder tokens (see `CONTRIBUTING.md`)
-- [ ] Added a row to the **Full template index** in the root `README.md`
-- [ ] Credits all third-party services with their license
+- [ ] Not a recolor of an existing template here or upstream
+- [ ] Every factual claim in the README is one you can back — no invented measurements, no invented history
 
 ## Preview screenshots
 
-<!-- Drag-drop a desktop and mobile screenshot here -->
+<!-- Drag-drop a desktop and a 390px screenshot here -->
 
 ## Test profile
 

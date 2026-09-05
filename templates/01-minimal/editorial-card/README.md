@@ -1,12 +1,17 @@
 # Editorial Card
 
-![preview](../../../assets/previews/editorial-card.svg)
+<!-- BEGIN:preview -->
+![Editorial Card](../../../assets/minimal/editorial-card.svg)
+<!-- END:preview -->
 
 > A magazine-style profile that earns attention through restraint, not noise.
 
-**Difficulty:** Basic
-**External services:** none (pure markdown)
+<!-- BEGIN:meta -->
+**Kind:** `markdown` — pure markdown — no images at all  
+**Difficulty:** Basic  
+**External services:** none  
 **Tags:** `minimal` `serif` `editorial` `no-deps`
+<!-- END:meta -->
 
 ## Preview
 
@@ -41,21 +46,19 @@ Works identically in light and dark themes because it relies on GitHub's default
 
 ## Placeholders
 
-| Token                       | Description                                | Example                                      |
-|-----------------------------|--------------------------------------------|----------------------------------------------|
-| `{{name}}`                  | Display name                               | `Jane Doe`                                   |
-| `{{tagline}}`               | One-liner under the name (italic)          | `Frontend engineer who writes essays in code`|
-| `{{currently_line}}`        | What you're working on right now           | `Building the design system at Acme.`        |
-| `{{website}}`               | Site domain shown to the reader            | `jane.dev`                                   |
-| `{{website_url}}`           | Site URL with protocol                     | `https://jane.dev`                           |
-| `{{twitter}}`               | Twitter/X handle, no `@`                   | `janedoe`                                    |
-| `{{linkedin}}`              | LinkedIn slug                              | `janedoe`                                    |
-| `{{project_one_name}}`      | First project name                         | `acme design system`                         |
-| `{{project_one_desc}}`      | One-sentence description                   | `A token-driven UI kit shipped to 14 teams.` |
-| `{{project_two_name}}`      | Second project name                        | `the type observatory`                       |
-| `{{project_two_desc}}`      | One-sentence description                   | `WebGL studies of variable fonts in motion.` |
-| `{{project_three_name}}`    | Third project name                         | `runtime essays`                             |
-| `{{project_three_desc}}`    | One-sentence description                   | `Notes on shipping interfaces.`              |
+<!-- BEGIN:placeholders -->
+| Token | Replace it | Description | Example |
+|-------|------------|-------------|---------|
+| `{{name}}` | in the block below | Display name | `Jane Doe` |
+| `{{tagline}}` | in the block below | One-liner under the name (italic) | `Frontend engineer who writes essays in code` |
+| `{{currently_line}}` | in the block below | What you're working on right now | `Building the design system at Acme.` |
+| `{{website}}` | in the block below | Site domain shown to the reader | `jane.dev` |
+| `{{website_url}}` | in the block below | Site URL with protocol | `https://jane.dev` |
+| `{{twitter}}` | in the block below | Twitter/X handle, no @ | `janedoe` |
+| `{{linkedin}}` | in the block below | LinkedIn slug | `janedoe` |
+| `{{project_*_name}}` | in the block below | nth project name | `acme design system` |
+| `{{project_*_desc}}` | in the block below | n-sentence description | `A token-driven UI kit shipped to 14 teams.` |
+<!-- END:placeholders -->
 
 ## Customization Tips
 

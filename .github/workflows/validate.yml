@@ -1,0 +1,21 @@
+name: check
+
+on:
+  push:
+    branches: [main, v2]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      # No dependencies to install: the scripts use the Node standard library
+      # only, so a clone is immediately runnable.
+      - name: Generated files match the manifest
+        run: node scripts/build.mjs --check
+      - name: Quality bar
+        run: node scripts/validate.mjs

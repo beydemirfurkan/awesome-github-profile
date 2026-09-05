@@ -1,26 +1,27 @@
-# Glassmorphism Hero (Liquid Glass)
+# Glassmorphism Hero
 
-![preview](../../../assets/previews/glassmorphism-hero.svg)
+<!-- BEGIN:preview -->
+![Glassmorphism Hero](../../../assets/designer-portfolio/glassmorphism-hero.svg)
+<!-- END:preview -->
 
 > What happens when you take "glassmorphism" past 2024 dribbble cliché. Four blurred color orbs animating behind a frosted glass card with iridescent border, crystalline edge highlights, specular dot, and surface grain. Apple Vision Pro DNA.
 
-**Difficulty:** Advanced
-**External services:** none — fully self-contained SVG
-**Tags:** `designer-portfolio` `liquid-glass` `feGaussianBlur` `iridescent-edge` `self-hosted`
+<!-- BEGIN:meta -->
+**Kind:** `svg` — ships a self-hosted SVG you download and commit  
+**Difficulty:** Advanced  
+**External services:** none  
+**Tags:** `designer` `glassmorphism` `blur` `self-hosted`
+<!-- END:meta -->
 
-## Why this got upgraded
+## Preview
 
-The first version's `glassmorphism-hero.svg` was a referenced asset *that didn't actually exist*. Visitors hitting "copy" got a 404. The new asset exists and is a serious composition:
+Four coloured orbs drift behind a heavy blur while a frosted panel floats on top of them carrying your name, role and a short statement. A one-pixel highlight runs along the panel's top and left edge.
 
-- **Four animated radial orbs** (pink, cyan, gold, violet) drifting on different durations
-- **Heavy `feGaussianBlur` (stdDeviation 36)** turns them into atmospheric color washes
-- **Glass card** with subtle `<linearGradient>` surface (`white` at low alpha, varying)
-- **Iridescent animated border** — multi-stop gradient with `x1`/`x2` sweeping over 14s
-- **Crystalline edge highlights** — short white strokes on two opposing corners (top-left and bottom-right) suggest light refracting along beveled glass edges
-- **Specular dot + glow ring** — single highlight point that says "this surface catches light"
-- **Surface grain** — `feTurbulence` filtered overlay at 5% alpha, what makes it feel like real glass not vector flat
+## Why this design
 
-This is glassmorphism *rendered with intention* — not a `backdrop-filter: blur(20px)` shortcut.
+Glass is a lighting problem, not a blur problem. Four animated radial orbs — pink, cyan, gold, violet — drift on different durations underneath; a heavy `feGaussianBlur` at `stdDeviation` 36 turns them into atmospheric washes rather than recognisable circles; and the panel only reads as glass because of the one-pixel highlight along its top and left edge.
+
+Remove that highlight and the whole thing collapses into a blurred rectangle. It is the cheapest element in the file and the one doing the most work.
 
 ## Live showcase
 
@@ -62,19 +63,22 @@ This is glassmorphism *rendered with intention* — not a `backdrop-filter: blur
 
 ## Placeholders
 
-| Token                    | Description                                | Example                                |
-|--------------------------|--------------------------------------------|----------------------------------------|
-| `{{name}}`               | Display name (edited inside SVG)           | `Jane Doe`                             |
-| `{{tagline}}`            | Italic role line (edited inside SVG)       | `Designer-engineer · interface, motion, type` |
-| `{{availability}}`       | Optional availability slot (edit in SVG)   | `2 slots / Q3`                         |
-| `{{approach_paragraph}}` | 2–3 sentences positioning                  | `An independent practice...`           |
-| `{{case_one_*}}`         | First case study name/URL/outcome          | `acme-ds / .../acme-ds / shipped to 14 teams` |
-| (etc. for two, three)    |                                            |                                        |
-| `{{essay_one}}`          | Recent essay title                         | `On the slowness of good interfaces`   |
-| `{{essay_one_url}}`      | URL                                        | `https://jane.dev/log/slow`            |
-| `{{talk_one}}`           | Recent talk title                          | `Motion as Editorial Tool`             |
-| `{{talk_one_url}}`       | URL                                        | `https://...`                          |
-| `{{email}}`              | Email                                      | `hello@jane.dev`                       |
+<!-- BEGIN:placeholders -->
+| Token | Replace it | Description | Example |
+|-------|------------|-------------|---------|
+| `{{name}}` | in the block below | Display name | `Jane Doe` |
+| `{{tagline}}` | inside the SVG | Italic role line | `Designer-engineer · interface, motion, type` |
+| `{{availability}}` | inside the SVG | Optional availability slot | `2 slots / Q3` |
+| `{{approach_paragraph}}` | in the block below | 2–3 sentences positioning | `An independent practice...` |
+| `{{essay_one}}` | in the block below | Recent essay title | `On the slowness of good interfaces` |
+| `{{essay_one_url}}` | in the block below | URL | `https://jane.dev/log/slow` |
+| `{{talk_one}}` | in the block below | Recent talk title | `Motion as Editorial Tool` |
+| `{{talk_one_url}}` | in the block below | URL | `https://...` |
+| `{{email}}` | in the block below | Email | `hello@jane.dev` |
+| `{{case_*_name}}` | in the block below | Case study name | `acme design system` |
+| `{{case_*_url}}` | in the block below | Link to the case study | `https://jane.dev/work/acme` |
+| `{{case_*_outcome}}` | in the block below | The result, in one clause | `shipped to 14 teams` |
+<!-- END:placeholders -->
 
 ## Customization Tips
 

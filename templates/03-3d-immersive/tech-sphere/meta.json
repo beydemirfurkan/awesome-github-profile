@@ -1,0 +1,73 @@
+{
+  "slug": "tech-sphere",
+  "name": "Tech Sphere",
+  "kind": "svg",
+  "difficulty": "Advanced",
+  "blurb": "A rotating orbit of your stack.",
+  "asset": "assets/3d-immersive/tech-sphere.svg",
+  "picture": false,
+  "tags": [
+    "3d",
+    "orbit",
+    "stack",
+    "self-hosted"
+  ],
+  "services": [],
+  "placeholders": [
+    {
+      "token": "name",
+      "where": "markdown",
+      "description": "Display name",
+      "example": "Jane Doe"
+    },
+    {
+      "token": "role",
+      "where": "asset",
+      "description": "Role caps line",
+      "example": "FRONTEND ENGINEER · MOTION · 3D"
+    },
+    {
+      "token": "stack_tokens_*",
+      "where": "asset",
+      "description": "Eight tech labels",
+      "example": "react / ts / webgl / node / rust / go"
+    },
+    {
+      "token": "tier_rows",
+      "where": "asset",
+      "description": "Three stack tiers",
+      "example": "STABLE / TRUSTED / EXPLORING"
+    },
+    {
+      "token": "orbit_explanation_paragraph",
+      "where": "markdown",
+      "description": "1–2 sentences explaining your stack philosophy",
+      "example": "Eight tools, one orbit..."
+    },
+    {
+      "token": "learning_focus",
+      "where": "markdown",
+      "description": "One sentence — what you're learning now",
+      "example": "rust shaders for the type observatory"
+    },
+    {
+      "token": "website",
+      "where": "markdown",
+      "description": "Domain",
+      "example": "jane.dev"
+    },
+    {
+      "token": "website_url",
+      "where": "markdown",
+      "description": "URL",
+      "example": "https://jane.dev"
+    },
+    {
+      "token": "twitter",
+      "where": "markdown",
+      "description": "Twitter handle without @",
+      "example": "janedoe"
+    }
+  ],
+  "credits": []
+}

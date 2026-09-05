@@ -1,18 +1,27 @@
 # Tech Sphere
 
-![preview](../../../assets/previews/tech-sphere.svg)
+<!-- BEGIN:preview -->
+![Tech Sphere](../../../assets/3d-immersive/tech-sphere.svg)
+<!-- END:preview -->
 
 > An actual rotating 3D-look sphere built from intersecting ellipses, with eight tech tokens that orbit on a counter-rotating layer to stay readable. Self-hosted SVG.
 
-**Difficulty:** Advanced
-**External services:** none — fully self-contained SVG
-**Tags:** `3d` `rotating-sphere` `orbital` `counter-rotation` `self-hosted`
+<!-- BEGIN:meta -->
+**Kind:** `svg` — ships a self-hosted SVG you download and commit  
+**Difficulty:** Advanced  
+**External services:** none  
+**Tags:** `3d` `orbit` `stack` `self-hosted`
+<!-- END:meta -->
 
-## Why this got upgraded
+## Preview
 
-The original template only described the technique without shipping the asset — visitors had to "build their own SVG or fall back to skill-icons." Now the asset exists. It's a real composition: a `<radialGradient>`-shaded sphere with specular shine and rim light, **two counter-rotating groups** (ellipse latitudes spinning one way, tech tokens spinning the opposite way at the same rate so labels stay upright), and a pulsing center node.
+A shaded sphere on a near-black field, wrapped in ellipse latitudes that rotate one way while your stack labels orbit the other way at the same rate — so the sphere turns and the type stays upright. A pulsing node marks the centre; a short tier list sits to the left.
 
-The counter-rotation is the magic: rotating both groups visually maintains the *sphere* sensation while keeping the labels readable.
+## Why this design
+
+A stack list is easy. A stack list that reads as an object in space is not. The sphere is a `<radialGradient>` with a specular highlight and a rim light, wrapped in **two counter-rotating groups**: ellipse latitudes spinning one way, tech tokens spinning the other way at the same rate.
+
+The counter-rotation is the whole trick. Rotating both keeps the sensation of a turning sphere while the labels never go upside down — which is why both `dur` values have to match exactly.
 
 ## Live showcase
 
@@ -48,17 +57,19 @@ The counter-rotation is the magic: rotating both groups visually maintains the *
 
 ## Placeholders
 
-| Token                            | Description                                | Example                                  |
-|----------------------------------|--------------------------------------------|------------------------------------------|
-| `{{name}}`                       | Display name (edited inside SVG)           | `Jane Doe`                               |
-| `{{role}}`                       | Role caps line (edited inside SVG)         | `FRONTEND ENGINEER · MOTION · 3D`        |
-| `{{stack_tokens_*}}`             | Eight tech labels (edited inside SVG)      | `react / ts / webgl / node / rust / go`  |
-| `{{tier_rows}}`                  | Three stack tiers (edited inside SVG)      | `STABLE / TRUSTED / EXPLORING`           |
-| `{{orbit_explanation_paragraph}}`| 1–2 sentences explaining your stack philosophy | `Eight tools, one orbit...`         |
-| `{{learning_focus}}`             | One sentence — what you're learning now    | `rust shaders for the type observatory`  |
-| `{{website}}`                    | Domain                                     | `jane.dev`                               |
-| `{{website_url}}`                | URL                                        | `https://jane.dev`                       |
-| `{{twitter}}`                    | Twitter handle without `@`                 | `janedoe`                                |
+<!-- BEGIN:placeholders -->
+| Token | Replace it | Description | Example |
+|-------|------------|-------------|---------|
+| `{{name}}` | in the block below | Display name | `Jane Doe` |
+| `{{role}}` | inside the SVG | Role caps line | `FRONTEND ENGINEER · MOTION · 3D` |
+| `{{stack_tokens_*}}` | inside the SVG | Eight tech labels | `react / ts / webgl / node / rust / go` |
+| `{{tier_rows}}` | inside the SVG | Three stack tiers | `STABLE / TRUSTED / EXPLORING` |
+| `{{orbit_explanation_paragraph}}` | in the block below | 1–2 sentences explaining your stack philosophy | `Eight tools, one orbit...` |
+| `{{learning_focus}}` | in the block below | One sentence — what you're learning now | `rust shaders for the type observatory` |
+| `{{website}}` | in the block below | Domain | `jane.dev` |
+| `{{website_url}}` | in the block below | URL | `https://jane.dev` |
+| `{{twitter}}` | in the block below | Twitter handle without @ | `janedoe` |
+<!-- END:placeholders -->
 
 ## Customization Tips
 
@@ -68,7 +79,7 @@ The counter-rotation is the magic: rotating both groups visually maintains the *
 - **The center pulse is the focal anchor.** A single warm-cream dot pulsing on the same beat as the halo creates a visual heartbeat at the center of the sphere. Removing it makes the sphere feel hollow.
 - **Don't fill the sphere with a solid color.** The radial gradient (`#1a2a52 → #0a0f24 → #040614`) is what gives it 3D shading. Flat fills look like a CD label.
 - **Pair with a single sentence** explaining what's at the center this week. The orbit metaphor only lands if you say what you're orbiting *toward*.
-- **Mobile.** Two `animateTransform` rotations + one breathing circle = ~9ms paint per frame. Smooth on iPhone X and up.
+- **Cost.** Two `animateTransform` rotations, three `<animate>` elements and a single blur. Transforms are the cheapest thing SVG animates, which is why this one stays light despite looking like the most expensive template here.
 
 ## Technical notes
 

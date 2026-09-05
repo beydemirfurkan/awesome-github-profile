@@ -1,0 +1,73 @@
+{
+  "slug": "collapsible-projects",
+  "name": "Collapsible Projects",
+  "kind": "markdown",
+  "difficulty": "Basic",
+  "blurb": "Pack ten projects into the space of three.",
+  "asset": "assets/markdown-tricks/collapsible-projects.svg",
+  "picture": false,
+  "tags": [
+    "trick",
+    "details",
+    "projects",
+    "no-deps"
+  ],
+  "services": [],
+  "placeholders": [
+    {
+      "token": "project_*_name",
+      "where": "markdown",
+      "description": "Project title",
+      "example": "acme design system"
+    },
+    {
+      "token": "project_*_tags",
+      "where": "markdown",
+      "description": "Short tag string",
+      "example": "typescript · react"
+    },
+    {
+      "token": "project_*_description",
+      "where": "markdown",
+      "description": "1–2 sentences",
+      "example": "A token-driven UI kit shipped to 14 teams."
+    },
+    {
+      "token": "project_*_stack",
+      "where": "markdown",
+      "description": "Detailed stack",
+      "example": "TypeScript, React, Vanilla Extract, Storybook"
+    },
+    {
+      "token": "project_*_repo_short",
+      "where": "markdown",
+      "description": "Repo display label",
+      "example": "jane/acme-ds"
+    },
+    {
+      "token": "project_*_repo_url",
+      "where": "markdown",
+      "description": "Repo URL",
+      "example": "https://github.com/jane/acme-ds"
+    },
+    {
+      "token": "archive_*_name",
+      "where": "markdown",
+      "description": "Archive entry title",
+      "example": "the type observatory"
+    },
+    {
+      "token": "archive_*_url",
+      "where": "markdown",
+      "description": "URL",
+      "example": "https://typeobservatory.dev"
+    },
+    {
+      "token": "archive_*_desc",
+      "where": "markdown",
+      "description": "Description",
+      "example": "webgl variable-font experiments, 2023"
+    }
+  ],
+  "credits": []
+}

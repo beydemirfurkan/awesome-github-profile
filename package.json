@@ -1,0 +1,13 @@
+{
+  "name": "awesome-github-profile",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Design-led GitHub profile README templates.",
+  "license": "MIT",
+  "type": "module",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/build.mjs --check && node scripts/validate.mjs"
+  }
+}

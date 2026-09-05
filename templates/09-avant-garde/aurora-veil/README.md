@@ -1,18 +1,27 @@
 # Aurora Veil
 
-![preview](../../../assets/previews/aurora-veil.svg)
+<!-- BEGIN:preview -->
+![Aurora Veil](../../../assets/avant-garde/aurora-veil.svg)
+<!-- END:preview -->
 
 > A living aurora that never repeats. Multi-layer `<feTurbulence>` + `<feDisplacementMap>` with animated seeds — the SVG renders fresh frames forever, on a static image tag.
 
-**Difficulty:** Advanced
-**External services:** none — fully self-contained SVG
-**Tags:** `avant-garde` `turbulence` `displacement` `animated-filter` `editorial`
+<!-- BEGIN:meta -->
+**Kind:** `svg` — ships a self-hosted SVG you download and commit  
+**Difficulty:** Advanced  
+**External services:** none  
+**Tags:** `avant-garde` `turbulence` `displacement` `self-hosted`
+<!-- END:meta -->
 
-## Why this is different
+## Preview
+
+Bands of teal and violet light drift across a black field, folded and re-folded by layered turbulence so the shape never repeats. Your name sits in the lower left in italic serif, quiet against the movement.
+
+## Why this design
 
 Most "animated" GitHub READMEs cycle a typing line or wave a banner. This one **continuously regenerates organic flow** by animating `feTurbulence`'s `seed` and `baseFrequency` while a `feDisplacementMap` warps gradient ribbons through it. Three displacement layers run at three different speeds; the result reads as cosmic depth, not loops.
 
-The catch: heavy SVG filters cost a few ms of paint per frame. GitHub's renderer handles it fine on desktop and modern mobile — but this is one of the few templates where the rendering itself is part of the craft.
+The catch: this is the one template here built almost entirely out of filter primitives, and filters are the expensive part of SVG rendering. Everything else in this repo animates geometry; this animates noise.
 
 ## Live showcase
 
@@ -58,17 +67,19 @@ The full hero (1200×420):
 
 ## Placeholders
 
-| Token                       | Description                                | Example                                              |
-|-----------------------------|--------------------------------------------|------------------------------------------------------|
-| `{{name}}`                  | Name (edited inside the SVG `<text>`)      | `Jane Doe`                                           |
-| `{{tagline}}`               | Role line (edited inside SVG)              | `DESIGNER · ENGINEER · OBSERVER`                     |
-| `{{currently_paragraph}}`   | 1–2 sentences                              | `Building a quiet design system at Acme...`         |
-| `{{writing_paragraph}}`     | 1–2 sentences                              | `Notes on motion and color at jane.dev/log.`        |
-| `{{epigraph}}`              | Short literary line                        | `we are made of light, deadlines, and Pacific time` |
-| `{{epigraph_attribution}}`  | Source                                     | `the journal, vol. iii`                              |
-| `{{website}}`               | Domain                                     | `jane.dev`                                           |
-| `{{website_url}}`           | URL                                        | `https://jane.dev`                                   |
-| `{{twitter}}`               | Twitter handle without `@`                 | `janedoe`                                            |
+<!-- BEGIN:placeholders -->
+| Token | Replace it | Description | Example |
+|-------|------------|-------------|---------|
+| `{{name}}` | in the block below | Name (edited inside the SVG <text>) | `Jane Doe` |
+| `{{tagline}}` | in the block below | Role line | `DESIGNER · ENGINEER · OBSERVER` |
+| `{{currently_paragraph}}` | in the block below | 1–2 sentences | `Building a quiet design system at Acme...` |
+| `{{writing_paragraph}}` | in the block below | 1–2 sentences | `Notes on motion and color at jane.dev/log.` |
+| `{{epigraph}}` | in the block below | Short literary line | `we are made of light, deadlines, and Pacific time` |
+| `{{epigraph_attribution}}` | in the block below | Source | `the journal, vol. iii` |
+| `{{website}}` | in the block below | Domain | `jane.dev` |
+| `{{website_url}}` | in the block below | URL | `https://jane.dev` |
+| `{{twitter}}` | in the block below | Twitter handle without @ | `janedoe` |
+<!-- END:placeholders -->
 
 ## Customization Tips
 
@@ -78,7 +89,7 @@ The full hero (1200×420):
 - **`stdDeviation="1.2"` on the headline glow** is the difference between *editorial* and *cheesy*. Bumping it past 2 makes the type look like a Geocities banner. Stay under 1.5.
 - **Don't add badges.** Don't add a stats card on top. The veil is the visual; everything else lives in prose underneath.
 - **Mobile.** Test in the GitHub mobile app — the displacement filter is GPU-accelerated on iOS Safari and Android Chrome, but on older devices the aurora may look static. That's an acceptable degradation; the static palette still reads.
-- **Performance.** This SVG paints at ~12-16 ms per frame on a mid-range laptop. Only one filter-heavy hero per page, please.
+- **Cost.** Four `feTurbulence` sources feed three `feDisplacementMap` passes across five filters — by a wide margin the heaviest asset in this repo. Put one filter-heavy hero on a page, not two.
 
 ## Technical notes (for the curious)
 

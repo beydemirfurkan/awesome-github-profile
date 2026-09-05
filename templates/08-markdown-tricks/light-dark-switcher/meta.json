@@ -1,0 +1,47 @@
+{
+  "slug": "light-dark-switcher",
+  "name": "Light / Dark Switcher",
+  "kind": "technique",
+  "difficulty": "Basic",
+  "blurb": "One picture tag, perfect theme parity.",
+  "asset": "assets/markdown-tricks/light-dark-switcher.svg",
+  "picture": true,
+  "tags": [
+    "trick",
+    "picture",
+    "theme",
+    "light-dark"
+  ],
+  "services": [
+    {
+      "host": "github-readme-stats.vercel.app",
+      "optional": true
+    },
+    {
+      "host": "raw.githubusercontent.com",
+      "optional": true
+    }
+  ],
+  "placeholders": [
+    {
+      "token": "username",
+      "where": "markdown",
+      "description": "GitHub username",
+      "example": "janedoe"
+    },
+    {
+      "token": "project_name",
+      "where": "markdown",
+      "description": "Project name (for alt text)",
+      "example": "acme design system"
+    }
+  ],
+  "credits": [
+    {
+      "name": "github-readme-stats",
+      "author": "anuraghazra",
+      "url": "https://github.com/anuraghazra/github-readme-stats",
+      "license": "MIT"
+    }
+  ]
+}

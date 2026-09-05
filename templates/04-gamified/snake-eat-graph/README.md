@@ -1,12 +1,17 @@
 # Snake Eat Graph
 
-![preview](../../../assets/previews/snake-eat-graph.svg)
+<!-- BEGIN:preview -->
+![Snake Eat Graph](../../../assets/gamified/snake-eat-graph.svg)
+<!-- END:preview -->
 
 > A snake that slithers across your contribution graph and eats every green square. Generated daily by GitHub Actions.
 
-**Difficulty:** Intermediate
-**External services:** [Platane/snk](https://github.com/Platane/snk) (GitHub Action)
-**Tags:** `gamified` `contribution-graph` `snake` `automated` `picture-tag`
+<!-- BEGIN:meta -->
+**Kind:** `action` — a GitHub Action generates it in your repo  
+**Difficulty:** Intermediate  
+**External services:** `raw.githubusercontent.com`  
+**Tags:** `gamified` `snake` `contributions` `action`
+<!-- END:meta -->
 
 ## Preview
 
@@ -73,14 +78,16 @@ The snake above is built fresh every day — it's eating real commits, not props
 
 ## Placeholders
 
-| Token             | Description                                | Example               |
-|-------------------|--------------------------------------------|-----------------------|
-| `{{username}}`    | GitHub username (also profile repo name)   | `janedoe`             |
-| `{{name}}`        | Display name                               | `Jane Doe`            |
-| `{{tagline}}`     | One-liner                                  | `frontend, daily.`    |
-| `{{website}}`     | Domain only                                | `jane.dev`            |
-| `{{website_url}}` | Full URL                                   | `https://jane.dev`    |
-| `{{twitter}}`     | Twitter handle without `@`                 | `janedoe`             |
+<!-- BEGIN:placeholders -->
+| Token | Replace it | Description | Example |
+|-------|------------|-------------|---------|
+| `{{username}}` | in the block below | GitHub username (also profile repo name) | `janedoe` |
+| `{{name}}` | in the block below | Display name | `Jane Doe` |
+| `{{tagline}}` | in the block below | One-liner | `frontend, daily.` |
+| `{{website}}` | in the block below | Domain only | `jane.dev` |
+| `{{website_url}}` | in the block below | Full URL | `https://jane.dev` |
+| `{{twitter}}` | in the block below | Twitter handle without @ | `janedoe` |
+<!-- END:placeholders -->
 
 ## Customization Tips
 

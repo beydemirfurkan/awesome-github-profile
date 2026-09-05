@@ -1,18 +1,27 @@
 # Dark Elegant
 
-![preview](../../../assets/previews/dark-elegant.svg)
+<!-- BEGIN:preview -->
+![Dark Elegant](../../../assets/themed/dark-elegant.svg)
+<!-- END:preview -->
 
 > A monogrammed onyx portrait with a gold hairline frame, an italic display monogram, and an animated shimmer that sweeps gold across the letterforms once every six seconds. Like a hotel business card. Self-hosted SVG.
 
-**Difficulty:** Intermediate
-**External services:** none for the hero; optional transparent stats card below
-**Tags:** `themed` `dark` `gold-shimmer` `monogram` `hotel-stationery` `self-hosted`
+<!-- BEGIN:meta -->
+**Kind:** `svg` — ships a self-hosted SVG you download and commit  
+**Difficulty:** Intermediate  
+**External services:** `github-readme-stats.vercel.app` (optional)  
+**Tags:** `themed` `elegant` `monogram` `self-hosted`
+<!-- END:meta -->
 
-## Why this got upgraded
+## Preview
 
-The original template referenced an `assets/dark-elegant-hero.svg` that didn't exist — readers had to build their own. The new asset is the actual hero: 1200×420, double gold hairline frame with corner brackets, 180px italic Playfair Display monogram with **a sweeping gold shimmer** (animated `<linearGradient>` rendered as overlay text), centered name in serif caps, mono uppercase tagline, italic epigraph, and a faint gold paper grain across the field.
+A double gold hairline frames a near-black field with brackets at the corners. A large italic monogram sits at the centre under a travelling gold shimmer, with your name in serif caps beneath it, a spaced mono tagline, and an italic epigraph. A faint gold grain keeps the black from going flat.
 
-The shimmer is the texture: gold dim → bright cream highlight → gold dim, traveling left-to-right every six seconds. Subtle. Expensive.
+## Why this design
+
+Restraint is hard to assemble from services, because every service wants to add something. The whole composition is one file: a double gold hairline with corner brackets, a 180px italic monogram under **a sweeping gold shimmer** (an animated `<linearGradient>` rendered as overlay text), a centred serif name, a spaced mono tagline, an italic epigraph, and a faint gold grain across the field.
+
+The shimmer is the texture — gold dim, to bright cream, back to gold dim, travelling left to right every six seconds. Subtle. Expensive.
 
 ## Live showcase
 
@@ -65,21 +74,23 @@ The shimmer is the texture: gold dim → bright cream highlight → gold dim, tr
 
 ## Placeholders
 
-| Token                    | Description                                  | Example                                |
-|--------------------------|----------------------------------------------|----------------------------------------|
-| `{{monogram}}`           | Two-letter italic mark (edit in SVG)         | `JD`                                   |
-| `{{name}}`               | Full name in serif caps (edit in SVG)        | `Jane Doe`                             |
-| `{{tagline}}`            | Tagline between em-dashes (edit in SVG)      | `— DEVELOPER · DESIGNER —`             |
-| `{{epigraph}}`           | Italic quote (edit in SVG)                   | `"the slowest type of software..."`    |
-| `{{location_stamps}}`    | Top register marks (edit in SVG)             | `EST. MMXVII / ATELIER · ISTANBUL · OSLO` |
-| `{{approach_paragraph}}` | 2 sentences                                  | `Quiet practice. Long timelines.`      |
-| `{{currently_paragraph}}`| 2 sentences                                  | `Shaping the design system at Acme...` |
-| `{{project_*_name}}`     | Project name                                 | `acme design system`                   |
-| `{{project_*_desc}}`     | One-liner                                    | `tokens shipped to 14 teams`           |
-| `{{username}}`           | GitHub username                              | `janedoe`                              |
-| `{{website}}`            | Domain                                       | `jane.dev`                             |
-| `{{twitter}}`            | Twitter without `@`                          | `janedoe`                              |
-| `{{email}}`              | Email                                        | `hello@jane.dev`                       |
+<!-- BEGIN:placeholders -->
+| Token | Replace it | Description | Example |
+|-------|------------|-------------|---------|
+| `{{monogram}}` | inside the SVG | Two-letter italic mark | `JD` |
+| `{{name}}` | in the block below | Full name in serif caps | `Jane Doe` |
+| `{{tagline}}` | inside the SVG | Tagline between em-dashes | `— DEVELOPER · DESIGNER —` |
+| `{{epigraph}}` | inside the SVG | Italic quote | `"the slowest type of software..."` |
+| `{{location_stamps}}` | inside the SVG | Top register marks | `EST. MMXVII / ATELIER · ISTANBUL · OSLO` |
+| `{{approach_paragraph}}` | in the block below | 2 sentences | `Quiet practice. Long timelines.` |
+| `{{currently_paragraph}}` | in the block below | 2 sentences | `Shaping the design system at Acme...` |
+| `{{project_*_name}}` | in the block below | Project name | `acme design system` |
+| `{{project_*_desc}}` | in the block below | One-liner | `tokens shipped to 14 teams` |
+| `{{username}}` | in the block below | GitHub username | `janedoe` |
+| `{{website}}` | in the block below | Domain | `jane.dev` |
+| `{{twitter}}` | in the block below | Twitter without @ | `janedoe` |
+| `{{email}}` | in the block below | Email | `hello@jane.dev` |
+<!-- END:placeholders -->
 
 ## Customization Tips
 

@@ -1,12 +1,17 @@
 # Editorial Magazine
 
-![preview](../../../assets/previews/editorial-magazine.svg)
+<!-- BEGIN:preview -->
+![Editorial Magazine](../../../assets/designer-portfolio/editorial-magazine.svg)
+<!-- END:preview -->
 
 > A profile typeset like the cover of a small print quarterly. Two columns, one display serif, no images.
 
-**Difficulty:** Intermediate
-**External services:** none (pure HTML+markdown)
-**Tags:** `designer-portfolio` `editorial` `serif` `two-column` `print-aesthetic`
+<!-- BEGIN:meta -->
+**Kind:** `markdown` — pure markdown — no images at all  
+**Difficulty:** Intermediate  
+**External services:** none  
+**Tags:** `designer` `editorial` `print` `no-deps`
+<!-- END:meta -->
 
 ## Preview
 
@@ -64,28 +69,24 @@ based in {{location}} · available for select projects
 
 ## Placeholders
 
-| Token                  | Description                                  | Example                                          |
-|------------------------|----------------------------------------------|--------------------------------------------------|
-| `{{volume}}`           | Issue number                                 | `07`                                             |
-| `{{year}}`             | Year                                         | `2026`                                           |
-| `{{name}}`             | Display name                                 | `Jane Doe`                                       |
-| `{{role}}`             | Role title                                   | `independent interface engineer`                 |
-| `{{location}}`         | City/country                                 | `Istanbul`                                       |
-| `{{press_quote}}`      | Single short quote                           | `quietly excellent`                              |
-| `{{press_outlet}}`     | Quote attribution                            | `sidebar.io`                                     |
-| `{{work_one_name}}`    | First project                                | `acme design system`                             |
-| `{{work_one_url}}`     | First project URL                            | `https://github.com/jane/acme-ds`                |
-| `{{work_two_name}}`    | Second project                               | `the type observatory`                           |
-| `{{work_two_url}}`     | Second project URL                           | `https://typeobservatory.dev`                    |
-| `{{work_three_name}}`  | Third project                                | `runtime essays`                                 |
-| `{{work_three_url}}`   | Third project URL                            | `https://jane.dev/log`                           |
-| `{{essay_one_name}}`   | First essay title                            | `On the slowness of good interfaces`             |
-| `{{essay_one_url}}`    | First essay URL                              | `https://jane.dev/log/slow`                      |
-| `{{essay_two_name}}`   | Second essay title                           | `Why I keep choosing CSS`                        |
-| `{{essay_two_url}}`    | Second essay URL                             | `https://jane.dev/log/css`                       |
-| `{{website}}`          | Domain only                                  | `jane.dev`                                       |
-| `{{twitter}}`          | Twitter handle without `@`                   | `janedoe`                                        |
-| `{{email}}`            | Email                                        | `hello@jane.dev`                                 |
+<!-- BEGIN:placeholders -->
+| Token | Replace it | Description | Example |
+|-------|------------|-------------|---------|
+| `{{volume}}` | in the block below | Issue number | `07` |
+| `{{year}}` | in the block below | Year | `2026` |
+| `{{name}}` | in the block below | Display name | `Jane Doe` |
+| `{{role}}` | in the block below | Role title | `independent interface engineer` |
+| `{{location}}` | in the block below | City/country | `Istanbul` |
+| `{{press_quote}}` | in the block below | Single short quote | `quietly excellent` |
+| `{{press_outlet}}` | in the block below | Quote attribution | `sidebar.io` |
+| `{{work_*_name}}` | in the block below | nth project | `acme design system` |
+| `{{work_*_url}}` | in the block below | nth project URL | `https://github.com/jane/acme-ds` |
+| `{{essay_*_name}}` | in the block below | nth essay title | `On the slowness of good interfaces` |
+| `{{essay_*_url}}` | in the block below | nth essay URL | `https://jane.dev/log/slow` |
+| `{{website}}` | in the block below | Domain only | `jane.dev` |
+| `{{twitter}}` | in the block below | Twitter handle without @ | `janedoe` |
+| `{{email}}` | in the block below | Email | `hello@jane.dev` |
+<!-- END:placeholders -->
 
 ## Customization Tips
 

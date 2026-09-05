@@ -1,12 +1,17 @@
 # Light / Dark Switcher
 
-![preview](../../../assets/previews/light-dark-switcher.svg)
+<!-- BEGIN:preview -->
+![Light / Dark Switcher](../../../assets/markdown-tricks/light-dark-switcher.svg)
+<!-- END:preview -->
 
 > One `<picture>` tag, two source files, perfect theme parity. The single most useful trick on this list.
 
-**Difficulty:** Basic
-**External services:** any image-emitting service of your choice
-**Tags:** `tricks` `picture-tag` `dark-mode` `prefers-color-scheme` `composable`
+<!-- BEGIN:meta -->
+**Kind:** `technique` — a pattern you apply inside another template  
+**Difficulty:** Basic  
+**External services:** `github-readme-stats.vercel.app` (optional), `raw.githubusercontent.com` (optional)  
+**Tags:** `trick` `picture` `theme` `light-dark`
+<!-- END:meta -->
 
 ## Preview
 
@@ -65,10 +70,12 @@ Useful when your project has a light wordmark and a dark wordmark.
 
 ## Placeholders
 
-| Token             | Description                                | Example                          |
-|-------------------|--------------------------------------------|----------------------------------|
-| `{{username}}`    | GitHub username                            | `janedoe`                        |
-| `{{project_name}}`| Project name (for alt text)                | `acme design system`             |
+<!-- BEGIN:placeholders -->
+| Token | Replace it | Description | Example |
+|-------|------------|-------------|---------|
+| `{{username}}` | in the block below | GitHub username | `janedoe` |
+| `{{project_name}}` | in the block below | Project name (for alt text) | `acme design system` |
+<!-- END:placeholders -->
 
 ## Customization Tips
 

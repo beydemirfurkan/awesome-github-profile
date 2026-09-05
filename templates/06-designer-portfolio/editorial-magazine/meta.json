@@ -1,0 +1,103 @@
+{
+  "slug": "editorial-magazine",
+  "name": "Editorial Magazine",
+  "kind": "markdown",
+  "difficulty": "Intermediate",
+  "blurb": "Typeset like a small print quarterly.",
+  "asset": "assets/designer-portfolio/editorial-magazine.svg",
+  "picture": false,
+  "tags": [
+    "designer",
+    "editorial",
+    "print",
+    "no-deps"
+  ],
+  "services": [],
+  "placeholders": [
+    {
+      "token": "volume",
+      "where": "markdown",
+      "description": "Issue number",
+      "example": "07"
+    },
+    {
+      "token": "year",
+      "where": "markdown",
+      "description": "Year",
+      "example": "2026"
+    },
+    {
+      "token": "name",
+      "where": "markdown",
+      "description": "Display name",
+      "example": "Jane Doe"
+    },
+    {
+      "token": "role",
+      "where": "markdown",
+      "description": "Role title",
+      "example": "independent interface engineer"
+    },
+    {
+      "token": "location",
+      "where": "markdown",
+      "description": "City/country",
+      "example": "Istanbul"
+    },
+    {
+      "token": "press_quote",
+      "where": "markdown",
+      "description": "Single short quote",
+      "example": "quietly excellent"
+    },
+    {
+      "token": "press_outlet",
+      "where": "markdown",
+      "description": "Quote attribution",
+      "example": "sidebar.io"
+    },
+    {
+      "token": "work_*_name",
+      "where": "markdown",
+      "description": "nth project",
+      "example": "acme design system"
+    },
+    {
+      "token": "work_*_url",
+      "where": "markdown",
+      "description": "nth project URL",
+      "example": "https://github.com/jane/acme-ds"
+    },
+    {
+      "token": "essay_*_name",
+      "where": "markdown",
+      "description": "nth essay title",
+      "example": "On the slowness of good interfaces"
+    },
+    {
+      "token": "essay_*_url",
+      "where": "markdown",
+      "description": "nth essay URL",
+      "example": "https://jane.dev/log/slow"
+    },
+    {
+      "token": "website",
+      "where": "markdown",
+      "description": "Domain only",
+      "example": "jane.dev"
+    },
+    {
+      "token": "twitter",
+      "where": "markdown",
+      "description": "Twitter handle without @",
+      "example": "janedoe"
+    },
+    {
+      "token": "email",
+      "where": "markdown",
+      "description": "Email",
+      "example": "hello@jane.dev"
+    }
+  ],
+  "credits": []
+}

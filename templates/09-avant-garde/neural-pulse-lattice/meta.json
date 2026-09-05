@@ -1,0 +1,79 @@
+{
+  "slug": "neural-pulse-lattice",
+  "name": "Neural Pulse Lattice",
+  "kind": "svg",
+  "difficulty": "Advanced",
+  "blurb": "10 nodes, 15 edges, 9 signals — animateMotion + mpath.",
+  "asset": "assets/avant-garde/neural-pulse-lattice.svg",
+  "picture": false,
+  "tags": [
+    "avant-garde",
+    "animatemotion",
+    "network",
+    "self-hosted"
+  ],
+  "services": [],
+  "placeholders": [
+    {
+      "token": "name",
+      "where": "markdown",
+      "description": "Display name",
+      "example": "Jane Doe"
+    },
+    {
+      "token": "role",
+      "where": "asset",
+      "description": "Role line in caps",
+      "example": "FRONTEND · INTERFACE · MOTION"
+    },
+    {
+      "token": "stats_*",
+      "where": "asset",
+      "description": "The 5 stat rows",
+      "example": "nodes / 10"
+    },
+    {
+      "token": "transmission_paragraph",
+      "where": "markdown",
+      "description": "1–2 sentence bio",
+      "example": "I build the kind of..."
+    },
+    {
+      "token": "node_*_label",
+      "where": "markdown",
+      "description": "Active project label",
+      "example": "acme/design-system"
+    },
+    {
+      "token": "node_*_text",
+      "where": "markdown",
+      "description": "Active project description",
+      "example": "tokens shipped to 14 product teams"
+    },
+    {
+      "token": "website",
+      "where": "markdown",
+      "description": "Domain",
+      "example": "jane.dev"
+    },
+    {
+      "token": "website_url",
+      "where": "markdown",
+      "description": "URL",
+      "example": "https://jane.dev"
+    },
+    {
+      "token": "twitter",
+      "where": "markdown",
+      "description": "Twitter without @",
+      "example": "janedoe"
+    },
+    {
+      "token": "email",
+      "where": "markdown",
+      "description": "Email",
+      "example": "hello@jane.dev"
+    }
+  ],
+  "credits": []
+}

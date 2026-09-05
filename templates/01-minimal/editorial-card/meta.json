@@ -1,0 +1,73 @@
+{
+  "slug": "editorial-card",
+  "name": "Editorial Card",
+  "kind": "markdown",
+  "difficulty": "Basic",
+  "blurb": "Magazine-style serif. No deps.",
+  "asset": "assets/minimal/editorial-card.svg",
+  "picture": false,
+  "tags": [
+    "minimal",
+    "serif",
+    "editorial",
+    "no-deps"
+  ],
+  "services": [],
+  "placeholders": [
+    {
+      "token": "name",
+      "where": "markdown",
+      "description": "Display name",
+      "example": "Jane Doe"
+    },
+    {
+      "token": "tagline",
+      "where": "markdown",
+      "description": "One-liner under the name (italic)",
+      "example": "Frontend engineer who writes essays in code"
+    },
+    {
+      "token": "currently_line",
+      "where": "markdown",
+      "description": "What you're working on right now",
+      "example": "Building the design system at Acme."
+    },
+    {
+      "token": "website",
+      "where": "markdown",
+      "description": "Site domain shown to the reader",
+      "example": "jane.dev"
+    },
+    {
+      "token": "website_url",
+      "where": "markdown",
+      "description": "Site URL with protocol",
+      "example": "https://jane.dev"
+    },
+    {
+      "token": "twitter",
+      "where": "markdown",
+      "description": "Twitter/X handle, no @",
+      "example": "janedoe"
+    },
+    {
+      "token": "linkedin",
+      "where": "markdown",
+      "description": "LinkedIn slug",
+      "example": "janedoe"
+    },
+    {
+      "token": "project_*_name",
+      "where": "markdown",
+      "description": "nth project name",
+      "example": "acme design system"
+    },
+    {
+      "token": "project_*_desc",
+      "where": "markdown",
+      "description": "n-sentence description",
+      "example": "A token-driven UI kit shipped to 14 teams."
+    }
+  ],
+  "credits": []
+}

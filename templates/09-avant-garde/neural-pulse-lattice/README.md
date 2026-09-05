@@ -1,14 +1,23 @@
 # Neural Pulse Lattice
 
-![preview](../../../assets/previews/neural-pulse-lattice.svg)
+<!-- BEGIN:preview -->
+![Neural Pulse Lattice](../../../assets/avant-garde/neural-pulse-lattice.svg)
+<!-- END:preview -->
 
 > A 10-node graph with 9 signals racing along its edges in real time. `<animateMotion>` + `<mpath>` + parallax node halos. Reads like a particle-physics readout. Says "I work on hard things."
 
-**Difficulty:** Advanced
-**External services:** none — fully self-contained SVG
-**Tags:** `avant-garde` `network-graph` `animatemotion` `tech-luminous` `data-vis`
+<!-- BEGIN:meta -->
+**Kind:** `svg` — ships a self-hosted SVG you download and commit  
+**Difficulty:** Advanced  
+**External services:** none  
+**Tags:** `avant-garde` `animatemotion` `network` `self-hosted`
+<!-- END:meta -->
 
-## Why this is different
+## Preview
+
+Ten nodes wired by fifteen edges on a deep field, with nine signals travelling those edges at once along real motion paths. A panel on the right carries your name, role and a small read-out; the network does the rest.
+
+## Why this design
 
 This is the deepest pure-SVG technique on this kit. **Every signal pulse is a `<circle>` whose position is driven by `<animateMotion>` referencing an `<mpath>` to one of the edge paths.** The edge paths are defined once in `<defs>` with `id`s; the visible edge lines and the moving signals both reference the same `id`. That's elegant — change one path and both visual + motion update.
 
@@ -57,19 +66,20 @@ What you'd otherwise need WebGL or D3 for is happening here in plain XML, no scr
 
 ## Placeholders
 
-| Token                         | Description                              | Example                              |
-|-------------------------------|------------------------------------------|--------------------------------------|
-| `{{name}}`                    | Display name (edit inside SVG)           | `Jane Doe`                           |
-| `{{role}}`                    | Role line in caps (edit inside SVG)      | `FRONTEND · INTERFACE · MOTION`      |
-| `{{stats_*}}`                 | The 5 stat rows (edit inside SVG)        | `nodes / 10`                         |
-| `{{transmission_paragraph}}`  | 1–2 sentence bio                         | `I build the kind of...`             |
-| `{{node_one_label}}`          | Active project label                     | `acme/design-system`                 |
-| `{{node_one_text}}`           | Active project description               | `tokens shipped to 14 product teams` |
-| (etc. for two, three)         |                                          |                                      |
-| `{{website}}`                 | Domain                                   | `jane.dev`                           |
-| `{{website_url}}`             | URL                                      | `https://jane.dev`                   |
-| `{{twitter}}`                 | Twitter without `@`                      | `janedoe`                            |
-| `{{email}}`                   | Email                                    | `hello@jane.dev`                     |
+<!-- BEGIN:placeholders -->
+| Token | Replace it | Description | Example |
+|-------|------------|-------------|---------|
+| `{{name}}` | in the block below | Display name | `Jane Doe` |
+| `{{role}}` | inside the SVG | Role line in caps | `FRONTEND · INTERFACE · MOTION` |
+| `{{stats_*}}` | inside the SVG | The 5 stat rows | `nodes / 10` |
+| `{{transmission_paragraph}}` | in the block below | 1–2 sentence bio | `I build the kind of...` |
+| `{{node_*_label}}` | in the block below | Active project label | `acme/design-system` |
+| `{{node_*_text}}` | in the block below | Active project description | `tokens shipped to 14 product teams` |
+| `{{website}}` | in the block below | Domain | `jane.dev` |
+| `{{website_url}}` | in the block below | URL | `https://jane.dev` |
+| `{{twitter}}` | in the block below | Twitter without @ | `janedoe` |
+| `{{email}}` | in the block below | Email | `hello@jane.dev` |
+<!-- END:placeholders -->
 
 ## Customization Tips
 

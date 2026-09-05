@@ -1,16 +1,25 @@
 # Typewriter Intro
 
-![preview](../../../assets/previews/typewriter-intro.svg)
+<!-- BEGIN:preview -->
+![Typewriter Intro](../../../assets/animated/typewriter-intro.svg)
+<!-- END:preview -->
 
 > A pixel-perfect macOS terminal as your hero. Multiple `$` prompts, syntax-highlighted output, a single blinking cursor. Self-hosted SVG, zero dependencies on third-party typing services.
 
-**Difficulty:** Basic
-**External services:** none — fully self-contained SVG
-**Tags:** `animated` `terminal` `macos-style` `monospace` `self-hosted`
+<!-- BEGIN:meta -->
+**Kind:** `svg` — ships a self-hosted SVG you download and commit  
+**Difficulty:** Basic  
+**External services:** none  
+**Tags:** `animated` `terminal` `typing` `self-hosted`
+<!-- END:meta -->
 
-## Why this got upgraded
+## Preview
 
-The original relied on `readme-typing-svg.demolab.com` for the cursor effect — fine until the service rate-limits or your custom `lines=` URL-encoding breaks. The new version is one self-contained SVG with the full terminal UI rendered statically (window chrome, traffic lights, three prompts of syntax-highlighted output) and only the **cursor blink** as motion. Reads richer, loads faster, never breaks.
+A terminal window at full width: chrome bar with traffic lights, then three prompts of syntax-highlighted output — who you are, what you are shipping, where to find you. Everything is drawn statically; the only motion is the cursor blinking at the last prompt.
+
+## Why this design
+
+The obvious way to build a typing terminal is a hosted typing-SVG service — until it rate-limits, or your `lines=` URL-encoding breaks on a character you did not think about. This draws the whole terminal instead: window chrome, traffic lights, three prompts of syntax-highlighted output. The only thing that animates is the cursor, because the cursor is the only thing that actually needed to move.
 
 ## Live showcase
 
@@ -47,16 +56,17 @@ The original relied on `readme-typing-svg.demolab.com` for the cursor effect —
 
 ## Placeholders
 
-| Token                       | Description                                | Example                                          |
-|-----------------------------|--------------------------------------------|--------------------------------------------------|
-| `{{name}}`                  | Display name (edited inside SVG)           | `Jane Doe`                                       |
-| `{{prompt_outputs_*}}`      | Three prompts' content (edited inside SVG) | `Jane Doe — frontend.engineer...`                |
-| `{{project_one_*}}`         | First project name/URL/desc                | `acme-ds / .../jane/acme-ds / ...token-driven UI`|
-| (etc. for two, three)       |                                            |                                                  |
-| `{{essay_one_title}}`       | Essay link 1                               | `On the slowness of good interfaces`             |
-| `{{essay_one_url}}`         | URL                                        | `https://jane.dev/log/slow`                      |
-| `{{essay_two_title}}`       | Essay link 2                               | `Why I keep choosing CSS`                        |
-| `{{essay_two_url}}`         | URL                                        | `https://jane.dev/log/css`                       |
+<!-- BEGIN:placeholders -->
+| Token | Replace it | Description | Example |
+|-------|------------|-------------|---------|
+| `{{name}}` | in the block below | Display name | `Jane Doe` |
+| `{{prompt_outputs_*}}` | inside the SVG | prompts' content | `Jane Doe — frontend.engineer...` |
+| `{{essay_*_title}}` | in the block below | Essay link | `On the slowness of good interfaces` |
+| `{{essay_*_url}}` | in the block below | URL | `https://jane.dev/log/slow` |
+| `{{project_*_name}}` | in the block below | Project name, one per row | `acme-ds` |
+| `{{project_*_url}}` | in the block below | Repo or site URL for that project | `https://github.com/jane/acme-ds` |
+| `{{project_*_desc}}` | in the block below | One line on what it is | `token-driven UI kit` |
+<!-- END:placeholders -->
 
 ## Customization Tips
 

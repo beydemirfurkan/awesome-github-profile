@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-label="Editorial Magazine — a profile typeset like a small print quarterly">
+  <title>Editorial Magazine</title>
+  <defs>
+    <filter id="em-grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="4" seed="3" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.08  0 0 0 0 0.07  0 0 0 0 0.05  0 0 0 0.42 0"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="420" fill="#f4efe4"/>
+  <rect width="1200" height="420" filter="url(#em-grain)" opacity="0.55"/>
+
+  <!-- Masthead: two rules of different weight, the quarterly's whole identity -->
+  <line x1="72" y1="40" x2="1128" y2="40" stroke="#141210" stroke-width="3"/>
+  <text x="72" y="68" font-family="Georgia, 'Times New Roman', serif" font-size="19" font-weight="700" fill="#141210" letter-spacing="7">THE PROFILE</text>
+  <text x="1128" y="68" text-anchor="end" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10" fill="#8a8172" letter-spacing="3">VOL. 07 · MMXXVI · ISTANBUL</text>
+  <line x1="72" y1="84" x2="1128" y2="84" stroke="#141210" stroke-width="0.8"/>
+
+  <!-- Headline -->
+  <text x="72" y="164" font-family="Georgia, 'Times New Roman', serif" font-size="68" font-weight="700" fill="#141210" letter-spacing="-1.5">Jane Doe</text>
+  <text x="72" y="198" font-family="Georgia, serif" font-style="italic" font-size="19" fill="#4a443a">independent interface engineer · available for select projects</text>
+  <line x1="72" y1="224" x2="1128" y2="224" stroke="#c9c1b0" stroke-width="0.8"/>
+
+  <!-- Column rules -->
+  <line x1="412" y1="248" x2="412" y2="366" stroke="#c9c1b0" stroke-width="0.8"/>
+  <line x1="752" y1="248" x2="752" y2="366" stroke="#c9c1b0" stroke-width="0.8"/>
+
+  <!-- Selected work -->
+  <text x="72" y="262" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9.5" fill="#8a8172" letter-spacing="3.5">— SELECTED WORK</text>
+  <text x="72" y="292" font-family="Georgia, serif" font-size="17" font-weight="700" fill="#141210">Acme Design System</text>
+  <text x="72" y="316" font-family="Georgia, serif" font-size="17" font-weight="700" fill="#141210">The Type Observatory</text>
+  <text x="72" y="340" font-family="Georgia, serif" font-size="17" font-weight="700" fill="#141210">Runtime</text>
+  <text x="72" y="362" font-family="Georgia, serif" font-style="italic" font-size="14" fill="#6b6355">and four more, on request</text>
+
+  <!-- Writing -->
+  <text x="452" y="262" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9.5" fill="#8a8172" letter-spacing="3.5">— WRITING</text>
+  <text x="452" y="292" font-family="Georgia, serif" font-size="17" fill="#141210">On the cost of a design token</text>
+  <text x="452" y="316" font-family="Georgia, serif" font-size="17" fill="#141210">Variable fonts, measured</text>
+  <text x="452" y="340" font-family="Georgia, serif" font-size="17" fill="#141210">Why interfaces get slower</text>
+  <text x="452" y="362" font-family="Georgia, serif" font-style="italic" font-size="14" fill="#6b6355">weekly, at jane.dev/notes</text>
+
+  <!-- Press: the one boxed element, so the eye lands here last -->
+  <rect x="792" y="244" width="336" height="88" fill="#141210"/>
+  <text x="812" y="272" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9.5" fill="#8a8172" letter-spacing="3.5">— PRESS</text>
+  <text x="812" y="300" font-family="Georgia, serif" font-style="italic" font-size="19" fill="#f4efe4">“quietly excellent.”</text>
+  <text x="812" y="320" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10" fill="#9a917f" letter-spacing="1.5">— sidebar.io</text>
+  <text x="792" y="362" font-family="Georgia, serif" font-size="15" fill="#4a443a">hello@jane.dev</text>
+
+  <!-- Folio -->
+  <line x1="72" y1="386" x2="1128" y2="386" stroke="#141210" stroke-width="2"/>
+  <text x="72" y="406" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9.5" fill="#8a8172" letter-spacing="2.5">JANE.DEV · @JANEDOE</text>
+  <text x="1128" y="406" text-anchor="end" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="9.5" fill="#8a8172" letter-spacing="2.5">SET IN HTML TABLES · NO IMAGES</text>
+</svg>

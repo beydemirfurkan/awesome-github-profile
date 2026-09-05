@@ -1,0 +1,61 @@
+{
+  "slug": "typewriter-intro",
+  "name": "Typewriter Intro",
+  "kind": "svg",
+  "difficulty": "Basic",
+  "blurb": "A terminal that types itself in.",
+  "asset": "assets/animated/typewriter-intro.svg",
+  "picture": false,
+  "tags": [
+    "animated",
+    "terminal",
+    "typing",
+    "self-hosted"
+  ],
+  "services": [],
+  "placeholders": [
+    {
+      "token": "name",
+      "where": "markdown",
+      "description": "Display name",
+      "example": "Jane Doe"
+    },
+    {
+      "token": "prompt_outputs_*",
+      "where": "asset",
+      "description": "prompts' content",
+      "example": "Jane Doe — frontend.engineer..."
+    },
+    {
+      "token": "essay_*_title",
+      "where": "markdown",
+      "description": "Essay link",
+      "example": "On the slowness of good interfaces"
+    },
+    {
+      "token": "essay_*_url",
+      "where": "markdown",
+      "description": "URL",
+      "example": "https://jane.dev/log/slow"
+    },
+    {
+      "token": "project_*_name",
+      "where": "markdown",
+      "description": "Project name, one per row",
+      "example": "acme-ds"
+    },
+    {
+      "token": "project_*_url",
+      "where": "markdown",
+      "description": "Repo or site URL for that project",
+      "example": "https://github.com/jane/acme-ds"
+    },
+    {
+      "token": "project_*_desc",
+      "where": "markdown",
+      "description": "One line on what it is",
+      "example": "token-driven UI kit"
+    }
+  ],
+  "credits": []
+}

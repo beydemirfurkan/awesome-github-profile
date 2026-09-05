@@ -1,12 +1,17 @@
 # Monospace CV
 
-![preview](../../../assets/previews/monospace-cv.svg)
+<!-- BEGIN:preview -->
+![Monospace CV](../../../assets/minimal/monospace-cv.svg)
+<!-- END:preview -->
 
 > Your profile as a terminal session. One font, four prompts, zero noise.
 
-**Difficulty:** Basic
-**External services:** [readme-typing-svg](https://github.com/DenverCoder1/readme-typing-svg) (optional, for the blinking cursor)
-**Tags:** `minimal` `monospace` `terminal` `dev-aesthetic`
+<!-- BEGIN:meta -->
+**Kind:** `markdown` — pure markdown — no images at all  
+**Difficulty:** Basic  
+**External services:** `readme-typing-svg.demolab.com` (optional)  
+**Tags:** `minimal` `monospace` `terminal` `cv`
+<!-- END:meta -->
 
 ## Preview
 
@@ -36,22 +41,20 @@ $ contact --all
 
 ## Placeholders
 
-| Token                  | Description                                    | Example                                            |
-|------------------------|------------------------------------------------|----------------------------------------------------|
-| `{{username}}`         | GitHub-style handle (lowercase + dot OK)       | `jane.doe`                                         |
-| `{{role}}`             | Short role title                               | `frontend.eng`                                     |
-| `{{skills_csv}}`       | Comma-separated skills                         | `typescript · react · node · figma`                |
-| `{{uptime_line}}`      | Years of experience as a sentence              | `8 yrs shipping production interfaces.`            |
-| `{{website}}`          | Domain only                                    | `jane.dev`                                         |
-| `{{website_url}}`      | Full URL                                       | `https://jane.dev`                                 |
-| `{{twitter}}`          | Twitter handle, no `@`                         | `janedoe`                                          |
-| `{{linkedin}}`         | LinkedIn slug                                  | `janedoe`                                          |
-| `{{accent}}`           | Hex color, no `#`, used for the typing cursor  | `7ee787`                                           |
-| `{{typing_line_one}}`  | First rotating status                          | `currently shipping design tokens`                 |
-| `{{typing_line_two}}`  | Second rotating status                         | `building a small synth in webaudio`               |
-| `{{typing_line_three}}`| Third rotating status                          | `writing about css.layers`                         |
-
-URL-encode the typing lines (replace spaces with `+` and special chars with `%XX`). The `;` is the line separator — keep it literal.
+<!-- BEGIN:placeholders -->
+| Token | Replace it | Description | Example |
+|-------|------------|-------------|---------|
+| `{{username}}` | in the block below | GitHub-style handle (lowercase + dot OK) | `jane.doe` |
+| `{{role}}` | in the block below | Short role title | `frontend.eng` |
+| `{{skills_csv}}` | in the block below | Comma-separated skills | `typescript · react · node · figma` |
+| `{{uptime_line}}` | in the block below | Years of experience as a sentence | `8 yrs shipping production interfaces.` |
+| `{{website}}` | in the block below | Domain only | `jane.dev` |
+| `{{website_url}}` | in the block below | Full URL | `https://jane.dev` |
+| `{{twitter}}` | in the block below | Twitter handle, no @ | `janedoe` |
+| `{{linkedin}}` | in the block below | LinkedIn slug | `janedoe` |
+| `{{accent}}` | in the block below | Hex color, no #, used for the typing cursor | `7ee787` |
+| `{{typing_line_*}}` | in the block below | nth rotating status | `currently shipping design tokens` |
+<!-- END:placeholders -->
 
 ## Customization Tips
 

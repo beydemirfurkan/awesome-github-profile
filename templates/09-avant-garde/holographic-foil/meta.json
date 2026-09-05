@@ -1,0 +1,97 @@
+{
+  "slug": "holographic-foil",
+  "name": "Holographic Foil",
+  "kind": "svg",
+  "difficulty": "Advanced",
+  "blurb": "Trading-card foil, animated stop-color iridescence.",
+  "asset": "assets/avant-garde/holographic-foil.svg",
+  "picture": false,
+  "tags": [
+    "avant-garde",
+    "iridescent",
+    "card",
+    "self-hosted"
+  ],
+  "services": [],
+  "placeholders": [
+    {
+      "token": "name",
+      "where": "markdown",
+      "description": "Display name",
+      "example": "JANE DOE"
+    },
+    {
+      "token": "role",
+      "where": "markdown",
+      "description": "Role",
+      "example": "FRONTEND ENGINEER"
+    },
+    {
+      "token": "level",
+      "where": "markdown",
+      "description": "Years of experience as a \"level\"",
+      "example": "7"
+    },
+    {
+      "token": "hp",
+      "where": "asset",
+      "description": "A number that means something (commits, days streak)",
+      "example": "2,184"
+    },
+    {
+      "token": "monogram",
+      "where": "asset",
+      "description": "Two-letter italic monogram",
+      "example": "JD"
+    },
+    {
+      "token": "bio_paragraph",
+      "where": "markdown",
+      "description": "1–2 sentences",
+      "example": "Trades rare type systems..."
+    },
+    {
+      "token": "website",
+      "where": "markdown",
+      "description": "Domain",
+      "example": "jane.dev"
+    },
+    {
+      "token": "website_url",
+      "where": "markdown",
+      "description": "URL",
+      "example": "https://jane.dev"
+    },
+    {
+      "token": "twitter",
+      "where": "markdown",
+      "description": "Twitter handle without @",
+      "example": "janedoe"
+    },
+    {
+      "token": "linkedin",
+      "where": "markdown",
+      "description": "LinkedIn slug",
+      "example": "janedoe"
+    },
+    {
+      "token": "currently_*_label",
+      "where": "markdown",
+      "description": "Short label for a “currently” row",
+      "example": "shipping"
+    },
+    {
+      "token": "currently_*_text",
+      "where": "markdown",
+      "description": "What you are doing, one line",
+      "example": "the design system at Acme"
+    },
+    {
+      "token": "ability_*_*",
+      "where": "asset",
+      "description": "Ability label, score, sublabel",
+      "example": "⚡ Type System Mastery / 86 / strict.tsconfig…"
+    }
+  ],
+  "credits": []
+}

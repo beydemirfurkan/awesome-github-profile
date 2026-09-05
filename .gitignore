@@ -17,3 +17,4 @@ package-lock.json
 # Local previews / scratch
 scratch/
 *.local.md
+_sheet.html

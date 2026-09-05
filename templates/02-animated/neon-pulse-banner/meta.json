@@ -1,0 +1,68 @@
+{
+  "slug": "neon-pulse-banner",
+  "name": "Neon Pulse Banner",
+  "kind": "svg",
+  "difficulty": "Intermediate",
+  "blurb": "Wide gradient hero with a slow wave.",
+  "asset": "assets/animated/neon-pulse-banner.svg",
+  "picture": false,
+  "tags": [
+    "animated",
+    "gradient-flow",
+    "wave-morph",
+    "glow-filter",
+    "self-hosted"
+  ],
+  "services": [],
+  "placeholders": [
+    {
+      "token": "name",
+      "where": "markdown",
+      "description": "Display name",
+      "example": "JANE DOE"
+    },
+    {
+      "token": "tagline",
+      "where": "markdown",
+      "description": "Role line",
+      "example": "FRONTEND · MOTION · WEBGL"
+    },
+    {
+      "token": "tags_*",
+      "where": "asset",
+      "description": "Four chip labels",
+      "example": "react, typescript, webgl, motion"
+    },
+    {
+      "token": "bio_paragraph",
+      "where": "markdown",
+      "description": "1–2 sentences in markdown",
+      "example": "I build interfaces that move..."
+    },
+    {
+      "token": "currently_*",
+      "where": "markdown",
+      "description": "Bullet",
+      "example": "shipping the design system at acme"
+    },
+    {
+      "token": "website",
+      "where": "markdown",
+      "description": "Domain",
+      "example": "jane.dev"
+    },
+    {
+      "token": "website_url",
+      "where": "markdown",
+      "description": "URL",
+      "example": "https://jane.dev"
+    },
+    {
+      "token": "twitter",
+      "where": "markdown",
+      "description": "Twitter handle without @",
+      "example": "janedoe"
+    }
+  ],
+  "credits": []
+}

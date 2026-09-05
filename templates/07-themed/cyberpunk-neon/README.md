@@ -1,16 +1,27 @@
 # Cyberpunk Neon
 
-![preview](../../../assets/previews/cyberpunk-neon.svg)
+<!-- BEGIN:preview -->
+![Cyberpunk Neon](../../../assets/themed/cyberpunk-neon.svg)
+<!-- END:preview -->
 
 > Vaporwave perspective grid receding to a synthwave sun, chromatic-aberration title, animated scan line, and an honest-to-god jacked-in status pill. Self-hosted SVG, capsule-render-free.
 
-**Difficulty:** Advanced
-**External services:** none — fully self-contained SVG
-**Tags:** `themed` `cyberpunk` `vaporwave` `chromatic-aberration` `self-hosted`
+<!-- BEGIN:meta -->
+**Kind:** `svg` — ships a self-hosted SVG you download and commit  
+**Difficulty:** Advanced  
+**External services:** none  
+**Tags:** `themed` `cyberpunk` `vaporwave` `self-hosted`
+<!-- END:meta -->
 
-## Why this got upgraded
+## Preview
 
-The first version stitched three external services together (capsule-render hero, readme-typing-svg status, github-readme-stats card) and depended on hex-encoded URL parameters that broke on every theme tweak. The new version is one self-hosted SVG with **all the synthwave clichés rendered properly**: vaporwave sun with horizontal scanline cuts, perspective grid floor with vanishing-point lines, distant mountain silhouette, scan-line that scrolls vertically, and a chromatic-aberration title (3 layered text elements with offset jitter).
+Every synthwave cliché, done properly: a sun on the horizon cut by horizontal scanlines, a perspective grid floor running to a vanishing point, a mountain silhouette between them, a scanline scrolling down the field, and your name in layered offset copies so the title reads as chromatic aberration.
+
+## Why this design
+
+Assembled from a hero generator, a typing service and a stats card, this look is possible — and it breaks the first time a hex-encoded URL parameter meets a theme tweak. Self-hosted, every part can be built properly instead: a vaporwave sun cut by horizontal scanlines, a perspective grid floor with real vanishing-point lines, a distant mountain silhouette, a vertically scrolling scanline, and a chromatic-aberration title made of layered `<text>` elements with offset jitter.
+
+The aberration is four layers, not three: cyan and magenta offsets, a magenta glow, and the white face on top.
 
 ## Live showcase
 
@@ -52,18 +63,20 @@ The first version stitched three external services together (capsule-render hero
 
 ## Placeholders
 
-| Token                | Description                                       | Example                              |
-|----------------------|---------------------------------------------------|--------------------------------------|
-| `{{name}}`           | Title text, ALL_CAPS_WITH_UNDERSCORES (edit in SVG) | `JANE_DOE`                         |
-| `{{role}}`           | Subtitle (edit in SVG)                            | `FRONTEND.ENGINEER`                  |
-| `{{location_stamp}}` | Top-left corner (edit in SVG)                     | `TOKYO.SECTOR_07 · 22:14`            |
-| `{{status_pill}}`    | Bottom-left phrase (edit in SVG)                  | `JACKED IN · NEURAL UPLINK STABLE`   |
-| `{{tags_list}}`      | Four uppercase chip labels (edit in SVG)          | `[ react ] [ webgl ] [ rust ] [ shaders ]` |
-| `{{bio_lowercase}}`  | 1–2 sentences in *lowercase only*                 | `i build interfaces that...`         |
-| `{{currently_*}}`    | Three lowercase bullets                           | `shipping the design system...`      |
-| `{{website}}`        | Domain                                            | `jane.dev`                           |
-| `{{twitter}}`        | Handle without `@`                                | `janedoe`                            |
-| `{{email}}`          | Email                                             | `hello@jane.dev`                     |
+<!-- BEGIN:placeholders -->
+| Token | Replace it | Description | Example |
+|-------|------------|-------------|---------|
+| `{{name}}` | in the block below | Title text, ALL_CAPS_WITH_UNDERSCORES | `JANE_DOE` |
+| `{{role}}` | inside the SVG | Subtitle | `FRONTEND.ENGINEER` |
+| `{{location_stamp}}` | inside the SVG | Top-left corner | `TOKYO.SECTOR_07 · 22:14` |
+| `{{status_pill}}` | inside the SVG | Bottom-left phrase | `JACKED IN · NEURAL UPLINK STABLE` |
+| `{{tags_list}}` | inside the SVG | Four uppercase chip labels | `[ react ] [ webgl ] [ rust ] [ shaders ]` |
+| `{{bio_lowercase}}` | in the block below | 1–2 sentences in *lowercase only* | `i build interfaces that...` |
+| `{{currently_*}}` | in the block below | lowercase bullets | `shipping the design system...` |
+| `{{website}}` | in the block below | Domain | `jane.dev` |
+| `{{twitter}}` | in the block below | Handle without @ | `janedoe` |
+| `{{email}}` | in the block below | Email | `hello@jane.dev` |
+<!-- END:placeholders -->
 
 ## Customization Tips
 

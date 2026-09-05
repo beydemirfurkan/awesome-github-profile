@@ -1,0 +1,73 @@
+{
+  "slug": "snake-eat-graph",
+  "name": "Snake Eat Graph",
+  "kind": "action",
+  "difficulty": "Intermediate",
+  "blurb": "The classic. Eats your contributions daily.",
+  "asset": "assets/gamified/snake-eat-graph.svg",
+  "picture": true,
+  "tags": [
+    "gamified",
+    "snake",
+    "contributions",
+    "action"
+  ],
+  "services": [
+    {
+      "host": "raw.githubusercontent.com",
+      "optional": false
+    }
+  ],
+  "placeholders": [
+    {
+      "token": "username",
+      "where": "markdown",
+      "description": "GitHub username (also profile repo name)",
+      "example": "janedoe"
+    },
+    {
+      "token": "name",
+      "where": "markdown",
+      "description": "Display name",
+      "example": "Jane Doe"
+    },
+    {
+      "token": "tagline",
+      "where": "markdown",
+      "description": "One-liner",
+      "example": "frontend, daily."
+    },
+    {
+      "token": "website",
+      "where": "markdown",
+      "description": "Domain only",
+      "example": "jane.dev"
+    },
+    {
+      "token": "website_url",
+      "where": "markdown",
+      "description": "Full URL",
+      "example": "https://jane.dev"
+    },
+    {
+      "token": "twitter",
+      "where": "markdown",
+      "description": "Twitter handle without @",
+      "example": "janedoe"
+    }
+  ],
+  "credits": [
+    {
+      "name": "snk",
+      "author": "Platane",
+      "url": "https://github.com/Platane/snk",
+      "license": "MIT"
+    },
+    {
+      "name": "ghaction-github-pages",
+      "author": "crazy-max",
+      "url": "https://github.com/crazy-max/ghaction-github-pages",
+      "license": "MIT"
+    }
+  ]
+}

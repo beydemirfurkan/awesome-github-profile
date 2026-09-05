@@ -1,0 +1,91 @@
+{
+  "slug": "glassmorphism-hero",
+  "name": "Glassmorphism Hero",
+  "kind": "svg",
+  "difficulty": "Advanced",
+  "blurb": "Frosted glass on a melting gradient.",
+  "asset": "assets/designer-portfolio/glassmorphism-hero.svg",
+  "picture": false,
+  "tags": [
+    "designer",
+    "glassmorphism",
+    "blur",
+    "self-hosted"
+  ],
+  "services": [],
+  "placeholders": [
+    {
+      "token": "name",
+      "where": "markdown",
+      "description": "Display name",
+      "example": "Jane Doe"
+    },
+    {
+      "token": "tagline",
+      "where": "asset",
+      "description": "Italic role line",
+      "example": "Designer-engineer · interface, motion, type"
+    },
+    {
+      "token": "availability",
+      "where": "asset",
+      "description": "Optional availability slot",
+      "example": "2 slots / Q3"
+    },
+    {
+      "token": "approach_paragraph",
+      "where": "markdown",
+      "description": "2–3 sentences positioning",
+      "example": "An independent practice..."
+    },
+    {
+      "token": "essay_one",
+      "where": "markdown",
+      "description": "Recent essay title",
+      "example": "On the slowness of good interfaces"
+    },
+    {
+      "token": "essay_one_url",
+      "where": "markdown",
+      "description": "URL",
+      "example": "https://jane.dev/log/slow"
+    },
+    {
+      "token": "talk_one",
+      "where": "markdown",
+      "description": "Recent talk title",
+      "example": "Motion as Editorial Tool"
+    },
+    {
+      "token": "talk_one_url",
+      "where": "markdown",
+      "description": "URL",
+      "example": "https://..."
+    },
+    {
+      "token": "email",
+      "where": "markdown",
+      "description": "Email",
+      "example": "hello@jane.dev"
+    },
+    {
+      "token": "case_*_name",
+      "where": "markdown",
+      "description": "Case study name",
+      "example": "acme design system"
+    },
+    {
+      "token": "case_*_url",
+      "where": "markdown",
+      "description": "Link to the case study",
+      "example": "https://jane.dev/work/acme"
+    },
+    {
+      "token": "case_*_outcome",
+      "where": "markdown",
+      "description": "The result, in one clause",
+      "example": "shipped to 14 teams"
+    }
+  ],
+  "credits": []
+}

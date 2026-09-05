@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-label="Light / Dark Switcher — one profile card rendered in both themes, split down the middle">
+  <title>Light / Dark Switcher</title>
+  <defs>
+    <!-- One card, one seam. The left of the artboard is what a light-theme
+         visitor sees; the right is what a dark-theme visitor sees. Same
+         markup, same file, two realities. -->
+    <clipPath id="ld-light"><polygon points="0,0 656,0 544,420 0,420"/></clipPath>
+    <clipPath id="ld-dark"><polygon points="656,0 1200,0 1200,420 544,420"/></clipPath>
+    <linearGradient id="ld-seam" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f59e0b" stop-opacity="0.15"/>
+      <stop offset="0.5" stop-color="#f59e0b" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#8b5cf6" stop-opacity="0.15"/>
+    </linearGradient>
+  </defs>
+
+  <!-- LIGHT HALF -->
+  <g clip-path="url(#ld-light)">
+    <rect width="1200" height="420" fill="#ffffff"/>
+    <text x="72" y="60" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10" fill="#8c959f" letter-spacing="3.5">PREFERS-COLOR-SCHEME: LIGHT</text>
+    <!-- sun, on the light side of the seam -->
+    <circle cx="520" cy="56" r="11" fill="#f59e0b"/>
+    <g stroke="#f59e0b" stroke-width="2" stroke-linecap="round">
+      <line x1="520" y1="34" x2="520" y2="40"/><line x1="520" y1="72" x2="520" y2="78"/>
+      <line x1="498" y1="56" x2="504" y2="56"/><line x1="536" y1="56" x2="542" y2="56"/>
+      <line x1="504" y1="40" x2="508" y2="44"/><line x1="532" y1="68" x2="536" y2="72"/>
+      <line x1="536" y1="40" x2="532" y2="44"/><line x1="508" y1="68" x2="504" y2="72"/>
+    </g>
+    <rect x="240" y="122" width="720" height="204" rx="14" fill="#ffffff" stroke="#d0d7de" stroke-width="1.5"/>
+    <circle cx="304" cy="182" r="30" fill="#dbeafe"/>
+    <text x="304" y="190" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="20" font-weight="700" fill="#1d4ed8">JD</text>
+    <text x="356" y="176" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="24" font-weight="700" fill="#1f2328">Jane Doe</text>
+    <text x="356" y="200" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="13" fill="#656d76">@janedoe · frontend.engineer</text>
+    <text x="288" y="248" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="15" fill="#1f2328">Building the parts of products nobody notices</text>
+    <text x="288" y="270" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="15" fill="#1f2328">when they work — and exactly notices when they don't.</text>
+    <rect x="288" y="288" width="86" height="26" rx="13" fill="#f6f8fa" stroke="#d0d7de"/>
+    <text x="331" y="305" text-anchor="middle" font-family="ui-monospace, monospace" font-size="11" fill="#1f2328">★ 1.2K</text>
+    <rect x="384" y="288" width="86" height="26" rx="13" fill="#f6f8fa" stroke="#d0d7de"/>
+    <text x="427" y="305" text-anchor="middle" font-family="ui-monospace, monospace" font-size="11" fill="#1f2328">▲ 47 PR</text>
+    <rect x="480" y="288" width="102" height="26" rx="13" fill="#dafbe1" stroke="#aceebb"/>
+    <text x="531" y="305" text-anchor="middle" font-family="ui-monospace, monospace" font-size="11" fill="#0a5227">● live · 47d</text>
+  </g>
+
+  <!-- DARK HALF -->
+  <g clip-path="url(#ld-dark)">
+    <rect width="1200" height="420" fill="#0d1117"/>
+    <text x="1128" y="60" text-anchor="end" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10" fill="#6e7681" letter-spacing="3.5">PREFERS-COLOR-SCHEME: DARK</text>
+    <!-- moon, on the dark side -->
+    <path d="M712 42 A15 15 0 1 0 712 70 A12 12 0 1 1 712 42 Z" fill="#a78bfa"/>
+    <circle cx="762" cy="40" r="1.6" fill="#a78bfa"/>
+    <circle cx="748" cy="62" r="1.2" fill="#a78bfa"/>
+    <circle cx="790" cy="74" r="1.4" fill="#a78bfa"/>
+    <rect x="240" y="122" width="720" height="204" rx="14" fill="#161b22" stroke="#30363d" stroke-width="1.5"/>
+    <circle cx="304" cy="182" r="30" fill="#1e3a5f"/>
+    <text x="304" y="190" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="20" font-weight="700" fill="#79c0ff">JD</text>
+    <text x="356" y="176" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="24" font-weight="700" fill="#e6edf3">Jane Doe</text>
+    <text x="356" y="200" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="13" fill="#8b949e">@janedoe · frontend.engineer</text>
+    <text x="288" y="248" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="15" fill="#e6edf3">Building the parts of products nobody notices</text>
+    <text x="288" y="270" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="15" fill="#e6edf3">when they work — and exactly notices when they don't.</text>
+    <rect x="288" y="288" width="86" height="26" rx="13" fill="#21262d" stroke="#30363d"/>
+    <text x="331" y="305" text-anchor="middle" font-family="ui-monospace, monospace" font-size="11" fill="#e6edf3">★ 1.2K</text>
+    <rect x="384" y="288" width="86" height="26" rx="13" fill="#21262d" stroke="#30363d"/>
+    <text x="427" y="305" text-anchor="middle" font-family="ui-monospace, monospace" font-size="11" fill="#e6edf3">▲ 47 PR</text>
+    <rect x="480" y="288" width="102" height="26" rx="13" fill="#0f2f1a" stroke="#1c5c33"/>
+    <text x="531" y="305" text-anchor="middle" font-family="ui-monospace, monospace" font-size="11" fill="#3fb950">● live · 47d</text>
+  </g>
+
+  <!-- The seam itself, and the tag that does the work -->
+  <line x1="656" y1="0" x2="544" y2="420" stroke="url(#ld-seam)" stroke-width="2"/>
+  <g>
+    <rect x="472" y="352" width="256" height="34" rx="17" fill="#161b22" stroke="#f59e0b" stroke-width="1.2"/>
+    <text x="600" y="374" text-anchor="middle" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="13" fill="#f0b429">&lt;picture&gt; · one tag</text>
+  </g>
+  <text x="72" y="394" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10" fill="#8c959f" letter-spacing="3">LIGHT</text>
+  <text x="1128" y="394" text-anchor="end" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="10" fill="#6e7681" letter-spacing="3">DARK</text>
+</svg>

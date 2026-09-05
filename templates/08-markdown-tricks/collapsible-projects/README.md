@@ -1,12 +1,17 @@
 # Collapsible Projects
 
-![preview](../../../assets/previews/collapsible-projects.svg)
+<!-- BEGIN:preview -->
+![Collapsible Projects](../../../assets/markdown-tricks/collapsible-projects.svg)
+<!-- END:preview -->
 
 > Pack ten projects into the space of three with `<details>`. The visitor opens what they care about.
 
-**Difficulty:** Basic
-**External services:** none
-**Tags:** `tricks` `details-tag` `accordion` `space-saving` `interactive`
+<!-- BEGIN:meta -->
+**Kind:** `markdown` — pure markdown — no images at all  
+**Difficulty:** Basic  
+**External services:** none  
+**Tags:** `trick` `details` `projects` `no-deps`
+<!-- END:meta -->
 
 ## Preview
 
@@ -77,18 +82,19 @@ Two rules:
 
 ## Placeholders
 
-| Token                            | Description                                | Example                                       |
-|----------------------------------|--------------------------------------------|-----------------------------------------------|
-| `{{project_one_name}}`           | Project title                              | `acme design system`                          |
-| `{{project_one_tags}}`           | Short tag string                           | `typescript · react`                          |
-| `{{project_one_description}}`    | 1–2 sentences                              | `A token-driven UI kit shipped to 14 teams.`  |
-| `{{project_one_stack}}`          | Detailed stack                             | `TypeScript, React, Vanilla Extract, Storybook` |
-| `{{project_one_repo_short}}`     | Repo display label                         | `jane/acme-ds`                                |
-| `{{project_one_repo_url}}`       | Repo URL                                   | `https://github.com/jane/acme-ds`             |
-| (repeat for projects two, three) |                                            |                                               |
-| `{{archive_one_name}}`           | Archive entry title                        | `the type observatory`                        |
-| `{{archive_one_url}}`            | URL                                        | `https://typeobservatory.dev`                 |
-| `{{archive_one_desc}}`           | Description                                | `webgl variable-font experiments, 2023`       |
+<!-- BEGIN:placeholders -->
+| Token | Replace it | Description | Example |
+|-------|------------|-------------|---------|
+| `{{project_*_name}}` | in the block below | Project title | `acme design system` |
+| `{{project_*_tags}}` | in the block below | Short tag string | `typescript · react` |
+| `{{project_*_description}}` | in the block below | 1–2 sentences | `A token-driven UI kit shipped to 14 teams.` |
+| `{{project_*_stack}}` | in the block below | Detailed stack | `TypeScript, React, Vanilla Extract, Storybook` |
+| `{{project_*_repo_short}}` | in the block below | Repo display label | `jane/acme-ds` |
+| `{{project_*_repo_url}}` | in the block below | Repo URL | `https://github.com/jane/acme-ds` |
+| `{{archive_*_name}}` | in the block below | Archive entry title | `the type observatory` |
+| `{{archive_*_url}}` | in the block below | URL | `https://typeobservatory.dev` |
+| `{{archive_*_desc}}` | in the block below | Description | `webgl variable-font experiments, 2023` |
+<!-- END:placeholders -->
 
 ## Customization Tips
 

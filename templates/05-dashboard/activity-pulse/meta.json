@@ -1,0 +1,74 @@
+{
+  "slug": "activity-pulse",
+  "name": "Activity Pulse",
+  "kind": "action",
+  "difficulty": "Advanced",
+  "blurb": "One card. Lots of signal. metrics-engine.",
+  "asset": "assets/dashboard/activity-pulse.svg",
+  "picture": false,
+  "tags": [
+    "dashboard",
+    "metrics",
+    "activity",
+    "action"
+  ],
+  "services": [],
+  "placeholders": [
+    {
+      "token": "username",
+      "where": "setup",
+      "description": "GitHub username",
+      "example": "janedoe"
+    },
+    {
+      "token": "name",
+      "where": "markdown",
+      "description": "Display name",
+      "example": "Jane Doe"
+    },
+    {
+      "token": "tagline",
+      "where": "markdown",
+      "description": "One-liner",
+      "example": "frontend with a metrics habit"
+    },
+    {
+      "token": "side_project_name",
+      "where": "markdown",
+      "description": "Current side project",
+      "example": "the type observatory"
+    },
+    {
+      "token": "side_project_url",
+      "where": "markdown",
+      "description": "Side project URL",
+      "example": "https://github.com/jane/tto"
+    },
+    {
+      "token": "website",
+      "where": "markdown",
+      "description": "Domain only",
+      "example": "jane.dev"
+    },
+    {
+      "token": "website_url",
+      "where": "markdown",
+      "description": "Full URL",
+      "example": "https://jane.dev"
+    },
+    {
+      "token": "twitter",
+      "where": "markdown",
+      "description": "Twitter handle without @",
+      "example": "janedoe"
+    }
+  ],
+  "credits": [
+    {
+      "name": "metrics",
+      "author": "lowlighter",
+      "url": "https://github.com/lowlighter/metrics",
+      "license": "MIT"
+    }
+  ]
+}

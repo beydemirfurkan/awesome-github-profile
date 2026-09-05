@@ -1,0 +1,66 @@
+[
+  {
+    "id": "01-minimal",
+    "dir": "minimal",
+    "title": "Minimal",
+    "tagline": "Less is more. Templates that earn attention through restraint.",
+    "templates": ["editorial-card", "monospace-cv"]
+  },
+  {
+    "id": "02-animated",
+    "dir": "animated",
+    "title": "Animated",
+    "tagline": "One focal motion done well — never a carnival.",
+    "templates": ["neon-pulse-banner", "typewriter-intro"]
+  },
+  {
+    "id": "03-3d-immersive",
+    "dir": "3d-immersive",
+    "title": "3D & Immersive",
+    "tagline": "Depth, perspective, motion that hints at WebGL — running entirely on `<svg>`.",
+    "templates": ["3d-contribution-tower", "tech-sphere"]
+  },
+  {
+    "id": "04-gamified",
+    "dir": "gamified",
+    "title": "Gamified",
+    "tagline": "Arcade-grade. Auto-updated by GitHub Actions.",
+    "templates": ["snake-eat-graph", "pacman-graph"]
+  },
+  {
+    "id": "05-dashboard",
+    "dir": "dashboard",
+    "title": "Dashboard",
+    "tagline": "Stats-heavy templates that read like product analytics pages.",
+    "templates": ["analytics-grid", "activity-pulse"]
+  },
+  {
+    "id": "06-designer-portfolio",
+    "dir": "designer-portfolio",
+    "title": "Designer Portfolio",
+    "tagline": "Visual, brand-driven, opinionated. For people whose work is the way it looks.",
+    "templates": ["glassmorphism-hero", "editorial-magazine"]
+  },
+  {
+    "id": "07-themed",
+    "dir": "themed",
+    "title": "Themed",
+    "tagline": "Strong aesthetic identity. Pick one and commit.",
+    "templates": ["cyberpunk-neon", "dark-elegant"]
+  },
+  {
+    "id": "08-markdown-tricks",
+    "dir": "markdown-tricks",
+    "title": "Markdown Tricks",
+    "tagline": "Techniques that make every other template better. Use them inside whichever you pick.",
+    "templates": ["light-dark-switcher", "collapsible-projects"]
+  },
+  {
+    "id": "09-avant-garde",
+    "dir": "avant-garde",
+    "title": "Avant-Garde",
+    "showcase": true,
+    "tagline": "What the GitHub README format is *actually* capable of when you push every SVG primitive at once. No scripts, no GIFs, no external services — just SMIL animation, filter primitives, path morphing, and motion paths, composed with intent.",
+    "templates": ["aurora-veil", "holographic-foil", "liquid-morph-wordmark", "neural-pulse-lattice"]
+  }
+]

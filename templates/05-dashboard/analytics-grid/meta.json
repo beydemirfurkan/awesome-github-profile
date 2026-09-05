@@ -1,0 +1,85 @@
+{
+  "slug": "analytics-grid",
+  "name": "Analytics Grid",
+  "kind": "svg",
+  "difficulty": "Intermediate",
+  "blurb": "Metric cards with sparklines. Dashboard energy.",
+  "asset": "assets/dashboard/analytics-grid.svg",
+  "picture": false,
+  "tags": [
+    "dashboard",
+    "metrics",
+    "cards",
+    "self-hosted"
+  ],
+  "services": [
+    {
+      "host": "github-readme-stats.vercel.app",
+      "optional": true
+    }
+  ],
+  "placeholders": [
+    {
+      "token": "name",
+      "where": "markdown",
+      "description": "Display name (edited inside SVG header)",
+      "example": "JANE DOE"
+    },
+    {
+      "token": "kpi_*",
+      "where": "asset",
+      "description": "Four KPI numbers",
+      "example": "1,842 / 47d / 86 / tue→thu"
+    },
+    {
+      "token": "commit_reason",
+      "where": "markdown",
+      "description": "One sentence narrative",
+      "example": "the design system shipped milestone 3"
+    },
+    {
+      "token": "streak_reason",
+      "where": "markdown",
+      "description": "One sentence narrative",
+      "example": "i blocked 30 minutes every morning"
+    },
+    {
+      "token": "cadence_reason",
+      "where": "markdown",
+      "description": "One sentence narrative",
+      "example": "i protect mondays and fridays for deep work"
+    },
+    {
+      "token": "username",
+      "where": "markdown",
+      "description": "GitHub username (for optional live card)",
+      "example": "janedoe"
+    },
+    {
+      "token": "website",
+      "where": "markdown",
+      "description": "Domain",
+      "example": "jane.dev"
+    },
+    {
+      "token": "website_url",
+      "where": "markdown",
+      "description": "URL",
+      "example": "https://jane.dev"
+    },
+    {
+      "token": "twitter",
+      "where": "markdown",
+      "description": "Twitter without @",
+      "example": "janedoe"
+    }
+  ],
+  "credits": [
+    {
+      "name": "github-readme-stats",
+      "author": "anuraghazra",
+      "url": "https://github.com/anuraghazra/github-readme-stats",
+      "license": "MIT"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "slug": "aurora-veil",
+  "name": "Aurora Veil",
+  "kind": "svg",
+  "difficulty": "Advanced",
+  "blurb": "Multi-layer turbulence + displacement, never repeats.",
+  "asset": "assets/avant-garde/aurora-veil.svg",
+  "picture": false,
+  "tags": [
+    "avant-garde",
+    "turbulence",
+    "displacement",
+    "self-hosted"
+  ],
+  "services": [],
+  "placeholders": [
+    {
+      "token": "name",
+      "where": "markdown",
+      "description": "Name (edited inside the SVG <text>)",
+      "example": "Jane Doe"
+    },
+    {
+      "token": "tagline",
+      "where": "markdown",
+      "description": "Role line",
+      "example": "DESIGNER · ENGINEER · OBSERVER"
+    },
+    {
+      "token": "currently_paragraph",
+      "where": "markdown",
+      "description": "1–2 sentences",
+      "example": "Building a quiet design system at Acme..."
+    },
+    {
+      "token": "writing_paragraph",
+      "where": "markdown",
+      "description": "1–2 sentences",
+      "example": "Notes on motion and color at jane.dev/log."
+    },
+    {
+      "token": "epigraph",
+      "where": "markdown",
+      "description": "Short literary line",
+      "example": "we are made of light, deadlines, and Pacific time"
+    },
+    {
+      "token": "epigraph_attribution",
+      "where": "markdown",
+      "description": "Source",
+      "example": "the journal, vol. iii"
+    },
+    {
+      "token": "website",
+      "where": "markdown",
+      "description": "Domain",
+      "example": "jane.dev"
+    },
+    {
+      "token": "website_url",
+      "where": "markdown",
+      "description": "URL",
+      "example": "https://jane.dev"
+    },
+    {
+      "token": "twitter",
+      "where": "markdown",
+      "description": "Twitter handle without @",
+      "example": "janedoe"
+    }
+  ],
+  "credits": []
+}

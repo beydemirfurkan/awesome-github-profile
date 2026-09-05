@@ -1,0 +1,109 @@
+{
+  "slug": "dark-elegant",
+  "name": "Dark Elegant",
+  "kind": "svg",
+  "difficulty": "Intermediate",
+  "blurb": "Monogram, gold hairline, restraint.",
+  "asset": "assets/themed/dark-elegant.svg",
+  "picture": false,
+  "tags": [
+    "themed",
+    "elegant",
+    "monogram",
+    "self-hosted"
+  ],
+  "services": [
+    {
+      "host": "github-readme-stats.vercel.app",
+      "optional": true
+    }
+  ],
+  "placeholders": [
+    {
+      "token": "monogram",
+      "where": "asset",
+      "description": "Two-letter italic mark",
+      "example": "JD"
+    },
+    {
+      "token": "name",
+      "where": "markdown",
+      "description": "Full name in serif caps",
+      "example": "Jane Doe"
+    },
+    {
+      "token": "tagline",
+      "where": "asset",
+      "description": "Tagline between em-dashes",
+      "example": "— DEVELOPER · DESIGNER —"
+    },
+    {
+      "token": "epigraph",
+      "where": "asset",
+      "description": "Italic quote",
+      "example": "\"the slowest type of software...\""
+    },
+    {
+      "token": "location_stamps",
+      "where": "asset",
+      "description": "Top register marks",
+      "example": "EST. MMXVII / ATELIER · ISTANBUL · OSLO"
+    },
+    {
+      "token": "approach_paragraph",
+      "where": "markdown",
+      "description": "2 sentences",
+      "example": "Quiet practice. Long timelines."
+    },
+    {
+      "token": "currently_paragraph",
+      "where": "markdown",
+      "description": "2 sentences",
+      "example": "Shaping the design system at Acme..."
+    },
+    {
+      "token": "project_*_name",
+      "where": "markdown",
+      "description": "Project name",
+      "example": "acme design system"
+    },
+    {
+      "token": "project_*_desc",
+      "where": "markdown",
+      "description": "One-liner",
+      "example": "tokens shipped to 14 teams"
+    },
+    {
+      "token": "username",
+      "where": "markdown",
+      "description": "GitHub username",
+      "example": "janedoe"
+    },
+    {
+      "token": "website",
+      "where": "markdown",
+      "description": "Domain",
+      "example": "jane.dev"
+    },
+    {
+      "token": "twitter",
+      "where": "markdown",
+      "description": "Twitter without @",
+      "example": "janedoe"
+    },
+    {
+      "token": "email",
+      "where": "markdown",
+      "description": "Email",
+      "example": "hello@jane.dev"
+    }
+  ],
+  "credits": [
+    {
+      "name": "github-readme-stats",
+      "author": "anuraghazra",
+      "url": "https://github.com/anuraghazra/github-readme-stats",
+      "license": "MIT"
+    }
+  ]
+}
