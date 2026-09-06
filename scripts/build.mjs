@@ -184,6 +184,20 @@ for (const t of templates) {
   emit(t.readmePath, md)
 }
 
+// ------------------------------------------------------------- workflow files
+
+// The four Action templates each carry their workflow as a fenced block in
+// their Setup section. Writing that block out as a real file means a reader
+// can link to it, fork it, or diff it — and because it is generated from the
+// prose rather than kept beside it, the two cannot disagree.
+mkdirSync(join(ROOT, 'workflows'), { recursive: true })
+for (const t of templates.filter((x) => x.kind === 'action')) {
+  const setup = section(read(t.readmePath), 'Setup')
+  const yaml = [...setup.matchAll(/```ya?ml\n([\s\S]*?)```/g)].map((m) => m[1])[0]
+  if (!yaml) throw new Error(`${t.slug}: kind "action" but no yaml block in ## Setup`)
+  emit(join(ROOT, 'workflows', `${t.slug}.yml`), yaml.trimEnd() + '\n')
+}
+
 // ---------------------------------------------------------------- docs data
 
 const site = {

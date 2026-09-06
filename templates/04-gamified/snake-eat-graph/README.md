@@ -56,6 +56,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
+*The same workflow is committed at [`workflows/snake-eat-graph.yml`](../../../workflows/snake-eat-graph.yml) — it is generated from the block above, so the two cannot drift.*
+
+
 The workflow commits the generated files to a separate `output` branch — they won't pollute your `main` history.
 
 ## Copy & Customize (paste into README.md)

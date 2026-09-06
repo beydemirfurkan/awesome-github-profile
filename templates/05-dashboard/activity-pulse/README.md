@@ -63,6 +63,9 @@ jobs:
           config_animations: yes
 ```
 
+*The same workflow is committed at [`workflows/activity-pulse.yml`](../../../workflows/activity-pulse.yml) — it is generated from the block above, so the two cannot drift.*
+
+
 You'll need a personal access token with `repo` and `read:user` scopes, saved as `METRICS_TOKEN` in your repo's secrets. The default `GITHUB_TOKEN` doesn't have enough scope for some plugins.
 
 ## Copy & Customize (paste into README.md)

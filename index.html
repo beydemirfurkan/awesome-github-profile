@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Awesome GitHub Profile — design-led README templates</title>
+<meta name="description" content="Thirty-two design-led GitHub profile README templates across thirteen categories. Copy, paste, ship.">
+<meta property="og:title" content="Awesome GitHub Profile">
+<meta property="og:description" content="Design-led GitHub profile README templates. Copy, paste, ship.">
+<meta property="og:image" content="assets/shared/hero.svg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23111'/><circle cx='16' cy='16' r='6' fill='%23d4321e'/></svg>">
+<style>
+  /* Tokens. Light is the default because the shell is a gallery wall; the
+     work hanging on it supplies the colour. */
+  :root {
+    color-scheme: light dark;
+    --paper: #f3f0e9;
+    --paper-2: #eae6dd;
+    --ink: #111111;
+    --ink-2: #5c5851;
+    --ink-3: #8c8578;
+    --rule: #d8d2c6;
+    --accent: #d4321e;
+    --card: #ffffff;
+    --shadow: 0 1px 2px rgba(17,17,17,.06), 0 8px 24px rgba(17,17,17,.06);
+    --mono: ui-monospace, Menlo, Consolas, "SF Mono", monospace;
+    --sans: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    --serif: Georgia, "Times New Roman", serif;
+  }
+  :root:not([data-theme="light"]) { }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #0e0e0d; --paper-2: #151513; --ink: #f2efe8; --ink-2: #a8a29a;
+      --ink-3: #78736b; --rule: #2a2925; --card: #171715;
+      --shadow: 0 1px 2px rgba(0,0,0,.5), 0 8px 24px rgba(0,0,0,.4);
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #0e0e0d; --paper-2: #151513; --ink: #f2efe8; --ink-2: #a8a29a;
+    --ink-3: #78736b; --rule: #2a2925; --card: #171715;
+    --shadow: 0 1px 2px rgba(0,0,0,.5), 0 8px 24px rgba(0,0,0,.4);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--paper); color: var(--ink);
+    font: 15px/1.55 var(--sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  img { max-width: 100%; display: block; }
+  button { font: inherit; color: inherit; }
+
+  .wrap { max-width: 1240px; margin: 0 auto; padding: 0 24px; }
+
+  /* ---------------------------------------------------------------- header */
+  header {
+    position: sticky; top: 0; z-index: 20;
+    background: color-mix(in srgb, var(--paper) 88%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid var(--ink);
+  }
+  .bar { display: flex; align-items: center; gap: 16px; padding: 14px 0; }
+  .mark { font: italic 700 24px/1 var(--serif); letter-spacing: -.5px; white-space: nowrap; }
+  .mark b { font: 800 24px/1 var(--sans); letter-spacing: -1px; font-style: normal; }
+  .grow { flex: 1; }
+  .search {
+    flex: 1 1 260px; max-width: 380px; min-width: 0;
+    display: flex; align-items: center; gap: 8px;
+    border: 1px solid var(--rule); background: var(--card);
+    border-radius: 8px; padding: 7px 11px;
+  }
+  .search input {
+    border: 0; background: transparent; color: inherit; outline: none;
+    font: 14px var(--mono); width: 100%; min-width: 0;
+  }
+  .search kbd {
+    font: 11px var(--mono); color: var(--ink-3); border: 1px solid var(--rule);
+    border-radius: 4px; padding: 1px 5px;
+  }
+  .ghost {
+    border: 1px solid var(--rule); background: var(--card); border-radius: 8px;
+    padding: 7px 12px; cursor: pointer; font: 12px var(--mono); white-space: nowrap;
+  }
+  .ghost:hover { border-color: var(--ink); }
+
+  /* --------------------------------------------------------------- filters */
+  .filters { padding: 18px 0 6px; display: grid; gap: 10px; }
+  .row { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .row > .lbl {
+    font: 10px var(--mono); letter-spacing: 2.5px; color: var(--ink-3);
+    width: 78px; flex: none; text-transform: uppercase;
+  }
+  .chip {
+    border: 1px solid var(--rule); background: transparent; color: var(--ink-2);
+    border-radius: 999px; padding: 4px 11px; cursor: pointer;
+    font: 12px var(--mono); transition: .12s;
+  }
+  .chip:hover { border-color: var(--ink-2); color: var(--ink); }
+  .chip[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  .chip.k[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+  .count { font: 11px var(--mono); color: var(--ink-3); letter-spacing: 2px; padding: 10px 0 0; }
+
+  /* ------------------------------------------------------------------ grid */
+  .grid {
+    display: grid; gap: 22px; padding: 16px 0 64px;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  }
+  .card {
+    border: 1px solid var(--rule); background: var(--card); border-radius: 10px;
+    overflow: hidden; cursor: pointer; text-align: left; padding: 0;
+    display: flex; flex-direction: column; transition: .15s;
+    /* Thirty-two animated SVGs on one page is a lot of compositing, and
+       `loading="lazy"` only defers the fetch — once decoded, an offscreen
+       SMIL animation keeps running. This skips rendering entirely for cards
+       outside the viewport; the intrinsic size keeps the scrollbar honest. */
+    content-visibility: auto;
+    contain-intrinsic-size: auto 320px;
+  }
+  .card:hover { border-color: var(--ink); box-shadow: var(--shadow); transform: translateY(-2px); }
+  .card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .card .shot { aspect-ratio: 1200 / 420; background: var(--paper-2); }
+  .card .shot img { width: 100%; height: 100%; object-fit: cover; }
+  .card .meta { padding: 13px 15px 15px; border-top: 1px solid var(--rule); }
+  .card h3 { margin: 0 0 3px; font-size: 16px; font-weight: 700; letter-spacing: -.2px; }
+  .card p { margin: 0; color: var(--ink-2); font-size: 13.5px; }
+  .tagline { display: flex; align-items: center; gap: 7px; margin-bottom: 7px; }
+  .kind {
+    font: 10px var(--mono); letter-spacing: 1px; padding: 2px 7px; border-radius: 4px;
+    border: 1px solid var(--rule); color: var(--ink-2);
+  }
+  .kind[data-k="svg"] { border-color: var(--accent); color: var(--accent); }
+  .dot { color: var(--ink-3); font-size: 11px; font-family: var(--mono); }
+
+  .empty { padding: 60px 0; text-align: center; color: var(--ink-3); font-family: var(--mono); }
+
+  /* ----------------------------------------------------------------- panel */
+  .scrim {
+    position: fixed; inset: 0; background: rgba(10,10,10,.5); z-index: 30;
+    opacity: 0; pointer-events: none; transition: opacity .18s;
+  }
+  .scrim[data-open] { opacity: 1; pointer-events: auto; }
+  aside {
+    position: fixed; top: 0; right: 0; bottom: 0; width: min(720px, 100%);
+    background: var(--paper); border-left: 2px solid var(--ink); z-index: 31;
+    transform: translateX(100%); transition: transform .22s cubic-bezier(.4,0,.2,1);
+    overflow-y: auto; overscroll-behavior: contain;
+  }
+  aside[data-open] { transform: none; }
+  .panel-head {
+    position: sticky; top: 0; background: var(--paper); z-index: 2;
+    border-bottom: 1px solid var(--rule); padding: 16px 24px;
+    display: flex; align-items: flex-start; gap: 14px;
+  }
+  .panel-head h2 { margin: 0; font-size: 21px; letter-spacing: -.3px; }
+  .panel-body { padding: 0 24px 48px; }
+  .panel-body h4 {
+    font: 10px var(--mono); letter-spacing: 3px; color: var(--ink-3);
+    margin: 28px 0 10px; text-transform: uppercase;
+  }
+  .panel-body p { margin: 0 0 12px; color: var(--ink-2); }
+  pre {
+    margin: 0; background: var(--paper-2); border: 1px solid var(--rule);
+    border-radius: 8px; padding: 14px; overflow-x: auto;
+    font: 12.5px/1.6 var(--mono); color: var(--ink);
+  }
+  .copywrap { position: relative; }
+  .copy {
+    position: absolute; top: 9px; right: 9px;
+    border: 1px solid var(--rule); background: var(--card); border-radius: 6px;
+    padding: 5px 10px; cursor: pointer; font: 11px var(--mono);
+  }
+  .copy:hover { border-color: var(--ink); }
+  .copy[data-done] { background: var(--accent); border-color: var(--accent); color: #fff; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { text-align: left; font: 10px var(--mono); letter-spacing: 2px; color: var(--ink-3); padding: 0 10px 7px 0; text-transform: uppercase; }
+  td { padding: 7px 10px 7px 0; border-top: 1px solid var(--rule); vertical-align: top; color: var(--ink-2); }
+  td code, .panel-body p code { font: 12px var(--mono); color: var(--ink); background: var(--paper-2); padding: 1px 5px; border-radius: 4px; }
+  .facts { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 4px; }
+  .fact { font: 11px var(--mono); border: 1px solid var(--rule); border-radius: 999px; padding: 4px 10px; color: var(--ink-2); }
+  .cta {
+    display: inline-block; margin-top: 8px; background: var(--ink); color: var(--paper);
+    text-decoration: none; border-radius: 8px; padding: 10px 16px; font: 13px var(--mono);
+  }
+
+  footer { border-top: 2px solid var(--ink); padding: 24px 0 48px; font: 12px var(--mono); color: var(--ink-3); }
+  footer a { color: var(--ink-2); }
+
+  @media (max-width: 620px) {
+    .bar { flex-wrap: wrap; }
+    .row > .lbl { width: 100%; }
+    .panel-head, .panel-body { padding-left: 16px; padding-right: 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <div class="mark">Awesome <b>GitHub Profile.</b></div>
+    <div class="grow"></div>
+    <label class="search">
+      <span aria-hidden="true" style="color:var(--ink-3)">⌕</span>
+      <input id="q" type="search" placeholder="search templates, tags, techniques" aria-label="Search templates">
+      <kbd>/</kbd>
+    </label>
+    <button class="ghost" id="theme" title="Toggle theme">◐ theme</button>
+    <a class="ghost" id="repo" href="https://github.com/beydemirfurkan/awesome-github-profile" style="text-decoration:none">★ repo</a>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="filters">
+    <div class="row" id="f-cat"><span class="lbl">Category</span></div>
+    <div class="row" id="f-kind"><span class="lbl">Kind</span></div>
+    <div class="row" id="f-diff"><span class="lbl">Level</span></div>
+  </div>
+  <div class="count" id="count"></div>
+  <div class="grid" id="grid"></div>
+</div>
+
+<footer>
+  <div class="wrap">
+    Every template ships a 1200×420 SVG and declares what it costs you.
+    <a href="https://github.com/beydemirfurkan/awesome-github-profile">Source</a> ·
+    <a href="https://github.com/beydemirfurkan/awesome-github-profile/blob/main/CONTRIBUTING.md">Contribute</a> ·
+    MIT
+  </div>
+</footer>
+
+<div class="scrim" id="scrim"></div>
+<aside id="panel" aria-hidden="true" tabindex="-1"></aside>
+
+<script>
+const $ = (s, r = document) => r.querySelector(s)
+const el = (t, a = {}, ...kids) => {
+  const n = Object.assign(document.createElement(t), a)
+  for (const k of kids) n.append(k)
+  return n
+}
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]))
+
+let DATA = null
+const state = { q: '', cat: null, kind: null, diff: null }
+
+// ------------------------------------------------------------------- theme
+const theme = $('#theme')
+const stored = (() => { try { return localStorage.getItem('agp-theme') } catch { return null } })()
+if (stored) document.documentElement.dataset.theme = stored
+theme.onclick = () => {
+  const now = document.documentElement.dataset.theme
+  const next = now === 'dark' ? 'light' : now === 'light' ? 'dark'
+    : (matchMedia('(prefers-color-scheme: dark)').matches ? 'light' : 'dark')
+  document.documentElement.dataset.theme = next
+  try { localStorage.setItem('agp-theme', next) } catch {}
+}
+
+// ----------------------------------------------------------------- filters
+function chips(host, items, key) {
+  host.append(...items.map(([value, label]) => {
+    const b = el('button', { className: 'chip' + (key === 'kind' ? ' k' : ''), type: 'button', textContent: label })
+    b.setAttribute('aria-pressed', 'false')
+    b.onclick = () => { state[key] = state[key] === value ? null : value; render() }
+    b.dataset.value = value
+    return b
+  }))
+}
+
+function syncChips() {
+  for (const b of document.querySelectorAll('.chip')) {
+    const key = b.parentElement.id.slice(2)
+    const k = key === 'cat' ? 'cat' : key === 'kind' ? 'kind' : 'diff'
+    b.setAttribute('aria-pressed', String(state[k] === b.dataset.value))
+  }
+}
+
+// -------------------------------------------------------------------- grid
+function matches(t) {
+  if (state.cat && t.category !== state.cat) return false
+  if (state.kind && t.kind !== state.kind) return false
+  if (state.diff && t.difficulty !== state.diff) return false
+  if (!state.q) return true
+  const hay = [t.name, t.blurb, t.pitch, t.categoryTitle, t.kind, t.difficulty, ...(t.tags || [])].join(' ').toLowerCase()
+  return state.q.toLowerCase().split(/\s+/).every((w) => hay.includes(w))
+}
+
+function card(t) {
+  const c = el('button', { className: 'card', type: 'button' })
+  c.innerHTML = `
+    <div class="shot"><img src="${esc(t.asset)}" alt="${esc(t.name)}" loading="lazy" decoding="async"></div>
+    <div class="meta">
+      <div class="tagline">
+        <span class="kind" data-k="${esc(t.kind)}">${esc(t.kind)}</span>
+        <span class="dot">${esc(t.categoryTitle)} · ${esc(t.difficulty)}</span>
+      </div>
+      <h3>${esc(t.name)}</h3>
+      <p>${esc(t.blurb)}</p>
+    </div>`
+  c.onclick = () => open(t.slug)
+  return c
+}
+
+function render() {
+  syncChips()
+  const list = DATA.templates.filter(matches)
+  const grid = $('#grid')
+  grid.replaceChildren(...list.map(card))
+  if (!list.length) grid.append(el('div', { className: 'empty', textContent: 'nothing matches that' }))
+  $('#count').textContent =
+    `${list.length} of ${DATA.templates.length} templates` +
+    (state.cat || state.kind || state.diff || state.q ? ' · filtered' : ` · ${DATA.categories.length} categories`)
+}
+
+// ------------------------------------------------------------------- panel
+const panel = $('#panel'), scrim = $('#scrim')
+let lastFocus = null
+
+function close() {
+  panel.removeAttribute('data-open')
+  scrim.removeAttribute('data-open')
+  panel.setAttribute('aria-hidden', 'true')
+  if (location.hash) history.replaceState(null, '', location.pathname + location.search)
+  lastFocus?.focus()
+}
+
+function open(slug) {
+  const t = DATA.templates.find((x) => x.slug === slug)
+  if (!t) return
+  lastFocus = document.activeElement
+  const services = t.services.length
+    ? t.services.map((s) => `<code>${esc(s.host)}</code>${s.optional ? ' <span class="dot">optional</span>' : ''}`).join(', ')
+    : 'none'
+  const rows = t.placeholders.map((p) => `
+    <tr><td><code>{{${esc(p.token)}}}</code></td>
+    <td>${esc({ markdown: 'in the block', setup: 'in the workflow', asset: 'inside the SVG' }[p.where] || p.where)}</td>
+    <td>${esc(p.description)}</td></tr>`).join('')
+  const credits = t.credits.length
+    ? t.credits.map((c) => `<a href="${esc(c.url)}">${esc(c.name)}</a> — ${esc(c.author)}, ${esc(c.license)}`).join('<br>')
+    : 'Self-hosted. No third-party services.'
+  const repo = 'https://github.com/beydemirfurkan/awesome-github-profile/tree/main/' + t.href
+
+  panel.innerHTML = `
+    <div class="panel-head">
+      <div style="flex:1">
+        <div class="tagline">
+          <span class="kind" data-k="${esc(t.kind)}">${esc(t.kind)}</span>
+          <span class="dot">${esc(t.categoryTitle)} · ${esc(t.difficulty)}</span>
+        </div>
+        <h2>${esc(t.name)}</h2>
+      </div>
+      <button class="ghost" id="x" type="button">esc ✕</button>
+    </div>
+    <div class="panel-body">
+      <img src="${esc(t.asset)}" alt="${esc(t.name)}" style="border:1px solid var(--rule);border-radius:8px;margin:18px 0 0">
+      <p style="margin-top:16px">${esc(t.pitch)}</p>
+      <div class="facts">
+        <span class="fact">${esc(DATA.kinds[t.kind] || t.kind)}</span>
+        ${t.picture ? '<span class="fact">light/dark via &lt;picture&gt;</span>' : ''}
+        ${(t.tags || []).map((x) => `<span class="fact">${esc(x)}</span>`).join('')}
+      </div>
+
+      <h4>Paste this</h4>
+      <div class="copywrap">
+        <button class="copy" id="cp" type="button">copy</button>
+        <pre id="sample">${esc(t.sample)}</pre>
+      </div>
+
+      <h4>Placeholders</h4>
+      <table><thead><tr><th>Token</th><th>Replace it</th><th>Description</th></tr></thead><tbody>${rows}</tbody></table>
+
+      <h4>External services</h4>
+      <p>${services}</p>
+
+      <h4>Credits</h4>
+      <p>${credits}</p>
+
+      <a class="cta" href="${esc(repo)}">Full instructions on GitHub →</a>
+    </div>`
+
+  $('#x').onclick = close
+  const cp = $('#cp')
+  cp.onclick = async () => {
+    try {
+      await navigator.clipboard.writeText(t.sample)
+    } catch {
+      // Clipboard API needs a secure context; select the block so ctrl+C works.
+      const r = document.createRange()
+      r.selectNodeContents($('#sample'))
+      getSelection().removeAllRanges()
+      getSelection().addRange(r)
+    }
+    cp.textContent = 'copied'
+    cp.dataset.done = '1'
+    setTimeout(() => { cp.textContent = 'copy'; delete cp.dataset.done }, 1400)
+  }
+
+  panel.dataset.open = '1'
+  scrim.dataset.open = '1'
+  panel.setAttribute('aria-hidden', 'false')
+  panel.scrollTop = 0
+  panel.focus()
+  history.replaceState(null, '', '#' + t.slug)
+}
+
+scrim.onclick = close
+addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && panel.dataset.open) close()
+  if (e.key === '/' && document.activeElement !== $('#q')) { e.preventDefault(); $('#q').focus() }
+})
+$('#q').oninput = (e) => { state.q = e.target.value.trim(); render() }
+
+// -------------------------------------------------------------------- boot
+fetch('docs/templates.json')
+  .then((r) => r.json())
+  .then((d) => {
+    DATA = d
+    chips($('#f-cat'), d.categories.map((c) => [c.id, c.title]), 'cat')
+    chips($('#f-kind'), Object.keys(d.kinds).map((k) => [k, k]), 'kind')
+    chips($('#f-diff'), ['Basic', 'Intermediate', 'Advanced'].map((x) => [x, x]), 'diff')
+    render()
+    if (location.hash) open(location.hash.slice(1))
+  })
+  .catch(() => {
+    $('#grid').append(el('div', { className: 'empty', textContent: 'could not load docs/templates.json — run npm run build' }))
+  })
+</script>
+</body>
+</html>

@@ -56,6 +56,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
+*The same workflow is committed at [`workflows/pacman-graph.yml`](../../../workflows/pacman-graph.yml) — it is generated from the block above, so the two cannot drift.*
+
+
 Trigger once manually from the **Actions** tab to seed the `output` branch.
 
 ## Copy & Customize (paste into README.md)

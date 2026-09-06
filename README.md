@@ -9,6 +9,11 @@
   From minimal type studies to 3D contribution skylines — copy, paste, ship.
 </p>
 
+<p align="center">
+  <a href="https://beydemirfurkan.github.io/awesome-github-profile/"><strong>Browse the gallery →</strong></a><br>
+  <sub>filter by category, kind and level · live previews · copy the block in one click</sub>
+</p>
+
 <!-- BEGIN:badges -->
 <p align="center">
   <a href="#categories"><img src="https://img.shields.io/badge/templates-32-111111?style=for-the-badge&labelColor=f5f3ee" alt="32 templates" /></a>
@@ -49,7 +54,7 @@ Templates are not all the same shape, and the gallery says which is which on eve
 | `technique` | a pattern you apply inside another template |
 <!-- END:kinds -->
 
-`svg` templates are the self-contained ones: you commit a single file to your own repo and nothing can rate-limit or 404 on you. `action` templates regenerate themselves on a schedule and need a one-time workflow — each template's README carries the exact YAML.
+`svg` templates are the self-contained ones: you commit a single file to your own repo and nothing can rate-limit or 404 on you. `action` templates regenerate themselves on a schedule and need a one-time workflow — each carries the exact YAML in its README, and the same file is committed under [`workflows/`](workflows/) so you can download it instead of copying.
 
 ---
 
@@ -494,6 +499,7 @@ Templates are not all the same shape, and the gallery says which is which on eve
 | GitHub Action setup walkthroughs      | ✅        | ❌         | ❌         | ❌         |
 | Dependency count stated per template  | ✅        | ❌         | ❌         | ❌         |
 | Quality bar enforced by CI, not honour system | ✅ | ❌     | ❌         | n/a       |
+| Browsable gallery with copy-to-clipboard | ✅ | ❌     | ❌         | ⚠️         |
 
 `✅ yes  · ⚠️ partial · ❌ no`
 

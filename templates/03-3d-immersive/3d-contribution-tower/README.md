@@ -45,6 +45,9 @@ jobs:
           settings-file-path: ".github/profile-3d-settings.json"
 ```
 
+*The same workflow is committed at [`workflows/3d-contribution-tower.yml`](../../../workflows/3d-contribution-tower.yml) — it is generated from the block above, so the two cannot drift.*
+
+
 Optional `profile-3d-settings.json` for color overrides (skip the file to use the default `profile-night-rainbow.svg` style):
 
 ```json
