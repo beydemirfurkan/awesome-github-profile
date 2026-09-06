@@ -11,6 +11,44 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23111'/><circle cx='16' cy='16' r='6' fill='%23d4321e'/></svg>">
 <style>
+  /* Self-hosted, so the page still makes no third-party request. Instrument
+     Serif and Instrument Sans, OFL 1.1 — see assets/fonts/. The templates
+     themselves cannot use these: GitHub proxies README images, so a webfont
+     never loads inside an SVG and every template stays on a system stack.
+     The gallery is a web page, not a template, so it gets a real face.
+     `swap` plus a genuine fallback on every rule means the page reads
+     correctly before, during and after the fonts arrive. */
+  @font-face {
+    font-family: 'Instrument Sans'; font-style: normal; font-weight: 400 700;
+    font-display: swap; src: url(assets/fonts/instrument-sans-latin.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  @font-face {
+    font-family: 'Instrument Sans'; font-style: normal; font-weight: 400 700;
+    font-display: swap; src: url(assets/fonts/instrument-sans-latin-ext.woff2) format('woff2');
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  @font-face {
+    font-family: 'Instrument Serif'; font-style: normal; font-weight: 400;
+    font-display: swap; src: url(assets/fonts/instrument-serif-latin.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  @font-face {
+    font-family: 'Instrument Serif'; font-style: normal; font-weight: 400;
+    font-display: swap; src: url(assets/fonts/instrument-serif-latin-ext.woff2) format('woff2');
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  @font-face {
+    font-family: 'Instrument Serif'; font-style: italic; font-weight: 400;
+    font-display: swap; src: url(assets/fonts/instrument-serif-italic-latin.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  @font-face {
+    font-family: 'Instrument Serif'; font-style: italic; font-weight: 400;
+    font-display: swap; src: url(assets/fonts/instrument-serif-italic-latin-ext.woff2) format('woff2');
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+
   /* Tokens. Light is the default because the shell is a gallery wall; the
      work hanging on it supplies the colour. */
   :root {
@@ -24,9 +62,11 @@
     --accent: #d4321e;
     --card: #ffffff;
     --shadow: 0 1px 2px rgba(17,17,17,.06), 0 8px 24px rgba(17,17,17,.06);
+    /* Mono stays on the system stack on purpose: system monos are
+       characterful rather than generic, and it saves two more files. */
     --mono: ui-monospace, Menlo, Consolas, "SF Mono", monospace;
-    --sans: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
-    --serif: Georgia, "Times New Roman", serif;
+    --sans: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --serif: "Instrument Serif", Georgia, "Times New Roman", serif;
   }
   :root:not([data-theme="light"]) { }
   @media (prefers-color-scheme: dark) {
@@ -62,8 +102,8 @@
     border-bottom: 2px solid var(--ink);
   }
   .bar { display: flex; align-items: center; gap: 16px; padding: 14px 0; }
-  .mark { font: italic 700 24px/1 var(--serif); letter-spacing: -.5px; white-space: nowrap; }
-  .mark b { font: 800 24px/1 var(--sans); letter-spacing: -1px; font-style: normal; }
+  .mark { font: italic 400 30px/1 var(--serif); letter-spacing: -.4px; white-space: nowrap; }
+  .mark b { font: 600 26px/1 var(--sans); letter-spacing: -.8px; font-style: normal; }
   .grow { flex: 1; }
   .search {
     flex: 1 1 260px; max-width: 380px; min-width: 0;
@@ -124,7 +164,7 @@
   .card .shot { aspect-ratio: 1200 / 420; background: var(--paper-2); }
   .card .shot img { width: 100%; height: 100%; object-fit: cover; }
   .card .meta { padding: 13px 15px 15px; border-top: 1px solid var(--rule); }
-  .card h3 { margin: 0 0 3px; font-size: 16px; font-weight: 700; letter-spacing: -.2px; }
+  .card h3 { margin: 0 0 3px; font-family: var(--serif); font-size: 21px; font-weight: 400; letter-spacing: -.2px; line-height: 1.15; }
   .card p { margin: 0; color: var(--ink-2); font-size: 13.5px; }
   .tagline { display: flex; align-items: center; gap: 7px; margin-bottom: 7px; }
   .kind {
@@ -154,7 +194,7 @@
     border-bottom: 1px solid var(--rule); padding: 16px 24px;
     display: flex; align-items: flex-start; gap: 14px;
   }
-  .panel-head h2 { margin: 0; font-size: 21px; letter-spacing: -.3px; }
+  .panel-head h2 { margin: 0; font-family: var(--serif); font-size: 28px; font-weight: 400; letter-spacing: -.3px; line-height: 1.1; }
   .panel-body { padding: 0 24px 48px; }
   .panel-body h4 {
     font: 10px var(--mono); letter-spacing: 3px; color: var(--ink-3);
@@ -322,6 +362,7 @@ let lastFocus = null
 
 function close() {
   panel.removeAttribute('data-open')
+  delete panel.dataset.slug
   scrim.removeAttribute('data-open')
   panel.setAttribute('aria-hidden', 'true')
   if (location.hash) history.replaceState(null, '', location.pathname + location.search)
@@ -400,14 +441,29 @@ function open(slug) {
   }
 
   panel.dataset.open = '1'
+  panel.dataset.slug = t.slug
   scrim.dataset.open = '1'
   panel.setAttribute('aria-hidden', 'false')
   panel.scrollTop = 0
   panel.focus()
-  history.replaceState(null, '', '#' + t.slug)
+  // pushState rather than replaceState, so Back steps out of the panel
+  // instead of leaving the gallery. Guarded because open() is also called
+  // *from* the hash listener, and that path must not push again.
+  if (location.hash !== '#' + t.slug) history.pushState(null, '', '#' + t.slug)
 }
 
 scrim.onclick = close
+
+// A hash link is shareable, which means it has to work in three cases, not
+// one: a cold load, a link followed while the page is already open (the
+// document never re-boots, only the hash changes), and Back/Forward between
+// templates. Reading the hash once at boot only covered the first.
+addEventListener('hashchange', () => {
+  const slug = location.hash.slice(1)
+  if (!slug) { if (panel.dataset.open) close(); return }
+  if (slug !== panel.dataset.slug) open(slug)
+})
+
 addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && panel.dataset.open) close()
   if (e.key === '/' && document.activeElement !== $('#q')) { e.preventDefault(); $('#q').focus() }
