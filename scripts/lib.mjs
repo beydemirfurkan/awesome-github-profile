@@ -46,7 +46,12 @@ export const DIFFICULTIES = ['Basic', 'Intermediate', 'Advanced']
 const posix = (p) => p.split(sep).join('/')
 
 export function read(path) {
-  return readFileSync(path, 'utf8')
+  // Normalise line endings before anything parses this. .gitattributes pins
+  // the working tree to LF, but a clone with a different git config would
+  // otherwise hand every fence and heading pattern a stray \r and they would
+  // quietly stop matching — which is exactly how `npm run build` first broke
+  // on a Windows checkout with core.autocrlf=true.
+  return readFileSync(path, 'utf8').replace(/\r\n/g, '\n')
 }
 
 /**

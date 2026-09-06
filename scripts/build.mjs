@@ -20,8 +20,11 @@ const written = []
 
 function emit(path, next) {
   const label = path.replace(ROOT, '').replace(/\\/g, '/').replace(/^\//, '')
+  // read() normalises line endings, so normalise `next` before comparing —
+  // otherwise --check would call every generated file stale on a CRLF
+  // checkout even when the content is byte-for-byte equivalent.
   const prev = existsSync(path) ? read(path) : null
-  if (prev === next) return
+  if (prev === next.replace(/\r\n/g, '\n')) return
   if (CHECK) { stale.push(label); return }
   writeFileSync(path, next)
   written.push(label)

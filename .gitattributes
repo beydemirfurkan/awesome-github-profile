@@ -1,0 +1,10 @@
+# Keep the working tree LF on every platform.
+#
+# The build and validate scripts parse fenced code blocks and section
+# headings out of markdown. With core.autocrlf=true a Windows checkout
+# rewrites every file to CRLF, the fence patterns stop matching, and
+# `npm run build` fails with a confusing "no yaml block in ## Setup".
+# Pinning eol here means a clone behaves the same everywhere.
+* text=auto eol=lf
+
+*.png binary
