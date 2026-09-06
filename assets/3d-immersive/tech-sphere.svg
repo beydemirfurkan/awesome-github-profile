@@ -48,17 +48,17 @@
 
     <line x1="0" y1="100" x2="380" y2="100" stroke="#1a2238" stroke-width="0.6"/>
 
-    <text y="128" font-family="'JetBrains Mono', monospace" font-size="11" fill="#cbd5e1">↳ Eight tools, one orbit. The bigger</text>
-    <text y="148" font-family="'JetBrains Mono', monospace" font-size="11" fill="#cbd5e1">  the radius, the longer I've shipped.</text>
-    <text y="168" font-family="'JetBrains Mono', monospace" font-size="11" fill="#cbd5e1">  The center is whatever I'm learning</text>
-    <text y="188" font-family="'JetBrains Mono', monospace" font-size="11" fill="#cbd5e1">  this week.</text>
+    <text y="128" font-family="'JetBrains Mono', monospace" font-size="11" fill="#cbd5e1">Seven tools in one orbit. The wider the</text>
+    <text y="148" font-family="'JetBrains Mono', monospace" font-size="11" fill="#cbd5e1">ring, the longer I have leaned on it:</text>
+    <text y="168" font-family="'JetBrains Mono', monospace" font-size="11" fill="#cbd5e1">outer is second nature, inner is still</text>
+    <text y="188" font-family="'JetBrains Mono', monospace" font-size="11" fill="#cbd5e1">new. The centre is whatever is this week.</text>
 
     <line x1="0" y1="220" x2="380" y2="220" stroke="#1a2238" stroke-width="0.6"/>
 
     <g transform="translate(0,250)" font-family="'JetBrains Mono', monospace" font-size="10" fill="#a5b4cf" letter-spacing="2">
-      <text>STABLE  </text>     <text x="80" fill="#5cffd9">react · ts · node</text>
-      <text y="20">TRUSTED </text>    <text x="80" y="20" fill="#5cffd9">go · postgres · k8s</text>
-      <text y="40">EXPLORING</text>   <text x="80" y="40" fill="#a78bfa">rust · webgl · shaders</text>
+      <text>OUTER RING</text>   <text x="96" fill="#5cffd9">react · ts · node</text>
+      <text y="20">MIDDLE</text>      <text x="96" y="20" fill="#5cffd9">go · css</text>
+      <text y="40">INNER</text>       <text x="96" y="40" fill="#a78bfa">rust · webgl</text>
     </g>
   </g>
 
@@ -91,35 +91,41 @@
     <!-- Tech tokens (counter-rotating to stay readable) -->
     <g font-family="'JetBrains Mono', monospace" font-size="13" font-weight="500">
       <animateTransform attributeName="transform" type="rotate" from="0" to="-360" dur="22s" repeatCount="indefinite"/>
-      <g transform="translate(-130,-30)">
+      <!-- Radius encodes tenure, and now actually does: 137 for the stable
+           ring, 113 for trusted, 92 for what is still new. The old positions
+           varied between 98 and 133 without meaning anything, which made the
+           caption beside the sphere a claim the picture did not support. -->
+      <g transform="translate(-135,-24)">
         <circle r="3" fill="#5cffd9"/>
         <text x="10" y="4" fill="#5cffd9">react</text>
       </g>
-      <g transform="translate(-110,40)">
+      <g transform="translate(-69,-119)">
         <circle r="3" fill="#5cffd9"/>
         <text x="10" y="4" fill="#5cffd9">ts</text>
       </g>
-      <g transform="translate(-50,-110)">
-        <circle r="3" fill="#a78bfa"/>
-        <text x="10" y="4" fill="#a78bfa">webgl</text>
-      </g>
-      <g transform="translate(40,-90)">
+      <g transform="translate(-105,88)">
         <circle r="3" fill="#5cffd9"/>
         <text x="10" y="4" fill="#5cffd9">node</text>
       </g>
-      <g transform="translate(120,-10)">
-        <circle r="3" fill="#a78bfa"/>
-        <text x="10" y="4" fill="#a78bfa">rust</text>
-      </g>
-      <g transform="translate(80,80)">
+      <g transform="translate(98,57)">
         <circle r="3" fill="#5cffd9"/>
         <text x="10" y="4" fill="#5cffd9">go</text>
       </g>
-      <g transform="translate(-30,120)">
+      <g transform="translate(10,113)">
         <circle r="3" fill="#5cffd9"/>
         <text x="10" y="4" fill="#5cffd9">css</text>
       </g>
-      <g transform="translate(30,-20)" opacity="0.7">
+      <!-- The two innermost sit on the right, where a right-hand label would
+           straddle the rim — so this one reads back toward its own dot. -->
+      <g transform="translate(86,-31)">
+        <circle r="3" fill="#a78bfa"/>
+        <text x="-10" y="4" text-anchor="end" fill="#a78bfa">rust</text>
+      </g>
+      <g transform="translate(39,-83)">
+        <circle r="3" fill="#a78bfa"/>
+        <text x="10" y="4" fill="#a78bfa">webgl</text>
+      </g>
+      <g transform="translate(18,26)" opacity="0.7">
         <text x="0" y="0" font-style="italic" fill="#fef3c7">// learning</text>
       </g>
     </g>

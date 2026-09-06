@@ -42,13 +42,19 @@
     <line x1="1000" y1="0" x2="1000" y2="420"/>
   </g>
 
+  <!-- The three waves rise left-to-right rather than running level. Level
+       waves sat in the bottom third and left the type stranded above them as
+       a separate band; rising, they sweep up through the empty right half and
+       the whole plate becomes one composition. They stay under the type on
+       the left, where the headline and chips are. -->
+
   <!-- Far wave (slow, dim) -->
   <path fill="none" stroke="url(#np-spectrum2)" stroke-width="2" opacity="0.45">
     <animate attributeName="d"
       values="
-        M -50 280 C 200 260 400 320 600 280 C 800 240 1000 320 1250 280;
-        M -50 280 C 200 320 400 240 600 280 C 800 320 1000 240 1250 280;
-        M -50 280 C 200 260 400 320 600 280 C 800 240 1000 320 1250 280"
+        M -50 355 C 300 345 550 320 750 265 C 950 210 1120 130 1250 85;
+        M -50 355 C 300 372 550 296 750 265 C 950 236 1120 106 1250 85;
+        M -50 355 C 300 345 550 320 750 265 C 950 210 1120 130 1250 85"
       dur="14s" repeatCount="indefinite"/>
   </path>
 
@@ -56,19 +62,20 @@
   <path fill="none" stroke="url(#np-spectrum)" stroke-width="2.5" opacity="0.7" filter="url(#np-soft)">
     <animate attributeName="d"
       values="
-        M -50 320 C 200 280 400 360 600 320 C 800 280 1000 360 1250 320;
-        M -50 320 C 200 360 400 280 600 320 C 800 360 1000 280 1250 320;
-        M -50 320 C 200 280 400 360 600 320 C 800 280 1000 360 1250 320"
+        M -50 400 C 300 392 550 370 750 315 C 950 260 1120 180 1250 135;
+        M -50 400 C 300 418 550 344 750 315 C 950 286 1120 156 1250 135;
+        M -50 400 C 300 392 550 370 750 315 C 950 260 1120 180 1250 135"
       dur="9s" repeatCount="indefinite"/>
   </path>
 
-  <!-- Front wave (fast, glowing) -->
+  <!-- Front wave (fast, glowing). Enters below the artboard so the status
+       line at the bottom left keeps clear air. -->
   <path fill="none" stroke="url(#np-spectrum)" stroke-width="3" filter="url(#np-glow)">
     <animate attributeName="d"
       values="
-        M -50 360 C 200 320 400 400 600 360 C 800 320 1000 400 1250 360;
-        M -50 360 C 200 400 400 320 600 360 C 800 400 1000 320 1250 360;
-        M -50 360 C 200 320 400 400 600 360 C 800 320 1000 400 1250 360"
+        M -50 445 C 300 438 550 415 750 360 C 950 305 1120 225 1250 180;
+        M -50 445 C 300 462 550 389 750 360 C 950 331 1120 201 1250 180;
+        M -50 445 C 300 438 550 415 750 360 C 950 305 1120 225 1250 180"
       dur="6s" repeatCount="indefinite"/>
   </path>
 
@@ -80,32 +87,37 @@
 
   <text x="82" y="214" font-family="'JetBrains Mono', monospace" font-size="13" fill="#00d9ff" letter-spacing="6">FRONTEND · MOTION · WEBGL</text>
 
-  <!-- Tag chips -->
+  <!-- Tag chips. All four share one quiet border: four chips cycling three
+       neon colours read as a carnival next to a spectrum that is already the
+       loudest thing here, and this template's own advice is one focal motion,
+       never a carnival. The colour belongs to the waves and the headline. -->
   <g font-family="'JetBrains Mono', monospace" font-size="11" letter-spacing="2">
     <g transform="translate(80,238)">
-      <rect width="86" height="26" rx="13" fill="none" stroke="#00d9ff" stroke-width="0.8"/>
-      <text x="43" y="17" text-anchor="middle" fill="#00d9ff">react</text>
+      <rect width="86" height="26" rx="13" fill="none" stroke="#4b3a8f" stroke-width="0.8"/>
+      <text x="43" y="17" text-anchor="middle" fill="#c9b8ff">react</text>
     </g>
     <g transform="translate(176,238)">
-      <rect width="86" height="26" rx="13" fill="none" stroke="#ff00d9" stroke-width="0.8"/>
-      <text x="43" y="17" text-anchor="middle" fill="#ff00d9">typescript</text>
+      <rect width="86" height="26" rx="13" fill="none" stroke="#4b3a8f" stroke-width="0.8"/>
+      <text x="43" y="17" text-anchor="middle" fill="#c9b8ff">typescript</text>
     </g>
     <g transform="translate(272,238)">
-      <rect width="86" height="26" rx="13" fill="none" stroke="#7c5cff" stroke-width="0.8"/>
-      <text x="43" y="17" text-anchor="middle" fill="#7c5cff">webgl</text>
+      <rect width="86" height="26" rx="13" fill="none" stroke="#4b3a8f" stroke-width="0.8"/>
+      <text x="43" y="17" text-anchor="middle" fill="#c9b8ff">webgl</text>
     </g>
     <g transform="translate(368,238)">
-      <rect width="86" height="26" rx="13" fill="none" stroke="#00d9ff" stroke-width="0.8"/>
-      <text x="43" y="17" text-anchor="middle" fill="#00d9ff">motion</text>
+      <rect width="86" height="26" rx="13" fill="none" stroke="#4b3a8f" stroke-width="0.8"/>
+      <text x="43" y="17" text-anchor="middle" fill="#c9b8ff">motion</text>
     </g>
   </g>
 
-  <!-- Status -->
+  <!-- Status. The old line read "OSC 9Hz · LATENCY 12ms", which is instrument
+       data this file does not have; it says what the template actually gives
+       you instead. -->
   <g transform="translate(80,388)" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="3" fill="#a78bfa">
     <circle cx="6" cy="-3" r="3.5" fill="#00d9ff">
       <animate attributeName="opacity" values="0.4;1;0.4" dur="1.4s" repeatCount="indefinite"/>
     </circle>
-    <text x="20" y="0">SIGNAL LIVE · OSC 9Hz · LATENCY 12ms</text>
+    <text x="20" y="0">ONE FILE · NO SERVICES · NOTHING TO RATE-LIMIT</text>
   </g>
 
   <!-- Top corner mark -->
