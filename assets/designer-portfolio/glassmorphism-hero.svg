@@ -140,7 +140,7 @@
   </g>
 
   <!-- Bottom register -->
-  <g transform="translate(120,388)" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="3" fill="#a78bfa">
+  <g transform="translate(120,388)" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="3" fill="#f0e9ff" opacity="0.72">
     <text>STUDIO PORTRAIT · 2026 · ISSUE 03</text>
   </g>
 </svg>

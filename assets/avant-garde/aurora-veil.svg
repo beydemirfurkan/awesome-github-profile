@@ -136,7 +136,7 @@
     <text x="20" y="3">VOL.MMXXVI · ISSUE 01</text>
   </g>
   <g transform="translate(1120,40)" font-family="'JetBrains Mono', monospace" font-size="9" fill="#94a3b8" letter-spacing="3" text-anchor="end">
-    <text x="-20" y="3">N 79.984%  ·  STREAM 03</text>
+    <text x="-20" y="3">KP 6  ·  SKY CLEAR</text>
     <line x1="-14" y1="0" x2="0" y2="0" stroke="#94a3b8" stroke-width="0.6"/>
   </g>
 </svg>

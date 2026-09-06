@@ -177,6 +177,6 @@
     <circle cx="6" cy="-3" r="3.5" fill="#4ade80">
       <animate attributeName="opacity" values="0.4;1;0.4" dur="1.6s" repeatCount="indefinite"/>
     </circle>
-    <text x="20" y="0" fill="#a5b4cf">SYSTEM NOMINAL · LATENCY 12ms · UPTIME 2,184d</text>
+    <text x="20" y="0" fill="#a5b4cf">SYSTEM NOMINAL · 9 SIGNALS IN FLIGHT · 15 EDGES</text>
   </g>
 </svg>
